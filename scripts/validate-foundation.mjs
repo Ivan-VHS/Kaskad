@@ -40,9 +40,21 @@ if (project) {
     fail("project-contract.json: composite-base divisor function must not be marked multiplicative");
   }
 
+  const requiredBoundaries = [
+    "mathematics_is_the_permanent_primary_scope",
+    "cross_repository_relationships_are_mathematical_only",
+    "no_operating_system_programming_language_ide_driver_or_application_product_scope",
+    "executable_tools_are_optional_support_for_mathematical_verification",
+    "computation_and_experiment_do_not_replace_proofs"
+  ];
+  const actualBoundaries = new Set(project.scope_boundary ?? []);
+  for (const boundary of requiredBoundaries) {
+    if (!actualBoundaries.has(boundary)) fail("Project scope boundary is missing: " + boundary);
+  }
+
   for (const relativePath of project.required_documents ?? []) {
     if (!existsSync(resolve(root, relativePath))) {
-      fail("Missing required research document: " + relativePath);
+      fail("Missing required mathematical document: " + relativePath);
     }
   }
 
@@ -78,6 +90,29 @@ if (mathematics) {
   if (mathematics.forbidden?.empirical_observation_as_universal_proof !== true) {
     fail("Empirical observations must never be accepted as universal proof");
   }
+
+  const composite = mathematics.k3_constraints?.composite_radix_arithmetic;
+  if (JSON.stringify(composite?.crt_components) !== JSON.stringify(["2^(3r)", "5^(3r)"])) {
+    fail("K3 CRT components must be 2^(3r) and 5^(3r)");
+  }
+  if (composite?.unit_criterion !== "gcd(n,1000)=1") {
+    fail("K3 modular units must use the gcd(n,1000)=1 criterion");
+  }
+  if (composite?.unit_count !== "(2/5)*1000^r") {
+    fail("K3 unit count must be (2/5)*1000^r");
+  }
+  if (composite?.nonzero_zero_divisor_count !== "(3/5)*1000^r-1") {
+    fail("K3 nonzero zero-divisor count is inconsistent");
+  }
+  const branching = composite?.residue_tree_branching;
+  if (branching?.["2_primary_branch_factor"] !== 8 ||
+      branching?.["5_primary_branch_factor"] !== 125 ||
+      branching?.total !== 1000) {
+    fail("K3 residue branching must factor as 8 * 125 = 1000");
+  }
+  if (mathematics.forbidden?.assuming_nu_1000_zero_implies_unit !== true) {
+    fail("The contract must forbid treating nu_1000(n)=0 as a unit test");
+  }
 }
 
 if (computation) {
@@ -97,7 +132,7 @@ if (evolution) {
     fail("Unexpected engineering evolution contract id");
   }
   if (!Array.isArray(evolution.stages) || evolution.stages.length < 7) {
-    fail("Engineering evolution must define all research platform stages");
+    fail("Engineering evolution must define all research stages");
   }
 }
 
@@ -118,5 +153,5 @@ if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad research foundation contracts and local links: OK\n");
+  process.stdout.write("Kaskad mathematical scope, K3 arithmetic contracts and local links: OK\n");
 }
