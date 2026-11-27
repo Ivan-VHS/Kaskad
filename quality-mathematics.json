@@ -24,6 +24,21 @@
     "divisor_filter": "not_a_multiplicative_valuation",
     "modular_ring_1000": "not_a_field",
     "completion": "inverse_limit_isomorphic_to_Z2_times_Z5",
+    "notation_and_semantics": {
+      "radix_symbol": "B",
+      "radix_value": 1000,
+      "separator_symbol": "k",
+      "separator_role": "lexical_group_delimiter",
+      "numeric_shift_operator": "S_B",
+      "raw_coefficient_domain": "Z",
+      "canonical_coefficient_range": "0..999",
+      "canonical_zero_word": "0",
+      "empty_word_is_canonical": false,
+      "evaluation_kernel": "(X-1000)",
+      "empty_sum": 0,
+      "empty_product": 1,
+      "undefined_marker": "outside_Z"
+    },
     "composite_radix_arithmetic": {
       "crt_components": [
         "2^(3r)",
@@ -49,7 +64,11 @@
     "claiming_bit_compression_without_encoding_proof": true,
     "unsupported_performance_superlatives": true,
     "redefining_standard_terms_without_definition": true,
-    "assuming_nu_1000_zero_implies_unit": true
+    "assuming_nu_1000_zero_implies_unit": true,
+    "using_k_as_both_numeric_radix_and_word_separator": true,
+    "treating_empty_word_as_canonical_zero": true,
+    "identifying_null_or_undefined_with_integer_zero": true,
+    "claiming_cryptographic_security_from_modular_arithmetic_alone": true
   },
   "review": {
     "mathematical_review_required": true,
