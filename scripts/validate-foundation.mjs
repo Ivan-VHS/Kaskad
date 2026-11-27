@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = process.cwd();
@@ -27,6 +27,7 @@ const project = readJson("project-contract.json");
 const mathematics = readJson("quality-mathematics.json");
 const computation = readJson("quality-computation.json");
 const evolution = readJson("engineering-evolution.v1.json");
+const vectors = readJson("docs/K3_REFERENCE_VECTORS.json");
 
 if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
@@ -65,6 +66,20 @@ if (project) {
     if (!existsSync(resolve(root, relativePath))) {
       fail("Missing required mathematical document: " + relativePath);
     }
+  }
+
+  const documentation = project.documentation_standard;
+  if (documentation?.edition !== "Cascade Edition" || documentation?.version !== "1.0.0") {
+    fail("Project contract must pin Cascade Edition 1.0.0");
+  }
+  if (documentation?.normative_document !== "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md") {
+    fail("Project contract must identify the normative scientific documentation standard");
+  }
+  if (JSON.stringify(documentation?.public_languages) !== JSON.stringify(["zh-CN", "en", "ru", "uk"])) {
+    fail("Project contract must declare the four public documentation languages");
+  }
+  for (const citationPath of ["CITATION.cff", "CITATION.bib"]) {
+    if (!existsSync(resolve(root, citationPath))) fail("Missing citation metadata: " + citationPath);
   }
 
   const requiredDomains = [
@@ -164,6 +179,53 @@ if (computation) {
   }
 }
 
+if (computation) {
+  if (computation.documentation_standard?.edition !== "Cascade Edition 1.0.0") {
+    fail("Computational contract must follow Cascade Edition 1.0.0");
+  }
+  if (computation.verification?.test_status_requires_actual_execution !== true) {
+    fail("Unexecuted tests must not be marked as passed");
+  }
+  if (computation.verification?.performance_claims_require_measurements !== true) {
+    fail("Performance claims must be based on measurements");
+  }
+}
+
+if (vectors) {
+  if (vectors.theory !== "K3" || vectors.radix !== 1000 ||
+      vectors.coefficient_order !== "least_significant_to_most_significant") {
+    fail("K3 reference-vector metadata is inconsistent");
+  }
+  const evaluate = (coefficients) => coefficients.reduce(
+    (sum, coefficient, index) => sum + BigInt(coefficient) * (1000n ** BigInt(index)), 0n
+  );
+  for (const vector of vectors.vectors ?? []) {
+    for (const operand of [vector.left, vector.right, vector.expected].filter(Boolean)) {
+      if (!Array.isArray(operand.coefficients) || operand.coefficients.length === 0) {
+        fail("Reference vector " + vector.id + " has no coefficient sequence");
+        continue;
+      }
+      if (operand.coefficients.some((coefficient) => !Number.isInteger(coefficient) || coefficient < 0 || coefficient > 999)) {
+        fail("Reference vector " + vector.id + " contains a non-canonical coefficient");
+        continue;
+      }
+      if (evaluate(operand.coefficients).toString() !== operand.decimal) {
+        fail("Reference vector " + vector.id + " has an incorrect decimal value");
+      }
+    }
+    if (vector.operation === "add" && vector.left && vector.right && vector.expected) {
+      const actual = BigInt(vector.left.decimal) + BigInt(vector.right.decimal);
+      if (actual.toString() !== vector.expected.decimal) fail("Reference addition failed: " + vector.id);
+    } else if (vector.operation === "multiply" && vector.left && vector.right && vector.expected) {
+      const actual = BigInt(vector.left.decimal) * BigInt(vector.right.decimal);
+      if (actual.toString() !== vector.expected.decimal) fail("Reference multiplication failed: " + vector.id);
+    } else if (vector.operation === "identity" && vector.left && vector.expected) {
+      if (vector.left.decimal !== vector.expected.decimal) fail("Reference identity failed: " + vector.id);
+    }
+    if (vector.status === "PASS") fail("Reference expectations must not be labeled PASS without an executed test");
+  }
+}
+
 if (evolution) {
   if (evolution.contract_id !== "KASKAD-ENGINEERING-EVOLUTION") {
     fail("Unexpected engineering evolution contract id");
@@ -178,6 +240,12 @@ if (!existsSync(readmePath)) {
   fail("README.md is missing");
 } else {
   const readme = readFileSync(readmePath, "utf8");
+  for (const heading of ["## 中文", "## English", "## Русский", "## Українська"]) {
+    if (!readme.includes(heading)) fail("README is missing a language edition: " + heading);
+  }
+  if (!readme.includes("docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md")) {
+    fail("README must link to the normative Cascade documentation standard");
+  }
   const links = readme.matchAll(/\]\(([^)]+)\)/g);
   for (const match of links) {
     const href = match[1].split("#")[0];
@@ -186,9 +254,34 @@ if (!existsSync(readmePath)) {
   }
 }
 
+const docsPath = resolve(root, "docs");
+if (existsSync(docsPath)) {
+  for (const fileName of readdirSync(docsPath)) {
+    if (!fileName.endsWith(".md")) continue;
+    const fileText = readFileSync(resolve(docsPath, fileName), "utf8");
+    if (!fileText.includes("Cascade Edition 1.0.0")) {
+      fail("Scientific document is missing the Cascade Edition header: docs/" + fileName);
+    }
+  }
+}
+
+const standardPath = resolve(root, "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md");
+if (existsSync(standardPath)) {
+  const standardText = readFileSync(standardPath, "utf8");
+  for (const ruleHeading of [
+    "### 1.", "### 2.", "### 3.", "### 4.", "### 5.",
+    "### 6.", "### 7.", "### 8.", "### 9.", "### 10."
+  ]) {
+    if (!standardText.includes(ruleHeading)) fail("Cascade standard is missing rule section " + ruleHeading);
+  }
+  for (const languageMarker of ["## 中文", "## English", "## Русский", "## Українська"]) {
+    if (!standardText.includes(languageMarker)) fail("Cascade standard is missing language section " + languageMarker);
+  }
+}
+
 if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad mathematical scope, K3 notation, algebraic semantics, arithmetic contracts and local links: OK\n");
+  process.stdout.write("Kaskad scientific documentation standard, multilingual README, mathematical scope, K3 notation, reference vectors, algebraic semantics and local links: OK\n");
 }
