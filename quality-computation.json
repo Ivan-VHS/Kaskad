@@ -52,7 +52,10 @@
     "property_tests_required": true,
     "correctness_check_before_benchmark": true,
     "numerical_error_report_required": true,
-    "algorithmic_complexity_report_required": true
+    "algorithmic_complexity_report_required": true,
+    "reference_vectors_file": "docs/K3_REFERENCE_VECTORS.json",
+    "test_status_requires_actual_execution": true,
+    "performance_claims_require_measurements": true
   },
   "experiment_manifest_required": [
     "experiment_id",
@@ -67,5 +70,18 @@
     "timestamp",
     "outputs",
     "verification_status"
-  ]
+  ],
+  "documentation_standard": {
+    "edition": "Cascade Edition 1.0.0",
+    "reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
+    "record_actual_tool_versions_only": true,
+    "no_default_language_or_runtime_dependency": true,
+    "measured_benchmarks_only": true,
+    "unimplemented_algorithms_must_not_be_reported_as_implemented": true,
+    "unexecuted_tests_must_not_be_reported_as_passed": true,
+    "reproducibility_manifest_required_for_computational_claims": true,
+    "data_provenance_and_sha256_required_when_data_are_used": true,
+    "random_generator_version_and_seed_required_when_randomness_is_used": true,
+    "non_applicable_fields_must_be_explicit": true
+  }
 }
