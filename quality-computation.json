@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "KASKAD-QUALITY-COMPUTATION",
+  "scope": "all future executable mathematical and research components",
+  "numeric_types": {
+    "integer": {
+      "exact": true,
+      "arbitrary_precision": true
+    },
+    "rational": {
+      "exact": true,
+      "normalized": true,
+      "denominator_nonzero": true
+    },
+    "modular": {
+      "modulus_explicit": true,
+      "inverse_requires_coprimality": true
+    },
+    "algebraic": {
+      "exact_representation_required": true
+    },
+    "floating_point": {
+      "approximate": true,
+      "format_explicit": true,
+      "rounding_explicit": true
+    },
+    "interval": {
+      "outward_rounding_required_for_guarantees": true
+    },
+    "quantity": {
+      "dimension_checked": true
+    },
+    "angle": {
+      "unit_explicit": true,
+      "default_unit": "radian"
+    }
+  },
+  "runtime": {
+    "silent_overflow": false,
+    "implicit_float_conversion": false,
+    "hidden_network_access": false,
+    "deterministic_default": true,
+    "random_seed_required": true,
+    "prng_version_required": true,
+    "typed_errors_required": true,
+    "serialization_version_required": true
+  },
+  "verification": {
+    "exact_reference_vectors_required": true,
+    "boundary_tests_required": true,
+    "differential_tests_required": true,
+    "property_tests_required": true,
+    "correctness_check_before_benchmark": true,
+    "numerical_error_report_required": true,
+    "algorithmic_complexity_report_required": true
+  },
+  "experiment_manifest_required": [
+    "experiment_id",
+    "theory_version",
+    "source_revision",
+    "algorithm_version",
+    "environment",
+    "input_checksum",
+    "parameters",
+    "precision_and_rounding",
+    "prng_and_seed",
+    "timestamp",
+    "outputs",
+    "verification_status"
+  ]
+}
