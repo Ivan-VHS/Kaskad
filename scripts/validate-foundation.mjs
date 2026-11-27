@@ -87,7 +87,7 @@ if (computation) {
   if (computation.runtime?.silent_overflow !== false) {
     fail("Silent overflow must be forbidden");
   }
-  if (computation.experiment_manifest_required?.includes("random_seed") !== false) {
+  if (!computation.experiment_manifest_required?.includes("prng_and_seed")) {
     fail("Experiment manifest must name the PRNG and seed explicitly");
   }
 }
