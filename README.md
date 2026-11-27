@@ -6,10 +6,11 @@ Kaskad посвящён чистой математической теории �
 
 - [Теория Вьюненко — фундаментальная математическая теория K3](docs/VYUNENKO_THEORY.md)
 - [Глава II — уравнения каскадного баланса, нормализация и инварианты](docs/CHAPTER_II_CASCADE_BALANCE.md)
+- [Канонический синтаксис K3 и формальная грамматика](docs/K3_CANONICAL_SYNTAX.md)
 - [Классический математический аппарат и терминологическая ревизия](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
 - [50 конструктивных блоков развития K3](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md)
 - [50 правил разработки математической теории](docs/THEORY_DEVELOPMENT_RULES.md)
-- [Справочник фундаментальных математических принципов](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
+- [Справочник 50 фундаментальных математических принципов](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
 
 ## Канонические параметры
 
