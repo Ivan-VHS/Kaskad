@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0.0",
+  "project": {
+    "id": "KASKAD",
+    "name": "Kaskad",
+    "mission": "Research computational foundation for the Vyunenko Theory of K3 and its rigorous mathematical extensions.",
+    "primary_language": "documentation-first",
+    "implementation_policy": "Technology choices for mathematical runtimes require a separate reviewed decision; no runtime is claimed by this contract."
+  },
+  "theory": {
+    "id": "K3",
+    "name": "Теория Вьюненко",
+    "specification_version": "0.1.0",
+    "radix": 1000,
+    "radix_factorization": {
+      "2": 3,
+      "5": 3
+    },
+    "group_separator": "k",
+    "coefficient_domain": [
+      0,
+      999
+    ],
+    "nonnegative_value_domain": "N0",
+    "signed_value_domain": "Z",
+    "value_semantics": "sum(a_i * radix^i)",
+    "canonical_form_required": true,
+    "normalization_preserves_value": true,
+    "composite_radix": true,
+    "divisor_function_is_multiplicative": false,
+    "completion": "inverse_limit_Z_mod_1000_power_r",
+    "completion_ring": "Z_2 x Z_5"
+  },
+  "scope": [
+    "mathematical_logic_and_axiomatics",
+    "set_theory_and_formal_semantics",
+    "algebra",
+    "arithmetic_and_number_theory",
+    "geometry_and_topology",
+    "mathematical_analysis",
+    "functional_analysis",
+    "trigonometry",
+    "combinatorics",
+    "probability",
+    "statistics",
+    "numerical_methods",
+    "optimization",
+    "computational_mathematics",
+    "experimental_mathematics",
+    "formal_proof_and_evidence"
+  ],
+  "architecture_layers": [
+    "logic_and_axiomatic_foundations",
+    "canonical_k3_core",
+    "fundamental_mathematical_structures",
+    "discipline_engines",
+    "exact_and_numerical_computation",
+    "experimental_research_laboratory",
+    "proof_and_evidence_registry"
+  ],
+  "epistemic_statuses": [
+    "axiom",
+    "definition",
+    "assumption",
+    "lemma",
+    "theorem",
+    "corollary",
+    "conjecture",
+    "counterexample",
+    "finite_exhaustive_verification",
+    "computational_observation",
+    "empirical_observation",
+    "numerical_estimate",
+    "heuristic",
+    "rejected"
+  ],
+  "numerical_policy": {
+    "exact_integer_arithmetic": "required_for_discrete_core",
+    "rational_normalization": "required",
+    "floating_point": "explicit_approximation_only",
+    "interval_arithmetic": "required_for_guaranteed_numeric_bounds",
+    "rounding_mode": "must_be_explicit",
+    "angle_default_unit": "radian",
+    "physical_dimensions": "must_be_type_checked",
+    "overflow": "must_never_be_silent"
+  },
+  "experiment_policy": {
+    "deterministic_by_default": true,
+    "random_seed_required": true,
+    "prng_identifier_required": true,
+    "dataset_checksum_required": true,
+    "code_revision_required": true,
+    "empirical_results_are_proofs": false,
+    "benchmark_requires_correctness_check": true
+  },
+  "required_documents": [
+    "docs/VYUNENKO_THEORY.md",
+    "docs/CHAPTER_II_CASCADE_BALANCE.md",
+    "docs/CLASSICAL_MATHEMATICS_CROSSWALK.md",
+    "docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md",
+    "docs/THEORY_DEVELOPMENT_RULES.md",
+    "docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md",
+    "docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md",
+    "docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md",
+    "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
+    "docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md",
+    "docs/EXPERIMENTAL_EMPIRICAL_METHOD.md",
+    "docs/RESEARCH_PLATFORM_ROADMAP.md",
+    "docs/RESEARCH_RECORD_TEMPLATE.md"
+  ],
+  "implementation_state": {
+    "status": "architecture_specified_runtime_not_yet_implemented",
+    "note": "A component is implemented only when source, contract, tests, documentation and CI evidence exist."
+  },
+  "release_gates": [
+    "mathematical_semantics_reviewed",
+    "proof_or_explicit_open_status",
+    "exact_reference_vectors",
+    "independent_tests",
+    "numeric_error_contracts",
+    "reproducible_research_artifacts",
+    "documentation_and_migration_review"
+  ]
+}
