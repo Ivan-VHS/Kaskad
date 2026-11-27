@@ -20,6 +20,7 @@ K3 не объявляется заменой классической ариф�
 
 - [Теория Вьюненко K3 — каноническая спецификация](docs/VYUNENKO_THEORY.md)
 - [Глава II — каскадный баланс, нормализация и инварианты](docs/CHAPTER_II_CASCADE_BALANCE.md)
+- [Канонический синтаксис K3 и формальная грамматика](docs/K3_CANONICAL_SYNTAX.md)
 - [Классический математический аппарат и терминологический crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
 - [Справочник фундаментальных математических принципов](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
 - [50 правил разработки математической теории](docs/THEORY_DEVELOPMENT_RULES.md)
