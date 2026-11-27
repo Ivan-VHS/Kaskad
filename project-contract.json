@@ -95,6 +95,7 @@
   },
   "required_documents": [
     "docs/VYUNENKO_THEORY.md",
+    "docs/K3_CANONICAL_SYNTAX.md",
     "docs/CHAPTER_II_CASCADE_BALANCE.md",
     "docs/CLASSICAL_MATHEMATICS_CROSSWALK.md",
     "docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md",
