@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "theory": "K3",
+  "radix": 1000,
+  "coefficient_order": "least_significant_to_most_significant",
+  "canonical_coefficient_range": [0, 999],
+  "vectors": [
+    {
+      "id": "K3-ADD-0001",
+      "operation": "add",
+      "left": {
+        "word": "999k999",
+        "coefficients": [999, 999],
+        "decimal": "999999"
+      },
+      "right": {
+        "word": "1",
+        "coefficients": [1],
+        "decimal": "1"
+      },
+      "expected": {
+        "word": "1k0k",
+        "coefficients": [0, 0, 1],
+        "decimal": "1000000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-MUL-0001",
+      "operation": "multiply",
+      "left": {
+        "word": "50k0k",
+        "coefficients": [0, 0, 50],
+        "decimal": "50000000"
+      },
+      "right": {
+        "word": "25",
+        "coefficients": [25],
+        "decimal": "25"
+      },
+      "expected": {
+        "word": "1k250k0k",
+        "coefficients": [0, 0, 250, 1],
+        "decimal": "1250000000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ZERO-0001",
+      "operation": "identity",
+      "left": {
+        "word": "0",
+        "coefficients": [0],
+        "decimal": "0"
+      },
+      "expected": {
+        "word": "0",
+        "coefficients": [0],
+        "decimal": "0"
+      },
+      "status": "reference_expected_not_execution_pass"
+    }
+  ]
+}
