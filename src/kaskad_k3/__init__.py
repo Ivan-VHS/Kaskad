@@ -1,0 +1,42 @@
+"""Reference implementation of the Vyunenko K3 cascade system."""
+
+from .core import (
+    GROUP_MAX,
+    GROUP_MIN,
+    K3SyntaxError,
+    RADIX,
+    add,
+    congruent_mod_radix_power,
+    distance_1000,
+    evaluate_coefficients,
+    format_k3,
+    multiply,
+    normalize,
+    parse_k3,
+    residue,
+    subtract,
+    to_groups,
+    valuation_1000,
+)
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "GROUP_MAX",
+    "GROUP_MIN",
+    "K3SyntaxError",
+    "RADIX",
+    "__version__",
+    "add",
+    "congruent_mod_radix_power",
+    "distance_1000",
+    "evaluate_coefficients",
+    "format_k3",
+    "multiply",
+    "normalize",
+    "parse_k3",
+    "residue",
+    "subtract",
+    "to_groups",
+    "valuation_1000",
+]
