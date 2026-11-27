@@ -36,6 +36,15 @@ if (project) {
     fail("project-contract.json: radix factorization must be 2^3 * 5^3");
   }
   if (project.theory?.group_separator !== "k") fail("project-contract.json: K3 separator must be k");
+  if (project.theory?.separator_semantics !== "lexical_group_delimiter") {
+    fail("project-contract.json: k must remain a lexical group delimiter");
+  }
+  if (project.theory?.zero_word !== "0" || project.theory?.empty_word_is_canonical !== false) {
+    fail("project-contract.json: canonical zero and empty-word semantics are inconsistent");
+  }
+  if (project.theory?.shift_operator !== "S_B") {
+    fail("project-contract.json: positional shift must use the separate S_B operator");
+  }
   if (project.theory?.divisor_function_is_multiplicative !== false) {
     fail("project-contract.json: composite-base divisor function must not be marked multiplicative");
   }
@@ -89,6 +98,34 @@ if (mathematics) {
   }
   if (mathematics.forbidden?.empirical_observation_as_universal_proof !== true) {
     fail("Empirical observations must never be accepted as universal proof");
+  }
+
+  const notation = mathematics.k3_constraints?.notation_and_semantics;
+  if (notation?.radix_symbol !== "B" || notation?.radix_value !== 1000) {
+    fail("K3 numerical radix must be B=1000");
+  }
+  if (notation?.separator_symbol !== "k" || notation?.separator_role !== "lexical_group_delimiter") {
+    fail("K3 k must remain the lexical group delimiter");
+  }
+  if (notation?.numeric_shift_operator !== "S_B") {
+    fail("K3 positional shift must use the separately defined S_B operator");
+  }
+  if (notation?.raw_coefficient_domain !== "Z" || notation?.canonical_coefficient_range !== "0..999") {
+    fail("K3 raw and canonical coefficient domains must remain distinct");
+  }
+  if (notation?.canonical_zero_word !== "0" || notation?.empty_word_is_canonical !== false) {
+    fail("K3 must have one canonical zero word and reject the empty word");
+  }
+  if (notation?.evaluation_kernel !== "(X-1000)") {
+    fail("K3 polynomial evaluation kernel must be (X-1000)");
+  }
+  if (notation?.empty_sum !== 0 || notation?.empty_product !== 1 || notation?.undefined_marker !== "outside_Z") {
+    fail("K3 empty-object and undefined-value semantics are inconsistent");
+  }
+  if (mathematics.forbidden?.using_k_as_both_numeric_radix_and_word_separator !== true ||
+      mathematics.forbidden?.treating_empty_word_as_canonical_zero !== true ||
+      mathematics.forbidden?.identifying_null_or_undefined_with_integer_zero !== true) {
+    fail("K3 notation and value-type distinctions must be enforced");
   }
 
   const composite = mathematics.k3_constraints?.composite_radix_arithmetic;
@@ -153,5 +190,5 @@ if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad mathematical scope, K3 arithmetic contracts and local links: OK\n");
+  process.stdout.write("Kaskad mathematical scope, K3 notation, algebraic semantics, arithmetic contracts and local links: OK\n");
 }
