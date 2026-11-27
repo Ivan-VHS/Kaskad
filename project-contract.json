@@ -60,7 +60,8 @@
     "quantum_operator_models",
     "category_theory_and_homological_algebra",
     "knot_theory_and_topological_invariants",
-    "analytic_number_theory"
+    "analytic_number_theory",
+    "cooperative_formula_synthesis"
   ],
   "architecture_layers": [
     "logic_and_axiomatic_foundations",
@@ -127,7 +128,8 @@
     "docs/EXPERIMENTAL_EMPIRICAL_METHOD.md",
     "docs/RESEARCH_PLATFORM_ROADMAP.md",
     "docs/RESEARCH_RECORD_TEMPLATE.md",
-    "docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md"
+    "docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md",
+    "docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
