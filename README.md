@@ -166,7 +166,7 @@ flowchart TD
 - [Дорожная карта исследовательской программы](docs/RESEARCH_PLATFORM_ROADMAP.md)
 - [Шаблон воспроизводимой исследовательской записи](docs/RESEARCH_RECORD_TEMPLATE.md)
 - [Исследование рекурсивных K-суффиксов и его формальная ревизия](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md)
-- [Кооперативный синтез формул: пропорции и совместимость](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md)
+- [Кооперативно-витрувианский синтез формул: 40 режимов, пропорции и алгебра кооперации](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md)
 
 ### Контракты качества и проверка
 
