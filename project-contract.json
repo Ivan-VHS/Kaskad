@@ -69,11 +69,11 @@
   ],
   "architecture_layers": [
     "logic_and_axiomatic_foundations",
-    "canonical_k3_core",
+    "canonical_k3_mathematical_core",
     "fundamental_mathematical_structures",
-    "discipline_engines",
-    "exact_and_numerical_computation",
-    "experimental_research_laboratory",
+    "mathematical_disciplines_and_models",
+    "optional_supporting_exact_and_numerical_methods",
+    "experimental_mathematics_methodology",
     "proof_and_evidence_registry"
   ],
   "epistemic_statuses": [
@@ -134,7 +134,10 @@
     "docs/RESEARCH_PLATFORM_ROADMAP.md",
     "docs/RESEARCH_RECORD_TEMPLATE.md",
     "docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md",
-    "docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md"
+    "docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "docs/LANGUAGE_REGISTER.md",
+    "docs/K3_REFERENCE_VECTORS.json"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -148,5 +151,36 @@
     "numeric_error_contracts",
     "reproducible_research_artifacts",
     "documentation_and_migration_review"
-  ]
+  ],
+  "documentation_standard": {
+    "edition": "Cascade Edition",
+    "version": "1.0.0",
+    "normative_document": "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "language_register": "docs/LANGUAGE_REGISTER.md",
+    "required_rules": [
+      "scientific_identity_and_citation",
+      "formal_problem_scope_and_assumptions",
+      "unified_notation_indexing_and_terminology",
+      "theorems_proofs_and_epistemic_status",
+      "exact_theory_approximation_and_discretization",
+      "algorithmic_transparency_and_complexity",
+      "reproducibility_determinism_and_data_provenance",
+      "reference_examples_tests_and_checksums",
+      "numerical_stability_complexity_and_figures",
+      "multilingual_equivalence_neutral_style_and_open_problems"
+    ],
+    "public_languages": [
+      "zh-CN",
+      "en",
+      "ru",
+      "uk"
+    ],
+    "citation_files": [
+      "CITATION.cff",
+      "CITATION.bib"
+    ],
+    "doi_policy": "Do not claim a DOI or arXiv identifier unless one has actually been assigned.",
+    "license_policy": "Respect the existing Apache-2.0 LICENSE; do not imply a separate license without an explicit license file.",
+    "environment_policy": "Record only tools and versions actually used; do not impose a default Python or runtime dependency."
+  }
 }
