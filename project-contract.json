@@ -3,10 +3,17 @@
   "project": {
     "id": "KASKAD",
     "name": "Kaskad",
-    "mission": "Research computational foundation for the Vyunenko Theory of K3 and its rigorous mathematical extensions.",
-    "primary_language": "documentation-first",
-    "implementation_policy": "Technology choices for mathematical runtimes require a separate reviewed decision; no runtime is claimed by this contract."
+    "mission": "Permanent mathematical research corpus for the Vyunenko Theory of K3 and rigorously defined extensions across mathematics.",
+    "primary_language": "mathematical-documentation-first",
+    "implementation_policy": "Executable tools are optional supporting instruments for exact calculation, finite verification, reproducible mathematical experiments or formal proof. Kaskad is not an operating-system, programming-language, IDE, application or general-purpose software-product project. Cross-repository relations are mathematical only."
   },
+  "scope_boundary": [
+    "mathematics_is_the_permanent_primary_scope",
+    "cross_repository_relationships_are_mathematical_only",
+    "no_operating_system_programming_language_ide_driver_or_application_product_scope",
+    "executable_tools_are_optional_support_for_mathematical_verification",
+    "computation_and_experiment_do_not_replace_proofs"
+  ],
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
@@ -108,6 +115,7 @@
     "docs/VYUNENKO_THEORY.md",
     "docs/K3_CANONICAL_SYNTAX.md",
     "docs/CHAPTER_II_CASCADE_BALANCE.md",
+    "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
     "docs/CLASSICAL_MATHEMATICS_CROSSWALK.md",
     "docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md",
     "docs/THEORY_DEVELOPMENT_RULES.md",
@@ -122,8 +130,8 @@
     "docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md"
   ],
   "implementation_state": {
-    "status": "architecture_specified_runtime_not_yet_implemented",
-    "note": "A component is implemented only when source, contract, tests, documentation and CI evidence exist."
+    "status": "mathematical_documentation_and_research_methods",
+    "note": "Executable components are optional supporting instruments. Their presence or specification does not change the mathematical scope of Kaskad."
   },
   "release_gates": [
     "mathematical_semantics_reviewed",
