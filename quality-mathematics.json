@@ -23,7 +23,23 @@
     "normalization_invariant": "preserve_polynomial_value",
     "divisor_filter": "not_a_multiplicative_valuation",
     "modular_ring_1000": "not_a_field",
-    "completion": "inverse_limit_isomorphic_to_Z2_times_Z5"
+    "completion": "inverse_limit_isomorphic_to_Z2_times_Z5",
+    "composite_radix_arithmetic": {
+      "crt_components": [
+        "2^(3r)",
+        "5^(3r)"
+      ],
+      "unit_criterion": "gcd(n,1000)=1",
+      "unit_count": "(2/5)*1000^r",
+      "nonzero_zero_divisor_count": "(3/5)*1000^r-1",
+      "divisor_product_law": "nu_1000(xy)>=nu_1000(x)+nu_1000(y)",
+      "residue_tree_branching": {
+        "2_primary_branch_factor": 8,
+        "5_primary_branch_factor": 125,
+        "total": 1000
+      },
+      "unit_test_depends_on": "least_significant_K3_group"
+    }
   },
   "forbidden": {
     "empirical_observation_as_universal_proof": true,
@@ -32,7 +48,8 @@
     "calling_Z_mod_1000_a_field": true,
     "claiming_bit_compression_without_encoding_proof": true,
     "unsupported_performance_superlatives": true,
-    "redefining_standard_terms_without_definition": true
+    "redefining_standard_terms_without_definition": true,
+    "assuming_nu_1000_zero_implies_unit": true
   },
   "review": {
     "mathematical_review_required": true,
