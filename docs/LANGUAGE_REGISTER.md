@@ -1,5 +1,7 @@
 # Реестр языковых редакций научного корпуса Kaskad
 
+> Нормативная основа: [Cascade Edition 1.0.0](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md).
+
 > Документ подчиняется [Научному стандарту математической документации — Cascade Edition](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md). Этот реестр сообщает фактическое состояние переводов и не приравнивает краткое изложение к полному переводу.
 
 ## Легенда
