@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "KASKAD-QUALITY-MATHEMATICS",
+  "scope": "all mathematical definitions, claims, models and proofs",
+  "mandatory": {
+    "every_construction_has_signature_and_semantics": true,
+    "every_axiom_has_scope_and_motivation": true,
+    "every_theorem_has_quantifiers_and_assumptions": true,
+    "every_proof_lists_dependencies": true,
+    "every_new_term_has_classical_crosswalk": true,
+    "every_universal_claim_is_proof_or_open_problem": true,
+    "every_definition_has_example_and_boundary_case": true,
+    "every_algorithm_has_invariant_and_termination_argument": true,
+    "every_nontrivial_operation_declares_domain_and_codomain": true,
+    "every_metric_declares_its_space_and_axioms": true
+  },
+  "k3_constraints": {
+    "radix": 1000,
+    "factorization": "2^3 * 5^3",
+    "group_separator": "k",
+    "coefficient_range": "0..999",
+    "canonical_expansion_uniqueness": "theorem_from_euclidean_division",
+    "normalization_invariant": "preserve_polynomial_value",
+    "divisor_filter": "not_a_multiplicative_valuation",
+    "modular_ring_1000": "not_a_field",
+    "completion": "inverse_limit_isomorphic_to_Z2_times_Z5"
+  },
+  "forbidden": {
+    "empirical_observation_as_universal_proof": true,
+    "finite_sample_as_infinite_proof": true,
+    "unqualified_p_adic_analogy_for_composite_base": true,
+    "calling_Z_mod_1000_a_field": true,
+    "claiming_bit_compression_without_encoding_proof": true,
+    "unsupported_performance_superlatives": true,
+    "redefining_standard_terms_without_definition": true
+  },
+  "review": {
+    "mathematical_review_required": true,
+    "counterexample_review_required": true,
+    "dependency_graph_review_required": true,
+    "status_change_requires_audit_trail": true
+  }
+}
