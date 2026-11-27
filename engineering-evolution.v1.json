@@ -11,7 +11,12 @@
         "domain_architecture",
         "computational_contracts",
         "experimental_method",
-        "research_record_template"
+        "research_record_template",
+        "scientific_documentation_standard",
+        "multilingual_language_register",
+        "citation_metadata",
+        "canonical_k3_reference_vectors",
+        "documentation_quality_validation"
       ]
     },
     {
@@ -95,5 +100,16 @@
     "conventional_commits": true,
     "no_unverified_completion_claims": true,
     "every_stage_requires_tests_and_documentation": true
+  },
+  "documentation_governance": {
+    "standard": "Cascade Edition 1.0.0",
+    "normative_document": "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "language_register": "docs/LANGUAGE_REGISTER.md",
+    "citation_metadata": [
+      "CITATION.cff",
+      "CITATION.bib"
+    ],
+    "mathematical_reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
+    "rule": "Documentation and computation support mathematical research; they do not redefine project scope."
   }
 }
