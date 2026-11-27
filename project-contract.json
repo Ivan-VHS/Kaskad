@@ -47,7 +47,13 @@
     "optimization",
     "computational_mathematics",
     "experimental_mathematics",
-    "formal_proof_and_evidence"
+    "formal_proof_and_evidence",
+    "p_adic_and_composite_adic_analysis",
+    "computability_theory",
+    "quantum_operator_models",
+    "category_theory_and_homological_algebra",
+    "knot_theory_and_topological_invariants",
+    "analytic_number_theory"
   ],
   "architecture_layers": [
     "logic_and_axiomatic_foundations",
@@ -72,7 +78,12 @@
     "empirical_observation",
     "numerical_estimate",
     "heuristic",
-    "rejected"
+    "rejected",
+    "conditional_result",
+    "research_program",
+    "speculative_model",
+    "metaphorical_interpretation",
+    "not_formulated"
   ],
   "numerical_policy": {
     "exact_integer_arithmetic": "required_for_discrete_core",
@@ -107,7 +118,8 @@
     "docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md",
     "docs/EXPERIMENTAL_EMPIRICAL_METHOD.md",
     "docs/RESEARCH_PLATFORM_ROADMAP.md",
-    "docs/RESEARCH_RECORD_TEMPLATE.md"
+    "docs/RESEARCH_RECORD_TEMPLATE.md",
+    "docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md"
   ],
   "implementation_state": {
     "status": "architecture_specified_runtime_not_yet_implemented",
