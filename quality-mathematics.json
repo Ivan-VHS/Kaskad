@@ -68,12 +68,35 @@
     "using_k_as_both_numeric_radix_and_word_separator": true,
     "treating_empty_word_as_canonical_zero": true,
     "identifying_null_or_undefined_with_integer_zero": true,
-    "claiming_cryptographic_security_from_modular_arithmetic_alone": true
+    "claiming_cryptographic_security_from_modular_arithmetic_alone": true,
+    "inventing_doi_arxiv_authorship_or_benchmark_results": true,
+    "marking_unexecuted_reference_vector_as_pass": true
   },
   "review": {
     "mathematical_review_required": true,
     "counterexample_review_required": true,
     "dependency_graph_review_required": true,
     "status_change_requires_audit_trail": true
+  },
+  "documentation": {
+    "standard": "Cascade Edition 1.0.0",
+    "normative_document": "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "language_register": "docs/LANGUAGE_REGISTER.md",
+    "required": {
+      "document_type_and_research_status": true,
+      "formal_scope_and_assumptions": true,
+      "symbol_table_and_index_conventions": true,
+      "theorem_proof_or_explicit_open_status": true,
+      "exact_and_approximate_results_separated": true,
+      "computational_claims_have_reproducibility_manifest": true,
+      "citations_and_license_are_not_invented": true,
+      "translation_completeness_is_explicit": true,
+      "changes_in_epistemic_status_have_audit_trail": true
+    },
+    "non_applicable_fields_must_be_explicit": true,
+    "no_unverified_doi_or_arxiv_identifier": true,
+    "no_unmeasured_benchmark_claims": true,
+    "no_unexecuted_test_marked_pass": true,
+    "no_unimplemented_algorithm_reported_as_implemented": true
   }
 }
