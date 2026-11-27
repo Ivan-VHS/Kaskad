@@ -36,7 +36,11 @@
     "composite_radix": true,
     "divisor_function_is_multiplicative": false,
     "completion": "inverse_limit_Z_mod_1000_power_r",
-    "completion_ring": "Z_2 x Z_5"
+    "completion_ring": "Z_2 x Z_5",
+    "zero_word": "0",
+    "empty_word_is_canonical": false,
+    "separator_semantics": "lexical_group_delimiter",
+    "shift_operator": "S_B"
   },
   "scope": [
     "mathematical_logic_and_axiomatics",
@@ -115,6 +119,7 @@
   "required_documents": [
     "docs/VYUNENKO_THEORY.md",
     "docs/K3_CANONICAL_SYNTAX.md",
+    "docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md",
     "docs/CHAPTER_II_CASCADE_BALANCE.md",
     "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
     "docs/CLASSICAL_MATHEMATICS_CROSSWALK.md",
