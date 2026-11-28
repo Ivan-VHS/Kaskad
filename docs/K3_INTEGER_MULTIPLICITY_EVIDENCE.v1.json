@@ -5,38 +5,243 @@
   "theory_id": "K3",
   "theory_version": "0.5.0",
   "radix": 1000,
-  "radix_factorization": {"2": 3, "5": 3},
-  "coefficient_range": [0, 999],
+  "radix_factorization": {
+    "2": 3,
+    "5": 3
+  },
+  "coefficient_range": [
+    0,
+    999
+  ],
   "coefficient_order": "least_significant_to_most_significant",
-  "status_vocabulary": ["met", "partial", "not_met", "not_applicable", "not_audited"],
+  "status_vocabulary": [
+    "met",
+    "partial",
+    "not_met",
+    "not_applicable",
+    "not_audited"
+  ],
   "criteria": [
-    {"id":"IME-01","label":"Показатель Доказательства Целых кратностей","mandatory":true,"test":"Утверждение задаёт точное отношение и область действия.","evidence":"Формула, домен и источник."},
-    {"id":"IME-02","label":"Мерило Аргументации Целочисленных множителей","mandatory":true,"test":"Для делимости предъявлен целый множитель q.","evidence":"Равенство n=q*d или доказательство существования q."},
-    {"id":"IME-03","label":"Признак Подтверждения Целочисленных множительностей","mandatory":true,"test":"Свидетель q проверен точной арифметикой.","evidence":"Точное равенство и независимая проверка."},
-    {"id":"IME-04","label":"Параметр Подкрепления Целых числовых кратностей","mandatory":true,"test":"Область чисел и типы переменных объявлены.","evidence":"Z, N или N0 и ограничения."},
-    {"id":"IME-05","label":"Оценка Доводы Дискретных кратностей","mandatory":true,"test":"Округление не используется как доказательство делимости.","evidence":"Евклидово деление и остаток."},
-    {"id":"IME-06","label":"Индикатор Аргументы Натуральных кратностей","mandatory":true,"test":"Различаются q в N0 и q в N.","evidence":"Явная область натурального множителя."},
-    {"id":"IME-07","label":"Стандарт Мотивировки Целочисленных коэффициентов кратности","mandatory":true,"test":"Различаются q, a_i, v_p, nu_B и число повторений.","evidence":"Таблица типов обозначений."},
-    {"id":"IME-08","label":"Норматив Пояснения Кратностей в целых числах","mandatory":true,"test":"Определение имеет смысл, пример и границу.","evidence":"Дефиниция и контрпример к неверному расширению."},
-    {"id":"IME-09","label":"Требование Разъяснения Целых степеней кратности","mandatory":true,"test":"Различаются q*d, d^r и B^r.","evidence":"Определение каждого показателя."},
-    {"id":"IME-10","label":"Условие Обоснованные утверждения Целочисленных повторений","mandatory":true,"test":"Повторная сумма отделена от факторной кратности и мультимножества.","evidence":"Рекурсия или точная формула числа повторов."},
-    {"id":"IME-11","label":"Основание Доказательные положения Целых множительных соотношений","mandatory":true,"test":"Предпосылки и зависимости перечислены.","evidence":"Список определений, лемм и внешних результатов."},
-    {"id":"IME-12","label":"Показатель соответствия Логические основания Дискретных целочисленных множителей","mandatory":true,"test":"Для iff доказаны обе импликации.","evidence":"Полное доказательство обеих сторон."},
-    {"id":"IME-13","label":"Оценочный параметр Теоретические основания Целочисленных масштабных коэффициентов","mandatory":true,"test":"Масштабирование задано типизированным отображением.","evidence":"Область, кодомен и инварианты."},
-    {"id":"IME-14","label":"Контрольный показатель Научные подтверждения Целых пропорциональных кратностей","mandatory":true,"test":"Целая кратность отделена от рационального отношения.","evidence":"Точный остаток и целочисленность частного."},
-    {"id":"IME-15","label":"Квалификатор Фактические подтверждения Арифметических кратностей","mandatory":true,"test":"Вычисление имеет происхождение и параметры.","evidence":"Векторы, версия кода, протокол и статус запуска."},
-    {"id":"IME-16","label":"Ориентир Рациональные доводы Целочисленных коэффициентных отношений","mandatory":true,"test":"Рациональное отношение не выдаётся за делимость.","evidence":"Сокращённая дробь и остаток 0."},
-    {"id":"IME-17","label":"Эталон Логические доказательства Целых кратных величин","mandatory":true,"test":"Универсальное утверждение имеет доказательство.","evidence":"Паспорт теоремы и полное доказательство."},
-    {"id":"IME-18","label":"Метрика Подтверждающие сведения Целочисленных кратных значений","mandatory":true,"test":"Проверены нулевые, граничные и контрпримерные случаи.","evidence":"Точные эталонные векторы."},
-    {"id":"IME-19","label":"Правило оценки Документальные свидетельства Кратных целочисленных отношений","mandatory":true,"test":"Происхождение и история статуса воспроизводимы.","evidence":"Путь, раздел, ревизия и ссылка."},
-    {"id":"IME-20","label":"Критериальный признак Концептуальные аргументы Целочисленных мультипликативных коэффициентов","mandatory":true,"test":"Исключены смешение понятий и чрезмерные обобщения.","evidence":"Типовой анализ, контрпримеры и ограничения."}
+    {
+      "id": "IME-01",
+      "label": "Показатель Доказательства Целых кратностей",
+      "mandatory": true,
+      "test": "Утверждение задаёт точное отношение и область действия.",
+      "evidence": "Формула, домен и источник."
+    },
+    {
+      "id": "IME-02",
+      "label": "Мерило Аргументации Целочисленных множителей",
+      "mandatory": true,
+      "test": "Для делимости предъявлен целый множитель q.",
+      "evidence": "Равенство n=q*d или доказательство существования q."
+    },
+    {
+      "id": "IME-03",
+      "label": "Признак Подтверждения Целочисленных множительностей",
+      "mandatory": true,
+      "test": "Свидетель q проверен точной арифметикой.",
+      "evidence": "Точное равенство и независимая проверка."
+    },
+    {
+      "id": "IME-04",
+      "label": "Параметр Подкрепления Целых числовых кратностей",
+      "mandatory": true,
+      "test": "Область чисел и типы переменных объявлены.",
+      "evidence": "Z, N или N0 и ограничения."
+    },
+    {
+      "id": "IME-05",
+      "label": "Оценка Доводы Дискретных кратностей",
+      "mandatory": true,
+      "test": "Округление не используется как доказательство делимости.",
+      "evidence": "Евклидово деление и остаток."
+    },
+    {
+      "id": "IME-06",
+      "label": "Индикатор Аргументы Натуральных кратностей",
+      "mandatory": true,
+      "test": "Различаются q в N0 и q в N.",
+      "evidence": "Явная область натурального множителя."
+    },
+    {
+      "id": "IME-07",
+      "label": "Стандарт Мотивировки Целочисленных коэффициентов кратности",
+      "mandatory": true,
+      "test": "Различаются q, a_i, v_p, nu_B и число повторений.",
+      "evidence": "Таблица типов обозначений."
+    },
+    {
+      "id": "IME-08",
+      "label": "Норматив Пояснения Кратностей в целых числах",
+      "mandatory": true,
+      "test": "Определение имеет смысл, пример и границу.",
+      "evidence": "Дефиниция и контрпример к неверному расширению."
+    },
+    {
+      "id": "IME-09",
+      "label": "Требование Разъяснения Целых степеней кратности",
+      "mandatory": true,
+      "test": "Различаются q*d, d^r и B^r.",
+      "evidence": "Определение каждого показателя."
+    },
+    {
+      "id": "IME-10",
+      "label": "Условие Обоснованные утверждения Целочисленных повторений",
+      "mandatory": true,
+      "test": "Повторная сумма отделена от факторной кратности и мультимножества.",
+      "evidence": "Рекурсия или точная формула числа повторов."
+    },
+    {
+      "id": "IME-11",
+      "label": "Основание Доказательные положения Целых множительных соотношений",
+      "mandatory": true,
+      "test": "Предпосылки и зависимости перечислены.",
+      "evidence": "Список определений, лемм и внешних результатов."
+    },
+    {
+      "id": "IME-12",
+      "label": "Показатель соответствия Логические основания Дискретных целочисленных множителей",
+      "mandatory": true,
+      "test": "Для iff доказаны обе импликации.",
+      "evidence": "Полное доказательство обеих сторон."
+    },
+    {
+      "id": "IME-13",
+      "label": "Оценочный параметр Теоретические основания Целочисленных масштабных коэффициентов",
+      "mandatory": true,
+      "test": "Масштабирование задано типизированным отображением.",
+      "evidence": "Область, кодомен и инварианты."
+    },
+    {
+      "id": "IME-14",
+      "label": "Контрольный показатель Научные подтверждения Целых пропорциональных кратностей",
+      "mandatory": true,
+      "test": "Целая кратность отделена от рационального отношения.",
+      "evidence": "Точный остаток и целочисленность частного."
+    },
+    {
+      "id": "IME-15",
+      "label": "Квалификатор Фактические подтверждения Арифметических кратностей",
+      "mandatory": true,
+      "test": "Вычисление имеет происхождение и параметры.",
+      "evidence": "Векторы, версия кода, протокол и статус запуска."
+    },
+    {
+      "id": "IME-16",
+      "label": "Ориентир Рациональные доводы Целочисленных коэффициентных отношений",
+      "mandatory": true,
+      "test": "Рациональное отношение не выдаётся за делимость.",
+      "evidence": "Сокращённая дробь и остаток 0."
+    },
+    {
+      "id": "IME-17",
+      "label": "Эталон Логические доказательства Целых кратных величин",
+      "mandatory": true,
+      "test": "Универсальное утверждение имеет доказательство.",
+      "evidence": "Паспорт теоремы и полное доказательство."
+    },
+    {
+      "id": "IME-18",
+      "label": "Метрика Подтверждающие сведения Целочисленных кратных значений",
+      "mandatory": true,
+      "test": "Проверены нулевые, граничные и контрпримерные случаи.",
+      "evidence": "Точные эталонные векторы."
+    },
+    {
+      "id": "IME-19",
+      "label": "Правило оценки Документальные свидетельства Кратных целочисленных отношений",
+      "mandatory": true,
+      "test": "Происхождение и история статуса воспроизводимы.",
+      "evidence": "Путь, раздел, ревизия и ссылка."
+    },
+    {
+      "id": "IME-20",
+      "label": "Критериальный признак Концептуальные аргументы Целочисленных мультипликативных коэффициентов",
+      "mandatory": true,
+      "test": "Исключены смешение понятий и чрезмерные обобщения.",
+      "evidence": "Типовой анализ, контрпримеры и ограничения."
+    }
   ],
   "profiles": {
-    "integer_multiple": ["IME-01","IME-02","IME-03","IME-04","IME-05","IME-06","IME-07","IME-08","IME-11","IME-12","IME-14","IME-16","IME-17","IME-18","IME-19","IME-20"],
-    "prime_factor_multiplicity": ["IME-01","IME-04","IME-05","IME-07","IME-08","IME-09","IME-11","IME-12","IME-15","IME-17","IME-18","IME-19","IME-20"],
-    "composite_base_depth": ["IME-01","IME-04","IME-05","IME-07","IME-08","IME-09","IME-11","IME-12","IME-13","IME-15","IME-17","IME-18","IME-19","IME-20"],
-    "multiset_repetition": ["IME-01","IME-04","IME-06","IME-07","IME-08","IME-10","IME-11","IME-12","IME-15","IME-18","IME-19","IME-20"],
-    "positional_scale": ["IME-01","IME-04","IME-05","IME-07","IME-09","IME-11","IME-12","IME-13","IME-15","IME-17","IME-18","IME-19","IME-20"]
+    "integer_multiple": [
+      "IME-01",
+      "IME-02",
+      "IME-03",
+      "IME-04",
+      "IME-05",
+      "IME-06",
+      "IME-07",
+      "IME-08",
+      "IME-11",
+      "IME-12",
+      "IME-14",
+      "IME-16",
+      "IME-17",
+      "IME-18",
+      "IME-19",
+      "IME-20"
+    ],
+    "prime_factor_multiplicity": [
+      "IME-01",
+      "IME-04",
+      "IME-05",
+      "IME-07",
+      "IME-08",
+      "IME-09",
+      "IME-11",
+      "IME-12",
+      "IME-15",
+      "IME-17",
+      "IME-18",
+      "IME-19",
+      "IME-20"
+    ],
+    "composite_base_depth": [
+      "IME-01",
+      "IME-04",
+      "IME-05",
+      "IME-07",
+      "IME-08",
+      "IME-09",
+      "IME-11",
+      "IME-12",
+      "IME-13",
+      "IME-15",
+      "IME-17",
+      "IME-18",
+      "IME-19",
+      "IME-20"
+    ],
+    "multiset_repetition": [
+      "IME-01",
+      "IME-04",
+      "IME-06",
+      "IME-07",
+      "IME-08",
+      "IME-10",
+      "IME-11",
+      "IME-12",
+      "IME-15",
+      "IME-18",
+      "IME-19",
+      "IME-20"
+    ],
+    "positional_scale": [
+      "IME-01",
+      "IME-04",
+      "IME-05",
+      "IME-07",
+      "IME-09",
+      "IME-11",
+      "IME-12",
+      "IME-13",
+      "IME-15",
+      "IME-17",
+      "IME-18",
+      "IME-19",
+      "IME-20"
+    ]
   },
   "source_documents": [
     "docs/VYUNENKO_THEORY.md",
@@ -57,23 +262,155 @@
     "docs/K3_STRATIFIED_MATHEMATICS.md",
     "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md"
+    "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/K3_CLAIM_REGISTRY.json",
+    "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+    "schemas/k3-claim-registry.v1.schema.json"
   ],
   "reference_cases": [
-    {"id":"IME-CASE-01","type":"exact_divisibility","divisor":"7","dividend":"42","quotient":"6","remainder":"0","expected_divisible":true},
-    {"id":"IME-CASE-02","type":"exact_divisibility","divisor":"7","dividend":"43","quotient":"6","remainder":"1","expected_divisible":false},
-    {"id":"IME-CASE-03","type":"zero_divisor","divisor":"0","dividend":"0","status":"degenerate_no_unique_quotient"},
-    {"id":"IME-CASE-04","type":"radix_divisibility","number":"1000","power":1,"expected_divisible":true},
-    {"id":"IME-CASE-05","type":"radix_divisibility","number":"8","power":1,"expected_divisible":false},
-    {"id":"IME-CASE-06","type":"positional_divisibility","coefficients_le":[0,0,50],"power":2,"expected_divisible":true,"expected_value":"50000000"},
-    {"id":"IME-CASE-07","type":"positional_divisibility","coefficients_le":[7,0,50],"power":1,"expected_divisible":false,"expected_value":"50000007"},
-    {"id":"IME-CASE-08","type":"valuation_product","left":"8","right":"125","expected_left_depth":0,"expected_right_depth":0,"expected_product_depth":1},
-    {"id":"IME-CASE-09","type":"prime_factor_multiplicity","number":"360","prime":"2","expected_exponent":3},
-    {"id":"IME-CASE-10","type":"prime_factor_multiplicity","number":"360","prime":"3","expected_exponent":2},
-    {"id":"IME-CASE-11","type":"prime_factor_multiplicity","number":"360","prime":"5","expected_exponent":1},
-    {"id":"IME-CASE-12","type":"multiset_repetition","sequence":["a","b","a","c"],"element":"a","expected_count":2},
-    {"id":"IME-CASE-13","type":"positional_scale","coefficients_le":[5,34],"positions":2,"expected_coefficients_le":[0,0,5,34],"expected_value":"34005000000"},
-    {"id":"IME-CASE-14","type":"unit_mod_radix","number":"2","expected_unit":false},
-    {"id":"IME-CASE-15","type":"unit_mod_radix","number":"7","expected_unit":true}
-  ]
+    {
+      "id": "IME-CASE-01",
+      "type": "exact_divisibility",
+      "divisor": "7",
+      "dividend": "42",
+      "quotient": "6",
+      "remainder": "0",
+      "expected_divisible": true
+    },
+    {
+      "id": "IME-CASE-02",
+      "type": "exact_divisibility",
+      "divisor": "7",
+      "dividend": "43",
+      "quotient": "6",
+      "remainder": "1",
+      "expected_divisible": false
+    },
+    {
+      "id": "IME-CASE-03",
+      "type": "zero_divisor",
+      "divisor": "0",
+      "dividend": "0",
+      "status": "degenerate_no_unique_quotient"
+    },
+    {
+      "id": "IME-CASE-04",
+      "type": "radix_divisibility",
+      "number": "1000",
+      "power": 1,
+      "expected_divisible": true
+    },
+    {
+      "id": "IME-CASE-05",
+      "type": "radix_divisibility",
+      "number": "8",
+      "power": 1,
+      "expected_divisible": false
+    },
+    {
+      "id": "IME-CASE-06",
+      "type": "positional_divisibility",
+      "coefficients_le": [
+        0,
+        0,
+        50
+      ],
+      "power": 2,
+      "expected_divisible": true,
+      "expected_value": "50000000"
+    },
+    {
+      "id": "IME-CASE-07",
+      "type": "positional_divisibility",
+      "coefficients_le": [
+        7,
+        0,
+        50
+      ],
+      "power": 1,
+      "expected_divisible": false,
+      "expected_value": "50000007"
+    },
+    {
+      "id": "IME-CASE-08",
+      "type": "valuation_product",
+      "left": "8",
+      "right": "125",
+      "expected_left_depth": 0,
+      "expected_right_depth": 0,
+      "expected_product_depth": 1
+    },
+    {
+      "id": "IME-CASE-09",
+      "type": "prime_factor_multiplicity",
+      "number": "360",
+      "prime": "2",
+      "expected_exponent": 3
+    },
+    {
+      "id": "IME-CASE-10",
+      "type": "prime_factor_multiplicity",
+      "number": "360",
+      "prime": "3",
+      "expected_exponent": 2
+    },
+    {
+      "id": "IME-CASE-11",
+      "type": "prime_factor_multiplicity",
+      "number": "360",
+      "prime": "5",
+      "expected_exponent": 1
+    },
+    {
+      "id": "IME-CASE-12",
+      "type": "multiset_repetition",
+      "sequence": [
+        "a",
+        "b",
+        "a",
+        "c"
+      ],
+      "element": "a",
+      "expected_count": 2
+    },
+    {
+      "id": "IME-CASE-13",
+      "type": "positional_scale",
+      "coefficients_le": [
+        5,
+        34
+      ],
+      "positions": 2,
+      "expected_coefficients_le": [
+        0,
+        0,
+        5,
+        34
+      ],
+      "expected_value": "34005000000"
+    },
+    {
+      "id": "IME-CASE-14",
+      "type": "unit_mod_radix",
+      "number": "2",
+      "expected_unit": false
+    },
+    {
+      "id": "IME-CASE-15",
+      "type": "unit_mod_radix",
+      "number": "7",
+      "expected_unit": true
+    }
+  ],
+  "claim_registry": {
+    "path": "docs/K3_CLAIM_REGISTRY.json",
+    "schema": "schemas/k3-claim-registry.v1.schema.json",
+    "role": "Canonical theorem, definition, counterexample and epistemic-status registry; K3-IME remains a supplemental criterion register.",
+    "related_claim_ids": [
+      "K3-BP-THM-001",
+      "K3-BP-THM-002",
+      "K3-CTR-001",
+      "K3-CTR-002"
+    ]
+  }
 }
