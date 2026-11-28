@@ -84,3 +84,7 @@ CI is configured for Python 3.11–3.14. A check result applies only to its spec
 ## Citation and license
 
 Cite a specific Git revision. Metadata: [CITATION.cff](CITATION.cff) and [CITATION.bib](CITATION.bib). License: [Apache-2.0](LICENSE).
+
+## Authorship
+
+Primary author of the Kaskad research corpus and Vyunenko Theory K3: **Ivan-VHS**. Canonical record: [AUTHORS.md](AUTHORS.md); citation metadata: [CITATION.cff](CITATION.cff) and [CITATION.bib](CITATION.bib). Third-party authorship and provenance are governed by [docs/ATTRIBUTION_AND_RIGHTS.md](docs/ATTRIBUTION_AND_RIGHTS.md).
