@@ -977,6 +977,68 @@
       "evidence_status": "definition",
       "independent_review": "not_recorded",
       "verification_note": "A collision in one encoding profile does not imply semantic equivalence, causality, prediction, or a cryptographic property."
+    },
+    {
+      "id": "K3-PRESHEAF-DEF-001",
+      "kind": "definition",
+      "statement": "The K3-GCS local-passport presheaf is a category-valued contravariant functor over an explicitly selected graph topology or site, with restriction functors preserving identities and composition.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§4.5.1, category-valued presheaf and restriction laws",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The graph does not determine a unique topology; the base topology or site is an explicit model parameter."
+    },
+    {
+      "id": "K3-DESCENT-DEF-001",
+      "kind": "definition",
+      "statement": "Object-level sheaf gluing of passport equivalence classes is distinct from category-valued effective descent, which also requires coherent overlap isomorphisms and gluing of morphisms.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§4.5.2–§4.5.3, sheaf of object classes and stack descent",
+      "dependencies": [
+        "K3-PRESHEAF-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "A category-valued presheaf is not asserted to be a stack without the effective descent conditions."
+    },
+    {
+      "id": "K3-CASCADE-DEF-001",
+      "kind": "definition",
+      "statement": "The cascade effect constructor K(X)=S→(Either(Stop,X)×S×J) is the transformer stack ExceptT Stop (StateT S (Writer J)) X with an explicitly ordered short-circuit, state, and proof-journal effect.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§4.6.1, cascade monad and transformer order",
+      "dependencies": [
+        "K3-GCS-DEF-004"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "Unit and bind are stated; the transformer order preserves the updated state and journal on short-circuit."
+    },
+    {
+      "id": "K3-COMONAD-HYP-001",
+      "kind": "hypothesis",
+      "statement": "A fixed-radius local dependency context of a K3 graph may form a comonad on a suitable category of graph contexts if its counit, comultiplication, and coassociativity laws can be defined and verified.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§4.6.2, local neighborhood as a comonadic context",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Pointed finite-radius neighborhoods of typed directed dependency graphs",
+        "assumptions": [
+          "The graph-context category and neighborhood restriction maps are specified",
+          "A counit extracts the value at the central node",
+          "A comultiplication maps contexts into nested contexts",
+          "Coassociativity and both counit laws are verified"
+        ],
+        "boundary": "Arbitrary graph neighborhoods are not claimed to form a comonad."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"

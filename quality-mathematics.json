@@ -58,7 +58,15 @@
     "numerative_records_separate_source_encoding_value_structure_relations_context_interpretation_and_provenance": true,
     "numerative_encoding_profiles_are_explicit_and_versioned": true,
     "numeric_code_structural_and_semantic_equality_layers_are_distinct": true,
-    "interpretations_retain_context_and_provenance": true
+    "interpretations_retain_context_and_provenance": true,
+    "category_valued_presheaf_declares_base_and_restriction_functor_laws": true,
+    "object_class_sheaf_is_distinguished_from_stack_descent": true,
+    "category_valued_descent_checks_overlap_cocycle_and_morphism_gluing": true,
+    "local_global_gluing_uses_explicit_four_valued_evidence": true,
+    "cascade_monad_declares_transformer_order_unit_and_bind_laws": true,
+    "comonad_context_is_not_asserted_without_counit_and_comultiplication_laws": true,
+    "operational_node_statuses_are_distinct_from_four_valued_predicate_results": true,
+    "wave_budget_is_not_treated_as_a_convergence_proof": true
   },
   "k3_constraints": {
     "radix": 1000,
