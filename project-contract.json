@@ -260,5 +260,18 @@
       "schemas/k3-claim-registry.v1.schema.json",
       "schemas/k3-reference-vectors.v1.schema.json"
     ]
+  },
+  "authorship": {
+    "primary_author": "Ivan-VHS",
+    "research_corpus_author": "Ivan-VHS",
+    "vyunenko_theory_k3_author": "Ivan-VHS",
+    "author_identifier": "https://github.com/Ivan-VHS",
+    "canonical_record": "AUTHORS.md",
+    "citation_metadata": [
+      "CITATION.cff",
+      "CITATION.bib"
+    ],
+    "provenance_policy": "docs/ATTRIBUTION_AND_RIGHTS.md",
+    "scope": "Original Kaskad research corpus and original Vyunenko Theory K3 material; cited classical results and third-party materials retain their own authorship, provenance and licenses."
   }
 }
