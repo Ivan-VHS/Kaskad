@@ -1,0 +1,455 @@
+{
+  "$schema": "../schemas/oplage-k3-model.v1.schema.json",
+  "schema": "kaskad.oplage-mathematical-model.v1",
+  "version": "1.0.0",
+  "source": {
+    "repository": "Ivan-VHS/OPlague",
+    "branch": "main",
+    "commit": "ab83f8bfbcb3a1b820067a502e6bb1b7f0b4b7e6",
+    "tree": "282a2f3eedaaf02ce1ffcc039f8951eb5a2cad65",
+    "tracked_file_count": 326,
+    "review_scope": "Full-tree inventory plus selected authoritative documentation, project contracts, schemas, core source modules and focused tests; not a line-by-line audit of every tracked file.",
+    "license": "Apache-2.0"
+  },
+  "integration": {
+    "target_repository": "Ivan-VHS/Kaskad",
+    "theory": "Теория Вьюненко K3",
+    "radix": 1000,
+    "group_min": 0,
+    "group_max": 999,
+    "role": "Exact integer representation layer for counters, indices, generations, versions and bounded quantities. It does not replace typed graphs, vectors, artifacts, hashes, measurements or evidence provenance.",
+    "preserve": {
+      "units": true,
+      "source_provenance": true,
+      "unknown_values": true,
+      "ordering": true,
+      "structural_identity": true,
+      "operation_traces": true
+    }
+  },
+  "inventory": {
+    "directories": {
+      ".architecture": 11,
+      ".clife": 6,
+      ".duckstory": 2,
+      "root": 27,
+      ".github": 41,
+      "assets": 6,
+      "crates": 3,
+      "docs": 86,
+      "examples": 1,
+      "federation": 6,
+      "i18n": 3,
+      "integrations": 3,
+      "mora": 1,
+      "oplague": 6,
+      "schemas": 16,
+      "scripts": 4,
+      "security": 2,
+      "tests": 52,
+      "tools": 50
+    },
+    "capabilities": [
+      {
+        "id": "inventory.windows-pnp-read-only",
+        "status": "implemented",
+        "domain": "inventory"
+      },
+      {
+        "id": "packages.inf-zip-inspection",
+        "status": "implemented",
+        "domain": "package-inspection"
+      },
+      {
+        "id": "udrv.integrity-inspection",
+        "status": "implemented",
+        "domain": "integrity"
+      },
+      {
+        "id": "reports.deterministic-batch-composition",
+        "status": "implemented",
+        "domain": "reporting"
+      },
+      {
+        "id": "metrics.normalized-profile-lab",
+        "status": "implemented",
+        "domain": "metrics"
+      },
+      {
+        "id": "compatibility.exact-id-dry-run",
+        "status": "implemented",
+        "domain": "candidate-graph"
+      },
+      {
+        "id": "federation.versioned-device-snapshot",
+        "status": "implemented",
+        "domain": "federation"
+      },
+      {
+        "id": "interop.pytyliki-native-cross-check",
+        "status": "implemented",
+        "domain": "interop"
+      },
+      {
+        "id": "compatibility.vertical-graph-self-product",
+        "status": "implemented",
+        "domain": "graph-composition"
+      },
+      {
+        "id": "federation.octa-8-horizontal-peer-mesh",
+        "status": "implemented",
+        "domain": "federation"
+      },
+      {
+        "id": "telemetry.gpu-read-only-export",
+        "status": "implemented",
+        "domain": "telemetry"
+      },
+      {
+        "id": "interop.pytyliki-diagnostics-rust",
+        "status": "partial",
+        "domain": "interop"
+      }
+    ],
+    "interfaces": [
+      {
+        "id": "oplage.device-snapshot.v1",
+        "direction": "provides",
+        "status": "implemented",
+        "format": "versioned-json"
+      },
+      {
+        "id": "oplage.inspection-bundle.v1",
+        "direction": "provides",
+        "status": "implemented",
+        "format": "canonical-json"
+      },
+      {
+        "id": "pytyliki.c-abi.v1",
+        "direction": "consumes",
+        "status": "implemented",
+        "format": "native-c-abi"
+      },
+      {
+        "id": "reaper.oplage-comparison.v1",
+        "direction": "consumes",
+        "status": "implemented",
+        "format": "versioned-json"
+      },
+      {
+        "id": "octa.pyramid.peer-mesh.v1",
+        "direction": "both",
+        "status": "implemented",
+        "format": "shared-contract"
+      },
+      {
+        "id": "oplage.reaper-report-audit.v1",
+        "direction": "provides",
+        "status": "implemented",
+        "format": "versioned-json"
+      },
+      {
+        "id": "oplage.gpu-telemetry.v1",
+        "direction": "provides",
+        "status": "implemented",
+        "format": "versioned-json"
+      },
+      {
+        "id": "pytyliki.diagnostics-abi.v1",
+        "direction": "consumes",
+        "status": "partial",
+        "format": "native-c-abi-144-byte-record"
+      }
+    ],
+    "plugins": [
+      "operandu",
+      "dropaul",
+      "zdoro",
+      "pyemont",
+      "dilly",
+      "baplap",
+      "sretuo",
+      "kali",
+      "zalam",
+      "liur",
+      "keel-koh",
+      "vorof",
+      "vprof",
+      "profe",
+      "prossee",
+      "vprossee",
+      "professiya",
+      "profevo"
+    ],
+    "selected_mathematical_domains": [
+      "device-inventory",
+      "identifier-normalization",
+      "bipartite-candidate-graph",
+      "architecture-classification",
+      "bounded-parsing",
+      "udrv-integrity",
+      "cryptographic-provenance",
+      "hmac-pseudonymization",
+      "evidence-conflict",
+      "canonical-report-digest",
+      "metric-vector-analysis",
+      "sample-statistics",
+      "partial-telemetry",
+      "optimistic-transactions",
+      "lww-register",
+      "workflow-dag",
+      "critical-path",
+      "octa-federation",
+      "atomic-quantum-catalogue",
+      "csr120",
+      "ordinal-impact-vectors",
+      "gaming-benchmark-statistics",
+      "guarded-power-restore",
+      "budget-allocation",
+      "atomic-ui-settings",
+      "clife-change-governance"
+    ]
+  },
+  "models": {
+    "candidate_graph": {
+      "kind": "bipartite-graph",
+      "edge_rule": "normalized_device_ids intersection normalized_package_ids is non-empty",
+      "edge_semantics": "candidate-only; not compatibility, trust, safety or installation authorization",
+      "bounds": {
+        "devices": 20000,
+        "packages": 5000,
+        "ids_per_record": 256,
+        "candidate_edges": 100000
+      }
+    },
+    "udrv_v1": {
+      "kind": "manifest-to-container-integrity",
+      "path_set_equality": true,
+      "per_entry_fields": [
+        "canonical_relative_path",
+        "byte_size",
+        "sha256"
+      ],
+      "bounds": {
+        "manifest_bytes": 4194304,
+        "archive_entries": 10000,
+        "file_bytes": 536870912,
+        "total_payload_bytes": 2147483648,
+        "hash_read_buffer_bytes": 1048576
+      },
+      "sha256_proves_publisher_authenticity": false,
+      "extracts_or_executes_payload": false
+    },
+    "metric_profiles": {
+      "domain": "[0,1]^n",
+      "requires_same_dimensions": true,
+      "euclidean": "sqrt(sum((x_i-y_i)^2))",
+      "weighted": "sqrt(sum(w_i*(x_i-y_i)^2)), w_i>=0",
+      "positive_weights_yield_metric": true,
+      "zero_weights_may_yield_pseudometric": true,
+      "cosine_undefined_for_zero_norm": true,
+      "repeat_variance": "sample variance with denominator m-1 for m>=2"
+    },
+    "evidence": {
+      "states": [
+        "single_source",
+        "multi_source_consistent",
+        "conflicted"
+      ],
+      "group_key": [
+        "pseudonymous_subject",
+        "exact_attribute",
+        "exact_time_window"
+      ],
+      "identifier_protection": "HMAC-SHA-256 with domain separation and caller-managed key",
+      "same_key_allows_cross_snapshot_linkage": true,
+      "pseudonymization_is_anonymization": false,
+      "sha256_is_source_authentication": false
+    },
+    "telemetry": {
+      "mode": "read-only",
+      "current_gpu_provider": "NVIDIA",
+      "unknown_sensor_value": "null",
+      "maximum_gpu_records": 16,
+      "utc_timestamp_is_monotonic_clock": false,
+      "telemetry_grants_device_control": false
+    },
+    "transactions": {
+      "kind": "bounded-in-memory-evidence-transaction",
+      "default_payload_limit_bytes": 8388608,
+      "commit_rule": "expected_generation equals current_generation",
+      "migration_rule": "target_schema_version strictly increases",
+      "rollback_target": "last_committed_snapshot",
+      "writes_device_or_driver_state": false,
+      "durable_database_transaction": false
+    },
+    "local_first": {
+      "kind": "single-value-lww-register-over-append-only-operation-log",
+      "operation_order": [
+        "lamport",
+        "actor",
+        "counter",
+        "operation_id"
+      ],
+      "explicit_export_merge_only": true,
+      "network_sync_implemented": false,
+      "general_crdt_framework": false
+    },
+    "workflow": {
+      "kind": "directed_acyclic_graph",
+      "cycle_rejected": true,
+      "topological_dry_run": true,
+      "critical_path_recurrence": "finish(v)=duration(v)+max(finish(u) for predecessors u)",
+      "workflow_steps_executed": false
+    },
+    "octa_federation": {
+      "project_count": 4,
+      "directed_peer_edges_without_loops": 12,
+      "self_loops": 4,
+      "facets": 8,
+      "hub_executable_runtime": false,
+      "note": "One project-contract capability summary uses stale/inconsistent three-project wording; the topology JSON lists four projects and 12 directed links."
+    },
+    "atomic_quantum": {
+      "function_count": 133,
+      "families": [
+        {
+          "id": "state",
+          "first": 1,
+          "last": 22,
+          "count": 22
+        },
+        {
+          "id": "entanglement",
+          "first": 23,
+          "last": 44,
+          "count": 22
+        },
+        {
+          "id": "measurement",
+          "first": 45,
+          "last": 66,
+          "count": 22
+        },
+        {
+          "id": "noise_ecc",
+          "first": 67,
+          "last": 88,
+          "count": 22
+        },
+        {
+          "id": "atomic_dynamics",
+          "first": 89,
+          "last": 110,
+          "count": 22
+        },
+        {
+          "id": "algorithms_telemetry",
+          "first": 111,
+          "last": 133,
+          "count": 23
+        }
+      ],
+      "execution_model": "bounded_classical_simulation",
+      "physical_hardware_claimed": false
+    },
+    "csr120": {
+      "principles": 120,
+      "domains": 8,
+      "executable_checks": 36,
+      "medical_or_diagnostic_product": false
+    },
+    "impact_profiles": {
+      "profiles": 20,
+      "dimensions": [
+        "acoustic",
+        "scale",
+        "kinetic",
+        "reach",
+        "impulse"
+      ],
+      "rank_min": 1,
+      "rank_max": 5,
+      "semantics": "ordinal_lexical_not_physical_measurement"
+    },
+    "budget": {
+      "categories": 6,
+      "balance": "limit - sum(allocations)",
+      "excess": "max(0,sum(allocations)-limit)",
+      "automatic_clamping": false,
+      "prices_are_live_quotes": false
+    },
+    "gaming": {
+      "benchmark_comparison_requires_comparable_conditions": true,
+      "regression_proves_causality": false,
+      "driver_install_or_rollback": false,
+      "power_restore_guard": "restore original only if current plan still equals the plan set by this session"
+    },
+    "clife": {
+      "lifecycle": [
+        "inventory",
+        "baseline",
+        "checkpoint",
+        "isolated_change",
+        "validation",
+        "human_review",
+        "accept_or_recover"
+      ],
+      "autonomous_source_rewriter": false,
+      "review_status": "pilot"
+    }
+  },
+  "conflicts_to_resolve": [
+    {
+      "id": "octa-project-count",
+      "topic": "OCTA project count",
+      "evidence": [
+        "federation/octa-pyramid.v1.json",
+        "docs/OCTA_PYRAMID_FEDERATION.md",
+        "project-contract.json"
+      ],
+      "status": "inconsistent-wording",
+      "resolution": "Use four-project JSON topology as current evidence; update stale three-project summary only after tests and contract owner review."
+    },
+    {
+      "id": "retry-count",
+      "topic": "retry maximum",
+      "evidence": [
+        "docs/DISTRIBUTED_SYSTEMS_ENGINEERING_STANDARD.md",
+        ".architecture/resilience-policy.json"
+      ],
+      "status": "conflicting-values",
+      "resolution": "Reconcile 10 versus 3; policy is contract-only and does not prove a runtime retry loop."
+    },
+    {
+      "id": "driver-deployment-scope",
+      "topic": "driver deployment",
+      "evidence": [
+        "README.md",
+        "docs/GAMING_PERFORMANCE_WORKBENCH.md",
+        ".architecture/resilience-policy.json"
+      ],
+      "status": "scope-mismatch",
+      "resolution": "Current product behavior remains read-only; planned/contract-only install workflow must not be presented as implemented."
+    },
+    {
+      "id": "rust-migration-scope",
+      "topic": "Rust migration",
+      "evidence": [
+        "README.md",
+        "project-contract.json",
+        "crates/"
+      ],
+      "status": "partial-integration",
+      "resolution": "Do not describe the ABI consumer as a complete Rust/Slint application migration."
+    }
+  ],
+  "evidence_status": {
+    "full_tree_inventory": true,
+    "selected_documentation_reviewed": true,
+    "selected_source_modules_reviewed": true,
+    "selected_contracts_and_schemas_reviewed": true,
+    "all_326_files_reviewed_line_by_line": false,
+    "all_implementation_claims_independently_proven": false
+  }
+}
