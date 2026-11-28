@@ -49,7 +49,8 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "computable_K3_numbering_and_TCV_K3_index_pullbacks"
     ]
   },
   "scope": [
@@ -93,7 +94,9 @@
     "typed_applied_mathematical_models",
     "repository_architecture_and_navigation",
     "claim_and_counterexample_registry",
-    "machine_readable_reference_vector_schema"
+    "machine_readable_reference_vector_schema",
+    "computable_numberings_and_index_morphisms",
+    "typed_CV_index_pullbacks"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -193,7 +196,9 @@
     "tests/README.md",
     "schemas/README.md",
     "scripts/README.md",
-    "docs/KASKAD_INSTITUTE_CHARTER.md"
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md",
+    "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",

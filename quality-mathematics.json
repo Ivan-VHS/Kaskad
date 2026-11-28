@@ -28,7 +28,11 @@
     "every_counterexample_names_the_rejected_claim_and_exact_witness": true,
     "theorem_and_hypothesis_statuses_are_tracked_by_stable_claim_id": true,
     "proof_review_and_machine_check_status_are_separate": true,
-    "applied_models_do_not_inherit_theorem_status_from_source_domain": true
+    "applied_models_do_not_inherit_theorem_status_from_source_domain": true,
+    "equivalence_collapse_requires_common_typed_carrier": true,
+    "description_complexity_does_not_imply_object_nonexistence": true,
+    "integrals_declare_density_domain_and_measure": true,
+    "semantic_load_metrics_are_operationally_defined": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -115,7 +119,11 @@
     "treating_the_1000_adic_completion_as_the_ordinary_integer_ring": true,
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
-    "using_1000_not_dividing_x_as_a_unit_criterion": true
+    "using_1000_not_dividing_x_as_a_unit_criterion": true,
+    "identifying_empty_set_with_numeric_zero_or_scalar_without_typed_map": true,
+    "evaluating_real_functions_at_empty_set": true,
+    "treating_semantic_overhead_as_a_standard_number_class": true,
+    "inferring_object_nonexistence_from_description_quality": true
   },
   "review": {
     "mathematical_review_required": true,
