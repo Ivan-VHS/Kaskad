@@ -1,0 +1,29 @@
+name: Scientific review gate
+
+on:
+  push:
+    branches:
+      - main
+      - "docs/**"
+      - "theory/**"
+      - "research/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-scientific-review-register:
+    name: Validate scientific review register integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate 60-point scientific review register
+        run: node scripts/validate-scientific-review-gate.mjs

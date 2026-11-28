@@ -12,7 +12,10 @@
     "cross_repository_relationships_are_mathematical_only",
     "no_operating_system_programming_language_ide_driver_or_application_product_scope",
     "executable_tools_are_optional_support_for_mathematical_verification",
-    "computation_and_experiment_do_not_replace_proofs"
+    "computation_and_experiment_do_not_replace_proofs",
+    "institute_is_a_repository_native_governance_model_not_a_legal_entity",
+    "external_scientific_recognition_requires_verifiable_external_evidence",
+    "mathematical_computational_implementation_and_recognition_statuses_are_orthogonal"
   ],
   "theory": {
     "id": "K3",
@@ -46,7 +49,8 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "computable_K3_numbering_and_TCV_K3_index_pullbacks"
     ]
   },
   "scope": [
@@ -73,7 +77,16 @@
     "knot_theory_and_topological_invariants",
     "analytic_number_theory",
     "cooperative_formula_synthesis",
-    "typed_applied_mathematical_models_from_related_repositories"
+    "typed_applied_mathematical_models_from_related_repositories",
+    "homological_algebra_and_simplicial_cohomology",
+    "sheaf_topoi_and_stratified_spaces",
+    "lattice_theory_and_orthomodular_logic",
+    "homotopy_type_theory_and_higher_categories",
+    "scheme_theory_and_commutative_algebra",
+    "fractal_geometry",
+    "semiotics_hermeneutics_and_symbolic_interpretation",
+    "cryptography_steganography_security_boundary_models",
+    "triadic_cascade_operational_semantics"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -87,7 +100,12 @@
     "two_channel_composite_radix_geometry",
     "finite_profile_morphology",
     "directed_expression_composition",
-    "typed_applied_mathematical_models"
+    "typed_applied_mathematical_models",
+    "repository_architecture_and_navigation",
+    "claim_and_counterexample_registry",
+    "machine_readable_reference_vector_schema",
+    "computable_numberings_and_index_morphisms",
+    "typed_CV_index_pullbacks"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -171,7 +189,26 @@
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+    "docs/REPOSITORY_ARCHITECTURE.md",
+    "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+    "docs/01-foundations/README.md",
+    "docs/02-core-theory/README.md",
+    "docs/03-proofs-and-theorems/README.md",
+    "docs/04-algebra-and-topology/README.md",
+    "docs/05-classical-crosswalk/README.md",
+    "docs/06-open-problems/README.md",
+    "docs/07-applied-models/README.md",
+    "docs/08-computational-evidence/README.md",
+    "formal/README.md",
+    "schemas/k3-reference-vectors.v1.schema.json",
+    "tests/README.md",
+    "schemas/README.md",
+    "scripts/README.md",
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md",
+    "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+    "docs/KASKAD_INSTITUTE_CHARTER.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -220,5 +257,59 @@
     "doi_policy": "Do not claim a DOI or arXiv identifier unless one has actually been assigned.",
     "license_policy": "Respect the existing Apache-2.0 LICENSE; do not imply a separate license without an explicit license file.",
     "environment_policy": "Record only tools and versions actually used; do not impose a default Python or runtime dependency."
+  },
+  "repository_layout": {
+    "architecture_document": "docs/REPOSITORY_ARCHITECTURE.md",
+    "navigation_root": "docs/INDEX.md",
+    "canonical_documents_keep_stable_paths": true,
+    "documentation_layers": [
+      "docs/01-foundations/README.md",
+      "docs/02-core-theory/README.md",
+      "docs/03-proofs-and-theorems/README.md",
+      "docs/04-algebra-and-topology/README.md",
+      "docs/05-classical-crosswalk/README.md",
+      "docs/06-open-problems/README.md",
+      "docs/07-applied-models/README.md",
+      "docs/08-computational-evidence/README.md"
+    ],
+    "claim_registry": "docs/K3_CLAIM_REGISTRY.json",
+    "counterexample_register": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+    "reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
+    "schemas": [
+      "schemas/k3-claim-registry.v1.schema.json",
+      "schemas/k3-reference-vectors.v1.schema.json"
+    ]
+  },
+  "authorship": {
+    "primary_author": "Ivan-VHS",
+    "research_corpus_author": "Ivan-VHS",
+    "vyunenko_theory_k3_author": "Ivan-VHS",
+    "author_identifier": "https://github.com/Ivan-VHS",
+    "canonical_record": "AUTHORS.md",
+    "citation_metadata": [
+      "CITATION.cff",
+      "CITATION.bib"
+    ],
+    "provenance_policy": "docs/ATTRIBUTION_AND_RIGHTS.md",
+    "scope": "Original Kaskad research corpus and original Vyunenko Theory K3 material; cited classical results and third-party materials retain their own authorship, provenance and licenses."
+  },
+  "institutional_governance": {
+    "name": "Kaskad Institute of Self-Developing Mathematics",
+    "name_ru": "Институт саморазвивающейся математики Kaskad",
+    "identifier": "KASKAD-ISM",
+    "model": "repository_native_virtual_research_institute",
+    "charter": "docs/KASKAD_INSTITUTE_CHARTER.md",
+    "coordination_core": "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "scientific_status_record": "docs/DEVELOPMENT_STATUS.md#4-mathematical-status",
+    "research_lifecycle": "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+    "claim_registry": "docs/K3_CLAIM_REGISTRY.json",
+    "legal_entity_claimed": false,
+    "accreditation_claimed": false,
+    "external_recognition_claimed": false,
+    "status_axes_are_orthogonal": true,
+    "independent_review_required_for_reviewed_status": true,
+    "automated_checks_do_not_establish_mathematical_truth": true,
+    "external_recognition_requires_verifiable_external_evidence": true,
+    "status_changes_require_auditable_evidence": true
   }
 }

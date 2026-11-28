@@ -1,5 +1,3 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # Математические основания сигналов и цифровой обработки в Теории Вьюненко
 
 **Проект:** Kaskad · Теория Вьюненко K3  
