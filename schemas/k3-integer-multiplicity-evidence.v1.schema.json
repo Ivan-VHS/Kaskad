@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/k3-integer-multiplicity-evidence.v1.schema.json",
+  "title": "Kaskad K3 integer multiplicity evidence register",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "standard_id",
+    "project",
+    "theory_id",
+    "theory_version",
+    "radix",
+    "radix_factorization",
+    "coefficient_range",
+    "coefficient_order",
+    "status_vocabulary",
+    "criteria",
+    "profiles",
+    "source_documents",
+    "reference_cases"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "standard_id": {"const": "K3-IME-1.0.0"},
+    "project": {"const": "Kaskad"},
+    "theory_id": {"const": "K3"},
+    "theory_version": {"type": "string", "minLength": 1},
+    "radix": {"type": "integer", "const": 1000},
+    "radix_factorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["2", "5"],
+      "properties": {"2": {"const": 3}, "5": {"const": 3}}
+    },
+    "coefficient_range": {
+      "type": "array",
+      "prefixItems": [{"const": 0}, {"const": 999}],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "coefficient_order": {"const": "least_significant_to_most_significant"},
+    "status_vocabulary": {
+      "type": "array",
+      "items": {"enum": ["met", "partial", "not_met", "not_applicable", "not_audited"]},
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "mandatory", "test", "evidence"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^IME-[0-9]{2}$"},
+          "label": {"type": "string", "minLength": 5},
+          "mandatory": {"type": "boolean"},
+          "test": {"type": "string", "minLength": 5},
+          "evidence": {"type": "string", "minLength": 5}
+        }
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "minProperties": 5,
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {"type": "string", "pattern": "^IME-[0-9]{2}$"}
+      }
+    },
+    "source_documents": {
+      "type": "array",
+      "minItems": 10,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 5}
+    },
+    "reference_cases": {
+      "type": "array",
+      "minItems": 15,
+      "items": {
+        "type": "object",
+        "required": ["id", "type"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^IME-CASE-[0-9]{2}$"},
+          "type": {
+            "enum": [
+              "exact_divisibility",
+              "zero_divisor",
+              "radix_divisibility",
+              "positional_divisibility",
+              "valuation_product",
+              "prime_factor_multiplicity",
+              "multiset_repetition",
+              "positional_scale",
+              "unit_mod_radix"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
