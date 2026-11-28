@@ -4,6 +4,15 @@ Kaskad посвящён математической теории каскадн
 
 ## Основные математические документы
 
+- [Карта научной консолидации Kaskad](docs/K3_SCIENTIFIC_CONSOLIDATION.md) — единая иерархия источников, доказательный контракт и границы математических расширений.
+- [Формальная и эпистемическая инфраструктура](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) — типы утверждений, паспорт теоремы, доказательные зависимости и пределы вычислительной проверки.
+- [Стандарт научной математической документации](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md).
+- [Реестр математических утверждений](docs/K3_CLAIM_REGISTRY.json), [его JSON Schema](schemas/k3-claim-registry.v1.schema.json) и [эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json).
+- [Арифметика составного основания K3](docs/K3_COMPOSITE_RADIX_ARITHMETIC.md) — CRT, единицы, делители нуля, делительная глубина и пополнение.
+- [Авторские каскадные формулы K3](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) и [4685 параметризованных экземпляров](docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md).
+- [Двухканальная геометрия K3 и закон переноса](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md).
+- [Расслоенная математика K3](docs/K3_STRATIFIED_MATHEMATICS.md).
+- [Мультиязычный реестр](docs/LANGUAGE_REGISTER.md).
 - [Теория Вьюненко — фундаментальная математическая теория K3](docs/VYUNENKO_THEORY.md)
 - [Структурная семантика и упорядоченные суммы K3](docs/K3_STRUCTURAL_SEMANTICS_AND_ORDERED_SUMS.md) — числовое и структурное равенство, K3-PAD/K3-RAW, упорядоченные выражения и операционные следы.
 - [Глава II — уравнения каскадного баланса, нормализация и инварианты](docs/CHAPTER_II_CASCADE_BALANCE.md)
