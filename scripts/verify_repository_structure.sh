@@ -55,7 +55,7 @@ case "$repo" in
     ;;
   Kaskad)
     for path in src/kaskad_k3 tests/vectors docs/01-foundations docs/02-core-theory docs/03-proofs-and-theorems docs/04-algebra-and-topology docs/05-classical-crosswalk docs/06-open-problems docs/07-applied-models docs/08-computational-evidence formal; do require_dir "$path"; done
-    for path in project-contract.json pyproject.toml CITATION.cff CITATION.bib docs/VYUNENKO_THEORY.md docs/REPOSITORY_ARCHITECTURE.md docs/INDEX.md; do require_file "$path"; done
+    for path in project-contract.json pyproject.toml CITATION.cff CITATION.bib docs/VYUNENKO_THEORY.md docs/REPOSITORY_ARCHITECTURE.md docs/INDEX.md docs/status-and-scope.md docs/roadmap.md formal/README.md; do require_file "$path"; done
     for path in docs/01-foundations/README.md docs/02-core-theory/README.md docs/03-proofs-and-theorems/README.md docs/04-algebra-and-topology/README.md docs/05-classical-crosswalk/README.md docs/06-open-problems/README.md docs/07-applied-models/README.md docs/08-computational-evidence/README.md; do require_file "$path"; done
     for link in 01-foundations/README.md 02-core-theory/README.md 03-proofs-and-theorems/README.md 04-algebra-and-topology/README.md 05-classical-crosswalk/README.md 06-open-problems/README.md 07-applied-models/README.md 08-computational-evidence/README.md status-and-scope.md roadmap.md REPOSITORY_STRUCTURE_PROFILE.md ../formal/README.md; do
       if ! grep -Fq -- "$link" docs/INDEX.md; then
