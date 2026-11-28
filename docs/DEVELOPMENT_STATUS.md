@@ -107,9 +107,9 @@ The reference package is a supporting exact-integer instrument, not the definiti
 - A source implementation can be called conformant only against a defined specification and a bounded verification scope.
 - The inverse-limit completion, CRT topological ring, probability results and infinite structures retain their own mathematical proof obligations independently of package features.
 
-### 4.6. Current main verification snapshot
+### 4.6. Historical baseline verification snapshot
 
-The inspected main commit at the start of this governance change was 5ded82cd197e866aecfe93b7bec58f4c90032186. The combined commit-status lookup returned no status entries, and the pull-request workflow lookup for that commit returned no runs. The current-main CI state is therefore **not verified** in this record. An empty result is not evidence of either a successful or a failed run.
+At the beginning of this governance work, the inspected baseline commit was 5ded82cd197e866aecfe93b7bec58f4c90032186. The combined commit-status lookup returned no status entries, and the pull-request workflow lookup for that historical commit returned no runs. This is a historical baseline observation only; it is **not** a statement about the current main branch or this pull request. An empty result is not evidence of either a successful or a failed run.
 
 Any later CI statement must name the exact commit SHA, workflow, job or matrix, execution time and actual conclusion. Historical results must remain attached to the commit on which they ran.
 
