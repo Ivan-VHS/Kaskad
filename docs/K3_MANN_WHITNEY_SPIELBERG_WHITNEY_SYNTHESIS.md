@@ -838,13 +838,13 @@ r_n^{\mathrm W}=\sin\left(\frac{6\pi n}{10000}\right)
 
 Период 10000 относится к паре фаз \((\psi_n,\chi_n)\). Наблюдаемая последовательность \(z_n^{\mathrm W}\) может иметь более короткий период из-за неинъективности полярного отображения; без отдельного доказательства ей не приписывается точный минимальный период 10000.
 
-Определим полный дискретный цикл:
+Определим N-точечную выборку радиального закона (первые 1000 точек автономной фазовой орбиты; полный фазовый период при этом равен 10000):
 
 \[
-\mathcal O_{\mathrm W}
+\mathcal O_{\mathrm W}^{(N)}
 =
-(z_0^{\mathrm W},z_1^{\mathrm W},\ldots,z_{9999}^{\mathrm W})
-\in(\mathbb R^2)^{10000}.
+(z_0^{\mathrm W},z_1^{\mathrm W},\ldots,z_{999}^{\mathrm W})
+\in(\mathbb R^2)^{1000}.
 \]
 
 ### 12.4. Выход третьего этапа
@@ -856,7 +856,7 @@ r_n^{\mathrm W}=\sin\left(\frac{6\pi n}{10000}\right)
 =
 \left(
 T_{\mathrm{cl}},\mathcal O_{\mathrm{cl}},
-T_{\mathrm W},\mathcal O_{\mathrm W}
+T_{\mathrm W},\mathcal O_{\mathrm W}^{(N)}
 \right).
 \]
 
@@ -868,7 +868,7 @@ T_{\mathrm W},\mathcal O_{\mathrm W}
 (\mathbb T_q\to\mathbb T_q)
 \times(\mathbb R^2)^{1000}
 \times(\mathbb T^2\to\mathbb T^2)
-\times(\mathbb R^2)^{10000}.
+\times(\mathbb R^2)^{1000}.
 \]
 
 Тогда \(\mathcal S_{\mathrm{JW}}\in\mathfrak D_{JW}\), при фиксированных параметрах и начальных состояниях, указанных выше.
