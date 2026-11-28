@@ -73,7 +73,15 @@
     "cv1_directional_zero_relation_is_not_replaced_by_equality": true,
     "cv_k3_m1_requires_componentwise_nonnegative_state_inputs_and_matrices": true,
     "cv_k3_m1_strict_weighted_growth_requires_nonzero_increment": true,
-    "cv_k3_m1_is_model_specific_not_a_universal_dynamic_law": true
+    "cv_k3_m1_is_model_specific_not_a_universal_dynamic_law": true,
+    "discriminant_functions_declare_domain_codomain_and_partiality": true,
+    "admissible_discriminant_regions_are_predeclared_with_explicit_boundaries": true,
+    "left_channel_erasure_preserves_the_standard_channel_and_uses_a_typed_marker": true,
+    "erasure_marker_is_distinct_from_integer_zero_and_zero_k3_coefficient": true,
+    "semantic_erasure_is_distinct_from_physical_storage_deletion": true,
+    "undefined_discriminants_do_not_trigger_destructive_branch_by_default": true,
+    "universal_reverse_cursed_root_claims_require_complete_quantifiers_and_counterexample_review": true,
+    "visual_brand_analogies_are_non_normative_and_separate_from_mathematical_proof": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -145,7 +153,8 @@
         "directed_dependency_propagation_with_componentwise_cap",
         "predeclared_twenty_level_thresholds",
         "metaphorical_labels_are_not_medical_claims"
-      ]
+      ],
+      "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure"
     }
   },
   "forbidden": {
