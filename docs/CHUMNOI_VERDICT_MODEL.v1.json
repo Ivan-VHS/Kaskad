@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0.0",
+  "theory": {
+    "id": "CV-K3",
+    "title": "Теория Чумного Вердикта",
+    "version": "1.0.0",
+    "base_theory": "K3",
+    "base_radix": 1000,
+    "status": "formalized_compatible_extension",
+    "base_k3_semantics_changed": false,
+    "ordinary_integer_equality_changed": false
+  },
+  "instance": {
+    "parameter": "kappa",
+    "domain": "Z",
+    "nonzero_required": true,
+    "exactly_one_value_per_instance": true,
+    "globally_selected_default": null
+  },
+  "semantics": {
+    "carrier": "Z",
+    "directed_relation": {
+      "symbol": "rightsquigarrow_kappa",
+      "definition": "x=0 and y=kappa",
+      "unique_nontrivial_pair": [
+        "0",
+        "kappa"
+      ],
+      "asymmetric": true,
+      "ordinary_equality": false
+    },
+    "verdict_map": {
+      "symbol": "P_kappa",
+      "definition": "kappa if n=0; n otherwise",
+      "idempotent": true,
+      "image": "Z excluding 0",
+      "noninjective": true,
+      "only_nontrivial_fiber": [
+        "0",
+        "kappa"
+      ]
+    },
+    "profiles": {
+      "post": "P_kappa(Val_K3(expression))",
+      "eager_addition": "P_kappa(a+b)",
+      "eager_multiplication": "P_kappa(a*b)"
+    }
+  },
+  "theorem_ids": [
+    "CV-K3-T1",
+    "CV-K3-T2",
+    "CV-K3-T3",
+    "CV-K3-T4",
+    "CV-K3-T5",
+    "CV-K3-T6"
+  ],
+  "illustrative_instance": {
+    "kappa": 5,
+    "map_cases": [
+      {
+        "input": 0,
+        "output": 5
+      },
+      {
+        "input": 5,
+        "output": 5
+      },
+      {
+        "input": 42,
+        "output": 42
+      },
+      {
+        "input": -7,
+        "output": -7
+      },
+      {
+        "input": 1000,
+        "output": 1000
+      }
+    ],
+    "relation_cases": [
+      {
+        "from": 0,
+        "to": 5,
+        "expected": true
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "expected": false
+      },
+      {
+        "from": 0,
+        "to": 42,
+        "expected": false
+      }
+    ],
+    "eager_addition_cases": [
+      {
+        "left": 0,
+        "right": 0,
+        "expected": 5
+      },
+      {
+        "left": 0,
+        "right": 5,
+        "expected": 5
+      },
+      {
+        "left": 5,
+        "right": -5,
+        "expected": 5
+      },
+      {
+        "left": 2,
+        "right": -2,
+        "expected": 5
+      }
+    ],
+    "eager_multiplication_cases": [
+      {
+        "left": 0,
+        "right": 2,
+        "expected": 5
+      },
+      {
+        "left": 2,
+        "right": 3,
+        "expected": 6
+      }
+    ],
+    "associativity_witnesses": {
+      "addition_left_grouping": 8,
+      "addition_right_grouping": 3,
+      "multiplication_left_grouping": 15,
+      "multiplication_right_grouping": 5
+    }
+  },
+  "verification": {
+    "method": "exact_integer_checks_and_proof_review",
+    "ci_status": "not_executed",
+    "notes": [
+      "Universal results and written proofs are in docs/CHUMNOI_VERDICT_THEORY.md.",
+      "The kappa=5 instance is illustrative and is not a repository-wide default.",
+      "CI checks exact control values; it does not machine-formalize the written proofs.",
+      "K3 positional coefficients and ordinary integer equality remain unchanged."
+    ]
+  }
+}
