@@ -118,7 +118,7 @@ J,K,\mathcal I),
 Для ориентированного пути
 
 \[
-\pi_{\\mathrm{path}}=(v_0\xrightarrow{e_1}v_1
+\pi_{\mathrm{path}}=(v_0\xrightarrow{e_1}v_1
 \xrightarrow{e_2}\cdots
 \xrightarrow{e_r}v_r)
 \]
@@ -665,7 +665,7 @@ x\equiv r_i\pmod{m_i},
 Для двух сравнений обобщённая теорема о китайских остатках даёт критерий совместности:
 
 \[
-a_i\equiv a_j
+r_i\equiv r_j
 \pmod{\gcd(m_i,m_j)}.
 \]
 
