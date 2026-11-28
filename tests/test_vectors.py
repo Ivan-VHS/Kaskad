@@ -101,7 +101,7 @@ class SharedConformanceVectors(unittest.TestCase):
         self.assertEqual(corpus["canonical_coefficient_range"], [0, 999])
 
         def decode_operand(operand):
-            mode = operand.get("input_mode", "canonical")
+            mode = operand.get("input_mode", operand.get("mode", "canonical"))
             if mode == "canonical":
                 return parse_k3(operand["word"])
             if mode == "K3-PAD":
@@ -130,7 +130,7 @@ class SharedConformanceVectors(unittest.TestCase):
                         canonical_word = operand.get("canonical_word")
                         if canonical_word is not None:
                             self.assertEqual(format_k3(value), canonical_word)
-                        elif operand.get("input_mode", "canonical") == "canonical":
+                        elif operand.get("input_mode", operand.get("mode", "canonical")) == "canonical":
                             self.assertEqual(format_k3(value), operand["word"])
                     self.assertEqual(actual_value, value)
                     self.assertEqual(

@@ -1,10 +1,12 @@
 # Kaskad Development Status
 
+> **Cascade Edition 1.0.0 · Status record.** This document reports bounded repository evidence and does not certify the whole mathematical corpus.
+
 > **Document type:** repository status and verification-boundary record.  
 > **Revision date:** 2026-11-28.  
-> **Inspected main revision:** `e68fbb1e84041eeb175b5feb63dbbda7adc9c910`.  
+> **Initial inspected main revision:** `e68fbb1e84041eeb175b5feb63dbbda7adc9c910`.  
 > **Status:** finite reference implementation and tests are present; this record does not certify current-main CI.  
-> **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json).
+> **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json), [60-point scientific review gate](SCIENTIFIC_REVIEW_GATE.md).
 
 This document reports repository evidence, not mathematical proof. Its statements are tied to the inspected tree and must be refreshed when source, tests or workflows change.
 
@@ -48,13 +50,77 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 ## 4. Mathematical status
 
-The package is a supporting reference instrument, not the definition of K3 and not a proof assistant.
+### 4.1. Status of the whole corpus
 
-- A theorem requires a complete statement, assumptions and mathematical proof.
-- A unit test confirms behavior only for executed inputs.
-- Exhaustive enumeration proves a claim only over the finite domain actually exhausted.
-- General results about completion, ultrametrics, probability and infinite structures retain their own proof obligations.
-- The inverse-limit completion and CRT topological ring are mathematical extensions; their specification must not be confused with package implementation.
+Kaskad is a mathematical research corpus with several independent theories and extensions at different stages of maturity. There is no single mathematical status that can be assigned to the repository as a whole. The status belongs to a specific claim, in a specific theory, under explicitly stated assumptions and on an identifiable document revision.
+
+The repository-native Institute of Self-Developing Mathematics Kaskad is an organizational model for research, review, provenance and continuous correction. It is not a legal entity or accredited academic institution, and this record does not claim external scientific recognition. See the [Institute Charter](KASKAD_INSTITUTE_CHARTER.md).
+
+The unity of the institute does not merge the axiomatics of K3, CV-1 or other research tracks. Each theory retains its own objects, language, assumptions and proof obligations. Applied mathematical models remain distinct from claims about the correctness of their source implementations.
+
+### 4.2. Independent status axes
+
+Every substantial result is assessed on independent axes. A value on one axis cannot be used as evidence for another.
+
+| Axis | What is recorded | What it does not establish |
+|---|---|---|
+| Mathematical | Idea, definition, open hypothesis, proof written, independent proof review, formal proof checking | Test success, implementation completeness or external recognition |
+| Computational | Not run, procedure specified, tests defined, passed on an exact commit, exhaustive verification on a finite domain, independent reproduction | A universal theorem outside the exhausted finite domain |
+| Implementation | Not implemented, specified only, partial, implemented, conformance checked in a stated scope | Mathematical truth of the abstract specification |
+| Empirical | Not applicable, not executed, pilot evidence, reproducible experiment, independent replication | A universal mathematical theorem without proof |
+| External scientific reception | Not submitted, public preprint, submitted for review, peer-reviewed publication, independent use or citation, documented external assessment | Automatic correctness of every claim in a publication |
+| Legal / institutional | Not claimed, externally documented legal status, externally documented accreditation | Any status inferred from the repository name or its own charter |
+
+“Not applicable” and “not verified” are different states. Missing evidence is not positive evidence. A single percentage or ranking of “scientificity” is not used.
+
+### 4.3. Existing K3 claim registry
+
+The K3 registry already distinguishes definitions, extension postulates, proofs awaiting independent review, classical specializations awaiting review, hypotheses, application models, counterexamples and catalogue-integrity checks. Its vocabulary remains authoritative for the records already stored there.
+
+In particular:
+
+- **proof_written_pending_independent_review** means that a proof is recorded but its independent review is not registered.
+- **classical_specialization_pending_independent_review** does not assert historical priority or independent validation.
+- **catalogue_integrity_verified_by_ci** certifies only the declared catalogue-integrity checks, not the truth of every mathematical claim in that catalogue.
+- **open_hypothesis** remains open until an adequate proof or counterexample changes its status.
+- **application_model_not_theorem** prevents an application model from inheriting theorem status from the source domain.
+- **counterexample** preserves a concrete witness against a precisely identified rejected claim.
+
+New status values require a coordinated update of the registry schema, documentation, validation and migration rules. Existing identifiers and history must not be silently rewritten.
+
+### 4.4. Mathematical status of the K3 core
+
+The canonical finite positional construction is specified by radix \(B=1000\), canonical coefficients in \(0,\ldots,999\), explicit group positions and the polynomial evaluation map. The primary source is [Vyunenko Theory K3](VYUNENKO_THEORY.md), supported by the canonical syntax, arithmetic, classical crosswalk and claim registry.
+
+The theory document contains proof texts and a growing set of extensions. That fact does not mean every extension has been independently reviewed, formally verified by a proof assistant or accepted as a novel result by the external mathematical community. Each theorem must be assessed through its own claim record, assumptions, dependencies and evidence.
+
+CV-1 and applied mathematical models have separate mathematical objects and separate maturity records. Their presence in the same repository does not raise or lower the status of K3.
+
+### 4.5. Computational and implementation boundary
+
+The reference package is a supporting exact-integer instrument, not the definition of K3 and not a proof assistant.
+
+- A theorem requires a complete mathematical statement, stated assumptions and a valid proof.
+- A unit test confirms only the cases actually executed.
+- Exhaustive enumeration supports a universal finite-domain claim only when the entire stated domain is exhausted and the checked predicate is exactly the theorem's predicate.
+- A successful CI run validates the checks included in that workflow on that exact commit; it does not prove arbitrary mathematics.
+- A source implementation can be called conformant only against a defined specification and a bounded verification scope.
+- The inverse-limit completion, CRT topological ring, probability results and infinite structures retain their own mathematical proof obligations independently of package features.
+
+### 4.6. Historical baseline verification snapshot
+
+At the beginning of this governance change, the inspected baseline commit was 5ded82cd197e866aecfe93b7bec58f4c90032186. The combined commit-status lookup returned no status entries, and the pull-request workflow lookup for that historical commit returned no runs. This is a historical baseline observation only; it is **not** a statement about the current main branch or the current pull request. An empty result is not evidence of either a successful or a failed run.
+
+Any later CI statement must name the exact commit SHA, workflow, job or matrix, execution time and actual conclusion. Historical results must remain attached to the commit on which they ran.
+
+### 4.7. Conditions for claims of scientific recognition
+
+A public repository, a preprint, a configured workflow, an extensive theory document or an internal pull request does not establish peer-reviewed publication or recognition by a mathematical community.
+
+A claim of external review must identify the independent reviewer or venue, date, exact work reviewed, scope of assessment and available report or publication record. A claim of peer-reviewed publication requires a verifiable publication and its actual review status. A claim of independent reproduction requires evidence produced outside the original authoring process.
+
+The appropriate current description is: **an active mathematical research corpus with a formally specified K3 core, independent research tracks, proof texts and open obligations at mixed levels of maturity**. No blanket claim that the entire corpus is externally recognized or fully verified is made.
+
 
 ## 5. Open engineering work
 
