@@ -1,265 +1,86 @@
-# Kaskad
+# Kaskad — Vyunenko Theory K3
 
-[简体中文](README.zh-CN.md) · [English](README.en.md) · [Русский](README.md) · [Українська](README.uk.md)
+[Русский](README.md) · [Українська](README.uk.md) · [简体中文](README.zh-CN.md)
 
-A mathematical research corpus for the Vyunenko Theory of K3. The repository
-supports precise definitions, mathematical models, proofs, counterexamples,
-and the study of connections with established mathematical theories.
+> **Kaskad** is a mathematical research corpus for the Vyunenko Theory K3. Its core is a finite positional system with radix 1000; extensions study arithmetic, representation structure, divisibility and related mathematical spaces. Mathematical theory, computational checks and software implementation are kept distinct.
 
-## Citation
+## 1. Mathematical core
 
-As of this revision, the repository does not register a separate journal
-publication, preprint, DOI, or published set of experimental results. This
-README does not claim alignment with an unspecified paper. For reproducible
-citation, identify the exact Git commit rather than citing a moving branch.
+Fix
+[
+B=1000=10^3=2^3cdot5^3,qquad D_B={0,1,ldots,999}.
+]
 
-BibTeX entry for the repository:
+A canonical cascade is a finite vector
+[
+a=(a_m,ldots,a_1,a_0),qquad a_iin D_B,
+]
+where (a_0) is the least significant position. Its value is
+[
+operatorname{Val}_{K3}(a)=sum_{i=0}^{m}a_iB^i.
+]
 
-~~~bibtex
-@misc{vyunenko_kaskad_2026,
-  author       = {Vyunenko, Ivan},
-  title        = {Kaskad: Mathematical Research Corpus for the Vyunenko Theory of K3},
-  year         = {2026},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/Ivan-VHS/Kaskad},
-  note         = {Cite a specific Git revision; no DOI is registered}
-}
-~~~
+A positive value has a nonzero leading coefficient; zero has the unique form ((0)). Signed values are a separate extension.
 
-## Contents
+## 2. Position is semantic
 
-- [Purpose and scope](#purpose-and-scope)
-- [The K3 mathematical model](#the-k3-mathematical-model)
-- [Epistemic status of claims](#epistemic-status-of-claims)
-- [Research method](#research-method)
-- [Documents and repository structure](#documents-and-repository-structure)
-- [Reproducible validation](#reproducible-validation)
-- [Data and experimental results](#data-and-experimental-results)
-- [Metrics and hardware requirements](#metrics-and-hardware-requirements)
-- [License and attribution](#license-and-attribution)
-- [Contributing and reporting issues](#contributing-and-reporting-issues)
+The symbol `k` separates adjacent groups. It is not a digit, radix, multiplier or multiplication operator. Only a `k` boundary advances to the next power of 1000; the number of decimal digits inside a group does not create another position.
 
-## Purpose and scope
+| Word | Coefficients, most to least significant | Value |
+|---|---:|---:|
+| `1k` | ((1,0)) | (1,000) |
+| `50k0k7` | ((50,0,7)) | (50,000,007) |
+| `50k0k` | ((50,0,0)) | (50,000,000) |
 
-Kaskad is a permanent mathematical research corpus. Its primary subject is the
-Vyunenko Theory of K3 and rigorously defined mathematical extensions. The
-research cycle is:
+A terminal `k` denotes exactly one omitted zero least-significant group. Explicit zero groups also retain their positions. Do not delete, move or merge zeros or separators without a proof of equivalence: equal depth does not imply equal value.
 
-**question → classical mathematical context → definition → model → proof or
-counterexample → exact or numerical checks of consequences → independent
-review → documented result.**
+## 3. Input modes and equality
 
-Kaskad is not an operating-system, programming-language, IDE, driver,
-application, or general-purpose software-platform project. Relations with
-other repositories are permitted only as mathematical relationships:
-shared definitions, mappings, models, provable consequences, and analogies
-whose limits are stated explicitly.
+- **Canonical mode** accepts only words admitted by the strict K3 grammar.
+- **K3-PAD** is an explicitly selected import and normalization mode for non-canonical groups; it does not alter strict parsing.
+- **K3-RAW** preserves original operand structure and order for structural analysis.
 
-Code and computational tools may be used as supporting instruments for exact
-arithmetic, finite verification, reproducible experiments, document checks,
-or formal verification. Computation does not replace mathematical proof and
-does not, by itself, turn a conjecture into a theorem.
+Text, coefficient structure, numeric value, expression trees and operation traces have distinct equality relations. Equal results do not make source words or computation histories identical. The positional shift operator (S_B) is defined separately from `k`.
 
-## The K3 mathematical model
+## 4. Arithmetic and extensions
 
-The base system fixes the composite radix
+Carry and borrow follow one balance law:
+[
+c_i+t_i=1000t_{i+1}+r_i,qquad 0le r_ile999.
+]
+Admissible normalization preserves the weighted value; proofs and conditions are in the specialized chapters.
 
-\[
-B=1000=10^3=2^3\cdot5^3.
-\]
+For the composite radix, the classical Chinese remainder theorem gives, for (rge1),
+[
+mathbb Z/1000^rmathbb Zcong
+mathbb Z/2^{3r}mathbb Z	imesmathbb Z/5^{3r}mathbb Z.
+]
+The corresponding completion is the ring (mathbb Z_2	imesmathbb Z_5), not a field. CRT and infinite cascades are a separate topological extension; finite K3 semantics remain unchanged.
 
-A canonical cascade is a finite coefficient vector
+## 5. Scope and context
 
-\[
-a=(a_m,\ldots,a_1,a_0),\qquad a_i\in\{0,1,\ldots,999\},
-\]
+K3 defines an exact representation of integers and studies its positional, algebraic, divisibility, combinatorial and topological properties. Measurements, physical units, statistical data, graphs and software entities require their own types, units and explicit mappings; they do not automatically become K3 numbers.
 
-with value given by the polynomial evaluation
+Arithmetic on K3 values agrees with classical integer arithmetic. The distinct contribution lies in the positional construction, canonical language and investigated structural extensions.
 
-\[
-\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
-\]
+## 6. Claim status
 
-Index \(i=0\) denotes the least significant group. In the textual notation,
-groups are separated by the symbol \(\mathtt{k}\). The symbol \(\mathtt{k}\)
-is a lexical group delimiter, not a digit, multiplier, or multiplication
-operator. The positional shift operator \(S_B\) is defined separately.
+Definitions introduce objects; postulates fix conventions; theorems require proofs; classical results retain sources and conditions. A test supports only the inputs actually checked, not a general theorem. A specification or conjecture is not an implementation fact or an established result.
 
-| Parameter | Canonical value |
-|---|---|
-| System | K3 |
-| Radix | \(B=1000=2^3\cdot5^3\) |
-| Canonical group range | \(0\ldots999\) |
-| Group separator | \(\mathtt{k}\) |
-| Non-negative value domain | \(\mathbb N_0\) |
-| Signed extension | \(\mathbb Z\) |
-| Canonical zero word | \(0\) |
-| Empty word | Not a canonical representation |
+## 7. Documentation and checks
 
-Canonical non-negative cascades represent \(\mathbb N_0\); the signed
-extension is treated separately for \(\mathbb Z\). Since the radix is
-composite, properties of prime \(p\)-adic bases must not be transferred to
-K3 without proof. At level \(r\), the relevant decomposition is
+- [Documentation map](docs/INDEX.md) · [Documentation guide](docs/DOCUMENTATION_GUIDE.md)
+- [Canonical theory](docs/VYUNENKO_THEORY.md) · [Foundations and algebra](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
+- [Syntax](docs/K3_CANONICAL_SYNTAX.md) · [Cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md)
+- [CRT and infinite cascades](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md) · [Classical crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
+- [Development status](docs/DEVELOPMENT_STATUS.md) · [Scientific documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)
 
-\[
-\mathbb Z/1000^r\mathbb Z
-\cong
-\mathbb Z/2^{3r}\mathbb Z\times\mathbb Z/5^{3r}\mathbb Z,
-\]
+Run the reference checks locally:
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+CI is configured for Python 3.11–3.14. A check result applies only to its specific Actions run and Git revision.
 
-and the corresponding completion is described as the topological ring
-\(\mathbb Z_2\times\mathbb Z_5\), not as a field.
+## Citation and license
 
-## Epistemic status of claims
-
-The documents distinguish definitions, postulates, assumptions, lemmas,
-theorems, corollaries, conjectures, counterexamples, exhaustive finite
-verification, computational and empirical observations, numerical estimates,
-heuristics, conditional results, rejected formulations, and research
-programmes.
-
-An item in a roadmap is not thereby a proved result. Finite enumeration
-supports a claim only over the fully enumerated finite domain. An empirical
-pattern or numerical estimate is not a universal proof. Textual proofs must
-not be described as machine-formalized unless the corresponding formalization
-has been published.
-
-## Research method
-
-~~~mermaid
-flowchart TD
-    A[Mathematical question] --> B[Classical context and notation]
-    B --> C[Precise definition and domain]
-    C --> D[Formal model]
-    D --> E{Proof available?}
-    E -->|Yes| F[Theorem and proof]
-    E -->|No| G[Conjecture, counterexample, or open problem]
-    F --> H[Exact or numerical checks of consequences]
-    G --> H
-    H --> I[Independent review and status assignment]
-    I --> J[Documentation]
-~~~
-
-This diagram describes the research method. It does not prove a theorem and
-is not a figure from an unspecified publication.
-
-## Documents and repository structure
-
-### K3 foundations
-
-- [Vyunenko Theory of K3 — foundational specification](docs/VYUNENKO_THEORY.md)
-- [Cascade balance, normalization, and invariants](docs/CHAPTER_II_CASCADE_BALANCE.md)
-- [Canonical K3 syntax and formal grammar](docs/K3_CANONICAL_SYNTAX.md)
-- [Canonical foundations, algebra, and semantics](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
-- [Composite-radix arithmetic in K3](docs/K3_COMPOSITE_RADIX_ARITHMETIC.md)
-- [Classical mathematics and terminology crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
-- [Reference of fundamental mathematical principles](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
-
-### Methodology and research programme
-
-- [Rules for developing the mathematical theory](docs/THEORY_DEVELOPMENT_RULES.md)
-- [Constructive K3 research roadmap](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md)
-- [Computational research foundation](docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md)
-- [Map of mathematical disciplines and dependencies](docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md)
-- [Formal, epistemic, and proof methodology](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md)
-- [Computational research architecture](docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md)
-- [Experimental, empirical, and statistical methodology](docs/EXPERIMENTAL_EMPIRICAL_METHOD.md)
-- [Research programme roadmap](docs/RESEARCH_PLATFORM_ROADMAP.md)
-- [Reproducible research record template](docs/RESEARCH_RECORD_TEMPLATE.md)
-- [Recursive K-suffixes: research programme and formal review](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md)
-- [Cooperative formula synthesis: proportions and compatibility](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md)
-
-### Quality contracts and validation
-
-- [Project contract](project-contract.json)
-- [Mathematical quality contract](quality-mathematics.json)
-- [Computational quality contract](quality-computation.json)
-- [Project evolution contract](engineering-evolution.v1.json)
-- [Research foundation validator](scripts/validate-foundation.mjs)
-- [GitHub Actions: foundation validation](.github/workflows/foundation-validation.yml)
-
-## Reproducible validation
-
-The current CI checks consistency of project and mathematical contracts,
-canonical K3 semantics, required documents, and relative README links. This is
-a documentation-and-contract check, not machine verification of mathematical
-proofs and not a test suite for a mathematical computation kernel.
-
-Local validation requires Node.js 22, the major version selected by the
-current CI workflow. The script uses Node.js built-in modules; no package
-installation is required.
-
-~~~bash
-git clone https://github.com/Ivan-VHS/Kaskad.git
-cd Kaskad
-node --version
-node scripts/validate-foundation.mjs
-~~~
-
-Expected result when the contracts and local links are valid:
-
-~~~text
-Kaskad mathematical scope, K3 notation, algebraic semantics, arithmetic contracts and local links: OK
-~~~
-
-The workflow uses a GitHub-hosted runner labelled ubuntu-latest,
-actions/checkout v4, and actions/setup-node v4. This documents the current
-CI configuration; it is not a fully locked environment for a numerical
-research experiment. Research computations should record exact tool
-versions, source revision, precision and rounding settings, input data and
-SHA-256 checksums, plus the PRNG and seed for stochastic procedures.
-
-## Data and experimental results
-
-The inspected repository tree contains no published dataset, archive of
-experimental measurements, benchmark tables, or checksums for such data. The
-primary work is mathematical and theoretical. Therefore, this README does
-not invent dataset links, training results, run counts, or statistical
-intervals.
-
-Any future computational or empirical result should include at least:
-experiment identifier, theory version, Git revision, algorithm version,
-environment, input checksum, parameters, precision and rounding mode, PRNG
-and seed, timestamp, output artifacts, and verification status. Raw data,
-derived data, and analysis results should be stored separately.
-
-## Metrics and hardware requirements
-
-For theoretical results, the primary criteria are correctness of definitions,
-completeness of assumptions, validity of proofs, and accuracy of classical
-correspondences. Units must be stated wherever physical or numerical
-quantities are introduced.
-
-This revision reports no hardware measurements, model training, inference
-time, algorithm performance, or comparison against SOTA and baseline
-methods. Hardware specifications are not applicable to the theoretical
-results; future computational experiments must publish hardware details
-together with the relevant protocol.
-
-## Integrated mathematical extensions (2026-11-28)
-
-The Kaskad corpus now includes the ordered K3 arithmetic monograph, directed positional composition, the two-channel \(2^3\times5^3\) geometry of radix 1000, and the ten-layer K3-M profile morphology.
-
-Applied mathematical sources are documented separately: [DAK](docs/DAK_SYSTEM_MATHEMATICS.md), [Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md), and [VentuSample audio mathematics](docs/VYUNENKO_AUDIO_MATHEMATICS.md). These are mathematical models and crosswalks, not claims that their source projects are implemented in Kaskad.
-
-See the [CRT completion and infinite cascades](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md), the [scientific documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), the [full document register](docs/INDEX.md), and the [language register](docs/LANGUAGE_REGISTER.md). The canonical K3 radix, coefficient domain, separator and positional-zero semantics are unchanged.
-
-## License and attribution
-
-The repository contains the [Apache License 2.0](LICENSE). Separate dataset
-or model licences are not declared in the current tree. Rights and terms for
-third-party materials must be identified separately.
-
-Use the BibTeX entry above for citation and record the commit hash that
-corresponds to the document version used. Do not provide a DOI, SWHID, or
-archived-version identifier until one has actually been registered.
-
-## Contributing and reporting issues
-
-For a mathematical issue, include the exact document and section, the
-statement under discussion, all assumptions, and either a minimal
-counterexample or a checkable derivation. For a computational issue, include
-the Git revision, input data or a safe minimal example, parameters, exact
-environment, and observed result.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and review guidance and [SECURITY.md](SECURITY.md) for vulnerability reporting. Submit mathematical suggestions with explicit assumptions and checkable reasoning; do not promote a conjecture to a theorem without a separate proof.
+Cite a specific Git revision. Metadata: [CITATION.cff](CITATION.cff) and [CITATION.bib](CITATION.bib). License: [Apache-2.0](LICENSE).
