@@ -10,6 +10,7 @@
   <a href="README.md">RU</a> · <a href="README.en.md">EN</a> · <a href="README.uk.md">UA</a> · <strong>中文</strong>
   <br />
   <a href="docs/INDEX.md">文档索引</a> ·
+  <a href="docs/KASKAD_INSTITUTE_CHARTER.md">KASKAD 数学研究院</a> ·
   <a href="docs/VYUNENKO_THEORY.md">K3 理论</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1 理论</a> ·
   <a href="CONTRIBUTING.md">如何参与</a>
@@ -28,6 +29,8 @@
 ## 02 · 关于项目
 
 **Kaskad** 不是一个公式，也不是一套单独的理论。它是一个有组织的数学研究文档库，包含多个独立的数学方向、各自的主要文档、研究结果、计算证据和开放问题。
+
+Kaskad 同时采用一个基于代码仓库的虚拟数学研究院治理模式。[研究院章程](docs/KASKAD_INSTITUTE_CHARTER.md)规定研究协调、独立审查和证据管理流程。这是仓库内部的组织治理模型，并不表示已经依法注册、获得学术认证或取得外部科学界认可。
 
 本项目致力于：
 - 描述数学对象及其相互关系；
