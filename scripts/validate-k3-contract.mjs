@@ -41,7 +41,14 @@ const requiredFiles = [
   "docs/K3_SCIENTIFIC_CONSOLIDATION.md",
   "docs/K3_CLAIM_REGISTRY.json",
   "schemas/k3-claim-registry.v1.schema.json",
-  "docs/K3_REFERENCE_VECTORS.json"
+  "docs/K3_REFERENCE_VECTORS.json",
+  "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+  "docs/01-foundations/README.md", "docs/02-core-theory/README.md",
+  "docs/03-proofs-and-theorems/README.md", "docs/04-algebra-and-topology/README.md",
+  "docs/05-classical-crosswalk/README.md", "docs/06-open-problems/README.md",
+  "docs/07-applied-models/README.md", "docs/08-computational-evidence/README.md",
+  "formal/README.md", "schemas/k3-reference-vectors.v1.schema.json",
+  "tests/README.md", "schemas/README.md", "scripts/README.md"
 ];
 
 for (const path of requiredFiles) {
@@ -143,7 +150,9 @@ function sameBigIntArray(actual, expected) {
 
 const vectors = readJson("docs/K3_REFERENCE_VECTORS.json");
 let vectorCount = 0;
+const vectorIds = new Set();
 if (vectors) {
+  check(vectors.schema_version === "1.2.0", "Unexpected K3 reference vector schema version");
   check(vectors.theory === "K3", "Reference vectors theory must be K3");
   check(vectors.radix === 1000, "Reference vector radix must equal 1000");
   check(vectors.coefficient_order === "least_significant_to_most_significant",
@@ -151,6 +160,9 @@ if (vectors) {
 
   for (const item of vectors.vectors ?? []) {
     vectorCount += 1;
+    check(!vectorIds.has(item.id), "Duplicate reference vector id: " + item.id);
+    vectorIds.add(item.id);
+    check(item.status === "reference_expected_not_execution_pass", item.id + ": expected vector must not be called a test PASS");
     try {
       const left = parseWord(item.left.word, modeOf(item.left));
       check(sameBigIntArray(left, item.left.coefficients),
@@ -208,8 +220,16 @@ if (vectors) {
 
 const registry = readJson("docs/K3_CLAIM_REGISTRY.json");
 const claimSchema = readJson("schemas/k3-claim-registry.v1.schema.json");
+const vectorSchema = readJson("schemas/k3-reference-vectors.v1.schema.json");
+const projectContract = readJson("project-contract.json");
+const computationContract = readJson("quality-computation.json");
 check(registry?.schema === "schemas/k3-claim-registry.v1.schema.json", "Claim registry schema path is inconsistent");
 check(claimSchema?.$schema === "https://json-schema.org/draft/2020-12/schema", "Claim registry JSON Schema dialect is not declared");
+check(claimSchema?.properties?.schema_version?.const === registry?.schema_version, "Claim registry schema version mismatch");
+check(registry?.theory_version === projectContract?.theory?.specification_version, "Claim registry theory_version must match project contract");
+check(vectorSchema?.$schema === "https://json-schema.org/draft/2020-12/schema", "Reference-vector JSON Schema dialect is not declared");
+check(vectorSchema?.properties?.schema_version?.const === vectors?.schema_version, "Reference-vector schema version mismatch");
+check(computationContract?.verification?.reference_vector_schema === "schemas/k3-reference-vectors.v1.schema.json", "Computational contract must identify vector schema");
 let claimCount = 0;
 if (registry) {
   check(registry.theory === "Vyunenko K3", "Claim registry must identify Vyunenko K3");
@@ -225,7 +245,7 @@ if (registry) {
   const knownStatuses = new Set(registry.status_vocabulary ?? []);
   const knownKinds = new Set([
     "definition", "theorem", "catalogue", "hypothesis",
-    "application_model", "extension_postulate"
+    "application_model", "extension_postulate", "counterexample"
   ]);
   const claims = registry.claims ?? [];
   const byId = new Map();
@@ -264,6 +284,13 @@ if (registry) {
     if (claim.kind === "application_model") {
       check(claim.evidence_status === "application_model_not_theorem",
         claim.id + ": application model must not be labelled a theorem");
+    }
+    if (claim.kind === "counterexample") {
+      check(claim.evidence_status === "counterexample", claim.id + ": invalid counterexample status");
+      check(typeof claim.witness === "string" && claim.witness.length >= 8, claim.id + ": exact witness required");
+      check(typeof claim.scope?.domain === "string" && claim.scope.domain.length > 0, claim.id + ": domain required");
+      check(Array.isArray(claim.scope?.assumptions) && claim.scope.assumptions.length > 0, claim.id + ": assumptions required");
+      check(typeof claim.scope?.boundary === "string" && claim.scope.boundary.length > 0, claim.id + ": boundary required");
     }
     if (claim.kind === "catalogue") {
       check(
@@ -362,7 +389,12 @@ for (const path of [
   "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
   "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
   "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
-  "schemas/k3-claim-registry.v1.schema.json"
+  "schemas/k3-claim-registry.v1.schema.json", "schemas/k3-reference-vectors.v1.schema.json",
+  "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+  "docs/01-foundations/README.md", "docs/02-core-theory/README.md",
+  "docs/03-proofs-and-theorems/README.md", "docs/04-algebra-and-topology/README.md",
+  "docs/05-classical-crosswalk/README.md", "docs/06-open-problems/README.md",
+  "docs/07-applied-models/README.md", "docs/08-computational-evidence/README.md"
 ]) {
   validateLocalLinks(path);
 }
@@ -374,10 +406,18 @@ for (const requiredLink of [
   "docs/K3_CLAIM_REGISTRY.json",
   "docs/K3_REFERENCE_VECTORS.json",
   "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
-  "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+  "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+  "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+  "schemas/k3-reference-vectors.v1.schema.json"
 ]) {
   check(readme.includes(requiredLink), "README lacks module index entry: " + requiredLink);
 }
+
+const docsIndex = readText("docs/INDEX.md");
+for (const p of ["REPOSITORY_ARCHITECTURE.md","K3_COUNTEREXAMPLES_AND_BOUNDARIES.md","01-foundations/README.md","02-core-theory/README.md","03-proofs-and-theorems/README.md","04-algebra-and-topology/README.md","05-classical-crosswalk/README.md","06-open-problems/README.md","07-applied-models/README.md","08-computational-evidence/README.md"]) check(docsIndex.includes(p), "docs/INDEX.md missing navigation entry: " + p);
+check(projectContract?.repository_layout?.claim_registry === "docs/K3_CLAIM_REGISTRY.json", "Project contract registry path mismatch");
+check(projectContract?.repository_layout?.counterexample_register === "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md", "Project contract counterexample path mismatch");
+check(projectContract?.repository_layout?.reference_vectors === "docs/K3_REFERENCE_VECTORS.json", "Project contract vector path mismatch");
 
 if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");

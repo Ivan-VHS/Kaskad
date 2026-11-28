@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "project": "Kaskad",
   "theory": "Vyunenko K3",
-  "theory_version": "0.3.2",
+  "theory_version": "0.5.0",
   "base": {
     "radix": 1000,
     "factorization": {
@@ -25,7 +25,8 @@
     "catalogue_integrity_pending_ci",
     "catalogue_integrity_verified_by_ci",
     "open_hypothesis",
-    "application_model_not_theorem"
+    "application_model_not_theorem",
+    "counterexample"
   ],
   "review_policy": {
     "independent_review": "not_recorded_unless_reviewer_and_date_are_supplied",
@@ -276,10 +277,9 @@
         "K3-M-THM-004",
         "K3-THM-003"
       ],
-      "evidence_status": "catalogue_integrity_verified_by_ci",
+      "evidence_status": "catalogue_integrity_pending_ci",
       "independent_review": "not_recorded",
-      "machine_check_scope": "record_count_family_counts_sequential_unique_ids_and_all_937_CRT_reconstructions_only",
-      "verification_note": "GitHub Actions K3 contract validation succeeded on commit c11613faddc569808116f2017c94aacc103a2d9f (push and pull_request runs). The check covers 4685 unique IDs, five families of 937 records, and exact reconstruction of all 937 CRT rows; it does not prove the master theorems."
+      "machine_check_scope": "record_count_family_counts_sequential_unique_ids_and_all_937_CRT_reconstructions_only"
     },
     {
       "id": "K3-BP-THM-001",
@@ -559,6 +559,109 @@
       ],
       "evidence_status": "application_model_not_theorem",
       "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-CTR-001",
+      "kind": "counterexample",
+      "statement": "The implication nu_1000(n)=0 => n is a unit modulo 1000^r is false.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§1, n=8 and gcd(8,1000)=8",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "For n=8 and r=1, nu_1000(8)=0 but gcd(8,1000)=8, so [8] is not a unit.",
+      "scope": {
+        "domain": "Integers n and r>=1",
+        "assumptions": [
+          "The modulus is 1000^r",
+          "nu_1000 is divisibility depth by powers of 1000"
+        ],
+        "boundary": "The correct unit criterion is gcd(n,1000)=1."
+      }
+    },
+    {
+      "id": "K3-CTR-002",
+      "kind": "counterexample",
+      "statement": "The function nu_1000 is additive on multiplication for all nonzero integer pairs.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§2, product 2*500=1000",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "nu_1000(2)=0 and nu_1000(500)=0, whereas nu_1000(2*500)=1.",
+      "scope": {
+        "domain": "Nonzero integer pairs",
+        "assumptions": [
+          "nu_1000(n) is the greatest r such that 1000^r divides n"
+        ],
+        "boundary": "The witness refutes additivity, not every divisibility inequality."
+      }
+    },
+    {
+      "id": "K3-CTR-003",
+      "kind": "counterexample",
+      "statement": "The number of separators k uniquely determines the numeric value of a K3 word.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§3, compare 50k0k and 5k0k",
+      "dependencies": [
+        "K3-DEF-002",
+        "K3-DEF-003"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "50k0k and 5k0k each have two separators but evaluate to 50000000 and 5000000.",
+      "scope": {
+        "domain": "Finite canonical nonnegative K3 words",
+        "assumptions": [
+          "Both words use radix 1000 and canonical syntax"
+        ],
+        "boundary": "Separator count records depth, not the full coefficient profile."
+      }
+    },
+    {
+      "id": "K3-CTR-004",
+      "kind": "counterexample",
+      "statement": "The quotient ring Z/1000Z is a field.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§4, nonzero zero divisors [8] and [125]",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "[8] and [125] are nonzero modulo 1000 but their product is [1000]=[0].",
+      "scope": {
+        "domain": "The quotient ring Z/1000Z",
+        "assumptions": [
+          "Residue classes are taken modulo 1000"
+        ],
+        "boundary": "A field has no nonzero zero divisors."
+      }
+    },
+    {
+      "id": "K3-CTR-005",
+      "kind": "counterexample",
+      "statement": "Equal numeric evaluations imply identity of ordered expression trees.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§5, reversed Add nodes",
+      "dependencies": [
+        "K3-DEF-004"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "Add(50k,K3-RAW(5k0)) and Add(K3-RAW(5k0),50k) are distinct ordered trees but both evaluate to 55000.",
+      "scope": {
+        "domain": "Ordered binary addition expressions over typed K3 operands",
+        "assumptions": [
+          "Both operands are evaluated as integers",
+          "Addition is ordinary integer addition"
+        ],
+        "boundary": "Numeric equality does not erase AST order or operation provenance."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"

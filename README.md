@@ -10,6 +10,8 @@ Kaskad — математический исследовательский ре�
 - [Арифметика составного основания](docs/K3_COMPOSITE_RADIX_ARITHMETIC.md) и [двухканальная геометрия с законом переноса](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md).
 - [Авторские каскадные формулы](docs/K3_ORIGINAL_CASCADE_FORMULAS.md), [4685 параметризованных экземпляров](docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md) и [расслоенная математика K3](docs/K3_STRATIFIED_MATHEMATICS.md).
 - [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md).
+- [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md) и восемь слоевых каталогов от [оснований](docs/01-foundations/README.md) до [вычислительных свидетельств](docs/08-computational-evidence/README.md).
+- [Контрпримеры и границы K3](docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md) — точные свидетели пяти неверных обобщений.
 
 
 **Основной объект:** конечные позиционные каскады целых чисел.  

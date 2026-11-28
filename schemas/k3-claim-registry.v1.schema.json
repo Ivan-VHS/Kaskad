@@ -18,7 +18,7 @@
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "schema": {
       "type": "string",
@@ -151,7 +151,8 @@
               "catalogue",
               "hypothesis",
               "application_model",
-              "extension_postulate"
+              "extension_postulate",
+              "counterexample"
             ]
           },
           "statement": {
@@ -213,6 +214,10 @@
           "verification_note": {
             "type": "string",
             "minLength": 1
+          },
+          "witness": {
+            "type": "string",
+            "minLength": 8
           }
         },
         "allOf": [
@@ -247,6 +252,24 @@
             "then": {
               "required": [
                 "machine_check_scope"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "counterexample"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "scope",
+                "witness"
               ]
             }
           }
