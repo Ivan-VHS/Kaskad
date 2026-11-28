@@ -47,7 +47,11 @@
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
       "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
-      "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels"
+      "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels",
+      "chumny_verdict_idempotent_output_projection",
+      "k3_cross_domain_dynamic_information_synthesis",
+      "quantum_comma_jumps_and_100_stage_audit",
+      "mathematical_knowledge_transition_model"
     ]
   },
   "scope": [
@@ -193,7 +197,12 @@
     "tests/README.md",
     "schemas/README.md",
     "scripts/README.md",
-    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
+    "docs/CHUMNY_VERDICT_MODEL.v1.json",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
+    "schemas/chumny-verdict.v1.schema.json",
+    "schemas/knowledge-transition.v1.schema.json"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -265,5 +274,17 @@
       "schemas/k3-claim-registry.v1.schema.json",
       "schemas/k3-reference-vectors.v1.schema.json"
     ]
+  },
+  "knowledge_transition_model": {
+    "id": "KASKAD-KTM-1",
+    "version": "1.0.0",
+    "canonical_source": "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+    "machine_model": "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
+    "schema": "schemas/knowledge-transition.v1.schema.json",
+    "state_model": "product_of_independent_evidence_axes",
+    "stage_count": 20,
+    "single_linear_progress_score": false,
+    "publication_or_review_implies_proof": false,
+    "base_k3_semantics_changed": false
   }
 }

@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "theory": {
+    "id": "CV-1",
+    "title": "Теория Чумного Вердикта",
+    "version": "1.2.0",
+    "base_theory": "K3",
+    "base_radix": 1000,
+    "status": "formal_specification_with_idempotent_output_projection",
+    "base_k3_semantics_changed": false,
+    "ordinary_integer_equality_changed": false
+  },
+  "instance": {
+    "parameter": "c",
+    "domain": "Z",
+    "nonzero_required": true,
+    "exactly_one_value_per_instance": true,
+    "global_default": null
+  },
+  "relations": {
+    "primary": {
+      "symbol": "prec_c",
+      "definition": "x=0 and y=c",
+      "unique_pair": [
+        "0",
+        "c"
+      ],
+      "asymmetric": true
+    },
+    "additive_transfer": {
+      "symbol": "rightsquigarrow_c",
+      "definition": "y=x+c",
+      "parameter_fixed": true
+    }
+  },
+  "projection": {
+    "id": "CV-P",
+    "symbol": "P_c",
+    "domain": "Z",
+    "codomain": "Z",
+    "definition": "c if n=0; n otherwise",
+    "idempotent": true,
+    "image": "Z excluding 0",
+    "noninjective": true,
+    "only_nontrivial_fiber": [
+      "0",
+      "c"
+    ],
+    "preserves_raw_evaluation": true,
+    "kernel_equivalence": "a≈c b iff P_c(a)=P_c(b)",
+    "kernel_is_additive_congruence": false
+  },
+  "illustrative_instance": {
+    "c": 5,
+    "map_cases": [
+      {
+        "input": 0,
+        "output": 5
+      },
+      {
+        "input": 5,
+        "output": 5
+      },
+      {
+        "input": 42,
+        "output": 42
+      },
+      {
+        "input": -7,
+        "output": -7
+      },
+      {
+        "input": 1000,
+        "output": 1000
+      }
+    ],
+    "primary_relation_cases": [
+      {
+        "from": 0,
+        "to": 5,
+        "expected": true
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "expected": false
+      },
+      {
+        "from": 0,
+        "to": 42,
+        "expected": false
+      }
+    ],
+    "transfer_cases": [
+      {
+        "from": 0,
+        "to": 5,
+        "expected": true
+      },
+      {
+        "from": 1,
+        "to": 6,
+        "expected": true
+      },
+      {
+        "from": 2,
+        "to": 7,
+        "expected": true
+      },
+      {
+        "from": 3,
+        "to": 8,
+        "expected": true
+      },
+      {
+        "from": 0,
+        "to": 10,
+        "expected": false
+      }
+    ],
+    "post_evaluation_cases": [
+      {
+        "expression": "7-7",
+        "raw_value": 0,
+        "cv_value": 5
+      },
+      {
+        "expression": "1000",
+        "raw_value": 1000,
+        "cv_value": 1000
+      }
+    ],
+    "positional_zero_group_example": {
+      "coefficients": [
+        0,
+        1
+      ],
+      "coefficient_order": "least_significant_to_most_significant",
+      "radix": 1000,
+      "evaluated_value": 1000,
+      "cv_value": 1000
+    },
+    "kernel_equivalence_cases": [
+      {
+        "left": 0,
+        "right": 5,
+        "expected": true
+      },
+      {
+        "left": 1,
+        "right": 6,
+        "expected": false
+      },
+      {
+        "left": 5,
+        "right": 5,
+        "expected": true
+      }
+    ]
+  },
+  "theorem_ids": [
+    "CV-T11",
+    "CV-T12",
+    "CV-T13",
+    "CV-T14"
+  ],
+  "verification": {
+    "method": "exact_integer_checks_and_written_proofs",
+    "ci_status": "not_executed",
+    "notes": [
+      "The primary relation and additive transfer remain distinct from CV-P.",
+      "The source integer evaluation is preserved in a separate state field.",
+      "The c=5 instance is illustrative and is not a repository-wide default.",
+      "CI checks exact model examples; it does not machine-formalize written proofs."
+    ]
+  }
+}
