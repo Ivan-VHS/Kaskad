@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0.0",
+  "project": "Kaskad",
+  "extension": "K3-Omega",
+  "extension_version": "0.1.0",
+  "source_of_truth": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md",
+  "compatibility": {
+    "preserves_k3_radix": 1000,
+    "preserves_k3_separator": "k",
+    "relation_to_k3": "typed research extension; no redefinition of canonical K3 arithmetic"
+  },
+  "status_vocabulary": [
+    "definition",
+    "postulate",
+    "proof_written",
+    "independently_reviewed",
+    "machine_checked",
+    "finite_verified",
+    "open_hypothesis",
+    "open_problem",
+    "counterexample",
+    "computational_observation",
+    "metaphor"
+  ],
+  "claims": [
+    {
+      "id": "OMG-DEF-001",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A state is a tuple (U,A,M,K,R) of a potential carrier and active, memory, knowledge, and trace projections.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#31-состояние",
+      "dependencies": [],
+      "scope": {
+        "domain": "K3-Omega state models",
+        "assumptions": [
+          "U is a set of potential object identifiers",
+          "A, M, K, and R are subsets of U"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-002",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "Erase, forget, and deactivate are distinct typed state transformations acting on M, K, and A respectively.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#34-уничтожение-удаление-забвение-и-остаток",
+      "dependencies": [
+        "OMG-DEF-001"
+      ],
+      "scope": {
+        "domain": "States from OMG-DEF-001",
+        "assumptions": [
+          "The selected object belongs to U"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-003",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A typed Omega boundary consists of left and right domains together with an interface relation rho included in L times R.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#41-типизированная-граница",
+      "dependencies": [],
+      "scope": {
+        "domain": "Typed boundary structures",
+        "assumptions": [
+          "L and R are declared sets"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-004",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "Lambda is a vertex in the vertex carrier V of a specified graph G=(V,E).",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#42-вершина-λ",
+      "dependencies": [],
+      "scope": {
+        "domain": "Graph structures",
+        "assumptions": [
+          "A graph G=(V,E) is fixed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-005",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "The black-triangle operator is a typed right projection on Omega-boundary expressions: cut(Join(l,r))=r.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#43-позиционное-отсечение",
+      "dependencies": [
+        "OMG-DEF-003"
+      ],
+      "scope": {
+        "domain": "Cut expressions over fixed L and R",
+        "assumptions": [
+          "Join is a well-typed constructor"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-006",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A standard integral is specified by a measure space, a measurable integrand, and integrability conditions.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#6-интегралы-и-интегральные-обобщения",
+      "dependencies": [],
+      "scope": {
+        "domain": "Measure-theoretic integration",
+        "assumptions": [
+          "A measure space (X,A,mu) is fixed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-007",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A semigroup is a set with an associative binary operation; a two-sided zero absorbs every element on both sides.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#71-полугруппа-и-нулевой-элемент",
+      "dependencies": [],
+      "scope": {
+        "domain": "Semigroup theory",
+        "assumptions": [
+          "A binary operation on S is defined"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-008",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "For finite random variables, Shannon entropy and mutual information are defined from the specified probability distribution.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#8-информационная-семантика-ω",
+      "dependencies": [],
+      "scope": {
+        "domain": "Finite probability spaces",
+        "assumptions": [
+          "Joint probability distribution is specified"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-009",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A closure operator on P(X) is extensive, monotone, and idempotent; its crystallized states are its fixed points.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#9-кристаллизация-как-оператор-замыкания",
+      "dependencies": [],
+      "scope": {
+        "domain": "Power-set lattice P(X)",
+        "assumptions": [
+          "X is a set"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-010",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "A formal theory is a language, a set of axioms, and a specified derivability relation.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#101-теория",
+      "dependencies": [],
+      "scope": {
+        "domain": "Formal theories",
+        "assumptions": [
+          "A formal language and inference system are fixed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-011",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "Self-application is defined only for a coded operator and a specified partial application function on codes.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#111-проблема-типов",
+      "dependencies": [
+        "OMG-DEF-010"
+      ],
+      "scope": {
+        "domain": "Effective coding systems",
+        "assumptions": [
+          "A code set and partial application function are fixed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-DEF-012",
+      "kind": "definition",
+      "status": "definition",
+      "statement": "Omega-infinity is a relative set of operator codes whose terminating self-application returns a string outside the chosen theory-code language.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#112-относительное-синтаксическое-схлопывание",
+      "dependencies": [
+        "OMG-DEF-011"
+      ],
+      "scope": {
+        "domain": "Fixed language L and partial application app",
+        "assumptions": [
+          "C_op and C_Th(L) are fixed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-THM-001",
+      "kind": "theorem",
+      "status": "proof_written",
+      "statement": "If a semigroup has a left zero l and a right zero r, then l=r.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#72-теорема-об-уникальности-двустороннего-поглотителя",
+      "dependencies": [
+        "OMG-DEF-007"
+      ],
+      "scope": {
+        "domain": "Any set with a binary operation",
+        "assumptions": [
+          "l*x=l for every x",
+          "x*r=r for every x"
+        ]
+      },
+      "proof_reference": "Section 7.2: evaluate l star r using both absorption laws."
+    },
+    {
+      "id": "OMG-THM-002",
+      "kind": "theorem",
+      "status": "proof_written",
+      "statement": "Erasing x from the memory projection does not remove x from the active projection when all unspecified state components are preserved.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#34-уничтожение-удаление-забвение-и-остаток",
+      "dependencies": [
+        "OMG-DEF-001",
+        "OMG-DEF-002"
+      ],
+      "scope": {
+        "domain": "State model from OMG-DEF-001",
+        "assumptions": [
+          "erase changes M only",
+          "x belongs to A before the transition"
+        ]
+      },
+      "proof_reference": "Section 3.4: the active component is unchanged by definition of erase."
+    },
+    {
+      "id": "OMG-THM-003",
+      "kind": "theorem",
+      "status": "proof_written",
+      "statement": "The defined Omega cut operator returns the right component of each well-typed Join expression.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#43-позиционное-отсечение",
+      "dependencies": [
+        "OMG-DEF-003",
+        "OMG-DEF-005"
+      ],
+      "scope": {
+        "domain": "Well-typed cut expressions",
+        "assumptions": [
+          "Expression is Join_Omega(l,r)"
+        ]
+      },
+      "proof_reference": "Section 4.3: defining reduction rule for the right projection."
+    },
+    {
+      "id": "OMG-HYP-001",
+      "kind": "open_hypothesis",
+      "status": "open_hypothesis",
+      "statement": "There exists a universal encoding-independent absolute self-application boundary corresponding to the informal item 666 formulation.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#113-интерпретация-пункта-666",
+      "dependencies": [
+        "OMG-DEF-011",
+        "OMG-DEF-012"
+      ],
+      "scope": {
+        "domain": "All admissible encoding systems",
+        "assumptions": [
+          "A nontrivial universal notion of representability must be defined"
+        ]
+      }
+    },
+    {
+      "id": "OMG-Q-001",
+      "kind": "open_problem",
+      "status": "open_problem",
+      "statement": "Give Omega_empty a precise interpretation without identifying it with the empty set or bottom constant.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#23-пустота-ноль-и-нижний-исход",
+      "dependencies": [],
+      "scope": {
+        "domain": "Boundary sort",
+        "assumptions": [
+          "Omega_empty remains a distinct boundary constant"
+        ]
+      }
+    },
+    {
+      "id": "OMG-Q-002",
+      "kind": "open_problem",
+      "status": "open_problem",
+      "statement": "Prove compatibility or exhibit countermodels for the v1, v2, and v3 semantics.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#12-три-версии-семантики-▼-и-самоприменения",
+      "dependencies": [
+        "OMG-DEF-002",
+        "OMG-DEF-005",
+        "OMG-DEF-011"
+      ],
+      "scope": {
+        "domain": "Versioned K3-Omega profiles",
+        "assumptions": [
+          "Each version is independently typed"
+        ]
+      }
+    },
+    {
+      "id": "OMG-Q-003",
+      "kind": "open_problem",
+      "status": "open_problem",
+      "statement": "Resolve the legacy use of Omega as an integration domain in K3-TI against Omega as a boundary symbol in K3-Omega.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#41-типизированная-граница",
+      "dependencies": [
+        "OMG-DEF-003",
+        "OMG-DEF-006"
+      ],
+      "scope": {
+        "domain": "Cross-document notation",
+        "assumptions": [
+          "Existing K3-TI documents are not silently rewritten"
+        ]
+      }
+    },
+    {
+      "id": "OMG-Q-004",
+      "kind": "open_problem",
+      "status": "open_problem",
+      "statement": "Complete the title, type, definition, dependencies, model, and evidence status for every position in the 666-entry catalogue.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#13-каталог-из-666-позиций",
+      "dependencies": [],
+      "scope": {
+        "domain": "CAT-001 through CAT-666",
+        "assumptions": [
+          "Unspecified entries remain visibly incomplete"
+        ]
+      }
+    },
+    {
+      "id": "OMG-Q-005",
+      "kind": "open_problem",
+      "status": "open_problem",
+      "statement": "Choose a proof assistant and establish a reproducible machine-checked correspondence only after the formal kernel and libraries are specified.",
+      "source": "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md#103-машинная-проверка",
+      "dependencies": [
+        "OMG-DEF-010"
+      ],
+      "scope": {
+        "domain": "Machine formalization",
+        "assumptions": [
+          "No proof assistant is currently declared as adopted"
+        ]
+      }
+    }
+  ]
+}
