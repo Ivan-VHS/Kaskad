@@ -219,7 +219,7 @@
     {
       "id": "CV-1",
       "title": "Теория Чумного Вердикта",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "status": "formal_specification",
       "source": "docs/CHUMNY_VERDICT_THEORY.md",
       "parameter_domain": "c in Z, c != 0",
@@ -231,8 +231,33 @@
         "The primary directed relation contains exactly one ordered pair (0,c)",
         "Additive propagation is modelled as a directed translation graph",
         "Unrestricted multiplication changes the parameter and is not a closure rule for fixed c",
-        "No claim of a new alternative arithmetic of integers is made"
-      ]
+        "No claim of a new alternative arithmetic of integers is made",
+        "TCV-K3 lifts the fixed directed CV relation to compatible typed carriers without replacing ordinary equality",
+        "K3 positional zero slots retain their indices even when their numeric contribution is zero",
+        "The zero-divisor example is in Z/1000Z; it is not an equality 625*376=0 in Z",
+        "The evidence verdict distinguishes exact zero, exact nonzero, unknown, absent, and invalid states"
+      ],
+      "typed_k3_layer": {
+        "id": "TCV-K3",
+        "title": "Каскадно-типизированное расширение",
+        "status": "compatible_formal_extension",
+        "sections": [
+          "typed_additive_domains",
+          "lifted_directed_relation",
+          "value_and_structural_equality",
+          "positional_zero_identity",
+          "residue_ring_zero_divisors",
+          "five_state_evidence_verdict"
+        ],
+        "verdict_states": [
+          "ZERO",
+          "NONZERO",
+          "UNKNOWN",
+          "ABSENT",
+          "INVALID"
+        ],
+        "base_semantics_changed": false
+      }
     }
   ]
 }
