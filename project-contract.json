@@ -17,7 +17,7 @@
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
-    "specification_version": "0.5.0",
+    "specification_version": "0.6.0",
     "radix": 1000,
     "radix_factorization": {
       "2": 3,
@@ -46,11 +46,13 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "CV1_directed_zero_relation_and_twenty_level_negative_trend_model"
     ]
   },
   "scope": [
     "mathematical_logic_and_axiomatics",
+    "directed_graph_models_and_relational_extensions",
     "set_theory_and_formal_semantics",
     "algebra",
     "arithmetic_and_number_theory",
@@ -79,6 +81,7 @@
     "1000_adic_inverse_limit_and_CRT_projectors",
     "logic_and_axiomatic_foundations",
     "canonical_k3_mathematical_core",
+    "directed_plague_verdict_and_negative_trend_model",
     "fundamental_mathematical_structures",
     "mathematical_disciplines_and_models",
     "optional_supporting_exact_and_numerical_methods",
@@ -131,6 +134,7 @@
   },
   "required_documents": [
     "docs/VYUNENKO_THEORY.md",
+    "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/K3_CANONICAL_SYNTAX.md",
     "docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md",
     "docs/CHAPTER_II_CASCADE_BALANCE.md",
