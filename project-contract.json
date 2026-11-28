@@ -46,7 +46,8 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "higher_structures_homology_sheaves_stratification_HoTT_schemes_fractals_semantic_layers"
     ]
   },
   "scope": [
@@ -73,7 +74,15 @@
     "knot_theory_and_topological_invariants",
     "analytic_number_theory",
     "cooperative_formula_synthesis",
-    "typed_applied_mathematical_models_from_related_repositories"
+    "typed_applied_mathematical_models_from_related_repositories",
+    "homological_algebra_and_simplicial_cohomology",
+    "sheaf_topoi_and_stratified_spaces",
+    "lattice_theory_and_orthomodular_logic",
+    "homotopy_type_theory_and_higher_categories",
+    "scheme_theory_and_commutative_algebra",
+    "fractal_geometry",
+    "semiotics_hermeneutics_and_symbolic_interpretation",
+    "cryptography_steganography_security_boundary_models"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -90,7 +99,8 @@
     "typed_applied_mathematical_models",
     "repository_architecture_and_navigation",
     "claim_and_counterexample_registry",
-    "machine_readable_reference_vector_schema"
+    "machine_readable_reference_vector_schema",
+    "typed_higher_structures_and_semantic_interpretation"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -189,7 +199,8 @@
     "schemas/k3-reference-vectors.v1.schema.json",
     "tests/README.md",
     "schemas/README.md",
-    "scripts/README.md"
+    "scripts/README.md",
+    "docs/K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
