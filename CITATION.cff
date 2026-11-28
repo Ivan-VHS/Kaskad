@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Please cite this repository when referencing the Kaskad mathematical research corpus. No DOI or arXiv identifier has been assigned."
+title: "Kaskad — Mathematical Research Corpus for Vyunenko Theory K3"
+type: generic
+authors:
+  - name: "Ivan-VHS"
+repository-code: "https://github.com/Ivan-VHS/Kaskad"
+license: Apache-2.0

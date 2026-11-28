@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "KASKAD-ENGINEERING-EVOLUTION",
+  "current_stage": "stage-0-specification-consolidation",
+  "stages": [
+    {
+      "id": "stage-0-specification-consolidation",
+      "status": "in_progress",
+      "deliverables": [
+        "unified_theory_governance",
+        "domain_architecture",
+        "computational_contracts",
+        "experimental_method",
+        "research_record_template",
+        "scientific_documentation_standard",
+        "multilingual_language_register",
+        "citation_metadata",
+        "canonical_k3_reference_vectors",
+        "documentation_quality_validation"
+      ]
+    },
+    {
+      "id": "stage-1-k3-core",
+      "status": "planned",
+      "deliverables": [
+        "parser",
+        "canonical_encoder_decoder",
+        "normalizer",
+        "exact_arithmetic",
+        "reference_vectors",
+        "proof_and_property_tests"
+      ]
+    },
+    {
+      "id": "stage-2-exact-algebra",
+      "status": "planned",
+      "deliverables": [
+        "big_integer",
+        "rational",
+        "modular",
+        "polynomial",
+        "matrix",
+        "algebraic_structures"
+      ]
+    },
+    {
+      "id": "stage-3-proof-registry",
+      "status": "planned",
+      "deliverables": [
+        "statement_ids",
+        "dependency_graph",
+        "counterexample_registry",
+        "formalization_decision"
+      ]
+    },
+    {
+      "id": "stage-4-geometry-and-trigonometry",
+      "status": "planned",
+      "deliverables": [
+        "typed_geometry",
+        "metrics",
+        "coordinate_transforms",
+        "trigonometric_core"
+      ]
+    },
+    {
+      "id": "stage-5-analysis-and-numerics",
+      "status": "planned",
+      "deliverables": [
+        "symbolic_analysis",
+        "numerical_methods",
+        "interval_arithmetic",
+        "error_analysis"
+      ]
+    },
+    {
+      "id": "stage-6-probability-and-combinatorics",
+      "status": "planned",
+      "deliverables": [
+        "combinatorics",
+        "probability_models",
+        "statistics",
+        "reproducible_prng"
+      ]
+    },
+    {
+      "id": "stage-7-research-laboratory",
+      "status": "planned",
+      "deliverables": [
+        "experiment_runner",
+        "dataset_registry",
+        "benchmarks",
+        "evidence_reports"
+      ]
+    }
+  ],
+  "merge_policy": {
+    "protected_default_branch_expected": true,
+    "reviewable_pull_requests": true,
+    "conventional_commits": true,
+    "no_unverified_completion_claims": true,
+    "every_stage_requires_tests_and_documentation": true
+  },
+  "documentation_governance": {
+    "standard": "Cascade Edition 1.0.0",
+    "normative_document": "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "language_register": "docs/LANGUAGE_REGISTER.md",
+    "citation_metadata": [
+      "CITATION.cff",
+      "CITATION.bib"
+    ],
+    "mathematical_reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
+    "rule": "Documentation and computation support mathematical research; they do not redefine project scope."
+  }
+}

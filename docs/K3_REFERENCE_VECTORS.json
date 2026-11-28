@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.1.0",
+  "theory": "K3",
+  "radix": 1000,
+  "coefficient_order": "least_significant_to_most_significant",
+  "canonical_coefficient_range": [
+    0,
+    999
+  ],
+  "vectors": [
+    {
+      "id": "K3-ADD-0001",
+      "operation": "add",
+      "left": {
+        "word": "999k999",
+        "coefficients": [
+          999,
+          999
+        ],
+        "decimal": "999999"
+      },
+      "right": {
+        "word": "1",
+        "coefficients": [
+          1
+        ],
+        "decimal": "1"
+      },
+      "expected": {
+        "word": "1k0k",
+        "coefficients": [
+          0,
+          0,
+          1
+        ],
+        "decimal": "1000000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-MUL-0001",
+      "operation": "multiply",
+      "left": {
+        "word": "50k0k",
+        "coefficients": [
+          0,
+          0,
+          50
+        ],
+        "decimal": "50000000"
+      },
+      "right": {
+        "word": "25",
+        "coefficients": [
+          25
+        ],
+        "decimal": "25"
+      },
+      "expected": {
+        "word": "1k250k0k",
+        "coefficients": [
+          0,
+          0,
+          250,
+          1
+        ],
+        "decimal": "1250000000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ZERO-0001",
+      "operation": "identity",
+      "left": {
+        "word": "0",
+        "coefficients": [
+          0
+        ],
+        "decimal": "0"
+      },
+      "expected": {
+        "word": "0",
+        "coefficients": [
+          0
+        ],
+        "decimal": "0"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-PAD-0001",
+      "operation": "identity",
+      "input_profile": "K3-PAD",
+      "left": {
+        "word": "5k00k",
+        "coefficients": [
+          0,
+          0,
+          5
+        ],
+        "decimal": "5000000"
+      },
+      "expected": {
+        "word": "5k0k",
+        "coefficients": [
+          0,
+          0,
+          5
+        ],
+        "decimal": "5000000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-PAD-0002",
+      "operation": "identity",
+      "input_profile": "K3-PAD",
+      "left": {
+        "word": "5k0",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "expected": {
+        "word": "5k",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ADD-0002",
+      "operation": "add",
+      "input_profile": "K3-PAD",
+      "left": {
+        "word": "5k",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "right": {
+        "word": "5k0",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "expected": {
+        "word": "10k",
+        "coefficients": [
+          0,
+          10
+        ],
+        "decimal": "10000"
+      },
+      "ordered_expression": [
+        "5k",
+        "5k0"
+      ],
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ADD-0003",
+      "operation": "add",
+      "left": {
+        "word": "5k",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "right": {
+        "word": "50k",
+        "coefficients": [
+          0,
+          50
+        ],
+        "decimal": "50000"
+      },
+      "expected": {
+        "word": "55k",
+        "coefficients": [
+          0,
+          55
+        ],
+        "decimal": "55000"
+      },
+      "ordered_expression": [
+        "5k",
+        "50k"
+      ],
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ADD-0004",
+      "operation": "add",
+      "input_profile": "K3-PAD",
+      "left": {
+        "word": "50k",
+        "coefficients": [
+          0,
+          50
+        ],
+        "decimal": "50000"
+      },
+      "right": {
+        "word": "5k0",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "expected": {
+        "word": "55k",
+        "coefficients": [
+          0,
+          55
+        ],
+        "decimal": "55000"
+      },
+      "ordered_expression": [
+        "50k",
+        "5k0"
+      ],
+      "status": "reference_expected_not_execution_pass"
+    },
+    {
+      "id": "K3-ADD-0005",
+      "operation": "add",
+      "input_profile": "K3-PAD",
+      "left": {
+        "word": "5k0",
+        "coefficients": [
+          0,
+          5
+        ],
+        "decimal": "5000"
+      },
+      "right": {
+        "word": "50k",
+        "coefficients": [
+          0,
+          50
+        ],
+        "decimal": "50000"
+      },
+      "expected": {
+        "word": "55k",
+        "coefficients": [
+          0,
+          55
+        ],
+        "decimal": "55000"
+      },
+      "ordered_expression": [
+        "5k0",
+        "50k"
+      ],
+      "status": "reference_expected_not_execution_pass"
+    }
+  ],
+  "notation_cases": [
+    {
+      "id": "K3-DEPTH-0001",
+      "word": "50k0k",
+      "coefficients": [
+        0,
+        0,
+        50
+      ],
+      "decimal": "50000000",
+      "separator_count": 2,
+      "strict_canonical": true,
+      "profile": "K3"
+    },
+    {
+      "id": "K3-PAD-0001",
+      "word": "5k00k",
+      "coefficients": [
+        0,
+        0,
+        5
+      ],
+      "decimal": "5000000",
+      "separator_count": 2,
+      "strict_canonical": false,
+      "profile": "K3-PAD",
+      "canonical_word": "5k0k"
+    }
+  ]
+}
