@@ -131,6 +131,7 @@ K3 рассматривает конечные позиционные запис
 |---|---|
 | Понять всю теорию K3 | [Теория Вьюненко K3](docs/VYUNENKO_THEORY.md) |
 | Понять интеграл, закрывающий формулу справа | [K3-TI — терминальный интеграл](docs/K3_TERMINAL_INTEGRAL_OPERATOR.md) |
+| Изучить оператор ▼ и каталог 64 направлений | [K3-RZ-WORD](docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md) · [K3-SCT-01](docs/K3_SELF_CREATED_THEORIES_CATALOGUE.md) |
 | Изучить направленный вердикт и CV-K3-M1 | [Теория Чумного Вердикта CV-1](docs/CHUMNY_VERDICT_THEORY.md) (v1.2.1; монотонность доказана только для явно заданной модели) |
 | Изучить правила записи и разбора | [Канонический синтаксис K3](docs/K3_CANONICAL_SYNTAX.md) |
 | Разобраться с переносом и заёмом | [Каскадный баланс](docs/CHAPTER_II_CASCADE_BALANCE.md) |

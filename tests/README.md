@@ -18,3 +18,7 @@ The CI workflow compiles the package and runs tests for its declared Python matr
 ## K3-TI terminal integral tests
 
 The test_terminal.py module checks exact finite atomic integration, weighted masses, rational results, strict K3 conversion rules, and postfix LaTeX rendering. These tests cover the finite reference implementation only; they do not validate continuous integration, the sine-Gordon equation, or infinite dynamical systems.
+
+## K3-RZ-WORD tests
+
+The test_right_zero_words.py module checks the exact right-projection implementation on immutable finite tuple-words, including the empty word, non-string tokens, associativity, idempotence, repeated application, and fixed-argument translations. These tests verify the finite implementation; the general algebraic claims are proved in docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md.

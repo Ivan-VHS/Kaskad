@@ -69,7 +69,11 @@
         "formalization_decision",
         "K3-TI stable claim identities and dependency registration",
         "sine-Gordon square-completion proof record",
-        "real quadratic escape-radius proof record"
+        "real quadratic escape-radius proof record",
+        "K3-RZ-WORD right-zero semigroup definitions and proof records",
+        "word-operator translation and fiber-cardinality theorem statements",
+        "mutual-information and privacy boundary claim records",
+        "right-image variant associativity criterion"
       ]
     },
     {
@@ -114,7 +118,10 @@
         "experiment_runner",
         "dataset_registry",
         "benchmarks",
-        "evidence_reports"
+        "evidence_reports",
+        "finite exhaustive models for K3-RZ-WORD",
+        "right-zero operator preimage and cardinality fixtures",
+        "counterexample fixtures for gated and two-layer variants"
       ]
     },
     {
@@ -165,7 +172,13 @@
         "K3 graph-category-semiotic passport presheaf with explicit site and restriction laws",
         "sheaf-of-passport-classes versus category-valued stack descent boundary",
         "local dependency-context comonad candidate with counit, comultiplication and law obligations",
-        "wave-limit and finite-termination criteria kept separate from successful convergence"
+        "wave-limit and finite-termination criteria kept separate from successful convergence",
+        "finite-word universal and typed empty-word boundary",
+        "right-zero word semigroup and classical algebra crosswalk",
+        "word translations congruences and morphism classification",
+        "operator variants with guarded and partial domains",
+        "self-application and higher-order type boundaries",
+        "K3-SCT-01 eight-category research catalogue and machine schema"
       ]
     }
   ],
