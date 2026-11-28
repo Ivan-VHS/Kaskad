@@ -37,6 +37,10 @@
     "directed_propagation_is_distinct_from_cluster_connectivity": true,
     "normalized_local_defect_load_is_bounded": true,
     "medical_metaphors_are_not_medical_claims": true
+    "equivalence_collapse_requires_common_typed_carrier": true,
+    "description_complexity_does_not_imply_object_nonexistence": true,
+    "integrals_declare_density_domain_and_measure": true,
+    "semantic_load_metrics_are_operationally_defined": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -134,18 +138,22 @@
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
     "using_1000_not_dividing_x_as_a_unit_criterion": true,
-    "treating_a_zero_group_as_a_defect_without_an_invariant_violation": true,
-    "treating_a_negative_integer_as_a_defect_by_sign_alone": true,
-    "treating_unassessed_nodes_as_zero_load": true,
-    "claiming_empirical_thresholds_without_calibration": true,
-    "interpreting_metaphorical_levels_as_epidemiological_results": true
+    "identifying_empty_set_with_numeric_zero_or_scalar_without_typed_map": true,
+    "evaluating_real_functions_at_empty_set": true,
+    "treating_semantic_overhead_as_a_standard_number_class": true,
+    "inferring_object_nonexistence_from_description_quality": true
   },
   "review": {
     "mathematical_review_required": true,
     "counterexample_review_required": true,
     "dependency_graph_review_required": true,
     "status_change_requires_audit_trail": true,
-    "threshold_calibration_review_required": true
+    "independent_proof_review_required_for_verified_status": true,
+    "computational_checks_never_promote_universal_claims_to_theorems": true,
+    "status_changes_require_commit_scoped_evidence": true,
+    "external_recognition_requires_verifiable_external_record": true,
+    "self_review_is_not_independent_review": true,
+    "scientific_maturity_must_not_be_collapsed_into_one_score": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",

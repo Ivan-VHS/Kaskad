@@ -1,5 +1,3 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # Происхождение математического переноса VentuSample
 
 **Назначение:** контроль источников, из которых извлечены математические определения, каталоги и ограничения для Теории Вьюненко K3.  
