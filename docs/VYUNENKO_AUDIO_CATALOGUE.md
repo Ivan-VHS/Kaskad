@@ -1,5 +1,3 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # Каталоги математических моделей VentuSample
 
 **Теория:** Вьюненко K3 · **Источник:** Ivan-VHS/VentuSample · **Снимок:** 2026-11-28

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "contract_id": "KASKAD-ENGINEERING-EVOLUTION",
-  "current_stage": "stage-1-k3-core",
+  "current_stage": "stage-9-institute-governance",
   "stages": [
     {
       "id": "stage-0-specification-consolidation",
@@ -16,7 +16,11 @@
         "multilingual_language_register",
         "citation_metadata",
         "canonical_k3_reference_vectors",
-        "documentation_quality_validation"
+        "documentation_quality_validation",
+        "repository_architecture_navigation",
+        "claim_status_registry",
+        "counterexample_register",
+        "reference_vector_json_schema"
       ]
     },
     {
@@ -113,7 +117,42 @@
         "Reaper typed mathematical models and source register",
         "VentuSample discrete signal and DSP mathematics",
         "K3 typed bridges with explicit domains and limitations",
-        "open proof obligations retained in the registry"
+        "open proof obligations retained in the registry",
+        "K3 paradigmatic-erosion metatheory specification and proof-obligation registry"
+      ]
+    },
+    {
+      "id": "stage-9-institute-governance",
+      "status": "in_progress",
+      "deliverables": [
+        "Kaskad Institute charter and repository-native governance",
+        "orthogonal mathematical computational implementation and external-recognition status axes",
+        "independent proof-review records and conflict-of-interest disclosures",
+        "claim dependency graph and auditable status-transition history",
+        "commit-scoped reproducibility and external-replication records",
+        "institutional maturity gates without unsupported recognition claims",
+        "multilingual institute documentation and consistent navigation"
+      ]
+    },
+    {
+      "id": "stage-9-higher-structures-and-semantic-models",
+      "status": "in_progress",
+      "deliverables": [
+        "typed K3 bridges to hypergraphs and simplicial/CW complexes",
+        "chain and cochain complexes with explicit coefficient objects",
+        "homology and cohomology with boundary-squared-zero obligations",
+        "stratification and sheaf gluing contracts",
+        "lattice, category, HoTT and topos research models",
+        "composite-adic and scheme-theoretic compatibility",
+        "fractal IFS models with explicit open-set conditions",
+        "versioned semiotic and interpretive mappings",
+        "cryptographic and steganographic threat-boundary documentation",
+        "claim registry, classical crosswalk and repository navigation synchronization",
+        "category-valued local-passport descent with overlap isomorphisms and cocycle coherence",
+        "triadic graph node statuses with four-valued guard evidence kept as separate types",
+        "cascade short-circuit/state/writer effect stack with explicit monad operations",
+        "local graph context comonad candidate with counit, comultiplication and law obligations",
+        "well-founded termination or finite-height fixpoint criterion; W_max is only a safety budget"
       ]
     }
   ],
@@ -133,6 +172,8 @@
       "CITATION.bib"
     ],
     "mathematical_reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
-    "rule": "Documentation and computation support mathematical research; they do not redefine project scope."
+    "rule": "Documentation and computation support mathematical research; they do not redefine project scope.",
+    "institute_charter": "docs/KASKAD_INSTITUTE_CHARTER.md",
+    "institutional_status_record": "docs/DEVELOPMENT_STATUS.md"
   }
 }

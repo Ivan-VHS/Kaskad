@@ -1,6 +1,6 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # 4685 формульных экземпляров и фундаментальных положений математической морфологии K3
+
+> **Cascade Edition 1.0.0 · Mathematical research catalogue.**
 
 **Теория:** Теория Вьюненко · **Система:** K3 · **Основание:** (B=1000=8cdot125=2^3cdot5^3)
 **Версия реестра:** 1.0.0 · **Статус:** пять доказанных схем, пять постулатов слоя, двенадцать выведенных принципов и ровно 4685 параметризованных экземпляров.
