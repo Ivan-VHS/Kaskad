@@ -156,7 +156,7 @@ $$
 - **几何与动态模型：** 描述数值轮廓、状态转移和变化的其他方法。
 - **开放问题：** 仍需严格证明或进一步研究的问题。
 
-可以从[经典数学对应关系](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)、[CRT 与无限级联](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md)、[维尤年科图论](docs/VYUNENKO_GRAPH_THEORY.md)和[K3-M 形态学](docs/K3_STRATIFIED_MATHEMATICS.md)开始。
+可以从[经典数学对应关系](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)、[CRT 与无限级联](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md)、[维尤年科图论（局部粘合、编号与可计算转换）](docs/VYUNENKO_GRAPH_THEORY.md)和[K3-M 形态学](docs/K3_STRATIFIED_MATHEMATICS.md)开始。
 
 这些方向的成熟程度并不相同。每份文档都会说明哪些内容已经定义或证明，哪些仍然只是研究提案。
 
