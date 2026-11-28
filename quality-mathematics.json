@@ -157,7 +157,12 @@
     "identifying_empty_set_with_numeric_zero_or_scalar_without_typed_map": true,
     "evaluating_real_functions_at_empty_set": true,
     "treating_semantic_overhead_as_a_standard_number_class": true,
-    "inferring_object_nonexistence_from_description_quality": true
+    "inferring_object_nonexistence_from_description_quality": true,
+    "treating_a_zero_group_as_a_defect_without_an_invariant_violation": true,
+    "treating_a_negative_integer_as_a_defect_by_sign_alone": true,
+    "treating_unassessed_nodes_as_zero_load": true,
+    "claiming_empirical_thresholds_without_calibration": true,
+    "interpreting_metaphorical_levels_as_epidemiological_results": true
   },
   "review": {
     "mathematical_review_required": true,
@@ -169,7 +174,8 @@
     "status_changes_require_commit_scoped_evidence": true,
     "external_recognition_requires_verifiable_external_record": true,
     "self_review_is_not_independent_review": true,
-    "scientific_maturity_must_not_be_collapsed_into_one_score": true
+    "scientific_maturity_must_not_be_collapsed_into_one_score": true,
+    "threshold_calibration_review_required": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
