@@ -1482,10 +1482,10 @@ Q_{t+1}
 
 ### 16.1. Модель и предпосылки
 
-Пусть \(d,m\in\mathbb N\), \(\mathbf y_t\in\mathbb N_0^d\) — вектор накопленного состояния, а \(\boldsymbol\varepsilon_t\in\mathbb R_{\ge0}^{m}\) — вектор неотрицательных входов. Для каждого шага заданы матрицы
+Пусть \(d,m\in\mathbb N\), \(\mathbf y_t\in\mathbb N_0^d\) — вектор накопленного состояния, а \(\boldsymbol\varepsilon_t\in\mathbb R_{\ge0}^{m}\) — вектор неотрицательных входов. Для каждого шага заданы матрицы
 
 \[
-M_t\in\mathbb R_{\ge0}^{d\times d},\qquad C_t\in\mathbb R_{\ge0}^{d\times m},
+M_t\in\mathbb R_{\ge0}^{d\times d},\qquad C_t\in\mathbb R_{\ge0}^{d\times m},
 \]
 
 и рекуррентное правило
