@@ -170,7 +170,7 @@ K3-PAD — уже существующий режим импорта, котор
 Но исходные структуры различаются:
 
 \[
-5k\ne_{\mathrm{str}}\operatorname{RawK3}(RawK3(RawK3(5k0))).
+5k\ne_{\mathrm{str}}\operatorname{RawK3}(RawK3(5k0)).
 \]
 
 Канонизация сырого операнда:
@@ -220,9 +220,9 @@ A=_{\mathrm{val}}B,
 Например:
 
 \[
-5k\ne_{\mathrm{str}}5k0,
+5k\ne_{\mathrm{str}}\operatorname{RawK3}(5k0),
 \qquad
-5k=_{\mathrm{val}}5k0.
+5k=_{\mathrm{val}}\operatorname{RawK3}(5k0).
 \]
 
 Разница между этими объектами реальна на уровне структуры, но не создаёт второго целого числа с тем же позиционным значением.
@@ -335,15 +335,15 @@ operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
 
 ## 7. Четыре контрольные суммы
 
-Для вычислений используем канонические операнды 5k и 50k, а также типизированный сырой операнд \\(\\operatorname{RawK3}(RawK3(5k0))\\):
+Для вычислений используем канонические операнды 5k и 50k, а также типизированный сырой операнд \(\\operatorname{RawK3}(RawK3(5k0))\):
 
-\\[
+\[
 5k=5\\,000,
 \\qquad
 \\operatorname{RawK3}(RawK3(5k0))=5\\,000,
 \\qquad
 50k=50\\,000.
-\\]
+\]
 
 Сырая форма 5k0 сохраняет явно записанную нулевую младшую группу и канонизируется в 5k. Она не является самостоятельным каноническим словом.
 
@@ -368,7 +368,7 @@ operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
 Упорядоченная структура:
 
 \[
-\operatorname{AddExpr}(5k,RawK3(RawK3(5k0))).
+\operatorname{AddExpr}(5k,RawK3(5k0)).
 \]
 
 ### 7.2. Сумма 5k + 50k
@@ -416,10 +416,10 @@ operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
 Упорядоченная структура:
 
 \[
-\operatorname{AddExpr}(50k,RawK3(RawK3(5k0))).
+\operatorname{AddExpr}(50k,RawK3(5k0)).
 \]
 
-### 7.4. Сумма RawK3(5k0) + 50k
+### 7.4. Сумма 5k0 + 50k в режиме K3-RAW
 
 \[
 5\,000+50\,000=55\,000.
@@ -440,7 +440,7 @@ operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
 Упорядоченная структура:
 
 \[
-\operatorname{AddExpr}(5k0,50k).
+\operatorname{AddExpr}(\operatorname{RawK3}(5k0),50k).
 \]
 
 ### 7.5. Сводная таблица
@@ -586,7 +586,7 @@ B\boxplus_{\mathrm{seq}}A,
 | 5k0k | Канонический | 5 000 000 | 5k0k |
 | 5k00k | K3-PAD | 5 000 000 | 5k0k |
 | 5k | Канонический | 5 000 | 5k |
-| RawK3(5k0) | Структурный | 5 000 | 5k |
+| RawK3(5k0) | K3-RAW | 5 000 | 5k |
 | 50k | Канонический | 50 000 | 50k |
 | 5k + 5k0 | Выражение | 10 000 | 10k |
 | 5k + 50k | Выражение | 55 000 | 55k |
