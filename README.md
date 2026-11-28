@@ -6,8 +6,8 @@ Kaskad — математический исследовательский ре�
 **Основание:** \(B=1000=10^3=2^3\cdot5^3\).  
 **Допустимый коэффициент канонической группы:** \(0\le a_i\le999\).  
 **Разделитель групп:** \(k\).  
-**Канонический источник:** [Теория Вьюненко K3](docs/VYUNENKO_THEORY.md), версия спецификации 0.5.0.
-**Совместимые расширения 0.5.0:** CRT-идемпотенты и бесконечная позиционная запись, двухканальная арифметика и геометрия \(2^3\times5^3\), морфология профилей K3-M, направленная композиция и типизированные прикладные математические модели; конечное ядро K3 не изменено.
+**Канонический источник:** [Теория Вьюненко K3](docs/VYUNENKO_THEORY.md), версия спецификации 0.6.0.
+**Совместимые расширения 0.6.0:** CRT-идемпотенты и бесконечная позиционная запись, двухканальная арифметика и геометрия \(2^3\times5^3\), морфология профилей K3-M, направленная композиция, типизированные прикладные модели, графовый баланс, энергия лапласиана и динамические информационные модели K3–CV; конечное ядро K3 не изменено.
 
 ## 1. Задача и принцип работы
 
@@ -237,20 +237,20 @@ CRT-разложение и бесконечная запись — доказа
 <details>
 <summary><strong>English</strong></summary>
 
-Kaskad is a mathematical research repository for the Vyunenko Theory of K3 cascade numbers. The finite system uses radix \(B=1000\), integer group coefficients from 0 to 999, and the separator \(k\). A coefficient vector is evaluated by \(\sum_i a_i1000^i\); zero groups retain their positions. Version 0.5.0 includes the compatible completion \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) and a unique infinite coefficient expansion, without changing finite K3 arithmetic. Canonical syntax, padded import, raw structural input, numeric equality, ordered expressions, proofs, computational checks, proposals, and open problems remain distinct. K3 provides a positional representation of ordinary integers, not a separate arithmetic of integers.
+Kaskad is a mathematical research repository for the Vyunenko Theory of K3 cascade numbers. The finite system uses radix \(B=1000\), integer group coefficients from 0 to 999, and the separator \(k\). A coefficient vector is evaluated by \(\sum_i a_i1000^i\); zero groups retain their positions. Version 0.6.0 includes compatible CRT and two-channel arithmetic extensions, K3 profile morphology, directed composition, typed applied models, and a formal dynamic-information research layer shared with CV-1. It includes the compatible completion \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) and a unique infinite coefficient expansion, without changing finite K3 arithmetic. Canonical syntax, padded import, raw structural input, numeric equality, ordered expressions, proofs, computational checks, proposals, and open problems remain distinct. K3 provides a positional representation of ordinary integers, not a separate arithmetic of integers.
 
 </details>
 
 <details>
 <summary><strong>Українська</strong></summary>
 
-Kaskad — математичний дослідницький репозиторій Теорії В'юненка каскадних чисел K3. Скінченна система використовує основу \(B=1000\), цілі коефіцієнти груп від 0 до 999 і роздільник \(k\); вектор обчислюється за формулою \(\sum_i a_i1000^i\), а нульові групи зберігають свої позиції. Версія 0.5.0 охоплює сумісне поповнення \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) та єдине нескінченне позиційне подання коефіцієнтами 0–999, не змінюючи скінченну арифметику K3. Канонічний синтаксис, доповнений імпорт, структурний вхід, числова рівність, упорядковані вирази, доведення, обчислювальні перевірки, пропозиції та відкриті задачі розмежовано. K3 подає звичайні цілі числа позиційним способом, а не створює окрему арифметику цілих чисел.
+Kaskad — математичний дослідницький репозиторій Теорії В'юненка каскадних чисел K3. Скінченна система використовує основу \(B=1000\), цілі коефіцієнти груп від 0 до 999 і роздільник \(k\); вектор обчислюється за формулою \(\sum_i a_i1000^i\), а нульові групи зберігають свої позиції. Версія 0.6.0 охоплює сумісні CRT- і двоканальні розширення, морфологію профілів K3, напрямлену композицію, прикладні типізовані моделі та спільний із CV-1 динамічно-інформаційний дослідницький шар. Вона включає сумісне поповнення \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) та єдине нескінченне позиційне подання коефіцієнтами 0–999, не змінюючи скінченну арифметику K3. Канонічний синтаксис, доповнений імпорт, структурний вхід, числова рівність, упорядковані вирази, доведення, обчислювальні перевірки, пропозиції та відкриті задачі розмежовано. K3 подає звичайні цілі числа позиційним способом, а не створює окрему арифметику цілих чисел.
 
 </details>
 
 <details>
 <summary><strong>中文</strong></summary>
 
-Kaskad 是维尤年科 K3 级联数理论的数学研究仓库。有限 K3 系统使用基数 \(B=1000\)、取值为 0 至 999 的整数系数，以及分隔符 \(k\)；有限系数向量按 \(\sum_i a_i1000^i\) 求值，零组保留其位置。0.5.0 版包含兼容的完备化 \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) 和唯一的无限系数展开，不改变有限 K3 算术。规范语法、补零导入、原始结构输入、数值相等、有序表达式、证明、计算检查、提案和开放问题分别处理。K3 提供普通整数的位置表示方法，并不建立独立的整数算术体系。
+Kaskad 是维尤年科 K3 级联数理论的数学研究仓库。有限 K3 系统使用基数 \(B=1000\)、取值为 0 至 999 的整数系数，以及分隔符 \(k\)；有限系数向量按 \(\sum_i a_i1000^i\) 求值，零组保留其位置。0.6.0 版包含兼容的 CRT 与双通道算术扩展、K3 轮廓形态学、定向组合、类型化应用模型，以及与 CV-1 共享的动态信息研究层。它还包含兼容的完备化 \(\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5\) 和唯一的无限系数展开，不改变有限 K3 算术。规范语法、补零导入、原始结构输入、数值相等、有序表达式、证明、计算检查、提案和开放问题分别处理。K3 提供普通整数的位置表示方法，并不建立独立的整数算术体系。
 
 </details>
