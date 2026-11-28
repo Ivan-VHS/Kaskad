@@ -310,21 +310,26 @@ B\boxplus_{\mathrm{seq}}A,
 
 Множество структурных выражений задаётся рекурсивно:
 
-\\[
-\\operatorname{Expr}_{K3}::=\\operatorname{Atom}(s)\\mid\\operatorname{AddExpr}(E_1,E_2),
-\\]
+\[
+\operatorname{Expr}_{K3}::=
+\operatorname{Atom}(s)
+\mid
+\operatorname{AddExpr}(E_1,E_2),
+\]
 
-где (s) — допустимая структурная запись, а (E_1,E_2) — структурные выражения.
+где \(s\) — допустимая структурная запись или типизированный атом K3-RAW, а \(E_1,E_2\) — структурные выражения.
 
 Оценка определяется рекурсивно:
 
-\\[
-\\operatorname{Eval}_{K3}(\\operatorname{Atom}(s))=\\operatorname{Decode}_{K3}(s),
-\\]
+\[
+\operatorname{Eval}_{K3}(\operatorname{Atom}(s))
+=\operatorname{Decode}_{K3}(s),
+\]
 
-\\[
-\\operatorname{Eval}_{K3}(\\operatorname{AddExpr}(E_1,E_2))=\\operatorname{Eval}_{K3}(E_1)+\\operatorname{Eval}_{K3}(E_2).
-\\]
+\[
+\operatorname{Eval}_{K3}(\operatorname{AddExpr}(E_1,E_2))
+=\operatorname{Eval}_{K3}(E_1)+\operatorname{Eval}_{K3}(E_2).
+\]
 
 Дерево хранит порядок аргументов и расстановку скобок. Поэтому перестановка операндов и изменение группировки могут менять структурное дерево, даже если числовое значение сохраняется.
 
