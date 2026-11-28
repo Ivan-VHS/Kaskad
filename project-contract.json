@@ -20,7 +20,7 @@
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
-    "specification_version": "0.7.0",
+    "specification_version": "0.8.0",
     "radix": 1000,
     "radix_factorization": {
       "2": 3,
@@ -58,7 +58,9 @@
       "typed_graph_category_semiotic_passport_descent_and_cascade_effects",
       "CV1_model_specific_monotonicity_theorem_CV_K3_M1",
       "CV1_directed_zero_relation_and_twenty_level_negative_trend_model",
-      "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model"
+      "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model",
+      "static_sine_gordon_bps_kink_energy_and_topological_sector_model",
+      "quadratic_reverse_cursed_root_escape_dynamics_julia_set_and_probabilistic_information_gate"
     ]
   },
   "scope": [
@@ -123,7 +125,9 @@
     "category_valued_descent_and_passport_gluing",
     "triadic_graph_effectful_execution_and_statuses",
     "directed_plague_verdict_and_negative_trend_model",
-    "typed_discriminant_gated_left_channel_erasure_and_recoverability_model"
+    "typed_discriminant_gated_left_channel_erasure_and_recoverability_model",
+    "variational_topological_energy_bounds_and_static_soliton_minimizers",
+    "quadratic_escape_dynamics_filled_julia_survivor_sets_and_typed_information_erasure"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -239,7 +243,9 @@
     "docs/VYUNENKO_PARSEC_QUANTIZATION.md",
     "docs/K3_NUMERATIVE_SEMANTICS.md",
     "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
-    "docs/K3_REVERSE_CURSED_ROOT.md"
+    "docs/K3_REVERSE_CURSED_ROOT.md",
+    "docs/CRYSTALLIZATION_OF_REST_STATES.md",
+    "docs/K3_CURSED_INVERSE_ROOT_CASCADE.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -259,7 +265,11 @@
     "previous_CRT_completion_and_infinite_expansion_results_preserved",
     "negative_tendency_model_has_complete_observation_coverage_and_predeclared_thresholds",
     "integer_multiplicity_evidence_contract",
-    "reverse_cursed_root_declares_discriminant_domain_heavens_set_erasure_marker_and_unknown_state"
+    "reverse_cursed_root_declares_discriminant_domain_heavens_set_erasure_marker_and_unknown_state",
+    "sine_gordon_bps_bound_declares_finite_energy_class_and_topological_sector",
+    "quadratic_escape_radius_is_not_mistaken_for_exact_survivor_set_membership",
+    "julia_measure_claim_declares_one_dimensional_lebesgue_measure_and_source",
+    "information_gate_mutual_information_claim_has_explicit_joint_probability_law"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",
