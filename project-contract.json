@@ -46,7 +46,8 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "chumny_verdict_idempotent_output_projection"
     ]
   },
   "scope": [
@@ -171,7 +172,9 @@
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+    "docs/CHUMNY_VERDICT_MODEL.v1.json",
+    "schemas/chumny-verdict.v1.schema.json"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",

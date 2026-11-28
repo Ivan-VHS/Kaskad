@@ -239,6 +239,7 @@ together with the relevant protocol.
 ## Integrated mathematical extensions (2026-11-28)
 
 The Kaskad corpus now includes the ordered K3 arithmetic monograph, directed positional composition, the two-channel \(2^3\times5^3\) geometry of radix 1000, and the ten-layer K3-M profile morphology.
+Chumny Verdict CV-1 1.2.0 adds the idempotent zero-result map \(P_c\), while retaining the raw integer evaluation and ordinary equality. See [the canonical specification](docs/CHUMNY_VERDICT_THEORY.md).
 
 Applied mathematical sources are documented separately: [DAK](docs/DAK_SYSTEM_MATHEMATICS.md), [Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md), and [VentuSample audio mathematics](docs/VYUNENKO_AUDIO_MATHEMATICS.md). These are mathematical models and crosswalks, not claims that their source projects are implemented in Kaskad.
 

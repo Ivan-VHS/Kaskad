@@ -24,7 +24,11 @@
     "infinite_K3_expansion_has_an_explicit_topological_domain": true,
     "ordinary_integer_tail_classification_states_finite_support_or_eventual_999": true,
     "the_two_channel_unit_criterion_uses_gcd_with_1000": true,
-    "carry_correlations_declare_the_fixed_incoming_carry_and_input_distribution": true
+    "carry_correlations_declare_the_fixed_incoming_carry_and_input_distribution": true,
+    "chumny_cv_projection_preserves_raw_integer_evaluation": true,
+    "chumny_cv_projection_applies_after_full_k3_evaluation": true,
+    "chumny_cv_projection_is_idempotent": true,
+    "chumny_projection_kernel_is_not_assumed_additive_congruence": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -111,7 +115,11 @@
     "treating_the_1000_adic_completion_as_the_ordinary_integer_ring": true,
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
-    "using_1000_not_dividing_x_as_a_unit_criterion": true
+    "using_1000_not_dividing_x_as_a_unit_criterion": true,
+    "replacing_standard_integer_equality_with_chumny_relation": true,
+    "applying_chumny_cv_projection_to_individual_k3_coefficients": true,
+    "treating_chumny_projection_as_additive_homomorphism": true,
+    "overwriting_raw_arithmetic_value_with_projected_value": true
   },
   "review": {
     "mathematical_review_required": true,

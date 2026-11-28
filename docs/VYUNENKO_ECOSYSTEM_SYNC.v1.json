@@ -92,35 +92,37 @@
   ],
   "kaskad_files": [
     "README.md",
-    "docs/INDEX.md",
-    "docs/VYUNENKO_THEORY.md",
-    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
+    "docs/CHUMNY_VERDICT_MODEL.v1.json",
+    "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
-    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
-    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
-    "docs/K3_EXPRESSION_LANGUAGE.md",
-    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
-    "docs/K3_STRATIFIED_MATHEMATICS.md",
-    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
-    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
-    "docs/DAK_SYSTEM_MATHEMATICS.md",
     "docs/DAK_FORMAL_CONTRACTS.md",
     "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
     "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
-    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/DAK_SYSTEM_MATHEMATICS.md",
+    "docs/INDEX.md",
+    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+    "docs/K3_EXPRESSION_LANGUAGE.md",
+    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
     "docs/REAPER_K3_INTEGRATION.md",
+    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
     "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
-    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
+    "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/VYUNENKO_AUDIO_CATALOGUE.md",
+    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
     "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
+    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
+    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
+    "docs/VYUNENKO_THEORY.md",
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
-    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
-    "docs/REFERENCE_IMPLEMENTATION.md",
-    "docs/K3_REFERENCE_VECTORS.json",
-    "docs/CHUMNY_VERDICT_THEORY.md"
+    "schemas/chumny-verdict.v1.schema.json"
   ],
   "ecosystem_dependents": [
     {
@@ -219,8 +221,8 @@
     {
       "id": "CV-1",
       "title": "Теория Чумного Вердикта",
-      "version": "1.1.0",
-      "status": "formal_specification",
+      "version": "1.2.0",
+      "status": "formal_specification_with_idempotent_output_projection",
       "source": "docs/CHUMNY_VERDICT_THEORY.md",
       "parameter_domain": "c in Z, c != 0",
       "primary_relation": "x prec_c y iff x = 0 and y = c",
@@ -235,7 +237,11 @@
         "TCV-K3 lifts the fixed directed CV relation to compatible typed carriers without replacing ordinary equality",
         "K3 positional zero slots retain their indices even when their numeric contribution is zero",
         "The zero-divisor example is in Z/1000Z; it is not an equality 625*376=0 in Z",
-        "The evidence verdict distinguishes exact zero, exact nonzero, unknown, absent, and invalid states"
+        "The evidence verdict distinguishes exact zero, exact nonzero, unknown, absent, and invalid states",
+        "CV-P stores raw integer evaluation separately from the projected output",
+        "CV-P is idempotent, has image Z excluding 0, and has the sole nontrivial fiber {0,c}",
+        "The equivalence induced by CV-P is not a congruence for ordinary addition",
+        "CV-P applies after full K3 evaluation and never to individual positional zero coefficients"
       ],
       "typed_k3_layer": {
         "id": "TCV-K3",
@@ -257,7 +263,18 @@
           "INVALID"
         ],
         "base_semantics_changed": false
-      }
+      },
+      "verdict_projection": "P_c(n)=c if n=0; n otherwise",
+      "raw_evaluation_preserved": true,
+      "projection_idempotent": true,
+      "projection_image": "Z excluding 0",
+      "projection_nontrivial_fiber": [
+        "0",
+        "c"
+      ],
+      "projection_kernel_is_additive_congruence": false,
+      "model": "docs/CHUMNY_VERDICT_MODEL.v1.json",
+      "schema": "schemas/chumny-verdict.v1.schema.json"
     }
   ]
 }
