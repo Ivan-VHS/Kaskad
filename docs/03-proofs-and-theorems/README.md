@@ -6,6 +6,8 @@
 - [Глава каскадного баланса](../CHAPTER_II_CASCADE_BALANCE.md).
 - [Формальная эпистемика](../FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md).
 - [Реестр утверждений](../K3_CLAIM_REGISTRY.json).
+- [План научного качества](../SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md).
+- [Журнал ошибок и исправлений](../ERRATA.md).
 - [Статус машинной формализации](../../formal/README.md).
 
 Статус proof_written_pending_independent_review не означает независимое рецензирование. Конечный CI не является proof assistant.

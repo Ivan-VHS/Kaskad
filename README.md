@@ -186,7 +186,10 @@ CI настроен для Python 3.11–3.14. Результат относит
   <a href="docs/KASKAD_INSTITUTE_CHARTER.md">ИНСТИТУТ KASKAD</a> ·
   <a href="docs/VYUNENKO_THEORY.md">ТЕОРИЯ K3</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">ТЕОРИЯ CV-1</a> ·
-  <a href="CONTRIBUTING.md">КАК УЧАСТВОВАТЬ</a>
+  <a href="CONTRIBUTING.md">КАК УЧАСТВОВАТЬ</a> ·
+  <a href="docs/MATHEMATICAL_GLOSSARY.md">СЛОВАРЬ</a> ·
+  <a href="docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md">ПЛАН КАЧЕСТВА</a> ·
+  <a href="docs/ERRATA.md">ERRATA</a>
 </p>
 
 ---

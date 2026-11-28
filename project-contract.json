@@ -215,7 +215,10 @@
     "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md",
     "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
-    "docs/KASKAD_INSTITUTE_CHARTER.md"
+    "docs/KASKAD_INSTITUTE_CHARTER.md",
+    "docs/MATHEMATICAL_GLOSSARY.md",
+    "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md",
+    "docs/ERRATA.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",

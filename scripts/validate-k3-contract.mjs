@@ -29,6 +29,9 @@ const requiredFiles = [
   "docs/K3_STRUCTURAL_SEMANTICS_AND_ORDERED_SUMS.md",
   "docs/CHAPTER_II_CASCADE_BALANCE.md",
   "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+  "docs/MATHEMATICAL_GLOSSARY.md",
+  "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md",
+  "docs/ERRATA.md",
   "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
   "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
   "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
@@ -44,6 +47,7 @@ const requiredFiles = [
   "schemas/k3-claim-registry.v1.schema.json",
   "docs/K3_REFERENCE_VECTORS.json",
   "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+  "docs/MATHEMATICAL_GLOSSARY.md", "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md", "docs/ERRATA.md",
   "docs/01-foundations/README.md", "docs/02-core-theory/README.md",
   "docs/03-proofs-and-theorems/README.md", "docs/04-algebra-and-topology/README.md",
   "docs/05-classical-crosswalk/README.md", "docs/06-open-problems/README.md",
@@ -401,6 +405,19 @@ for (const path of [
   validateLocalLinks(path);
 }
 
+const glossary = readText("docs/MATHEMATICAL_GLOSSARY.md");
+for (const requiredText of ["## 2. Основная нотация K3", "## 4. CV-1: отдельная теория", "## 5. Эпистемические статусы"]) {
+  check(glossary.includes(requiredText), "Mathematical glossary is missing section: " + requiredText);
+}
+const qualityPlan = readText("docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md");
+for (const id of ["SQ-01", "SQ-02", "SQ-03", "SQ-04", "SQ-05", "SQ-06", "SQ-07", "SQ-08", "SQ-09", "SQ-10", "SQ-11", "SQ-12"]) {
+  check(qualityPlan.includes(id), "Scientific quality plan is missing workstream " + id);
+}
+const errata = readText("docs/ERRATA.md");
+for (const status of ["Reported", "Triaged", "Confirmed", "Fixed", "Rejected"]) {
+  check(errata.includes(status), "Errata register is missing status " + status);
+}
+
 const readme = readText("README.md");
 for (const requiredLink of [
   "docs/K3_SCIENTIFIC_CONSOLIDATION.md",
@@ -410,13 +427,16 @@ for (const requiredLink of [
   "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
   "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
   "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
-  "schemas/k3-reference-vectors.v1.schema.json"
+  "schemas/k3-reference-vectors.v1.schema.json",
+  "docs/MATHEMATICAL_GLOSSARY.md",
+  "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md",
+  "docs/ERRATA.md"
 ]) {
   check(readme.includes(requiredLink), "README lacks module index entry: " + requiredLink);
 }
 
 const docsIndex = readText("docs/INDEX.md");
-for (const p of ["REPOSITORY_ARCHITECTURE.md","K3_COUNTEREXAMPLES_AND_BOUNDARIES.md","01-foundations/README.md","02-core-theory/README.md","03-proofs-and-theorems/README.md","04-algebra-and-topology/README.md","05-classical-crosswalk/README.md","06-open-problems/README.md","07-applied-models/README.md","08-computational-evidence/README.md"]) check(docsIndex.includes(p), "docs/INDEX.md missing navigation entry: " + p);
+for (const p of ["REPOSITORY_ARCHITECTURE.md","K3_COUNTEREXAMPLES_AND_BOUNDARIES.md","01-foundations/README.md","02-core-theory/README.md","03-proofs-and-theorems/README.md","04-algebra-and-topology/README.md","05-classical-crosswalk/README.md","06-open-problems/README.md","07-applied-models/README.md","08-computational-evidence/README.md","MATHEMATICAL_GLOSSARY.md","SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md","ERRATA.md"]) check(docsIndex.includes(p), "docs/INDEX.md missing navigation entry: " + p);
 check(docsIndex.includes("K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"), "docs/INDEX.md missing K3-GCS-1 navigation entry");
 const gcsDocument = readText("docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md");
 check(gcsDocument.includes("K3-GCS-1"), "K3-GCS-1 document identifier is missing");
