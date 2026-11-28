@@ -53,7 +53,8 @@
       "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels",
       "computable_K3_numbering_and_TCV_K3_index_pullbacks",
       "hierarchical_K3_product_decomposition_and_exact_quotient_remainder_segmentation",
-      "typed_discrete_signal_operators_and_VentuSample_mathematical_bridge"
+      "typed_discrete_signal_operators_and_VentuSample_mathematical_bridge",
+      "typed_numerative_semantics_K3_NS"
     ]
   },
   "scope": [
@@ -109,7 +110,8 @@
     "claim_and_counterexample_registry",
     "machine_readable_reference_vector_schema",
     "computable_numberings_and_index_morphisms",
-    "typed_CV_index_pullbacks"
+    "typed_CV_index_pullbacks",
+    "typed_multisorted_numerative_semantics"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -222,7 +224,8 @@
     "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md",
     "docs/ERRATA.md",
     "docs/K3_PRODUCT_DECOMPOSITION.md",
-    "docs/VYUNENKO_PARSEC_QUANTIZATION.md"
+    "docs/VYUNENKO_PARSEC_QUANTIZATION.md",
+    "docs/K3_NUMERATIVE_SEMANTICS.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
