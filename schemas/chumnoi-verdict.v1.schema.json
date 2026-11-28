@@ -1,0 +1,374 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/chumnoi-verdict.v1.schema.json",
+  "title": "CV-K3 machine-readable theory model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "theory",
+    "instance",
+    "semantics",
+    "theorem_ids",
+    "illustrative_instance",
+    "verification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "theory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "version",
+        "base_theory",
+        "base_radix",
+        "status",
+        "base_k3_semantics_changed",
+        "ordinary_integer_equality_changed"
+      ],
+      "properties": {
+        "id": {
+          "const": "CV-K3"
+        },
+        "title": {
+          "const": "Теория Чумного Вердикта"
+        },
+        "version": {
+          "const": "1.0.0"
+        },
+        "base_theory": {
+          "const": "K3"
+        },
+        "base_radix": {
+          "const": 1000
+        },
+        "status": {
+          "const": "formalized_compatible_extension"
+        },
+        "base_k3_semantics_changed": {
+          "const": false
+        },
+        "ordinary_integer_equality_changed": {
+          "const": false
+        }
+      }
+    },
+    "instance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameter",
+        "domain",
+        "nonzero_required",
+        "exactly_one_value_per_instance",
+        "globally_selected_default"
+      ],
+      "properties": {
+        "parameter": {
+          "const": "kappa"
+        },
+        "domain": {
+          "const": "Z"
+        },
+        "nonzero_required": {
+          "const": true
+        },
+        "exactly_one_value_per_instance": {
+          "const": true
+        },
+        "globally_selected_default": {
+          "type": "null"
+        }
+      }
+    },
+    "semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "carrier",
+        "directed_relation",
+        "verdict_map",
+        "profiles"
+      ],
+      "properties": {
+        "carrier": {
+          "const": "Z"
+        },
+        "directed_relation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "symbol",
+            "definition",
+            "unique_nontrivial_pair",
+            "asymmetric",
+            "ordinary_equality"
+          ],
+          "properties": {
+            "symbol": {
+              "const": "rightsquigarrow_kappa"
+            },
+            "definition": {
+              "const": "x=0 and y=kappa"
+            },
+            "unique_nontrivial_pair": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "0"
+                },
+                {
+                  "const": "kappa"
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "asymmetric": {
+              "const": true
+            },
+            "ordinary_equality": {
+              "const": false
+            }
+          }
+        },
+        "verdict_map": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "symbol",
+            "definition",
+            "idempotent",
+            "image",
+            "noninjective",
+            "only_nontrivial_fiber"
+          ],
+          "properties": {
+            "symbol": {
+              "const": "P_kappa"
+            },
+            "definition": {
+              "const": "kappa if n=0; n otherwise"
+            },
+            "idempotent": {
+              "const": true
+            },
+            "image": {
+              "const": "Z excluding 0"
+            },
+            "noninjective": {
+              "const": true
+            },
+            "only_nontrivial_fiber": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "0"
+                },
+                {
+                  "const": "kappa"
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        },
+        "profiles": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "post",
+            "eager_addition",
+            "eager_multiplication"
+          ],
+          "properties": {
+            "post": {
+              "type": "string"
+            },
+            "eager_addition": {
+              "type": "string"
+            },
+            "eager_multiplication": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "theorem_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^CV-K3-T[1-9][0-9]*$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "illustrative_instance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kappa",
+        "map_cases",
+        "relation_cases",
+        "eager_addition_cases",
+        "eager_multiplication_cases",
+        "associativity_witnesses"
+      ],
+      "properties": {
+        "kappa": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "map_cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "input",
+              "output"
+            ],
+            "properties": {
+              "input": {
+                "type": "integer"
+              },
+              "output": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "relation_cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "from",
+              "to",
+              "expected"
+            ],
+            "properties": {
+              "from": {
+                "type": "integer"
+              },
+              "to": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "eager_addition_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "left",
+              "right",
+              "expected"
+            ],
+            "properties": {
+              "left": {
+                "type": "integer"
+              },
+              "right": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "eager_multiplication_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "left",
+              "right",
+              "expected"
+            ],
+            "properties": {
+              "left": {
+                "type": "integer"
+              },
+              "right": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "associativity_witnesses": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "addition_left_grouping",
+            "addition_right_grouping",
+            "multiplication_left_grouping",
+            "multiplication_right_grouping"
+          ],
+          "properties": {
+            "addition_left_grouping": {
+              "type": "integer"
+            },
+            "addition_right_grouping": {
+              "type": "integer"
+            },
+            "multiplication_left_grouping": {
+              "type": "integer"
+            },
+            "multiplication_right_grouping": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "ci_status",
+        "notes"
+      ],
+      "properties": {
+        "method": {
+          "const": "exact_integer_checks_and_proof_review"
+        },
+        "ci_status": {
+          "enum": [
+            "not_executed",
+            "executed"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}
