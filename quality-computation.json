@@ -61,7 +61,9 @@
     "reference_tests": [
       "tests/test_core.py",
       "tests/test_vectors.py"
-    ]
+    ],
+    "reference_vector_schema": "schemas/k3-reference-vectors.v1.schema.json",
+    "claim_registry_schema": "schemas/k3-claim-registry.v1.schema.json"
   },
   "experiment_manifest_required": [
     "experiment_id",

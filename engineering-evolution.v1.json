@@ -16,7 +16,11 @@
         "multilingual_language_register",
         "citation_metadata",
         "canonical_k3_reference_vectors",
-        "documentation_quality_validation"
+        "documentation_quality_validation",
+        "repository_architecture_navigation",
+        "claim_status_registry",
+        "counterexample_register",
+        "reference_vector_json_schema"
       ]
     },
     {

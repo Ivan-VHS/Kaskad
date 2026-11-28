@@ -1,5 +1,3 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # 4685 формульных экземпляров и фундаментальных положений математической морфологии K3
 
 **Теория:** Теория Вьюненко · **Система:** K3 · **Основание:** (B=1000=8cdot125=2^3cdot5^3)
