@@ -29,6 +29,13 @@ from .core import (
     valuation_1000,
 )
 
+from .terminal import (
+    TerminalIntegralError,
+    render_terminal_integral,
+    terminal_integral,
+    terminal_integral_k3,
+)
+
 __version__ = "0.2.0"
 
 __all__ = [
@@ -59,4 +66,8 @@ __all__ = [
     "subtract",
     "to_groups",
     "valuation_1000",
+    "TerminalIntegralError",
+    "render_terminal_integral",
+    "terminal_integral",
+    "terminal_integral_k3",
 ]

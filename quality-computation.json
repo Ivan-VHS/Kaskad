@@ -63,7 +63,13 @@
       "tests/test_vectors.py"
     ],
     "reference_vector_schema": "schemas/k3-reference-vectors.v1.schema.json",
-    "claim_registry_schema": "schemas/k3-claim-registry.v1.schema.json"
+    "claim_registry_schema": "schemas/k3-claim-registry.v1.schema.json",
+    "terminal_integral_exact_cases_require_declared_measure_and_exact_expected_value": true,
+    "terminal_integral_tests_must_not_be_reported_as_general_proofs": true,
+    "terminal_integral_backend_and_precision_must_be_explicit_if_numeric_backend_is_added": true,
+    "terminal_integral_rejects_binary_float_inputs_for_exact_api": true,
+    "terminal_integral_K3_encoder_rejects_nonintegral_and_negative_results": true,
+    "terminal_integral_extended_real_survival_log_is_not_claimed_as_implemented": true
   },
   "experiment_manifest_required": [
     "experiment_id",

@@ -43,6 +43,7 @@
 | docs/K3_INTEGER_MULTIPLICITY_EVIDENCE_STANDARD.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_INTEGER_MULTIPLICITY_AUDIT.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json | Машиночитаемый реестр | Не применимо | Не применимо | Не применимо |
+| docs/K3_TERMINAL_INTEGRAL_OPERATOR.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 
 ## Правило изменения статуса
 
