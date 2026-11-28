@@ -7,6 +7,7 @@ on:
     paths:
       - "docs/VYUNENKO_THEORY.md"
       - "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md"
+      - "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
       - "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
   workflow_dispatch:
 

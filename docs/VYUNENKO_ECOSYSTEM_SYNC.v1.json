@@ -28,6 +28,8 @@
       "Added typed applied mathematical models and traceability for DAK, Reaper, Pytyliki, OPlague and VentuSample without claiming source-project implementation",
       "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations.",
       "Added the K3-PD hierarchical product-decomposition layer: disjoint factor-index partitions, pairwise product cells, positional and multi-factor convolution, carry-preserving normalization, and exact quotient/remainder reconciliation."
+      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation",
+      "Added K3-NT, a documentation-only research model of invariant-violation load, weakly connected defect clusters, directed dependency propagation and twenty threshold-based metaphorical levels; empirical calibration remains open."
     ]
   },
   "results": [
@@ -161,7 +163,8 @@
     "docs/OPLAGUE_K3_MODEL.v1.json",
     "schemas/oplage-k3-model.v1.schema.json",
     "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
-    "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
+    "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
   ],
   "ecosystem_dependents": [
     {
@@ -256,7 +259,8 @@
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
       "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
       "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
-      "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
+      "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+      "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
     ]
   },
   "research_extensions": [
@@ -302,6 +306,20 @@
         ],
         "base_semantics_changed": false
       }
+    },
+    {
+      "id": "K3-NT-1",
+      "title": "Negative-tendency and defect-propagation model",
+      "status": "proposed_formal_research_model",
+      "source": "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
+      "base_semantics_changed": false,
+      "calibration_required": true
+    },
+    {
+      "id": "K3-NT-ZERO-1",
+      "title": "Zero equality and canonical zero characterization",
+      "status": "proved_under_base_K3_assumptions",
+      "source": "docs/VYUNENKO_THEORY.md#103-zero-as-an-integer"
     }
   ]
 }
