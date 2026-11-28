@@ -23,6 +23,7 @@
 ## Расширения Теории Вьюненко
 
 - [Программа расширения](VYUNENKO_EXPANSION_PROGRAM.md)
+- [K3-MC5 — пять фундаментальных правил математической космологии](K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md) — совместимый метатеоретический слой
 - [Когнитивные функции и типизированные операторы](VYUNENKO_COGNITIVE_FUNCTIONS.md)
 - [Комплекторная логика и псевдоосновы](COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md)
 - [Теория графов Вьюненко](VYUNENKO_GRAPH_THEORY.md)
