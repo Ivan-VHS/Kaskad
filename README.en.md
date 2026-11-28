@@ -63,7 +63,7 @@ The main K3 notation is:
 | $D_B$ | Allowed canonical coefficients: $\{0,1,\ldots,999\}$ |
 | $a_i$ | Coefficient of the group at position $i$ |
 | $k$ | Separator between adjacent groups; not a number or multiplier |
-| $\operatorname{Val}_{K3}$ | Function that evaluates a cascade as an integer |
+| $\mathrm{Val}_{K3}$ | Function that evaluates a cascade as an integer |
 
 See the [canonical K3 theory](docs/VYUNENKO_THEORY.md) and the [scientific documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) for the full conventions.
 
@@ -84,7 +84,7 @@ A cascade can be represented by a finite coefficient vector. When the coefficien
 $$
 a=(a_0,a_1,\ldots,a_m),
 \qquad
-\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
+\mathrm{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
 $$
 
 In simple terms, every group has a position, and that position determines its contribution to the number.
