@@ -108,6 +108,36 @@ if (project) {
   }
 }
 
+
+const institute = project?.institutional_governance;
+if (!institute) {
+  fail("project-contract.json must define institutional_governance");
+} else {
+  if (institute.identifier !== "KASKAD-ISM") fail("Institute identifier must be KASKAD-ISM");
+  if (institute.model !== "repository_native_virtual_research_institute") {
+    fail("Kaskad institute model must remain repository-native and virtual");
+  }
+  if (institute.charter !== "docs/KASKAD_INSTITUTE_CHARTER.md") {
+    fail("Institute charter path is not canonical");
+  }
+  if (institute.legal_entity_claimed !== false ||
+      institute.accreditation_claimed !== false ||
+      institute.external_recognition_claimed !== false) {
+    fail("The repository must not claim legal status, accreditation or external recognition without external evidence");
+  }
+  if (institute.status_axes_are_orthogonal !== true) {
+    fail("Mathematical, computational, implementation and recognition statuses must remain orthogonal");
+  }
+  if (institute.independent_review_required_for_reviewed_status !== true ||
+      institute.automated_checks_do_not_establish_mathematical_truth !== true) {
+    fail("Independent review and the proof/computation boundary must be explicit");
+  }
+  if (institute.external_recognition_requires_verifiable_external_evidence !== true ||
+      institute.status_changes_require_auditable_evidence !== true) {
+    fail("External recognition and status transitions require auditable evidence");
+  }
+}
+
 if (mathematics) {
   if (mathematics.contract_id !== "KASKAD-QUALITY-MATHEMATICS") {
     fail("Unexpected mathematical quality contract id");
@@ -244,20 +274,23 @@ if (!existsSync(readmePath)) {
   fail("README.md is missing");
 } else {
   const readme = readFileSync(readmePath, "utf8");
-  const languageMarkers = [
-    ["Russian", "Kaskad — Теория Вьюненко K3"],
-    ["English", "<summary><strong>English</strong></summary>"],
-    ["Ukrainian", "<summary><strong>Українська</strong></summary>"],
-    ["Chinese", "<summary><strong>中文</strong></summary>"]
+  const languageEditions = [
+    ["Russian", "README.md"],
+    ["English", "README.en.md"],
+    ["Ukrainian", "README.uk.md"],
+    ["Chinese", "README.zh-CN.md"]
   ];
-  for (const [language, marker] of languageMarkers) {
-    if (!readme.includes(marker)) fail("README is missing a language edition: " + language);
-  }
-  if (!readme.includes("## Краткие аннотации")) {
-    fail("README must expose the multilingual summary annotations");
+  for (const [language, path] of languageEditions) {
+    if (!existsSync(resolve(root, path))) fail("Missing language edition: " + language + " (" + path + ")");
+    if (path !== "README.md" && !readme.includes(path)) {
+      fail("README must link to the separate language edition: " + path);
+    }
   }
   if (!readme.includes("docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md")) {
     fail("README must link to the normative Cascade documentation standard");
+  }
+  if (!readme.includes("docs/KASKAD_INSTITUTE_CHARTER.md")) {
+    fail("README must link to the Kaskad Institute Charter");
   }
   const links = readme.matchAll(/\]\(([^)]+)\)/g);
   for (const match of links) {
@@ -267,14 +300,14 @@ if (!existsSync(readmePath)) {
   }
 }
 
-const docsPath = resolve(root, "docs");
-if (existsSync(docsPath)) {
-  for (const fileName of readdirSync(docsPath)) {
-    if (!fileName.endsWith(".md")) continue;
-    const fileText = readFileSync(resolve(docsPath, fileName), "utf8");
-    if (!fileText.includes("Cascade Edition 1.0.0")) {
-      fail("Scientific document is missing the Cascade Edition header: docs/" + fileName);
-    }
+const requiredScientificDocuments = project?.required_documents ?? [];
+for (const relativePath of requiredScientificDocuments) {
+  if (!relativePath.startsWith("docs/") || !relativePath.endsWith(".md")) continue;
+  const documentPath = resolve(root, relativePath);
+  if (!existsSync(documentPath)) continue;
+  const documentText = readFileSync(documentPath, "utf8");
+  if (!documentText.includes("Cascade Edition 1.0.0")) {
+    fail("Required scientific document is missing the Cascade Edition header: " + relativePath);
   }
 }
 
@@ -292,6 +325,42 @@ if (existsSync(standardPath)) {
   }
 }
 
+
+const instituteCharterPath = resolve(root, "docs/KASKAD_INSTITUTE_CHARTER.md");
+if (!existsSync(instituteCharterPath)) {
+  fail("Kaskad Institute Charter is missing");
+} else {
+  const charterText = readFileSync(instituteCharterPath, "utf8");
+  for (const requiredText of [
+    "# Устав Института саморазвивающейся математики Kaskad",
+    "## 1. Назначение и статус",
+    "## 6. Модель научного статуса",
+    "## 8. Протокол независимой проверки",
+    "## 11. Саморазвитие и контур научной обратной связи",
+    "## 14. Ограничения и заявления о признании"
+  ]) {
+    if (!charterText.includes(requiredText)) {
+      fail("Institute Charter is missing required governance section: " + requiredText);
+    }
+  }
+}
+
+const statusRecordPath = resolve(root, "docs/DEVELOPMENT_STATUS.md");
+if (existsSync(statusRecordPath)) {
+  const statusText = readFileSync(statusRecordPath, "utf8");
+  for (const requiredText of [
+    "## 4. Mathematical status",
+    "### 4.1. Status of the whole corpus",
+    "### 4.2. Independent status axes",
+    "### 4.3. Existing K3 claim registry",
+    "### 4.6. Current main verification snapshot",
+    "### 4.7. Conditions for claims of scientific recognition"
+  ]) {
+    if (!statusText.includes(requiredText)) {
+      fail("Development status record is missing required section: " + requiredText);
+    }
+  }
+}
 
 const theoryPath = resolve(root, "docs/VYUNENKO_THEORY.md");
 if (existsSync(theoryPath)) {
