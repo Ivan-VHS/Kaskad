@@ -82,7 +82,8 @@
     "scheme_theory_and_commutative_algebra",
     "fractal_geometry",
     "semiotics_hermeneutics_and_symbolic_interpretation",
-    "cryptography_steganography_security_boundary_models"
+    "cryptography_steganography_security_boundary_models",
+    "triadic_cascade_operational_semantics"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -100,7 +101,8 @@
     "repository_architecture_and_navigation",
     "claim_and_counterexample_registry",
     "machine_readable_reference_vector_schema",
-    "typed_higher_structures_and_semantic_interpretation"
+    "typed_higher_structures_and_semantic_interpretation",
+    "triadic_graph_status_monad_and_comonad_semantics"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -200,7 +202,8 @@
     "tests/README.md",
     "schemas/README.md",
     "scripts/README.md",
-    "docs/K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md"
+    "docs/K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md",
+    "docs/VYUNENKO_GRAPH_THEORY.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
