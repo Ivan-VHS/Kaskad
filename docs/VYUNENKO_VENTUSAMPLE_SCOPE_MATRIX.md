@@ -27,14 +27,14 @@
 
 | Путь | Класс |
 |---|---|
-| src/atomic_quantum.cpp | Signal mathematics / DSP |
-| src/atomic_quantum.hpp | Signal mathematics / DSP |
+| src/atomic_quantum.cpp | Classical quantum-state simulation |
+| src/atomic_quantum.hpp | Classical quantum-state simulation |
 | src/audio_telemetry.cpp | Discrete / allocation / telemetry |
 | src/audio_telemetry.hpp | Discrete / allocation / telemetry |
 | src/budget_planner.cpp | Discrete / allocation / telemetry |
 | src/budget_planner.hpp | Discrete / allocation / telemetry |
-| src/budget_planner_dialog.cpp | Discrete / allocation / telemetry |
-| src/budget_planner_dialog.hpp | Discrete / allocation / telemetry |
+| src/budget_planner_dialog.cpp | UI / presentation |
+| src/budget_planner_dialog.hpp | UI / presentation |
 | src/builtin_plugins.cpp | Typed data / transaction / runtime |
 | src/careguard.cpp | Discrete / allocation / telemetry |
 | src/careguard.hpp | Discrete / allocation / telemetry |
