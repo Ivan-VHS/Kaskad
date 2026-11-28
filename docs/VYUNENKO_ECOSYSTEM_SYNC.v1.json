@@ -17,7 +17,7 @@
   },
   "release": {
     "date": "2026-11-28",
-    "branch": "integration/kaskad-total-consolidation-2026-11-28",
+    "branch": "theory/k3-product-decomposition-v0.6.0-20261128",
     "compatible_extension": true,
     "base_semantics_changed": false,
     "summary": [
@@ -95,31 +95,31 @@
       "id": "K3-PD-T1",
       "title": "Complete blockwise distributive decomposition of a product",
       "status": "proved",
-      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#4-hierarchical-partition-and-recursive-refinement"
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md"
     },
     {
       "id": "K3-PD-T2",
       "title": "Positional convolution identity for K3 products",
       "status": "proved",
-      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#5-stratification-by-position-and-cascade-convolution"
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md"
     },
     {
       "id": "K3-PD-T3",
       "title": "Value preservation under product normalization",
       "status": "proved",
-      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#5-stratification-by-position-and-cascade-convolution"
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md"
     },
     {
       "id": "K3-PD-T4",
       "title": "Exact quotient and remainder reconciliation across product cells",
       "status": "proved",
-      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#7-quotient-segmentation-and-remainder-reconciliation"
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md"
     },
     {
       "id": "K3-PD-T5",
       "title": "Multi-factor positional convolution identity",
       "status": "proved",
-      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#6-decomposition-of-multiple-products"
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md"
     }
   ],
   "kaskad_files": [
@@ -252,6 +252,7 @@
     "merge_policy": "draft_pull_request_only",
     "trigger_paths": [
       "docs/VYUNENKO_THEORY.md",
+      "docs/K3_PRODUCT_DECOMPOSITION.md",
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
       "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
       "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
