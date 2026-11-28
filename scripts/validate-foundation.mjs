@@ -33,9 +33,6 @@ if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
   if (project.theory?.id !== "K3") fail("project-contract.json: theory.id must be K3");
 
-  if (project.theory?.specification_version !== "0.6.0") {
-    fail("project-contract.json: theory.specification_version must match the integrated K3 theory 0.6.0");
-  }
   if (project.theory?.radix !== 1000) fail("project-contract.json: K3 radix must be 1000");
   if (project.theory?.radix_factorization?.["2"] !== 3 || project.theory?.radix_factorization?.["5"] !== 3) {
     fail("project-contract.json: radix factorization must be 2^3 * 5^3");
@@ -396,6 +393,12 @@ if (existsSync(statusRecordPath)) {
 const theoryPath = resolve(root, "docs/VYUNENKO_THEORY.md");
 if (existsSync(theoryPath)) {
   const theoryText = readFileSync(theoryPath, "utf8");
+  const versionMatch = theoryText.match(/^\*\*Версия:\*\*\\s+([0-9]+\\.[0-9]+\\.[0-9]+)/m);
+  if (!versionMatch) {
+    fail("Integrated Vyunenko Theory is missing its semantic version metadata");
+  } else if (project?.theory?.specification_version !== versionMatch[1]) {
+    fail("project-contract.json: theory.specification_version must match the integrated K3 theory " + versionMatch[1]);
+  }
   for (const section of ["# ЧАСТЬ XIX.", "# ЧАСТЬ XX.", "# ЧАСТЬ XXI.", "# ЧАСТЬ XXII.", "# ЧАСТЬ XXIII.", "# ЧАСТЬ XXIV.", "## 99.", "## 103.", "## 107."]) {
     if (!theoryText.includes(section)) fail("Integrated Vyunenko Theory is missing section " + section);
   }

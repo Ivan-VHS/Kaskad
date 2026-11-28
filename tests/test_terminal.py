@@ -36,7 +36,7 @@ class K3TerminalIntegralTests(unittest.TestCase):
 
     def test_integer_result_can_be_encoded_in_canonical_k3(self):
         self.assertEqual(terminal_integral_k3((3, 5, 7)), "15")
-        self.assertEqual(terminal_integral_k3((1, 0), (1, 1000)), "1k")
+        self.assertEqual(terminal_integral_k3((0, 1), (1, 1000)), "1k")
 
     def test_noninteger_result_is_not_rounded_for_k3(self):
         with self.assertRaises(TerminalIntegralError):
