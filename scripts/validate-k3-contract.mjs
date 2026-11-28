@@ -272,6 +272,10 @@ if (registry) {
         claim.id + ": catalogue status must be explicit");
       check(Boolean(claim.machine_check_scope),
         claim.id + ": catalogue status must delimit machine-check scope");
+      if (claim.evidence_status === "catalogue_integrity_verified_by_ci") {
+        check(typeof claim.verification_note === "string" && claim.verification_note.length > 0,
+          claim.id + ": verified catalogue must include bounded CI evidence");
+      }
     }
   }
 
