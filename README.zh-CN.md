@@ -131,6 +131,7 @@ K3 的数值算术与普通整数算术一致：基数 1000 只是把十进制�
 |---|---|
 | 完整 K3 理论 | [维尤年科 K3 理论](docs/VYUNENKO_THEORY.md) |
 | 了解位于公式末尾的终端积分 | [K3-TI 终端积分算子](docs/K3_TERMINAL_INTEGRAL_OPERATOR.md) |
+| 了解数学宇宙学的五条规则 | [K3-MC5](docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md) — 与 TOPK、K3-RCR 和 K3-TI 关联的元理论层 |
 | 了解有向判定与 CV-K3-M1 | [Chumny Verdict CV-1 理论](docs/CHUMNY_VERDICT_THEORY.md)（v1.2.1；单调性结论仅适用于明确给定的模型） |
 | 记数和解析规则 | [K3 规范语法](docs/K3_CANONICAL_SYNTAX.md) |
 | 进位与借位 | [级联平衡](docs/CHAPTER_II_CASCADE_BALANCE.md) |
