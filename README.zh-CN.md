@@ -132,6 +132,7 @@ flowchart TD
 ### K3 基础理论
 
 - [维尤年科 K3 理论——基础规范](docs/VYUNENKO_THEORY.md)
+- [瘟疫裁决理论——CV-1](docs/CHUMNY_VERDICT_THEORY.md)
 - [级联平衡、规范化与不变量](docs/CHAPTER_II_CASCADE_BALANCE.md)
 - [K3 规范语法与形式文法](docs/K3_CANONICAL_SYNTAX.md)
 - [K3 规范基础、代数与语义](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
@@ -211,7 +212,7 @@ actions/checkout v4 和 actions/setup-node v4。这是对当前 CI 配置的说�
 
 ## 集成数学扩展（2026-11-28）
 
-Kaskad 研究文档库现已纳入 K3 有序算术专著、定向位置组合、基数 \(1000=2^3\cdot5^3\) 的双通道几何，以及 K3-M 的十层有限系数轮廓形态学。
+Kaskad 研究文档库现已纳入 K3 有序算术专著、定向位置组合、基数 \(1000=2^3\cdot5^3\) 的双通道几何，以及 K3-M 的十层有限系数轮廓形态学。瘟疫裁决理论 CV-1 1.1.0 还定义了幂等投影 (P_c)，同时保留原始整数求值结果和普通相等关系。
 
 相关应用数学来源分别记录：[DAK](docs/DAK_SYSTEM_MATHEMATICS.md)、[Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md) 和 [VentuSample 音频数学](docs/VYUNENKO_AUDIO_MATHEMATICS.md)。这些内容是数学模型与对应关系，不表示 Kaskad 实现了这些源项目。
 

@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/chumny-verdict.v1.schema.json",
+  "title": "CV-1 / CV-P machine-readable theory model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "theory",
+    "instance",
+    "relations",
+    "projection",
+    "illustrative_instance",
+    "theorem_ids",
+    "verification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "theory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "version",
+        "base_theory",
+        "base_radix",
+        "status",
+        "base_k3_semantics_changed",
+        "ordinary_integer_equality_changed"
+      ],
+      "properties": {
+        "id": {
+          "const": "CV-1"
+        },
+        "title": {
+          "const": "Теория Чумного Вердикта"
+        },
+        "version": {
+          "const": "1.1.0"
+        },
+        "base_theory": {
+          "const": "K3"
+        },
+        "base_radix": {
+          "const": 1000
+        },
+        "status": {
+          "const": "formalized_compatible_extension"
+        },
+        "base_k3_semantics_changed": {
+          "const": false
+        },
+        "ordinary_integer_equality_changed": {
+          "const": false
+        }
+      }
+    },
+    "instance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameter",
+        "domain",
+        "nonzero_required",
+        "exactly_one_value_per_instance",
+        "global_default"
+      ],
+      "properties": {
+        "parameter": {
+          "const": "c"
+        },
+        "domain": {
+          "const": "Z"
+        },
+        "nonzero_required": {
+          "const": true
+        },
+        "exactly_one_value_per_instance": {
+          "const": true
+        },
+        "global_default": {
+          "type": "null"
+        }
+      }
+    },
+    "relations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "additive_transfer"
+      ],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "symbol",
+            "definition",
+            "unique_pair",
+            "asymmetric"
+          ],
+          "properties": {
+            "symbol": {
+              "const": "prec_c"
+            },
+            "definition": {
+              "const": "x=0 and y=c"
+            },
+            "unique_pair": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "0"
+                },
+                {
+                  "const": "c"
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "asymmetric": {
+              "const": true
+            }
+          }
+        },
+        "additive_transfer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "symbol",
+            "definition",
+            "parameter_fixed"
+          ],
+          "properties": {
+            "symbol": {
+              "const": "rightsquigarrow_c"
+            },
+            "definition": {
+              "const": "y=x+c"
+            },
+            "parameter_fixed": {
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "projection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "symbol",
+        "domain",
+        "codomain",
+        "definition",
+        "idempotent",
+        "image",
+        "noninjective",
+        "only_nontrivial_fiber",
+        "preserves_raw_evaluation",
+        "kernel_equivalence",
+        "kernel_is_additive_congruence"
+      ],
+      "properties": {
+        "id": {
+          "const": "CV-P"
+        },
+        "symbol": {
+          "const": "P_c"
+        },
+        "domain": {
+          "const": "Z"
+        },
+        "codomain": {
+          "const": "Z"
+        },
+        "definition": {
+          "const": "c if n=0; n otherwise"
+        },
+        "idempotent": {
+          "const": true
+        },
+        "image": {
+          "const": "Z excluding 0"
+        },
+        "noninjective": {
+          "const": true
+        },
+        "only_nontrivial_fiber": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "0"
+            },
+            {
+              "const": "c"
+            }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "preserves_raw_evaluation": {
+          "const": true
+        },
+        "kernel_equivalence": {
+          "const": "a≈c b iff P_c(a)=P_c(b)"
+        },
+        "kernel_is_additive_congruence": {
+          "const": false
+        }
+      }
+    },
+    "illustrative_instance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "c",
+        "map_cases",
+        "primary_relation_cases",
+        "transfer_cases",
+        "post_evaluation_cases",
+        "positional_zero_group_example",
+        "kernel_equivalence_cases"
+      ],
+      "properties": {
+        "c": {
+          "type": "integer",
+          "not": {
+            "const": 0
+          }
+        },
+        "map_cases": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "input",
+              "output"
+            ],
+            "properties": {
+              "input": {
+                "type": "integer"
+              },
+              "output": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "primary_relation_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "from",
+              "to",
+              "expected"
+            ],
+            "properties": {
+              "from": {
+                "type": "integer"
+              },
+              "to": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "transfer_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "from",
+              "to",
+              "expected"
+            ],
+            "properties": {
+              "from": {
+                "type": "integer"
+              },
+              "to": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "post_evaluation_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "expression",
+              "raw_value",
+              "cv_value"
+            ],
+            "properties": {
+              "expression": {
+                "type": "string"
+              },
+              "raw_value": {
+                "type": "integer"
+              },
+              "cv_value": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        "positional_zero_group_example": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "coefficients",
+            "coefficient_order",
+            "radix",
+            "evaluated_value",
+            "cv_value"
+          ],
+          "properties": {
+            "coefficients": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 1
+            },
+            "coefficient_order": {
+              "const": "least_significant_to_most_significant"
+            },
+            "radix": {
+              "const": 1000
+            },
+            "evaluated_value": {
+              "type": "integer"
+            },
+            "cv_value": {
+              "type": "integer"
+            }
+          }
+        },
+        "kernel_equivalence_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "left",
+              "right",
+              "expected"
+            ],
+            "properties": {
+              "left": {
+                "type": "integer"
+              },
+              "right": {
+                "type": "integer"
+              },
+              "expected": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "theorem_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^CV-T1[1-4]$"
+      },
+      "uniqueItems": true,
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "ci_status",
+        "notes"
+      ],
+      "properties": {
+        "method": {
+          "const": "exact_integer_checks_and_written_proofs"
+        },
+        "ci_status": {
+          "enum": [
+            "not_executed",
+            "executed"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}
