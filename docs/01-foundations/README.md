@@ -5,6 +5,7 @@
 **Назначение:** формальные объекты, постулаты, определения, алфавит, области и ограничения.
 
 - [Теория Вьюненко K3](../VYUNENKO_THEORY.md)
+- [Математический словарь и реестр обозначений](../MATHEMATICAL_GLOSSARY.md)
 - [Канонический синтаксис](../K3_CANONICAL_SYNTAX.md)
 - [Канонические основания и алгебра](../K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
 - [Математический справочник](../MATHEMATICAL_FOUNDATIONS_REFERENCE.md)

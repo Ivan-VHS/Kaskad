@@ -13,7 +13,10 @@
   <a href="docs/KASKAD_INSTITUTE_CHARTER.md">KASKAD INSTITUTE</a> ·
   <a href="docs/VYUNENKO_THEORY.md">K3 THEORY</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1 THEORY</a> ·
-  <a href="CONTRIBUTING.md">HOW TO CONTRIBUTE</a>
+  <a href="CONTRIBUTING.md">HOW TO CONTRIBUTE</a> ·
+  <a href="docs/MATHEMATICAL_GLOSSARY.md">GLOSSARY</a> ·
+  <a href="docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md">QUALITY PLAN</a> ·
+  <a href="docs/ERRATA.md">ERRATA</a>
 </p>
 
 ---

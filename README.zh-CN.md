@@ -13,7 +13,10 @@
   <a href="docs/KASKAD_INSTITUTE_CHARTER.md">KASKAD 数学研究院</a> ·
   <a href="docs/VYUNENKO_THEORY.md">K3 理论</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1 理论</a> ·
-  <a href="CONTRIBUTING.md">如何参与</a>
+  <a href="CONTRIBUTING.md">如何参与</a> ·
+  <a href="docs/MATHEMATICAL_GLOSSARY.md">术语表</a> ·
+  <a href="docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md">质量计划</a> ·
+  <a href="docs/ERRATA.md">勘误表</a>
 </p>
 
 ---
