@@ -158,6 +158,17 @@ flowchart TD
 ---
 
 <p align="center"><sub>АТЛАС ДОКУМЕНТАЦИИ KASKAD · КАЖДЫЙ СЛОЙ ИМЕЕТ СВОЙ СТАТУС</sub></p>
+## Расширенная карта математического корпуса
+
+- [Научная консолидация K3](K3_SCIENTIFIC_CONSOLIDATION.md) · [Реестр утверждений](K3_CLAIM_REGISTRY.json) · [Эталонные векторы](K3_REFERENCE_VECTORS.json)
+- [Исходные каскадные формулы](K3_ORIGINAL_CASCADE_FORMULAS.md) · [Бипрайм-геометрия и закон переноса](K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md)
+- [Архитектура репозитория](REPOSITORY_ARCHITECTURE.md) · [Контрпримеры и границы](K3_COUNTEREXAMPLES_AND_BOUNDARIES.md)
+- [Схема эталонных векторов](../schemas/k3-reference-vectors.v1.schema.json)
+- [01 · Основы](01-foundations/README.md) · [02 · Каноническая теория](02-core-theory/README.md) · [03 · Доказательства](03-proofs-and-theorems/README.md)
+- [04 · Алгебра и топология](04-algebra-and-topology/README.md) · [05 · Классический crosswalk](05-classical-crosswalk/README.md) · [06 · Открытые задачи](06-open-problems/README.md)
+- [07 · Прикладные модели](07-applied-models/README.md) · [08 · Вычислительные свидетельства](08-computational-evidence/README.md)
+- [Формальный слой](../formal/README.md) · [Тесты](../tests/README.md) · [Схемы](../schemas/README.md) · [Скрипты](../scripts/README.md)
+
 ## Организация математического корпуса
 
 - [Статус и границы Kaskad](status-and-scope.md) — предметная область и эпистемические ограничения.
