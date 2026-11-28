@@ -74,7 +74,10 @@
     "knot_theory_and_topological_invariants",
     "analytic_number_theory",
     "cooperative_formula_synthesis",
-    "typed_applied_mathematical_models_from_related_repositories"
+    "typed_applied_mathematical_models_from_related_repositories",
+    "category_valued_local_passport_descent",
+    "triadic_cascade_effect_semantics",
+    "local_graph_context_comonadic_models"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -93,7 +96,9 @@
     "claim_and_counterexample_registry",
     "machine_readable_reference_vector_schema",
     "computable_numberings_and_index_morphisms",
-    "typed_CV_index_pullbacks"
+    "typed_CV_index_pullbacks",
+    "category_valued_descent_and_passport_gluing",
+    "triadic_graph_effectful_execution_and_statuses"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -195,7 +200,8 @@
     "scripts/README.md",
     "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md",
-    "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md"
+    "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+    "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
