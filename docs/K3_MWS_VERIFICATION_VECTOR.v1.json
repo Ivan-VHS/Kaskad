@@ -301,9 +301,10 @@
       "autonomous_state_space": "(R/2piZ)^2",
       "state_map": "(psi,chi) -> (psi + 2pi TD/N, chi + 2pi/(N(TD+1))) mod 2pi",
       "full_phase_state_minimal_period": 10000,
-      "full_cycle_sample_count": 10000,
       "observed_coordinate_minimal_period": "not asserted",
-      "attribution_boundary": "The radial sequence follows the discrete formula reported in Putnam's analysis of Whitney. The explicit torus lift and angular embedding are constructions specified by K3-MWS-1."
+      "attribution_boundary": "The radial sequence follows the discrete formula reported in Putnam's analysis of Whitney. The explicit torus lift and angular embedding are constructions specified by K3-MWS-1.",
+      "sample_window_count": 1000,
+      "sample_window_description": "The N source-formula samples n=0..999; the autonomous lifted phase map continues for 10000 steps before its full phase state returns."
     }
   },
   "k3_length_profile": {
