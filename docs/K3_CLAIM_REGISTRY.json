@@ -1283,6 +1283,123 @@
         ],
         "boundary": "Erasure on a single trajectory or on an event of positive probability does not imply unconditional I(X;Y)=0; a gate depending on X may preserve all information."
       }
+    },
+    {
+      "id": "K3-TOPK-DEF-001",
+      "kind": "definition",
+      "statement": "For each declared type τ, the TOPK annihilator is the typed constant map Dτ:Xτ→{⊥Ω,τ}, and a complete formal system is supplied as one declared environment package Env(S).",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§§2, 4–8, Definitions and system environment",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A declared carrier Xτ of objects of one formal type, including a tagged environment package for a formal system",
+        "assumptions": [
+          "The input type and external codomain marker are fixed before applying the operator",
+          "Every component claimed to belong to a complete system is included in Env(S)"
+        ],
+        "boundary": "The map describes semantic collapse of the declared input; it does not physically delete stored data or alter the truth of external metatheoretic statements."
+      }
+    },
+    {
+      "id": "K3-TOPK-THM-001",
+      "kind": "theorem",
+      "statement": "The image of a nonempty TOPK input carrier under Dτ is the singleton {⊥Ω,τ}; any two inputs of that type have the same output.",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§§10–11, universal result and derived rules",
+      "dependencies": [
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A nonempty declared carrier Xτ",
+        "assumptions": [
+          "Dτ is defined on every element of Xτ",
+          "The external marker ⊥Ω,τ is fixed for the carrier"
+        ],
+        "boundary": "This is an equality of operator outputs; it does not identify the original inputs or their pre-annihilation properties."
+      }
+    },
+    {
+      "id": "K3-TOPK-THM-002",
+      "kind": "theorem",
+      "statement": "If Dτ is extended to the marker by D̂τ(⊥Ω,τ)=⊥Ω,τ, then D̂τ is idempotent.",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§10 and §12, extension to the marker and idempotence",
+      "dependencies": [
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The disjoint union Xτ⊔{⊥Ω,τ}",
+        "assumptions": [
+          "D̂τ agrees with Dτ on Xτ",
+          "The marker is a fixed point of D̂τ"
+        ],
+        "boundary": "Without the explicit extension to the marker, a second application may be ill-typed."
+      }
+    },
+    {
+      "id": "K3-TOPK-THM-003",
+      "kind": "theorem",
+      "statement": "If Xτ contains at least two distinct elements, Dτ is non-injective and no left inverse can recover every input from the marker alone.",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§§13–14, non-injectivity and non-recoverability",
+      "dependencies": [
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A declared carrier Xτ with cardinality at least two",
+        "assumptions": [
+          "The operator output contains only the fixed marker and no side-channel data"
+        ],
+        "boundary": "An external backup, side channel or retained log can contain additional information; recovery from such data is outside Dτ."
+      }
+    },
+    {
+      "id": "K3-TOPK-THM-004",
+      "kind": "theorem",
+      "statement": "For a discrete random input Xτ with any declared probability law and constant output Y=Dτ(Xτ), H(Y)=0 and I(Xτ;Y)=0.",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§16, zero entropy and mutual information",
+      "dependencies": [
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A discrete random variable Xτ with a probability distribution and Y=Dτ(Xτ)",
+        "assumptions": [
+          "The output is exactly the constant marker",
+          "No auxiliary output or side channel is included"
+        ],
+        "boundary": "The information statement requires the declared probability model; it is not a physical erasure or thermodynamic claim."
+      }
+    },
+    {
+      "id": "K3-TOPK-THM-005",
+      "kind": "theorem",
+      "statement": "The set-theoretic interpretation X→{⊥Ω}, x↦⊥Ω satisfies the four base TOPK axioms A0–A3 whenever X is a set and ⊥Ω is chosen as a fresh tagged object.",
+      "source": "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+      "proof_reference": "§9.1, canonical model and relative model existence",
+      "dependencies": [
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A set X in a background set theory with tagged objects and disjoint unions",
+        "assumptions": [
+          "A fresh tagged marker can be adjoined to X",
+          "The constant map is defined by separation/replacement or an equivalent function construction"
+        ],
+        "boundary": "This is a relative model construction and does not prove the consistency of the background set theory."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
