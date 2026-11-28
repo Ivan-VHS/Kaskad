@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "project": "Kaskad",
   "theory": "Vyunenko K3",
-  "theory_version": "0.7.0",
+  "theory_version": "0.8.0",
   "base": {
     "radix": 1000,
     "factorization": {
@@ -1399,6 +1399,211 @@
           "The constant map is defined by separation/replacement or an equivalent function construction"
         ],
         "boundary": "This is a relative model construction and does not prove the consistency of the background set theory."
+      }
+    },
+    {
+      "id": "K3-MC5-DEF-001",
+      "kind": "definition",
+      "statement": "K3-MC5 represents the mathematical object universe as a stratified family of declared nonempty levels, with object sorts and higher-level codes for descriptions of lower-level theories and proofs.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§§2.1–2.3, stratified universe and existence rule",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Declared active object levels U_l and their typed object sorts",
+        "assumptions": [
+          "Each active level has a declared nonempty carrier",
+          "Theory and proof descriptions are represented at an appropriate meta-level"
+        ],
+        "boundary": "The construction is not a set of all sets and does not assert one universal set containing every possible mathematical object."
+      }
+    },
+    {
+      "id": "K3-MC5-DEF-002",
+      "kind": "definition",
+      "statement": "A transformation in K3-MC5 is a typed partial map O_(A⇀B):D_O⇀B with D_O a declared subset of A and with explicit preconditions, postconditions and preserved invariants.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§3, typed transformation rule",
+      "dependencies": [
+        "K3-MC5-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Typed object carriers A and B and a declared operator domain D_O",
+        "assumptions": [
+          "Input and output types are declared",
+          "The operator is applied only to inputs in its domain"
+        ],
+        "boundary": "No operator is asserted to be total or applicable to every object."
+      }
+    },
+    {
+      "id": "K3-MC5-DEF-003",
+      "kind": "definition",
+      "statement": "A transformation boundary is a typed descriptor carrying its admissible domain, boundary object or threshold, and a status classifier with inside, boundary, outside and undetermined states.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§4, boundary passport",
+      "dependencies": [
+        "K3-MC5-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A declared transformation and its typed input state space",
+        "assumptions": [
+          "The boundary criterion is declared",
+          "A topological boundary is used only when a topology has been declared"
+        ],
+        "boundary": "Being outside an active domain is not identical to metaphysical nonexistence or physical deletion."
+      }
+    },
+    {
+      "id": "K3-MC5-DEF-004",
+      "kind": "definition",
+      "statement": "Crystallization relative to an invariant set K is the proved convergence condition dist(Phi_t(x),K)→0 on a declared basin; pointwise convergence is the special case K={k}.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§5.1, invariant set and crystallization definition",
+      "dependencies": [
+        "K3-MC5-DEF-002",
+        "K3-MC5-DEF-003"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A declared evolution Phi_t on a metric or otherwise convergence-equipped state space",
+        "assumptions": [
+          "The time parameter and evolution are defined",
+          "K is invariant under the evolution",
+          "The convergence metric/topology and basin are specified"
+        ],
+        "boundary": "Lyapunov stability alone does not imply convergence to a specified equilibrium; a convergence theorem and its hypotheses are required."
+      }
+    },
+    {
+      "id": "K3-MC5-DEF-005",
+      "kind": "definition",
+      "statement": "The annihilation rule distinguishes the TOPK typed total constant map on each declared type, the auxiliary right-residual map C_Omega(L Omega R)=R, and the conditional K3-RCR erasure (L,S)↦Erased(bottom_L,S); these operators have different signatures and outputs.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§6, comparison of TOPK, C_Omega and K3-RCR",
+      "dependencies": [
+        "K3-TOPK-DEF-001",
+        "K3-RCR-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The type-specific TOPK carrier X_tau, the declared L×Omega×R projection carrier, and the typed K3-RCR pair domain",
+        "assumptions": [
+          "TOPK maps its declared input to an external annihilation marker",
+          "C_Omega preserves the right residual",
+          "K3-RCR has an explicit trigger and preserves the standard position S"
+        ],
+        "boundary": "No one of these maps is substituted for either of the other two; the markers bottom_Omega and bottom_L remain distinct."
+      }
+    },
+    {
+      "id": "K3-MC5-THM-001",
+      "kind": "theorem",
+      "statement": "Under the stated global LaSalle hypotheses for a continuous autonomous vector field, a continuously differentiable positive-definite radially unbounded function V with Vdot≤0 implies that trajectories converge to the largest invariant set contained in {x:Vdot(x)=0}.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§5.3, classical LaSalle invariance principle and MIT source",
+      "dependencies": [
+        "K3-MC5-DEF-004"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Autonomous ODE on R^n with continuous vector field and forward trajectories",
+        "assumptions": [
+          "V is continuously differentiable and positive definite",
+          "Vdot≤0 along trajectories",
+          "V is radially unbounded, or a separately justified compact positively invariant variant is used"
+        ],
+        "boundary": "Only convergence to the largest invariant subset of the zero-derivative set is concluded; convergence to a unique point requires further conditions."
+      },
+      "classical_context": "Russ Tedrake, MIT Underactuated Robotics notes, Lyapunov Analysis, LaSalle's Theorem, https://underactuated.mit.edu/lyapunov.html."
+    },
+    {
+      "id": "K3-MC5-THM-002",
+      "kind": "theorem",
+      "statement": "Every element in a terminating and confluent rewrite system has a unique normal form.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§5.4, classical unique-normal-form theorem",
+      "dependencies": [
+        "K3-MC5-DEF-004"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A rewrite system with a specified one-step reduction relation",
+        "assumptions": [
+          "The rewrite relation is terminating",
+          "The rewrite relation is confluent"
+        ],
+        "boundary": "Confluence without termination does not guarantee that a normal form is reached."
+      },
+      "classical_context": "Klaus Sutner, Carnegie Mellon University, Rewrite Systems, Spring 2025, slides 34–35, https://www.cs.cmu.edu/~cdm/resources/50-rewrite.pdf."
+    },
+    {
+      "id": "K3-MC5-CEX-001",
+      "kind": "counterexample",
+      "statement": "Lyapunov stability alone does not imply convergence to a specified equilibrium: the planar linear center xdot=−y, ydot=x has a Lyapunov-stable origin while every nonzero trajectory is periodic and does not converge to the origin.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§5.2, linear-center counterexample",
+      "dependencies": [
+        "K3-MC5-DEF-004"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "For every initial state, the solution of xdot=-y, ydot=x is (x(t),y(t))=(x0 cos t-y0 sin t, x0 sin t+y0 cos t), so x(t)^2+y(t)^2=x0^2+y0^2. The origin is Lyapunov-stable; every nonzero trajectory is periodic and does not converge to the origin."
+    },
+    {
+      "id": "K3-MC5-HYP-001",
+      "kind": "hypothesis",
+      "statement": "There exists a final global meta-level or a single terminal marker that subsumes every possible higher-order meta-environment, rather than an unending level-indexed TOPK annihilation scheme.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§6.3, open question about a final meta-level",
+      "dependencies": [
+        "K3-MC5-DEF-001",
+        "K3-MC5-DEF-005",
+        "K3-TOPK-DEF-001"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A proposed terminal completion of the level-indexed meta-hierarchy",
+        "assumptions": [
+          "A final level or global terminal marker is defined",
+          "Its relation to all possible external description languages is formalized"
+        ],
+        "boundary": "TOPK defines relative annihilation at each fixed level and does not assert a last level."
+      }
+    },
+    {
+      "id": "K3-MC5-HYP-002",
+      "kind": "hypothesis",
+      "statement": "The five K3-MC5 rules may support a formal derivation system from which broad classes of mathematical theories can be reconstructed, once a logic, signature, semantics and inference rules are supplied.",
+      "source": "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md",
+      "proof_reference": "§1 and §7–§9, open hypothesis",
+      "dependencies": [
+        "K3-MC5-DEF-001",
+        "K3-MC5-DEF-002",
+        "K3-MC5-DEF-003",
+        "K3-MC5-DEF-004",
+        "K3-MC5-DEF-005"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A future formal calculus extending the five-rule meta-axiomatic signature",
+        "assumptions": [
+          "A formal inference relation is defined",
+          "Soundness and consistency obligations are stated",
+          "Concrete derivations of target mathematical results are supplied"
+        ],
+        "boundary": "The current five formulas alone do not establish that almost all mathematics is derivable."
       }
     }
   ],
