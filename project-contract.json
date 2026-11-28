@@ -50,7 +50,7 @@
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
       "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
-      "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels"
+      "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels",
       "computable_K3_numbering_and_TCV_K3_index_pullbacks"
     ]
   },
@@ -79,7 +79,7 @@
     "analytic_number_theory",
     "cooperative_formula_synthesis",
     "typed_applied_mathematical_models_from_related_repositories",
-    "negative_tendency_and_dependency_defect_model"
+    "negative_tendency_and_dependency_defect_model",
     "homological_algebra_and_simplicial_cohomology",
     "sheaf_topoi_and_stratified_spaces",
     "lattice_theory_and_orthomodular_logic",
@@ -208,10 +208,10 @@
     "tests/README.md",
     "schemas/README.md",
     "scripts/README.md",
-    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
     "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE_STANDARD.md",
     "docs/K3_INTEGER_MULTIPLICITY_AUDIT.md",
-    "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json"
+    "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json",
     "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md",
     "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
@@ -236,7 +236,7 @@
     "canonical_K3_core_invariants_preserved",
     "open_proof_obligations_remain_explicit",
     "previous_CRT_completion_and_infinite_expansion_results_preserved",
-    "negative_tendency_model_has_complete_observation_coverage_and_predeclared_thresholds"
+    "negative_tendency_model_has_complete_observation_coverage_and_predeclared_thresholds",
     "integer_multiplicity_evidence_contract"
   ],
   "documentation_standard": {

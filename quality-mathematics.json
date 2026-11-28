@@ -36,7 +36,7 @@
     "dependency_clusters_declare_weak_connectivity": true,
     "directed_propagation_is_distinct_from_cluster_connectivity": true,
     "normalized_local_defect_load_is_bounded": true,
-    "medical_metaphors_are_not_medical_claims": true
+    "medical_metaphors_are_not_medical_claims": true,
     "every_integer_multiplicity_declares_typed_relation_and_domain": true,
     "integer_divisibility_uses_exact_quotient_remainder": true,
     "composite_radix_1000_divisibility_checks_both_prime_channels": true,
@@ -45,7 +45,7 @@
     "positional_scale_preserves_explicit_zero_groups": true,
     "multiset_repetition_does_not_collapse_to_set": true,
     "multiplicity_claims_include_boundary_cases_and_counterexamples": true,
-    "multiplicity_claims_follow_K3_IME_1_0_0": true
+    "multiplicity_claims_follow_K3_IME_1_0_0": true,
     "equivalence_collapse_requires_common_typed_carrier": true,
     "description_complexity_does_not_imply_object_nonexistence": true,
     "integrals_declare_density_domain_and_measure": true,
@@ -153,11 +153,16 @@
     "assuming_nu_1000_is_multiplicative": true,
     "using_nonzero_low_group_as_modular_unit_test": true,
     "using_plain_set_when_repetition_counts_matter": true,
-    "scoring_evidence_status_as_mathematical_truth": true
+    "scoring_evidence_status_as_mathematical_truth": true,
     "identifying_empty_set_with_numeric_zero_or_scalar_without_typed_map": true,
     "evaluating_real_functions_at_empty_set": true,
     "treating_semantic_overhead_as_a_standard_number_class": true,
-    "inferring_object_nonexistence_from_description_quality": true
+    "inferring_object_nonexistence_from_description_quality": true,
+    "treating_a_zero_group_as_a_defect_without_an_invariant_violation": true,
+    "treating_a_negative_integer_as_a_defect_by_sign_alone": true,
+    "treating_unassessed_nodes_as_zero_load": true,
+    "claiming_empirical_thresholds_without_calibration": true,
+    "interpreting_metaphorical_levels_as_epidemiological_results": true
   },
   "review": {
     "mathematical_review_required": true,
@@ -169,7 +174,8 @@
     "status_changes_require_commit_scoped_evidence": true,
     "external_recognition_requires_verifiable_external_record": true,
     "self_review_is_not_independent_review": true,
-    "scientific_maturity_must_not_be_collapsed_into_one_score": true
+    "scientific_maturity_must_not_be_collapsed_into_one_score": true,
+    "threshold_calibration_review_required": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
