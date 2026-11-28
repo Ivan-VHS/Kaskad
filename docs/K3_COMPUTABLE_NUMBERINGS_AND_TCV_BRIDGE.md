@@ -3,6 +3,8 @@
   <p><sub>ВЫЧИСЛИМЫЕ НУМЕРАЦИИ · ПОЗИЦИОННЫЕ ИНДЕКСЫ K3 · TCV-K3</sub></p>
 </div>
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** mathematical claims retain their declared status; coding and computation do not replace proof.
+
 <p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="CHUMNY_VERDICT_THEORY.md">ТЧВ / CV-1</a></p>
 
 ---
