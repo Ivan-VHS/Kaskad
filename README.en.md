@@ -96,6 +96,8 @@ In simple terms, every group has a position, and that position determines its co
 | **50k0k** | $(0,0,50)$ | $50\,000\,000$ |
 | **50k7** | $(7,50)$ | $50\,007$ |
 
+In the canonical grammar, a trailing **k** denotes exactly one additional implicit least-significant zero group. The canonical zero word is **0**.
+
 **Why do zero groups matter?** In **50k0k7**, the middle group is zero, but it still occupies a position. Removing it gives **50k7**, which is a different number. Zeros and separators must not be removed, moved or combined without a precise rule and a proof that the required property is preserved.
 
 K3 also separates three ways of handling structure:
