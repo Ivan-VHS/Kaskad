@@ -623,7 +623,7 @@ K3\text{-}PAD(5k0)+50k
 
 \[
 \operatorname{Add}(50k,K3\text{-}PAD(5k0))
-\ne_{\mathrm{AST}}
+\not\equiv_{\mathrm{AST}}
 \operatorname{Add}(K3\text{-}PAD(5k0),50k),
 \]
 
