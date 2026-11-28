@@ -150,6 +150,13 @@ flowchart TD
     B --> H["独立研究方向，包括 CV-1"]
 ~~~
 
+### 其他重要文档
+
+- [K3 科学整合文档](docs/K3_SCIENTIFIC_CONSOLIDATION.md) · [形式认识论与证明](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [参考向量](docs/K3_REFERENCE_VECTORS.json)
+- [原始级联公式](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) · [双通道几何与进位规则](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) · [仓库架构](docs/REPOSITORY_ARCHITECTURE.md)
+- [参考向量数据结构](schemas/k3-reference-vectors.v1.schema.json) · [数学术语表](docs/MATHEMATICAL_GLOSSARY.md) · [科学质量计划](docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md)
+- [Cascade Edition 科学文档标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Kaskad 研究院章程](docs/KASKAD_INSTITUTE_CHARTER.md)
+
 ## 检查参考实现
 
 仓库中包含辅助包 **src/kaskad_k3/**、位于 **tests/** 的测试，以及 **tests/vectors/** 中的参考数据。该软件包使用 Python 标准库，没有额外的运行时依赖。CI 配置覆盖 Python 3.11–3.14。
