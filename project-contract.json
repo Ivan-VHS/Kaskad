@@ -270,7 +270,11 @@
     "finite_atomic_integral_reduces_to_exact_weighted_sum",
     "K3_encoding_is_applied_only_after_integrality_of_result_is_established",
     "sine_gordon_topological_atom_is_semantically_declared",
-    "extended_real_survival_log_is_separate_from_rational_runtime"
+    "extended_real_survival_log_is_separate_from_rational_runtime",
+    "K3_TI_sine_Gordon_energy_claim_declares_locally_absolutely_continuous_finite_energy_class",
+    "K3_TI_quadratic_escape_radius_is_separated_from_full_survivor_set",
+    "K3_TI_Julia_measure_statement_uses_one_dimensional_Lebesgue_measure_and_classical_source",
+    "K3_TI_mutual_information_zero_requires_almost_surely_constant_output"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",

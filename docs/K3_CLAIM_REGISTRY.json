@@ -1179,13 +1179,13 @@
       "evidence_status": "proof_written_pending_independent_review",
       "independent_review": "not_recorded",
       "scope": {
-        "domain": "Finite-energy real profiles on R with the stated endpoint limits and sufficient local absolute continuity",
+        "domain": "Real-valued locally absolutely continuous profiles u in AC_loc(R) with finite normalized sine-Gordon energy and endpoint limits u(-∞)=0, u(+∞)=2π",
         "assumptions": [
-          "The energy integral is finite",
-          "u is locally absolutely continuous with derivative square-integrable where required",
-          "The endpoint limits are 0 and 2pi"
+          "The energy is E[u]=integral_R (1/2 |u'|^2 + 1-cos u) dx",
+          "Finite energy implies u' in L2(R) and sin(u/2) in L2(R), so the cross term is integrable",
+          "The primitive W(u)=-4 cos(u/2) is evaluated at the declared endpoint limits"
         ],
-        "boundary": "The lower bound belongs to the specified sine-Gordon normalization and topological sector; it is not a universal energy bound."
+        "boundary": "The lower bound 8 belongs to the normalized static topological sector 0 to 2π; it does not establish temporal convergence or physical crystallization."
       }
     },
     {
@@ -1198,13 +1198,13 @@
       "evidence_status": "proof_written_pending_independent_review",
       "independent_review": "not_recorded",
       "scope": {
-        "domain": "Real initial states for the quadratic recurrence with m>0",
+        "domain": "Real initial states for D_(k+1)=D_k^2-m with m>0 and rho=(1+sqrt(1+4m))/2",
         "assumptions": [
-          "m is a positive real number",
-          "rho=(1+sqrt(1+4m))/2",
+          "m is a fixed positive real parameter",
+          "The current state is real and has |D_k|>rho",
           "The recurrence is iterated exactly over the real numbers"
         ],
-        "boundary": "The result is specific to the real recurrence and does not by itself establish a complex dynamical claim."
+        "boundary": "This is a sufficient real escape criterion. It does not classify all points currently inside the radius and does not, by itself, establish the complex Julia-set classification."
       }
     },
     {
@@ -1219,6 +1219,70 @@
       "evidence_status": "definition",
       "independent_review": "not_recorded",
       "verification_note": "The log-zero convention is log(0)=-infinity; this symbolic extended-real construction is not implemented by the rational-only runtime function."
+    },
+    {
+      "id": "K3-SG-THM-002",
+      "kind": "theorem",
+      "statement": "In the finite-energy sine-Gordon sector u(-infinity)=0 and u(+infinity)=2pi, equality E[u]=8 holds exactly when u'=2 sin(u/2) almost everywhere; all equality profiles are u(x)=4 arctan(exp(x-x0)) for a spatial translation x0.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§6.5, equality condition, separated first-order equation and direct profile verification",
+      "dependencies": [
+        "K3-SG-THM-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite-energy real profiles in AC_loc(R) with endpoint limits 0 and 2pi",
+        "assumptions": [
+          "The energy decomposition is the exact BPS identity in §6.3",
+          "A nonnegative square has zero integral exactly when its value is zero almost everywhere",
+          "The first-order ODE u'=2 sin(u/2) is solved with the stated endpoint limits"
+        ],
+        "boundary": "Uniqueness is modulo spatial translation. The result is a static minimizer classification, not a theorem of dynamic asymptotic stability."
+      }
+    },
+    {
+      "id": "K3-DSC-THM-002",
+      "kind": "theorem",
+      "statement": "For the quadratic polynomial F_m(z)=z^2-m with m>2, the filled Julia set equals its Julia boundary, is a Cantor subset of the real line, and has zero one-dimensional Lebesgue measure.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§7.4, classical quadratic specialization c=-m<-2 and one-dimensional measure statement",
+      "dependencies": [
+        "K3-DSC-THM-001"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The quadratic polynomial F_m:C→C, F_m(z)=z^2-m, with real m>2; measure is one-dimensional Lebesgue measure on R",
+        "assumptions": [
+          "The complex filled Julia set and its boundary are defined as in §7.4",
+          "The parameter c=-m belongs to the real quadratic regime c<-2",
+          "The classical Cantor-Julia classification and the zero-real-measure result for x↦x^2-m are used"
+        ],
+        "boundary": "Cantor topology alone does not imply zero measure; the result is specific to this quadratic family and does not assert zero planar measure as its substantive content."
+      },
+      "classical_context": "M. Lyubich, Conformal Geometry and Dynamics of Quadratic Polynomials, §21.5.1; W. Van Assche, Orthogonal Polynomials and Approximation Theory: some open problems, 2008, §1.4."
+    },
+    {
+      "id": "K3-DSC-THM-003",
+      "kind": "theorem",
+      "statement": "If X is a measurable random left payload, G is a measurable binary erasure gate, Y=G·X in a declared measurable module, and P(G=0)=1, then Y is almost surely constant and the Shannon mutual information I(X;Y) is zero.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§7.5, almost-surely closed gate and constant-output argument",
+      "dependencies": [
+        "K3-DSC-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Random variables X and Y on a common probability space, with Y=G·X and G taking values in {0,1}",
+        "assumptions": [
+          "The gate is zero almost surely on the full probability space",
+          "The zero output is a fixed measurable constant in the declared module",
+          "The joint probability law of X and Y is defined"
+        ],
+        "boundary": "Erasure on a single trajectory or on an event of positive probability does not imply unconditional I(X;Y)=0; a gate depending on X may preserve all information."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"

@@ -92,7 +92,18 @@
     "terminal_integral_atomic_mass_has_declared_semantics": true,
     "real_quadratic_escape_radius_uses_the_positive_fixed_point": true,
     "mutual_information_claims_require_random_variables_and_joint_law": true,
-    "Cantor_topology_is_not_used_as_a_standalone_zero_measure_proof": true
+    "Cantor_topology_is_not_used_as_a_standalone_zero_measure_proof": true,
+    "sine_gordon_energy_proof_declares_ac_loc_finite_energy_and_endpoint_class": true,
+    "sine_gordon_cross_term_integrability_is_established_before_boundary_evaluation": true,
+    "sine_gordon_topological_term_is_independent_of_arbitrary_split_point": true,
+    "sine_gordon_equality_profile_is_solved_and_verified_up_to_translation": true,
+    "static_bps_energy_bound_is_not_claimed_as_dynamic_asymptotic_stability": true,
+    "quadratic_escape_radius_is_distinguished_from_exact_survivor_membership": true,
+    "filled_julia_set_and_julia_boundary_are_distinguished_in_complex_dynamics": true,
+    "julia_zero_measure_claim_specifies_one_dimensional_lebesgue_measure_and_source": true,
+    "mutual_information_claim_requires_random_variables_and_a_joint_probability_law": true,
+    "zero_mutual_information_from_erasure_requires_constant_output_almost_surely": true,
+    "partial_trajectorywise_erasure_does_not_imply_unconditional_zero_mutual_information": true
   },
   "k3_constraints": {
     "radix": 1000,
