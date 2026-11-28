@@ -1,91 +1,70 @@
 # Kaskad Development Status
 
-> **Document standard:** [Cascade Edition 1.0.0](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md).
-> **Epistemic status:** a dated repository progress record; it does not certify mathematical proofs or completed future work.
-> **K3 notation:** B = 1000 is the numeric radix; k is only the lexical group separator; S_B is the positional shift.
-> **Citation and reproducibility:** cite the exact Git revision and corresponding workflow run; repository metadata is in CITATION.cff and CITATION.bib.
+> **Document type:** repository status and verification-boundary record.  
+> **Revision date:** 2026-11-28.  
+> **Inspected main revision:** `e68fbb1e84041eeb175b5feb63dbbda7adc9c910`.  
+> **Status:** finite reference implementation and tests are present; this record does not certify current-main CI.  
+> **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json).
 
-**Document type:** development-status and verification-boundary record  
-**Authorship provenance:** maintained in the Kaskad repository; individual document authorship is not separately assigned.  
-**Version:** 0.1.0  
-**Revision date:** 2026-11-28  
-**Primary language:** English  
-**Translation status:** Russian, Ukrainian and Chinese translations are pending; see LANGUAGE_REGISTER.md.  
-**Subject and scope:** status of the auxiliary finite K3 reference implementation and its verification boundary.  
-**Dependencies:** project contract, computational research architecture, reference implementation specification and GitHub Actions.  
-**Computational protocol:** statuses are verified against repository trees and Actions; no benchmark or theorem proof is claimed.  
-**Revision history:** 2026-11-28 — initial status record.
+This document reports repository evidence, not mathematical proof. Its statements are tied to the inspected tree and must be refreshed when source, tests or workflows change.
 
-Reviewed: 2026-11-28  
-Scope: mathematical research foundation and initial K3 reference-core milestone
+## 1. Repository evidence
 
-## 1. Foundation baseline
+The inspected revision contains:
 
-The research-foundation branch provides the mathematical domain architecture,
-research methodology, epistemic status taxonomy, composite-radix arithmetic,
-the exploratory K-suffix track, the cooperative Vitruvian formula-synthesis
-track, canonical K3 foundations and algebra, machine-readable project and
-quality contracts, and a dependency-free foundation validator.
+- the auxiliary package in `src/kaskad_k3/`;
+- unit and conformance tests in `tests/`;
+- shared vectors in `tests/vectors/k3-vectors.json`;
+- the K3 reference workflow in `.github/workflows/ci.yml`;
+- the foundation-validation workflow in `.github/workflows/foundation-validation.yml`.
 
-## 2. Stage-1 reference core
+The reference workflow compiles the package and tests, then runs unittest discovery on Python 3.11, 3.12, 3.13 and 3.14. A configured workflow is not evidence of a passing run for every revision.
 
-The auxiliary kaskad_k3 package currently provides:
+## 2. Reference-core surface
 
-| Area | Delivered | Verification boundary |
+| Area | Present in source | Verification boundary |
 |---|---|---|
-| Canonical codec | Strict parser and encoder for signed finite K3 integers | Canonical and malformed examples plus round trips |
-| Coefficient semantics | Exact evaluation and low-to-high group extraction | Exact integer comparison and conformance corpus |
-| Normalization | Euclidean carry/borrow for signed finite coefficient vectors | Exhaustive small vectors and value-preservation checks |
-| Positional operation | S_B shift over raw signed coefficient vectors | Exact scaling invariant checked on representative vectors |
-| Arithmetic | Addition, subtraction, multiplication and comparison | Differential checks against exact host integers on finite grids |
-| Radix operations | Euclidean division by 1000 and low-group access | Positive and negative boundary cases |
-| Units | gcd(n,1000) criterion for invertibility modulo powers of 1000 | Positive/negative and non-unit examples |
-| Divisibility | Residues, congruence and depth of divisibility | Boundary vectors and composite-base examples |
-| Metric | Exact rational 1000-divisibility distance | Strong triangle inequality checked on a finite grid |
-| Serialization | Deterministic versioned JSON format with strict validation | Round-trip and malformed-payload tests |
-| Research infrastructure | Theory-level vectors and extended edge-case vectors, contribution/security notes and CI | K3 matrix and foundation validation passed on the core revision listed below |
+| Canonical codec | Strict parser and formatter for signed finite K3 integers | Canonical examples, malformed words and round trips |
+| Coefficients | Exact evaluation and group extraction | Integer comparisons and shared vectors |
+| Normalization | Carry/borrow for finite integer coefficient vectors | Finite test domains and value-preservation assertions |
+| Arithmetic | Addition, subtraction, multiplication and comparison | Differential checks on tested inputs |
+| Radix operations | Division by 1000, residues and low-group access | Boundary and conformance cases |
+| Divisibility and metric | Divisibility depth, congruence and exact rational distance | Finite tests, not proof of every general theorem |
+| Serialization | Versioned JSON round trip and shape validation | Tested valid and invalid payloads |
+| Structural APIs | Explicit PAD/RAW parsing and positional shift | Documented cases, not every external integration |
 
-| Complexity | Group-level operation counts documented without a bit-complexity or performance claim | See reference specification section 9; no benchmark is published |
+The source and tests are inspectable artifacts. Their presence does not prove conformance with every statement in the mathematical corpus.
 
+## 3. Current verification status
 
-### Verification evidence
+The combined GitHub commit-status query for inspected revision `e68fbb1e84041eeb175b5feb63dbbda7adc9c910` returned no status entries. This record therefore reports current-main CI as **not verified**, not passed or failed.
 
-The following checks completed successfully for core revision `2fc0468572926a672167edd219092174e15fccd2`:
+Older run identifiers recorded for revision `2fc0468572926a672167edd219092174e15fccd2` are historical evidence for that exact revision only. They must not be transferred to another commit or treated as certification of the unrestricted theory.
 
-- [K3 reference checks — run 46086000332](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086000332): passed on Python 3.11, 3.12, 3.13 and 3.14; package compilation and all unit/conformance tests passed.
-- [Foundation validation — run 46086000377](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086000377): passed.
+To verify a revision, inspect its Actions runs and record the exact commit, workflow, matrix and result. Locally:
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
 
-A second K3 run, [46086002506](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086002506), also completed successfully on the same revision. These results verify the auxiliary implementation and repository contracts at the cited revision; they do not certify the unrestricted mathematical theorems. The subsequent status-only commit does not change source, tests, vectors or workflow definitions.
+## 4. Mathematical status
 
-## 3. Mathematical status
+The package is a supporting reference instrument, not the definition of K3 and not a proof assistant.
 
-The package is a supporting reference instrument. It is not the permanent
-subject of Kaskad, not a full mathematical runtime, and not a proof assistant.
+- A theorem requires a complete statement, assumptions and mathematical proof.
+- A unit test confirms behavior only for executed inputs.
+- Exhaustive enumeration proves a claim only over the finite domain actually exhausted.
+- General results about completion, ultrametrics, probability and infinite structures retain their own proof obligations.
+- The inverse-limit completion and CRT topological ring are mathematical extensions; their specification must not be confused with package implementation.
 
-- Written theorems retain complete mathematical proofs and explicit assumptions.
-- Unit tests verify program behavior on tested inputs.
-- Finite exhaustive checks prove only statements over the fully exhausted
-  finite domain that was actually enumerated.
-- General ultrametric, completion, probability and infinite-structure results
-  remain mathematical claims with their own proof obligations.
-- The inverse-limit completion is not implemented in the package.
+## 5. Open engineering work
 
-## 4. Remaining work
+1. Maintain traceability from functions and vectors to canonical definitions and theorem identifiers.
+2. Check parser, PAD/RAW behavior, normalization and serialization against the current specifications.
+3. Expand boundary and property coverage where the finite domain and invariant are explicit.
+4. Record CI results against the exact head revision; do not reuse historical statuses.
+5. Independently review the implementation or compare it with a second implementation before treating it as a release-grade conformance oracle.
+6. Keep proofs, computational evidence and application contracts separately versioned.
 
-1. Independently review parser, normalizer and serialization contracts against
-   the canonical tractate, foundations chapter and syntax specification.
-2. Connect K3 core operations to stable statement identifiers and the proof
-   dependency registry.
-3. Extend the shared theory-level and implementation vectors to cover every normative syntax and API rule.
-4. Audit version consistency between the 0.1.0 tractate, Chapter II 0.2.1,
-   syntax 1.0 and later research documents; record a canonical version policy.
-5. Continue composite-radix CRT and inverse-limit development separately from
-   the finite integer codec.
-6. Independently compare a second implementation or proof-assistant model
-   before treating the reference kernel as a release-grade conformance oracle.
+## 6. Completion rule
 
-## 5. Completion rule
-
-Stage 1 remains in_progress until independent mathematical review, theorem
-traceability, complete interface edge cases and relevant CI checks are done.
-The overall mathematical research programme remains open.
+The reference-core milestone remains **in progress** until current-revision CI evidence, independent review, complete contract traceability and remaining interface obligations are recorded. The mathematical research programme remains open.
