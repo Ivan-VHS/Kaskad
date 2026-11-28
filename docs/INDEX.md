@@ -4,7 +4,7 @@
   <p><sub>НАВИГАЦИЯ · СТАТУСЫ · ИСТОЧНИКИ</sub></p>
 </div>
 
-<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
+<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="KASKAD_INSTITUTE_CHARTER.md">УСТАВ ИНСТИТУТА</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
 
 # Карта документации Kaskad
 
