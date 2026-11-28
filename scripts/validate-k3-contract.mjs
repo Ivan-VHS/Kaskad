@@ -36,6 +36,7 @@ const requiredFiles = [
   "docs/K3_STRATIFIED_MATHEMATICS.md",
   "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
   "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+  "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
   "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
   "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
   "docs/K3_SCIENTIFIC_CONSOLIDATION.md",
@@ -389,6 +390,7 @@ for (const path of [
   "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
   "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
   "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+  "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
   "schemas/k3-claim-registry.v1.schema.json", "schemas/k3-reference-vectors.v1.schema.json",
   "docs/REPOSITORY_ARCHITECTURE.md", "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
   "docs/01-foundations/README.md", "docs/02-core-theory/README.md",
@@ -415,6 +417,34 @@ for (const requiredLink of [
 
 const docsIndex = readText("docs/INDEX.md");
 for (const p of ["REPOSITORY_ARCHITECTURE.md","K3_COUNTEREXAMPLES_AND_BOUNDARIES.md","01-foundations/README.md","02-core-theory/README.md","03-proofs-and-theorems/README.md","04-algebra-and-topology/README.md","05-classical-crosswalk/README.md","06-open-problems/README.md","07-applied-models/README.md","08-computational-evidence/README.md"]) check(docsIndex.includes(p), "docs/INDEX.md missing navigation entry: " + p);
+check(docsIndex.includes("K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"), "docs/INDEX.md missing K3-GCS-1 navigation entry");
+const gcsDocument = readText("docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md");
+check(gcsDocument.includes("K3-GCS-1"), "K3-GCS-1 document identifier is missing");
+check(!/(Shard|Шард)/i.test(gcsDocument), "K3-GCS-1 contains a legacy plane name");
+for (const heading of [
+  "### 12.1.1. Позиционные обозначения ядра K3",
+  "### 12.2. Латинские буквы и графовые обозначения",
+  "### 12.3. Категорийные обозначения",
+  "### 12.4. Семиотические, алгебраические и логические обозначения",
+  "### 12.5. Каскадные обозначения",
+  "### 12.6. Совпадающие буквы, которые нельзя смешивать",
+  "### 12.7. Сокращения и машинные идентификаторы",
+  "### 12.8. Локальные переменные вычислительной схемы",
+  "### 12.9. Имена архитектурных типов из исходной модели"
+]) {
+  check(gcsDocument.includes(heading), "K3-GCS-1 symbol dictionary is missing section: " + heading);
+}
+const gcsClaims = (registry?.claims ?? []).filter((claim) => claim.id.startsWith("K3-GCS-"));
+check(gcsClaims.filter((claim) => claim.kind === "definition").length === 4,
+  "K3-GCS registry must contain four definitions");
+check(gcsClaims.filter((claim) => claim.kind === "hypothesis").length === 4,
+  "K3-GCS registry must contain four hypotheses");
+check(gcsClaims.filter((claim) => claim.kind === "hypothesis")
+  .every((claim) => claim.evidence_status === "open_hypothesis"),
+  "K3-GCS hypotheses must retain open_hypothesis status");
+check(gcsClaims.every((claim) => claim.source === "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"),
+  "K3-GCS registry sources must point to the synthesis document");
+
 check(projectContract?.repository_layout?.claim_registry === "docs/K3_CLAIM_REGISTRY.json", "Project contract registry path mismatch");
 check(projectContract?.repository_layout?.counterexample_register === "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md", "Project contract counterexample path mismatch");
 check(projectContract?.repository_layout?.reference_vectors === "docs/K3_REFERENCE_VECTORS.json", "Project contract vector path mismatch");
