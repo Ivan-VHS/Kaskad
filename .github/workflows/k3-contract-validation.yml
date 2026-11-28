@@ -1,0 +1,29 @@
+name: K3 contract validation
+
+on:
+  push:
+    branches:
+      - main
+      - "docs/**"
+      - "theory/**"
+      - "research/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-k3-contract:
+    name: Validate K3 notation, claims and reference data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate mathematical repository contracts
+        run: node scripts/validate-k3-contract.mjs

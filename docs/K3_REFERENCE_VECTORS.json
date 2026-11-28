@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.1.0",
   "theory": "K3",
   "radix": 1000,
   "coefficient_order": "least_significant_to_most_significant",
@@ -90,6 +90,7 @@
     {
       "id": "K3-PAD-0001",
       "operation": "identity",
+      "input_profile": "K3-PAD",
       "left": {
         "word": "5k00k",
         "coefficients": [
@@ -98,8 +99,7 @@
           5
         ],
         "decimal": "5000000",
-        "input_mode": "K3-PAD",
-        "canonical_word": "5k0k"
+        "mode": "K3-PAD"
       },
       "expected": {
         "word": "5k0k",
@@ -113,8 +113,9 @@
       "status": "reference_expected_not_execution_pass"
     },
     {
-      "id": "K3-RAW-0001",
+      "id": "K3-PAD-0002",
       "operation": "identity",
+      "input_profile": "K3-PAD",
       "left": {
         "word": "5k0",
         "coefficients": [
@@ -122,8 +123,7 @@
           5
         ],
         "decimal": "5000",
-        "input_mode": "K3-RAW",
-        "canonical_word": "5k"
+        "mode": "K3-RAW"
       },
       "expected": {
         "word": "5k",
@@ -138,6 +138,7 @@
     {
       "id": "K3-ADD-0002",
       "operation": "add",
+      "input_profile": "K3-PAD",
       "left": {
         "word": "5k",
         "coefficients": [
@@ -153,8 +154,7 @@
           5
         ],
         "decimal": "5000",
-        "input_mode": "K3-RAW",
-        "canonical_word": "5k"
+        "mode": "K3-RAW"
       },
       "expected": {
         "word": "10k",
@@ -206,6 +206,7 @@
     {
       "id": "K3-ADD-0004",
       "operation": "add",
+      "input_profile": "K3-PAD",
       "left": {
         "word": "50k",
         "coefficients": [
@@ -221,8 +222,7 @@
           5
         ],
         "decimal": "5000",
-        "input_mode": "K3-RAW",
-        "canonical_word": "5k"
+        "mode": "K3-RAW"
       },
       "expected": {
         "word": "55k",
@@ -241,6 +241,7 @@
     {
       "id": "K3-ADD-0005",
       "operation": "add",
+      "input_profile": "K3-PAD",
       "left": {
         "word": "5k0",
         "coefficients": [
@@ -248,8 +249,7 @@
           5
         ],
         "decimal": "5000",
-        "input_mode": "K3-RAW",
-        "canonical_word": "5k"
+        "mode": "K3-RAW"
       },
       "right": {
         "word": "50k",
@@ -274,9 +274,33 @@
       "status": "reference_expected_not_execution_pass"
     }
   ],
-  "input_modes": {
-    "canonical": "Strict K3 word grammar; use parse_k3.",
-    "K3-PAD": "Explicit import mode accepting one-to-three digit group tokens with leading zeroes; strict positional boundaries remain.",
-    "K3-RAW": "Typed structural operand preserving explicit final zero groups; not a canonical textual number."
-  }
+  "notation_cases": [
+    {
+      "id": "K3-DEPTH-0001",
+      "word": "50k0k",
+      "coefficients": [
+        0,
+        0,
+        50
+      ],
+      "decimal": "50000000",
+      "separator_count": 2,
+      "strict_canonical": true,
+      "profile": "K3"
+    },
+    {
+      "id": "K3-PAD-0001",
+      "word": "5k00k",
+      "coefficients": [
+        0,
+        0,
+        5
+      ],
+      "decimal": "5000000",
+      "separator_count": 2,
+      "strict_canonical": false,
+      "profile": "K3-PAD",
+      "canonical_word": "5k0k"
+    }
+  ]
 }
