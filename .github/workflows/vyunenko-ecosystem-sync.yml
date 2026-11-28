@@ -1,0 +1,56 @@
+name: Vyunenko ecosystem documentation sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/VYUNENKO_THEORY.md"
+      - "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md"
+      - "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vyunenko-ecosystem-sync
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Kaskad
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Validate synchronizer and registry
+        run: |
+          node --check scripts/sync_vyunenko_docs.mjs
+          node --input-type=module -e "import fs from 'node:fs'; JSON.parse(fs.readFileSync('docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json', 'utf8'));"
+
+      - name: Check cross-repository credential
+        id: credential
+        env:
+          SYNC_TOKEN: ${{ secrets.IVAN_VHS_SYNC_TOKEN }}
+        shell: bash
+        run: |
+          if [[ -n "$SYNC_TOKEN" ]]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "### Cross-repository sync is not activated"
+              echo
+              echo "Add the repository Actions secret `IVAN_VHS_SYNC_TOKEN` with contents:write and pull_requests:write access to the five dependent repositories. No write was attempted."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Open documentation sync PRs
+        if: steps.credential.outputs.available == 'true'
+        env:
+          IVAN_VHS_SYNC_TOKEN: ${{ secrets.IVAN_VHS_SYNC_TOKEN }}
+          KASKAD_REPOSITORY: ${{ github.repository }}
+        run: node scripts/sync_vyunenko_docs.mjs
