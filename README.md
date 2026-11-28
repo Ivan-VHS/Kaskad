@@ -150,6 +150,13 @@ flowchart TD
     B --> H["Отдельные направления, включая CV-1"]
 ~~~
 
+### Дополнительные материалы
+
+- [Научная консолидация K3](docs/K3_SCIENTIFIC_CONSOLIDATION.md) · [Формальная эпистемика и доказательства](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [Эталонные векторы](docs/K3_REFERENCE_VECTORS.json)
+- [Исходные каскадные формулы](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) · [Двухканальная геометрия и переносы](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) · [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md)
+- [Схема эталонных векторов](schemas/k3-reference-vectors.v1.schema.json) · [Математический словарь](docs/MATHEMATICAL_GLOSSARY.md) · [План научного качества](docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md)
+- [Научный стандарт документации Cascade Edition](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Устав Института Kaskad](docs/KASKAD_INSTITUTE_CHARTER.md)
+
 ## Проверка вычислительной реализации
 
 В репозитории есть вспомогательный пакет **src/kaskad_k3/**, тесты в **tests/** и эталонные данные в **tests/vectors/**. Пакет использует стандартную библиотеку Python и не имеет дополнительных runtime-зависимостей. CI-конфигурация предусматривает Python 3.11–3.14.
