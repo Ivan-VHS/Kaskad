@@ -662,6 +662,139 @@
         ],
         "boundary": "Numeric equality does not erase AST order or operation provenance."
       }
+    },
+    {
+      "id": "K3-GCS-DEF-001",
+      "kind": "definition",
+      "statement": "K3-GCS-1 is the typed tuple of a dependency graph, an algebraic category, a sign-interpretation category, graph-to-category and sign mappings, and interpretation rules.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§2, Definition 1; formal signature K3-GCS-1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-002",
+      "kind": "definition",
+      "statement": "A K3-GCS dependency graph is a typed directed multigraph whose vertices and edges carry declared types, labels, contextual guards, and optional weights.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§3, Definition 2",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-003",
+      "kind": "definition",
+      "statement": "A semiotic passport is the typed triple of representamen, represented object, and interpretant rule, with an optional interpretation context.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§5, Definition 5",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-004",
+      "kind": "definition",
+      "statement": "The four-valued evidence domain consists of true, false, unknown, and conflict states represented by positive and negative evidence pairs.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§8.1, four-valued pair representation",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-HYP-001",
+      "kind": "hypothesis",
+      "statement": "For selected classes of K3 dependency graphs, quotienting by equivalences that preserve semantic passports and categorical invariants may yield a smaller model without losing a specified set of derivations.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-1; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Selected finite or suitably bounded typed K3 dependency graphs",
+        "assumptions": [
+          "The quotient relation is explicitly defined",
+          "Semantic passports and selected categorical invariants are preserved"
+        ],
+        "boundary": "No general derivation-preservation theorem is claimed for arbitrary graph quotients."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-002",
+      "kind": "hypothesis",
+      "statement": "For a defined class of predicate systems over finite metadata domains, the cascade refinement operator may be monotone and may reach a least or greatest fixed point.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-2; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-004"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Specified finite partially ordered metadata states and predicate operators",
+        "assumptions": [
+          "A partial order is defined",
+          "Every refinement operator is proved monotone",
+          "The update schedule satisfies the stated fairness condition"
+        ],
+        "boundary": "Termination is not claimed for arbitrary non-monotone or infinite-state cascades."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-003",
+      "kind": "hypothesis",
+      "statement": "For some covers of K3 metadata graphs, compatible local passports may glue uniquely into a global structure satisfying the sheaf conditions.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-3; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-003"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A specified base space, cover, presheaf of metadata, and restriction maps",
+        "assumptions": [
+          "Local sections are defined",
+          "Compatibility on overlaps is defined",
+          "The relevant sheaf axioms are checked"
+        ],
+        "boundary": "Pairwise local compatibility alone does not establish a unique global section."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-004",
+      "kind": "hypothesis",
+      "statement": "Some metadata morphisms may induce maps between Schwarz planes that preserve selected dimension or tensor invariants.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-4; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A specified family of metadata morphisms and the associated Schwarz-plane configurations",
+        "assumptions": [
+          "The metadata-to-coordinate maps are fixed",
+          "The class of admissible morphisms is specified",
+          "The dimension or tensor invariant is defined on both sides"
+        ],
+        "boundary": "No invariant-preservation claim is made for arbitrary morphisms or all Schwarz-plane configurations."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
