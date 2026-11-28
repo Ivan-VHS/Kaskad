@@ -33,8 +33,8 @@ if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
   if (project.theory?.id !== "K3") fail("project-contract.json: theory.id must be K3");
 
-  if (project.theory?.specification_version !== "0.5.0") {
-    fail("project-contract.json: theory.specification_version must match the integrated K3 theory 0.5.0");
+  if (project.theory?.specification_version !== "0.6.0") {
+    fail("project-contract.json: theory.specification_version must match the integrated K3 theory 0.6.0");
   }
   if (project.theory?.radix !== 1000) fail("project-contract.json: K3 radix must be 1000");
   if (project.theory?.radix_factorization?.["2"] !== 3 || project.theory?.radix_factorization?.["5"] !== 3) {
@@ -169,6 +169,33 @@ if (mathematics) {
   if (mathematics.forbidden?.assuming_nu_1000_zero_implies_unit !== true) {
     fail("The contract must forbid treating nu_1000(n)=0 as a unit test");
   }
+
+  const k3ntMandatory = [
+    "defect_load_requires_explicit_invariant_registry",
+    "defect_load_requires_complete_fixed_observation_coverage",
+    "unassessed_observations_are_not_zero",
+    "negative_tendency_levels_require_predeclared_thresholds",
+    "dependency_clusters_declare_weak_connectivity",
+    "directed_propagation_is_distinct_from_cluster_connectivity",
+    "normalized_local_defect_load_is_bounded",
+    "medical_metaphors_are_not_medical_claims"
+  ];
+  for (const key of k3ntMandatory) {
+    if (mathematics.mandatory?.[key] !== true) fail("K3-NT mathematical quality rule is missing: " + key);
+  }
+  const k3ntForbidden = [
+    "treating_a_zero_group_as_a_defect_without_an_invariant_violation",
+    "treating_a_negative_integer_as_a_defect_by_sign_alone",
+    "treating_unassessed_nodes_as_zero_load",
+    "claiming_empirical_thresholds_without_calibration",
+    "interpreting_metaphorical_levels_as_epidemiological_results"
+  ];
+  for (const key of k3ntForbidden) {
+    if (mathematics.forbidden?.[key] !== true) fail("K3-NT forbidden interpretation is not recorded: " + key);
+  }
+  if (mathematics.review?.threshold_calibration_review_required !== true) {
+    fail("K3-NT threshold calibration review must be required");
+  }
 }
 
 if (computation) {
@@ -293,10 +320,34 @@ if (existsSync(standardPath)) {
 }
 
 
+
+
+const k3ntPath = resolve(root, "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md");
+if (existsSync(k3ntPath)) {
+  const k3ntText = readFileSync(k3ntPath, "utf8");
+  const stageRows = [...k3ntText.matchAll(/^\|\s*(?:[1-9]|1[0-9]|20)\s*\|[^\n]*$/gm)];
+  const formulaRows = stageRows.filter(match => match[0].includes("\\Psi_t") && match[0].includes("\\tau_"));
+  if (stageRows.length !== 20 || formulaRows.length !== 20) {
+    fail("K3-NT must define exactly twenty numbered stages, each with an interval formula");
+  }
+  for (const required of [
+    "0\\in\\mathbb Z",
+    "0=n\\iff n=0",
+    "неоценённый",
+    "компонента слабой связности",
+    "\\\\min\\\\{1,",
+    "не является эпидемиологической или медицинской моделью"
+  ]) {
+    if (!k3ntText.includes(required)) fail("K3-NT specification is missing required semantic guard: " + required);
+  }
+} else {
+  fail("Missing K3-NT mathematical specification");
+}
+
 const theoryPath = resolve(root, "docs/VYUNENKO_THEORY.md");
 if (existsSync(theoryPath)) {
   const theoryText = readFileSync(theoryPath, "utf8");
-  for (const section of ["# ЧАСТЬ XIX.", "# ЧАСТЬ XX.", "# ЧАСТЬ XXI.", "# ЧАСТЬ XXII.", "## 99."]) {
+  for (const section of ["# ЧАСТЬ XIX.", "# ЧАСТЬ XX.", "# ЧАСТЬ XXI.", "# ЧАСТЬ XXII.", "# ЧАСТЬ XXIII.", "# ЧАСТЬ XXIV.", "## 99.", "## 103.", "## 107."]) {
     if (!theoryText.includes(section)) fail("Integrated Vyunenko Theory is missing section " + section);
   }
 }
