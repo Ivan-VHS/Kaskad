@@ -133,6 +133,27 @@
         "institutional maturity gates without unsupported recognition claims",
         "multilingual institute documentation and consistent navigation"
       ]
+    },
+    {
+      "id": "stage-9-higher-structures-and-semantic-models",
+      "status": "in_progress",
+      "deliverables": [
+        "typed K3 bridges to hypergraphs and simplicial/CW complexes",
+        "chain and cochain complexes with explicit coefficient objects",
+        "homology and cohomology with boundary-squared-zero obligations",
+        "stratification and sheaf gluing contracts",
+        "lattice, category, HoTT and topos research models",
+        "composite-adic and scheme-theoretic compatibility",
+        "fractal IFS models with explicit open-set conditions",
+        "versioned semiotic and interpretive mappings",
+        "cryptographic and steganographic threat-boundary documentation",
+        "claim registry, classical crosswalk and repository navigation synchronization",
+        "category-valued local-passport descent with overlap isomorphisms and cocycle coherence",
+        "triadic graph node statuses with four-valued guard evidence kept as separate types",
+        "cascade short-circuit/state/writer effect stack with explicit monad operations",
+        "local graph context comonad candidate with counit, comultiplication and law obligations",
+        "well-founded termination or finite-height fixpoint criterion; W_max is only a safety budget"
+      ]
     }
   ],
   "merge_policy": {

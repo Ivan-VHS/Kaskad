@@ -157,7 +157,7 @@ Main directions include:
 - **Geometric and dynamic models:** other ways to describe profiles, transitions and change.
 - **Open problems:** questions that still need proof or further study.
 
-Useful starting points include the [classical mathematics crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md), [CRT and infinite cascades](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md), [Vyunenko Graph Theory](docs/VYUNENKO_GRAPH_THEORY.md) and [K3-M morphology](docs/K3_STRATIFIED_MATHEMATICS.md).
+Useful starting points include the [classical mathematics crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md), [CRT and infinite cascades](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md), [Vyunenko Graph Theory (operational states, monadic effects, and termination)](docs/VYUNENKO_GRAPH_THEORY.md) and [K3-M morphology](docs/K3_STRATIFIED_MATHEMATICS.md).
 
 These directions do not all have the same level of maturity. Each document states what has been defined or proved and what remains a research proposal.
 

@@ -77,7 +77,16 @@
     "knot_theory_and_topological_invariants",
     "analytic_number_theory",
     "cooperative_formula_synthesis",
-    "typed_applied_mathematical_models_from_related_repositories"
+    "typed_applied_mathematical_models_from_related_repositories",
+    "homological_algebra_and_simplicial_cohomology",
+    "sheaf_topoi_and_stratified_spaces",
+    "lattice_theory_and_orthomodular_logic",
+    "homotopy_type_theory_and_higher_categories",
+    "scheme_theory_and_commutative_algebra",
+    "fractal_geometry",
+    "semiotics_hermeneutics_and_symbolic_interpretation",
+    "cryptography_steganography_security_boundary_models",
+    "triadic_cascade_operational_semantics"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
