@@ -25,7 +25,8 @@
       "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
-      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation"
+      "Added typed applied mathematical models and traceability for DAK, Reaper, Pytyliki, OPlague and VentuSample without claiming source-project implementation",
+      "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations."
     ]
   },
   "results": [
@@ -120,7 +121,14 @@
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/REFERENCE_IMPLEMENTATION.md",
     "docs/K3_REFERENCE_VECTORS.json",
-    "docs/CHUMNY_VERDICT_THEORY.md"
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_MAP.v1.json",
+    "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/OPLAGUE_TO_K3_CROSSWALK.md",
+    "docs/OPLAGUE_K3_MODEL.v1.json",
+    "schemas/oplage-k3-model.v1.schema.json",
+    "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md"
   ],
   "ecosystem_dependents": [
     {
@@ -212,7 +220,8 @@
     "trigger_paths": [
       "docs/VYUNENKO_THEORY.md",
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+      "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md"
     ]
   },
   "research_extensions": [
