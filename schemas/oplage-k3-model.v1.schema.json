@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/oplage-k3-model.v1.schema.json",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/schemas/oplage-k3-model.v1.schema.json",
   "title": "Kaskad OPlague Mathematical Model v1",
   "type": "object",
   "additionalProperties": false,
@@ -12,7 +12,8 @@
     "inventory",
     "models",
     "conflicts_to_resolve",
-    "evidence_status"
+    "evidence_status",
+    "model_schema"
   ],
   "properties": {
     "$schema": {
@@ -274,6 +275,10 @@
         "all_326_files_reviewed_line_by_line",
         "all_implementation_claims_independently_proven"
       ]
+    },
+    "model_schema": {
+      "type": "string",
+      "const": "../schemas/oplage-k3-model.v1.schema.json"
     }
   }
 }

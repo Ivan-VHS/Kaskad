@@ -1,5 +1,5 @@
 {
-  "$schema": "../schemas/oplage-k3-model.v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schema": "kaskad.oplage-mathematical-model.v1",
   "version": "1.0.0",
   "source": {
@@ -413,7 +413,7 @@
       "equal_allocation": "N=kq+r; first r groups receive q+1, remaining groups receive q",
       "weighted_allocation": "floor(N*w_i/sum(w)); distribute residual by descending fractional remainder with stable tie-break",
       "dependency_model": "dependency graph condensed by strongly connected components; declared indivisible components are never split",
-      "conservation": "union(partitions)=input and partitions are pairwise disjoint; ordered reconstruction must restore original inventory order and hashes",
+      "conservation": "union(partitions)=input and partitions are pairwise disjoint; preserve original source ordinals so ordered reconstruction restores inventory order and hashes",
       "lifecycle": [
         "DISCOVER",
         "VALIDATE",
@@ -609,5 +609,6 @@
     "selected_contracts_and_schemas_reviewed": true,
     "all_326_files_reviewed_line_by_line": false,
     "all_implementation_claims_independently_proven": false
-  }
+  },
+  "model_schema": "../schemas/oplage-k3-model.v1.schema.json"
 }
