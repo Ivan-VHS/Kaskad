@@ -6,7 +6,7 @@
 > **Revision date:** 2026-11-28.  
 > **Initial inspected main revision:** `e68fbb1e84041eeb175b5feb63dbbda7adc9c910`.  
 > **Status:** finite reference implementation and tests are present; this record does not certify current-main CI.  
-> **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json).
+> **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json), [60-point scientific review gate](SCIENTIFIC_REVIEW_GATE.md).
 
 This document reports repository evidence, not mathematical proof. Its statements are tied to the inspected tree and must be refreshed when source, tests or workflows change.
 
