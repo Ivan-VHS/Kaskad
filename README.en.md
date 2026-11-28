@@ -131,6 +131,7 @@ Known limits, failed generalizations, and open questions are collected in the [c
 |---|---|
 | Understand the full K3 theory | [Vyunenko Theory K3](docs/VYUNENKO_THEORY.md) |
 | Read the formula-ending terminal integral | [K3-TI — terminal integral](docs/K3_TERMINAL_INTEGRAL_OPERATOR.md) |
+| Study the five-rule mathematical cosmology | [K3-MC5](docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md) — a meta-theoretical layer for existence, transformation, boundaries, crystallization and annihilation |
 | Explore the directed verdict and CV-K3-M1 | [Chumny Verdict Theory CV-1](docs/CHUMNY_VERDICT_THEORY.md) (v1.2.1; monotonicity is model-scoped) |
 | Learn the notation and parsing rules | [K3 canonical syntax](docs/K3_CANONICAL_SYNTAX.md) |
 | Understand carry and borrow | [Cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md) |
