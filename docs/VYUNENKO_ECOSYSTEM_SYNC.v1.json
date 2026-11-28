@@ -99,6 +99,8 @@
     "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
     "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
     "docs/DAK_SYSTEM_MATHEMATICS.md",
+    "docs/EXPERIMENTAL_EMPIRICAL_METHOD.md",
+    "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
     "docs/INDEX.md",
     "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
@@ -109,11 +111,15 @@
     "docs/K3_REFERENCE_VECTORS.json",
     "docs/K3_STRATIFIED_MATHEMATICS.md",
     "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
     "docs/REAPER_K3_INTEGRATION.md",
     "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
     "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
     "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/RESEARCH_RECORD_TEMPLATE.md",
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "docs/THEORY_DEVELOPMENT_RULES.md",
     "docs/VYUNENKO_AUDIO_CATALOGUE.md",
     "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
     "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
@@ -122,7 +128,8 @@
     "docs/VYUNENKO_THEORY.md",
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
-    "schemas/chumny-verdict.v1.schema.json"
+    "schemas/chumny-verdict.v1.schema.json",
+    "schemas/knowledge-transition.v1.schema.json"
   ],
   "ecosystem_dependents": [
     {
@@ -275,6 +282,34 @@
       "projection_kernel_is_additive_congruence": false,
       "model": "docs/CHUMNY_VERDICT_MODEL.v1.json",
       "schema": "schemas/chumny-verdict.v1.schema.json"
+    },
+    {
+      "id": "KASKAD-KTM-1",
+      "title": "Математическая модель переходов исследовательского знания Kaskad",
+      "version": "1.0.0",
+      "status": "normative_methodological_model",
+      "source": "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+      "machine_model": "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
+      "schema": "schemas/knowledge-transition.v1.schema.json",
+      "stage_count": 20,
+      "state_model": "product_of_independent_evidence_axes",
+      "axes": [
+        "formal",
+        "computational",
+        "empirical",
+        "review",
+        "publication",
+        "application"
+      ],
+      "base_k3_semantics_changed": false,
+      "notes": [
+        "The twenty stages are a research-activity catalogue, not a universal chronology or truth ranking",
+        "Proof status is relative to named assumptions and a declared calculus",
+        "Empirical support is scoped to a declared population, protocol and uncertainty",
+        "Review, publication and application do not automatically change proof status",
+        "A finite exhaustive check proves only the declared finite domain",
+        "Evidence corrections and invalidations are retained in an auditable history"
+      ]
     }
   ]
 }

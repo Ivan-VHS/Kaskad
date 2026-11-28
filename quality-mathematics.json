@@ -28,7 +28,16 @@
     "chumny_cv_projection_preserves_raw_integer_evaluation": true,
     "chumny_cv_projection_applies_after_full_k3_evaluation": true,
     "chumny_cv_projection_is_idempotent": true,
-    "chumny_projection_kernel_is_not_assumed_additive_congruence": true
+    "chumny_projection_kernel_is_not_assumed_additive_congruence": true,
+    "every_claim_has_declared_scope_kind_and_provenance": true,
+    "formal_computational_empirical_review_publication_and_application_states_are_separate": true,
+    "formal_proof_status_is_relative_to_named_assumptions_and_calculus": true,
+    "counterexamples_verify_domain_membership_and_negated_predicate": true,
+    "finite_exhaustive_verification_requires_complete_finite_domain": true,
+    "empirical_support_is_bounded_by_protocol_scope_and_uncertainty": true,
+    "independent_replication_is_distinguished_from_same_input_reproduction": true,
+    "knowledge_status_changes_have_auditable_evidence_events": true,
+    "research_stage_model_allows_feedback_and_nonapplicable_stages": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -119,7 +128,14 @@
     "replacing_standard_integer_equality_with_chumny_relation": true,
     "applying_chumny_cv_projection_to_individual_k3_coefficients": true,
     "treating_chumny_projection_as_additive_homomorphism": true,
-    "overwriting_raw_arithmetic_value_with_projected_value": true
+    "overwriting_raw_arithmetic_value_with_projected_value": true,
+    "treating_twenty_research_stages_as_universal_linear_truth_ladder": true,
+    "treating_publication_or_peer_review_as_mathematical_proof": true,
+    "treating_application_as_universal_validity": true,
+    "treating_random_or_finite_samples_as_proof_on_infinite_domains": true,
+    "treating_same_dataset_rerun_as_independent_empirical_replication": true,
+    "applying_empirical_falsifiability_without_adjustment_to_formal_proof_claims": true,
+    "deleting_negative_results_or_invalidated_evidence_without_history": true
   },
   "review": {
     "mathematical_review_required": true,

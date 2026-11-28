@@ -28,6 +28,8 @@ const mathematics = readJson("quality-mathematics.json");
 const computation = readJson("quality-computation.json");
 const evolution = readJson("engineering-evolution.v1.json");
 const vectors = readJson("docs/K3_REFERENCE_VECTORS.json");
+const knowledgeTransition = readJson("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json");
+const knowledgeTransitionSchema = readJson("schemas/knowledge-transition.v1.schema.json");
 const chumnyVerdict = readJson("docs/CHUMNY_VERDICT_MODEL.v1.json");
 const chumnyVerdictSchema = readJson("schemas/chumny-verdict.v1.schema.json");
 
@@ -319,6 +321,76 @@ if (chumnyVerdictSchema) {
   }
 }
 
+
+if (knowledgeTransition) {
+  const kt = knowledgeTransition;
+  if (kt.model?.id !== "KASKAD-KTM-1" || kt.model?.version !== "1.0.0" ||
+      kt.model?.base_theory !== "K3" || kt.model?.base_theory_version !== "0.5.0" ||
+      kt.model?.stage_count !== 20) {
+    fail("KTM-1 identity, stage count or K3 compatibility is inconsistent");
+  }
+  if (kt.state_vector?.independent_axes !== true ||
+      kt.state_vector?.single_linear_rank !== false ||
+      kt.state_vector?.publication_changes_proof_status !== false ||
+      kt.state_vector?.peer_review_changes_proof_status !== false ||
+      kt.state_vector?.application_changes_proof_status !== false ||
+      kt.state_vector?.computational_test_changes_proof_status !== false) {
+    fail("KTM-1 must keep evidence axes independent and prevent status inflation");
+  }
+  const axes = kt.state_vector?.coordinates ?? [];
+  for (const axis of [
+    "formal.formalization","formal.proof_evidence","formal.refutation_evidence",
+    "formal.axiom_system_consistency","computational","empirical.protocol",
+    "empirical.observations","empirical.support","review","publication","application"
+  ]) {
+    if (!axes.includes(axis)) fail("KTM-1 state vector is missing axis: " + axis);
+  }
+  const stages = kt.stages ?? [];
+  if (stages.length !== 20 || stages.some((stage,index) =>
+    stage.id !== index + 1 || !stage.name || !stage.track || !stage.artifact || !stage.gate)) {
+    fail("KTM-1 must define twenty complete, sequentially identified research stages");
+  }
+  const ruleIds = new Set();
+  for (const rule of kt.transition_rules ?? []) {
+    if (!rule.id || ruleIds.has(rule.id) || !rule.guard || !rule.effect || !rule.axis) {
+      fail("KTM-1 contains a malformed or duplicate guarded transition");
+    }
+    ruleIds.add(rule.id);
+  }
+  if (ruleIds.size < 13) fail("KTM-1 is missing guarded knowledge-transition rules");
+  for (const inference of [
+    "publication_implies_proof","peer_review_implies_proof",
+    "institutional_adoption_implies_proof","application_implies_universal_validity",
+    "random_tests_prove_universal_claim","finite_sample_proves_infinite_claim",
+    "computational_conjecture_confirms_theorem","mathematical_proof_implies_empirical_model_truth",
+    "one_failed_test_refutes_universal_math_without_checked_witness",
+    "same_dataset_rerun_equals_independent_replication"
+  ]) {
+    if (kt.non_implications?.[inference] !== false) fail("KTM-1 must reject invalid inference: " + inference);
+  }
+  if (kt.workflow?.stages_are_universal_required_sequence !== false ||
+      kt.workflow?.formal_track_may_omit_empirical_stages !== true ||
+      kt.workflow?.feedback_and_revision_edges_allowed !== true) {
+    fail("KTM-1 workflow must permit optional stages and feedback");
+  }
+  if (project?.knowledge_transition_model?.id !== "KASKAD-KTM-1" ||
+      project?.knowledge_transition_model?.version !== "1.0.0" ||
+      !project?.required_documents?.includes("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md") ||
+      !project?.required_documents?.includes("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json") ||
+      !project?.required_documents?.includes("schemas/knowledge-transition.v1.schema.json")) {
+    fail("Project contract is not synchronized with KTM-1 documents");
+  }
+}
+if (knowledgeTransitionSchema) {
+  if (knowledgeTransitionSchema.$schema !== "https://json-schema.org/draft/2020-12/schema" ||
+      knowledgeTransitionSchema.properties?.model?.properties?.stage_count?.const !== 20 ||
+      knowledgeTransitionSchema.properties?.state_vector?.properties?.single_linear_rank?.const !== false ||
+      knowledgeTransitionSchema.properties?.stages?.minItems !== 20 ||
+      knowledgeTransitionSchema.properties?.stages?.maxItems !== 20) {
+    fail("KTM-1 JSON Schema does not enforce the twenty-stage multidimensional model");
+  }
+}
+
 if (evolution) {
   if (evolution.contract_id !== "KASKAD-ENGINEERING-EVOLUTION") {
     fail("Unexpected engineering evolution contract id");
@@ -394,5 +466,5 @@ if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad scientific documentation standard, multilingual README, K3 notation, reference vectors, CV-1/CV-P semantics and local links: OK\n");
+  process.stdout.write("Kaskad scientific documentation standard, multilingual README, K3 notation, reference vectors, CV-1/CV-P and KTM-1 knowledge-transition semantics and local links: OK\n");
 }
