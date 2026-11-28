@@ -32,6 +32,7 @@
 | Тензорные суммы и перестановочные инварианты | [K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md](K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) | Матрица коэффициентов, вектор значений и тензоры взаимодействий |
 | Авторские каскадные формулы | [K3_ORIGINAL_CASCADE_FORMULAS.md](K3_ORIGINAL_CASCADE_FORMULAS.md) | Моментный спектр, нулевая топология, лаговые взаимодействия, переносы и двойные остаточные координаты |
 | 4685 формульных экземпляров K3-M | [K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md](K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md) | Пять постулатов анализа профилей, двенадцать принципов и 4685 параметризованных формул пяти типов |
+| Расслоенная математика K3-M | [K3_STRATIFIED_MATHEMATICS.md](K3_STRATIFIED_MATHEMATICS.md) | Десять типов операторов, метрик, энергий, спектров, транспортных и динамических законов |
 
 ## 3. Базовые формулы слоя
 
