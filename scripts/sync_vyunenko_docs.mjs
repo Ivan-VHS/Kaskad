@@ -10,7 +10,7 @@ const markerStart = '<!-- vyunenko-k3-reference:start -->';
 const markerEnd = '<!-- vyunenko-k3-reference:end -->';
 const theoryUrl = 'https://github.com/' + sourceRepo + '/blob/main/docs/VYUNENKO_THEORY.md';
 const proofUrl = 'https://github.com/' + sourceRepo + '/blob/main/docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md';
-const styleUrl = 'https://github.com/Ivan-VHS/DAK/blob/main/docs/PSYCHOPORTER_DOCUMENTATION_STYLE_V1.md';
+const styleUrl = 'https://github.com/Ivan-VHS/Kaskad/blob/main/docs/JADE_ATLAS_STYLE.md';
 
 async function request(method, path, payload) {
   const response = await fetch(apiRoot + path, {
