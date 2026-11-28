@@ -66,8 +66,8 @@
 | src/preset_store.hpp | Typed data / transaction / runtime |
 | src/quantum_audio.cpp | Signal mathematics / DSP |
 | src/quantum_audio.hpp | Signal mathematics / DSP |
-| src/quantum_audio_lab.cpp | Signal mathematics / DSP |
-| src/quantum_audio_lab.hpp | Signal mathematics / DSP |
+| src/quantum_audio_lab.cpp | UI / presentation and visualization |
+| src/quantum_audio_lab.hpp | UI / presentation and visualization |
 | src/reaper_expression.cpp | Typed data / transaction / runtime |
 | src/reaper_expression.hpp | Typed data / transaction / runtime |
 | src/runtime_transaction.cpp | Typed data / transaction / runtime |
