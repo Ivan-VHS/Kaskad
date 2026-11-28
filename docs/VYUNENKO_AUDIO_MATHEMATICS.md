@@ -886,8 +886,16 @@ Preset Store использует версионированную схему ve
 | src/compat/pytyliki-dsp/resample.c | линейная и оконная sinc-интерполяция |
 | src/compat/pytyliki-dsp/spectrum.c | radix-2 FFT, окно Ханна, центроид, peak и rolloff |
 | src/compat/pytyliki-dsp/midi_file.c | конечные событийные последовательности SMF |
-| src/atomic_quantum.cpp | комплексные векторы состояний, нормировка, гейты, измерение, fidelity |
+| src/atomic_quantum.cpp, src/atomic_quantum.hpp | отдельная классическая симуляция комплексных состояний, нормировка, гейты, измерение, fidelity |
 | src/octa8.hpp | рекурсивные типизированные значения и ограниченная валидация |
+| src/audio_telemetry.cpp/.hpp | нагрузка callback в ppm, overrun-счётчики, автомат качества и render-stage state |
+| src/budget_planner.cpp/.hpp | целочисленная сумма шести категорий, лимит и остаток бюджета |
+| src/occasion_planner.cpp/.hpp | равное и Hamilton-распределение, комбинаторика, жадный подбор набора и граф поздравлений |
+| src/careguard.cpp/.hpp | дискретная эвристика нагрузки и расчёт resilience reserve |
+| src/runtime_transaction.cpp/.hpp | поколение, CRC32, staged/committed состояния, compare-and-commit и rollback |
+| src/plugin_manager.cpp/.hpp, src/builtin_plugins.cpp | реестр служебных операций, lifecycle и workflow-контракты |
+| src/preset_store.cpp/.hpp | версионированная схема пресетов и проверка типизированных параметров |
+| src/reaper_expression.cpp/.hpp | необязательный Reaper ABI и безопасная публикация integer result |
 | docs/ARCHITECTURE.md, docs/CRATE_PRODUCTION_SUITE.md | границы системы и музыкальные процессы |
 | schemas/quantum-audio-chain.v1.schema.json, schemas/ventusample.pack.v1/v2.schema.json | версионированные математические входы/выходы и данные происхождения |
 
