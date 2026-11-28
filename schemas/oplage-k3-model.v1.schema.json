@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/schemas/oplage-k3-model.v1.schema.json",
+  "title": "Kaskad OPlague Mathematical Model v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "version",
+    "source",
+    "integration",
+    "inventory",
+    "models",
+    "conflicts_to_resolve",
+    "evidence_status",
+    "model_schema"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schema": {
+      "const": "kaskad.oplage-mathematical-model.v1"
+    },
+    "version": {
+      "const": "1.0.0"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "branch",
+        "commit",
+        "tree",
+        "tracked_file_count",
+        "review_scope",
+        "license"
+      ],
+      "properties": {
+        "repository": {
+          "const": "Ivan-VHS/OPlague"
+        },
+        "branch": {
+          "const": "main"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "tree": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "tracked_file_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "review_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string"
+        }
+      }
+    },
+    "integration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_repository",
+        "theory",
+        "radix",
+        "group_min",
+        "group_max",
+        "role",
+        "preserve"
+      ],
+      "properties": {
+        "target_repository": {
+          "const": "Ivan-VHS/Kaskad"
+        },
+        "theory": {
+          "const": "Теория Вьюненко K3"
+        },
+        "radix": {
+          "const": 1000
+        },
+        "group_min": {
+          "const": 0
+        },
+        "group_max": {
+          "const": 999
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preserve": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "required": [
+            "units",
+            "source_provenance",
+            "unknown_values",
+            "ordering",
+            "structural_identity",
+            "operation_traces"
+          ]
+        }
+      }
+    },
+    "inventory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directories",
+        "capabilities",
+        "interfaces",
+        "plugins",
+        "selected_mathematical_domains"
+      ],
+      "properties": {
+        "directories": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "status",
+              "domain"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "implemented",
+                  "partial",
+                  "planned",
+                  "not_applicable",
+                  "not_assessed"
+                ]
+              },
+              "domain": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "interfaces": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "direction",
+              "status",
+              "format"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "direction": {
+                "enum": [
+                  "provides",
+                  "consumes",
+                  "both"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "implemented",
+                  "partial",
+                  "planned",
+                  "optional",
+                  "not_applicable"
+                ]
+              },
+              "format": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "plugins": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "selected_mathematical_domains": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "models": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "conflicts_to_resolve": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "topic",
+          "evidence",
+          "status",
+          "resolution"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resolution": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "evidence_status": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "required": [
+        "full_tree_inventory",
+        "selected_documentation_reviewed",
+        "selected_source_modules_reviewed",
+        "selected_contracts_and_schemas_reviewed",
+        "all_326_files_reviewed_line_by_line",
+        "all_implementation_claims_independently_proven"
+      ]
+    },
+    "model_schema": {
+      "type": "string",
+      "const": "../schemas/oplage-k3-model.v1.schema.json"
+    }
+  }
+}
