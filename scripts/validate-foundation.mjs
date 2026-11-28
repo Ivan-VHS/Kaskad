@@ -393,7 +393,7 @@ if (existsSync(statusRecordPath)) {
 const theoryPath = resolve(root, "docs/VYUNENKO_THEORY.md");
 if (existsSync(theoryPath)) {
   const theoryText = readFileSync(theoryPath, "utf8");
-  const versionMatch = theoryText.match(/^\*\*Версия:\*\*\\s+([0-9]+\\.[0-9]+\\.[0-9]+)/m);
+  const versionMatch = theoryText.match(/^\*\*Версия:\*\*\s+([0-9]+\.[0-9]+\.[0-9]+)/m);
   if (!versionMatch) {
     fail("Integrated Vyunenko Theory is missing its semantic version metadata");
   } else if (project?.theory?.specification_version !== versionMatch[1]) {
