@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Главный контур консолидации Kaskad
 
 **Идентификатор:** KASKAD-CONSOLIDATION-CORE  

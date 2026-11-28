@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Классический математический аппарат Теории Вьюненко K3
 ## Терминологическая ревизия, точные соответствия и формальные модели
 

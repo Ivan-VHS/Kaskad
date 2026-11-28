@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Большие и расширенные числа Теории Вьюненко
 
 ## Конечные каскады, огромные величины, периодические записи, бесконечные пределы и многокомпонентные числа

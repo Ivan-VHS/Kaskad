@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Соответствие OPlague ↔ математика Kaskad/K3
 ## Реестр переноса смысловых структур, данных и доказательных границ
 

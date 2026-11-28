@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Теория графов Вьюненко
 
 ## Графы каскадов, остаточных деревьев, доказательных зависимостей и когнитивных операторов

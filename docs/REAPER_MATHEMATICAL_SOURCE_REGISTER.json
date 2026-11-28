@@ -1,0 +1,222 @@
+{
+  "schema": "kaskad.reaper-mathematical-source-register/v1",
+  "document": {
+    "title": "Реестр происхождения математического переноса Reaper в Kaskad",
+    "version": "1.0.0",
+    "destination": "Ivan-VHS/Kaskad",
+    "branch": "research/reaper-mathematical-foundations-v1-sync",
+    "linked_documents": [
+      "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+      "docs/REAPER_K3_INTEGRATION.md"
+    ]
+  },
+  "source": {
+    "repository": "Ivan-VHS/Reaper",
+    "ref": "main",
+    "commit": "c3d89dd91da880e523867bd8d0724a6edc6b3cf6",
+    "recursive_tree_entries": 624,
+    "review_scope": {
+      "detailed_source_files_examined": 26,
+      "note": "Полное дерево репозитория проинвентаризировано; содержательное чтение и математическая формализация в этой версии выполнены по перечисленным ниже опорным файлам. Это не побайтовое копирование всех 624 путей и не заявление о завершённом разборе каждого файла."
+    },
+    "examined_paths": [
+      "docs/EARLY_MATH_CONTRACTS.md",
+      "docs/DIVISION_ENGINE.md",
+      "docs/ORTHOGONAL_METRIC_ENGINE.md",
+      "docs/REAPER_ARCHITECTURE_FOUNDATION_66.md",
+      "docs/FUNCTION_ARCHITECTURE_CATEGORIES.md",
+      "docs/DABI64_DESKTOP_HOST_V1.md",
+      "docs/NATIVE_COMPILER.md",
+      "docs/SEMANTIC_HYPERGRAPH_AND_SOURCE_MAP.md",
+      "docs/SYSTEM_RUNTIME_ABI_V1.md",
+      "docs/TYPED_REGISTRY.md",
+      "docs/HARDWARE_LANGUAGE.md",
+      "docs/MOST_400_COMBINATORIAL_MATRIX.md",
+      "docs/MOST_FUNCTION_CONTRACT_REGISTRY.md",
+      "LANGUAGE.md",
+      "selfhost/type_system.rpr",
+      "selfhost/ir.rpr",
+      "selfhost/memory_model.rpr",
+      "selfhost/bytecode.rpr",
+      "selfhost/module_graph.rpr",
+      "selfhost/span.rpr",
+      "selfhost/source_map.rpr",
+      "reaper/metric_space.py",
+      "reaper/ir.py",
+      "language/features.json",
+      "language/function_registry.v1.json",
+      "language/most_matrix_20x20.json"
+    ],
+    "extracted_domains": [
+      "конечные множества, кардинальность, биекции и разбиения",
+      "евклидово деление, остатки и сбалансированное распределение",
+      "фиксированные целочисленные области и знаковое кодирование",
+      "векторы, нормы, метрики, ортогональность и квадратичные формы",
+      "сферическая, гиперболическая и Минковская геометрия",
+      "вероятность, дисперсия и ковариация",
+      "структурные типы, конструкторы и эффекты",
+      "размещение полей, выравнивание, ABI и конечные кадры",
+      "AST/IR, инструкции, блоки, CFG и байткод",
+      "стековые инварианты и сохранение наблюдаемой семантики",
+      "полуинтервалы Span и отображения исходных координат",
+      "графы зависимостей модулей и топологические порядки",
+      "региональные журналы памяти и инварианты ёмкости",
+      "типизированные семантические графы и канонические хеши",
+      "множества capabilities и границы полномочий",
+      "конечные реестры, архитектурная классификация и комбинаторные матрицы"
+    ]
+  },
+  "source_registry_snapshot": {
+    "function_registry": {
+      "path": "language/function_registry.v1.json",
+      "blob_sha": "8f464930ea9e93231cd8b3847077551481258d5d",
+      "schema": "most.function-registry/v1",
+      "entry_count": 666,
+      "base_specification_count": 66,
+      "existing_feature_spec_count": 147,
+      "added_proposals_count": 519,
+      "implementation_claims": 0,
+      "status_counts": {
+        "specified": 666
+      },
+      "implementation_state_counts": {
+        "planned": 519,
+        "specified_only": 134,
+        "partial_outside_most": 13
+      },
+      "domain_counts": {
+        "memory": 21,
+        "types": 110,
+        "web": 22,
+        "network": 21,
+        "compiler": 21,
+        "data": 121,
+        "tooling": 77,
+        "frontend": 73,
+        "execution": 100,
+        "security": 100
+      },
+      "architecture_category_counts": {
+        "kernel_runtime": 121,
+        "language_compiler": 260,
+        "desktop_ui": 22,
+        "network_distributed": 21,
+        "storage_data": 121,
+        "security_resilience": 100,
+        "ecosystem_tooling": 21
+      },
+      "interpretation": "Запись в каталоге означает наличие контракта/спецификации, но не доказывает исполнимость или реализацию. Все 666 записей не объявляются реализованными."
+    },
+    "feature_registry": {
+      "path": "language/features.json",
+      "blob_sha": "ccdee9eb02c6ed5bec1ee221eb2fd1ce796d1677",
+      "entry_count": 33,
+      "status_counts": {
+        "specified": 19,
+        "planned": 7,
+        "implemented": 4,
+        "deprecated": 3
+      }
+    },
+    "most_combinatorial_matrix": {
+      "path": "language/most_matrix_20x20.json",
+      "blob_sha": "e8fab45e5bb0eb93c362c1fb9feca641eba1ea87",
+      "schema": "most.combinatorial-matrix/v1",
+      "status": "specified",
+      "orientation": "directed",
+      "basis_size": 20,
+      "rows": 20,
+      "columns": 20,
+      "ordered_projections": 400,
+      "diagonal": 20,
+      "off_diagonal": 380,
+      "interpretation": "Декартово произведение базиса на себя и классификационные проекции; не 400 независимых исполняемых функций."
+    },
+    "architecture_foundation": {
+      "path": "docs/REAPER_ARCHITECTURE_FOUNDATION_66.md",
+      "concept_count": 66,
+      "architecture_layers": 9,
+      "interpretation": "Классификационный словарь архитектуры, не набор из 66 математических аксиом."
+    },
+    "system_runtime": {
+      "path": "docs/SYSTEM_RUNTIME_ABI_V1.md",
+      "declared_operations": 84,
+      "domains": 14,
+      "native_capability_registrations": 108,
+      "combined_catalogue_entries": 192,
+      "interpretation": "Количество объявленных записей API/каталога, а не количество доказанно реализованных системных обработчиков."
+    },
+    "dabi64": {
+      "path": "docs/DABI64_DESKTOP_HOST_V1.md",
+      "request_header_bytes": 40,
+      "response_header_bytes": 32,
+      "max_payload_bytes": 65536,
+      "byte_order": "little-endian",
+      "interpretation": "Формат кадров и структурный валидатор не равны аутентификации, IPC-доставке, выдаче полномочий или реализации kernel dispatch."
+    }
+  },
+  "destination_foundation_reviewed": {
+    "repository": "Ivan-VHS/Kaskad",
+    "base_ref": "main",
+    "base_commit": "1a67862cdea67e84d69fe78a9e05d4d1acaad3a8",
+    "theory_document": "docs/VYUNENKO_THEORY.md",
+    "theory_version": "0.3.0",
+    "radix": 1000,
+    "group_coefficients": [
+      0,
+      999
+    ],
+    "separator": "k",
+    "reviewed_paths": [
+      "README.md",
+      "docs/VYUNENKO_THEORY.md",
+      "docs/K3_CANONICAL_SYNTAX.md",
+      "docs/CLASSICAL_MATHEMATICS_CROSSWALK.md",
+      "docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md"
+    ],
+    "invariants_preserved": [
+      "основание B=1000 не меняется",
+      "коэффициенты базового K3 лежат в диапазоне 0..999",
+      "символ k остаётся позиционным разделителем",
+      "значение каскада определяется полной последовательностью коэффициентов",
+      "структурные расширения не смешиваются с арифметикой K3 без явного определения и доказательства"
+    ],
+    "integrated_reaper_section": 74
+  },
+  "transfer_policy": {
+    "copied": [
+      "математические определения и соответствия",
+      "формулы и структурные инварианты",
+      "конечные комбинаторные модели",
+      "формальные схемы кодирования конечных типизированных данных",
+      "исходные пути, версии, commit SHA и статусы свидетельств"
+    ],
+    "not_copied": [
+      "исполняемый код Reaper",
+      "runtime и компилятор как программные подсистемы",
+      "драйверы, системные вызовы и аппаратные адаптеры",
+      "непроверенные заявления о реализации"
+    ],
+    "status_separation": [
+      "классическое математическое утверждение",
+      "определение/модель, вводимое в переносе",
+      "свойство, заявленное и ограниченное исходным кодом",
+      "спецификация или проектное предложение Reaper",
+      "открытая задача для дальнейшего математического разбора"
+    ]
+  },
+  "remaining_coverage": {
+    "state": "not_exhaustive",
+    "note": "Следующие версии должны пройти каждый домен 666-контрактного реестра и остальные исходные подсистемы по отдельности. Проектные/технические декларации следует переносить только в форме явно типизированных математических моделей, если у них есть строгий математический смысл.",
+    "priorities": [
+      "полный поэлементный математический crosswalk 666 реестровых контрактов с отметкой specified/planned/partial",
+      "развёрнутый разбор 20×20 MOST-матрицы, action-kind и всех 400 направленных проекций",
+      "память, регионы, borrow/ownership, атомики, очереди и IPC",
+      "сети, транзакции, идемпотентность, потоки и backpressure",
+      "хранилища, сериализация, схемы, индексы и миграции",
+      "криптография, capabilities, threat models и модели отказа",
+      "UI, геометрия интерфейса, анимация и доступность как формальные/дискретные модели там, где это корректно",
+      "инструменты, измерения, сложность, воспроизводимость и верификация"
+    ]
+  }
+}

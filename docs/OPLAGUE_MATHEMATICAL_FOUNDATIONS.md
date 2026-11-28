@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Математические основания OPlague
 ## Прикладная формальная модель, согласованная с Теорией Вьюненко K3
 

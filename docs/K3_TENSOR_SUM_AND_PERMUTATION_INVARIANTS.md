@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Тензорная модель каскадных сумм и инварианты перестановок K3
 
 **Теория:** Теория Вьюненко  

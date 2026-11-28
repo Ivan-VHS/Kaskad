@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "KASKAD-QUALITY-MATHEMATICS",
+  "scope": "all mathematical definitions, claims, models and proofs",
+  "mandatory": {
+    "every_construction_has_signature_and_semantics": true,
+    "every_axiom_has_scope_and_motivation": true,
+    "every_theorem_has_quantifiers_and_assumptions": true,
+    "every_proof_lists_dependencies": true,
+    "every_new_term_has_classical_crosswalk": true,
+    "every_universal_claim_is_proof_or_open_problem": true,
+    "every_definition_has_example_and_boundary_case": true,
+    "every_algorithm_has_invariant_and_termination_argument": true,
+    "every_nontrivial_operation_declares_domain_and_codomain": true,
+    "every_metric_declares_its_space_and_axioms": true,
+    "raw_convolution_and_canonical_normalization_are_distinguished": true,
+    "entropy_definitions_require_positive_total_mass": true,
+    "cross_domain_encodings_preserve_declared_types": true,
+    "encoding_isomorphism_claims_require_explicit_proof": true,
+    "prefix_ultrametrics_and_low_digit_metrics_are_not_conflated": true,
+    "directed_block_composition_is_separate_from_numeric_addition": true,
+    "positional_zero_groups_are_never_silently_removed": true,
+    "CRT_projectors_are_compatible_across_modular_levels": true,
+    "infinite_K3_expansion_has_an_explicit_topological_domain": true,
+    "ordinary_integer_tail_classification_states_finite_support_or_eventual_999": true,
+    "the_two_channel_unit_criterion_uses_gcd_with_1000": true,
+    "carry_correlations_declare_the_fixed_incoming_carry_and_input_distribution": true
+  },
+  "k3_constraints": {
+    "radix": 1000,
+    "factorization": "2^3 * 5^3",
+    "group_separator": "k",
+    "coefficient_range": "0..999",
+    "canonical_expansion_uniqueness": "theorem_from_euclidean_division",
+    "normalization_invariant": "preserve_polynomial_value",
+    "divisor_filter": "not_a_multiplicative_valuation",
+    "modular_ring_1000": "not_a_field",
+    "completion": "inverse_limit_isomorphic_to_Z2_times_Z5",
+    "notation_and_semantics": {
+      "radix_symbol": "B",
+      "radix_value": 1000,
+      "separator_symbol": "k",
+      "separator_role": "lexical_group_delimiter",
+      "numeric_shift_operator": "S_B",
+      "raw_coefficient_domain": "Z",
+      "canonical_coefficient_range": "0..999",
+      "canonical_zero_word": "0",
+      "empty_word_is_canonical": false,
+      "evaluation_kernel": "(X-1000)",
+      "empty_sum": 0,
+      "empty_product": 1,
+      "undefined_marker": "outside_Z"
+    },
+    "composite_radix_arithmetic": {
+      "crt_components": [
+        "2^(3r)",
+        "5^(3r)"
+      ],
+      "unit_criterion": "gcd(n,1000)=1",
+      "unit_count": "(2/5)*1000^r",
+      "nonzero_zero_divisor_count": "(3/5)*1000^r-1",
+      "divisor_product_law": "nu_1000(xy)>=nu_1000(x)+nu_1000(y)",
+      "residue_tree_branching": {
+        "2_primary_branch_factor": 8,
+        "5_primary_branch_factor": 125,
+        "total": 1000
+      },
+      "unit_test_depends_on": "least_significant_K3_group"
+    },
+    "extension_layers": {
+      "biprime_base_factorization": "1000=2^3*5^3",
+      "crt_levels": [
+        "2^(3r)",
+        "5^(3r)"
+      ],
+      "profile_morphology": [
+        "moments",
+        "convolution",
+        "affine_positions",
+        "finite_differences",
+        "transport",
+        "entropy",
+        "fourier",
+        "prefix_ultrametric",
+        "q_addend_carries",
+        "lag_moments"
+      ],
+      "directed_composition": "separate_noncommutative_sequence_concatenation"
+    }
+  },
+  "forbidden": {
+    "empirical_observation_as_universal_proof": true,
+    "finite_sample_as_infinite_proof": true,
+    "unqualified_p_adic_analogy_for_composite_base": true,
+    "calling_Z_mod_1000_a_field": true,
+    "claiming_bit_compression_without_encoding_proof": true,
+    "unsupported_performance_superlatives": true,
+    "redefining_standard_terms_without_definition": true,
+    "assuming_nu_1000_zero_implies_unit": true,
+    "using_k_as_both_numeric_radix_and_word_separator": true,
+    "treating_empty_word_as_canonical_zero": true,
+    "identifying_null_or_undefined_with_integer_zero": true,
+    "claiming_cryptographic_security_from_modular_arithmetic_alone": true,
+    "inventing_doi_arxiv_authorship_or_benchmark_results": true,
+    "marking_unexecuted_reference_vector_as_pass": true,
+    "claiming_4685_catalogue_entries_are_4685_independent_discoveries": true,
+    "treating_raw_convolution_as_canonical_normalized_product": true,
+    "treating_directed_composition_as_integer_addition": true,
+    "assuming_serialization_proves_domain_isomorphism": true,
+    "claiming_implementation_from_a_mathematical_contract": true,
+    "treating_the_1000_adic_completion_as_the_ordinary_integer_ring": true,
+    "claiming_statistical_independence_from_CRT_coordinate_independence": true,
+    "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
+    "using_1000_not_dividing_x_as_a_unit_criterion": true
+  },
+  "review": {
+    "mathematical_review_required": true,
+    "counterexample_review_required": true,
+    "dependency_graph_review_required": true,
+    "status_change_requires_audit_trail": true
+  },
+  "documentation": {
+    "standard": "Cascade Edition 1.0.0",
+    "normative_document": "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "language_register": "docs/LANGUAGE_REGISTER.md",
+    "required": {
+      "document_type_and_research_status": true,
+      "formal_scope_and_assumptions": true,
+      "symbol_table_and_index_conventions": true,
+      "theorem_proof_or_explicit_open_status": true,
+      "exact_and_approximate_results_separated": true,
+      "computational_claims_have_reproducibility_manifest": true,
+      "citations_and_license_are_not_invented": true,
+      "translation_completeness_is_explicit": true,
+      "changes_in_epistemic_status_have_audit_trail": true
+    },
+    "non_applicable_fields_must_be_explicit": true,
+    "no_unverified_doi_or_arxiv_identifier": true,
+    "no_unmeasured_benchmark_claims": true,
+    "no_unexecuted_test_marked_pass": true,
+    "no_unimplemented_algorithm_reported_as_implemented": true
+  }
+}

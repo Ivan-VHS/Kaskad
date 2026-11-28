@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Глава II. Уравнения каскадного баланса, нормализация и инварианты системы K3
 
 **Теория:** Теория Вьюненко  
