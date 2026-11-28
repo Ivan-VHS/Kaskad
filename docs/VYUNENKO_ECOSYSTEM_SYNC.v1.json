@@ -138,7 +138,8 @@
     "docs/K3_REFERENCE_VECTORS.json",
     "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
     "docs/CHUMNY_VERDICT_THEORY.md",
-    "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md"
+    "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md",
+    "docs/K3_QUANTUM_COMMA_JUMPS.md"
   ],
   "ecosystem_dependents": [
     {
@@ -326,6 +327,26 @@
         "Graph jumps are not identified with quantum tunneling",
         "K3 canonicalization and lossy compression are kept distinct",
         "CV-1 primary target and fixed parameter semantics remain unchanged"
+      ]
+    },
+    {
+      "id": "K3-QCJ-0.1.0",
+      "title": "Квантовые скачки запятой",
+      "status": "compatible_research_specification",
+      "source": "docs/K3_QUANTUM_COMMA_JUMPS.md",
+      "base_semantics_changed": false,
+      "depends_on": [
+        "CV-1",
+        "K3"
+      ],
+      "summary": [
+        "Defines exact decimal coefficient-scale pairs (m,d)",
+        "Defines signed decimal scaling J_k(x)=10^k x and its composition law",
+        "Defines scale-aware decimal-separator erasure E(m,d)=m",
+        "Audits all 100 Chuma stages in four blocks of 25",
+        "Separates arithmetic equalities, scale transformations, representation changes and symbolic state transitions",
+        "Proves zero-status preservation under nonzero powers-of-ten scaling",
+        "Specifies three decimal shifts per radix-1000 position without equating comma movement with the K3 separator"
       ]
     }
   ]
