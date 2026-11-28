@@ -357,7 +357,7 @@ if (existsSync(statusRecordPath)) {
     "### 4.1. Status of the whole corpus",
     "### 4.2. Independent status axes",
     "### 4.3. Existing K3 claim registry",
-    "### 4.6. Current main verification snapshot",
+    "### 4.6. Historical baseline verification snapshot",
     "### 4.7. Conditions for claims of scientific recognition"
   ]) {
     if (!statusText.includes(requiredText)) {
