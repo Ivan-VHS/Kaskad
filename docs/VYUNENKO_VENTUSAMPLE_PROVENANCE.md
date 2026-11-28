@@ -55,14 +55,37 @@
 | src/compat/pytyliki-dsp/midi_file.h | 8662baf80de0c5cb9e6f03cb89af04308ebd7c6b | bounded MIDI event data types |
 | src/compat/pytyliki-dsp/midi_file.c | 1fdf19ff3278c8d50a83bccc118d4d06bcb406bd | bounded SMF 0/1 parser |
 
-## 5. Schema source files
+
+## 5. Дополнительные доменные и runtime-источники
+
+| Файл VentuSample | Blob SHA | Формализованный домен |
+|---|---|---|
+| src/audio_telemetry.hpp | e14a77bc9b59178292bc12f68ed460fdad685bed | типы счётчиков callback, memory budget и render stages |
+| src/audio_telemetry.cpp | b641ddc0fb72dc1fde2687335017cd599b7da9b4 | load ppm, overrun counters, Normal/Reduced/Emergency policy |
+| src/budget_planner.hpp | 98187e6e6925d040b04177af78f846b8684c4fbf | шестимерное целочисленное распределение бюджета |
+| src/budget_planner.cpp | cb9f8e6ee2b0efdbcdf7fc0166ba238effc8e3f5 | суммы категорий, remaining и within-budget predicate |
+| src/occasion_planner.hpp | 078d4748f54b0e6ef65f7719874496aa0879e224 | целочисленные allocation, bounded catalog и gift-plan types |
+| src/occasion_planner.cpp | 40222eb866c099e0cce0d506344b1f524dc8bd53 | equal/largest-remainder split, комбинации, greedy basket, bipartite greeting graph |
+| src/careguard.hpp | 38ee7ca6bea78eb477c0eb640fa7cb0ce4d8b08e | workload snapshot, rule score и resilience reserve |
+| src/careguard.cpp | 1b30c0740c47a5b27f4eb273105b33a3bfdd942a | piecewise pressure heuristic, ceiling reserve, bounded string checks |
+| src/plugin_manager.hpp | 7fa2b3e9ce38533744d2f75a1531480f10fd85ff | plugin descriptor, handler lifecycle и versioned metadata types |
+| src/plugin_manager.cpp | b8e32ac03a2517b9fe3dedbaf649547bdad47705 | manifest validation, bounded parsing, registration and lifecycle |
+| src/builtin_plugins.cpp | f5c358a78f127d41edc611460b26bb08a8975792 | 19 встроенных операций и их workflow contracts |
+| src/preset_store.hpp | 455502c9b27fda3b4f41fba42dbf88345225f492 | preset schema identity and typed parameter API |
+| src/preset_store.cpp | c19c2f8c3c06c01e29be94c1e821c6115f69c072 | whitelist parsing, range validation and candidate commit |
+| src/reaper_expression.hpp | cef32d9c03ba7b573c3235dd3a3bfd34c57cfe51 | optional Reaper integer-expression ABI and selfhood lookup |
+| src/reaper_expression.cpp | 0ae077bc98c4d0fa0d10c0f2c1294501f2dd06e8 | ABI status, int64 candidate publication and 1 MiB input limit |
+| src/runtime_transaction.hpp | 4ee53d8a5cabc3221870b450b99853e98a01b461 | committed/staged payload, generation, schema and transaction status |
+| src/runtime_transaction.cpp | 7b3863d8f0cc639970ea6bf6de19d44ce4832356 | CRC32 integrity check, generation conflict, commit and rollback |
+
+## 6. Schema source files
 
 | Файл VentuSample | Blob SHA | Роль |
 |---|---|---|
 | schemas/quantum-audio-chain.v1.schema.json | eb22068cffefa6625d62216654e03f17c00b47de | typed chain JSON contract and 133-step limit |
 | schemas/atomic-quantum-functions.v1.json | 50521890a69ec02f92e0487cda25f6b7374f4ace | Atomic-Quantum function registry |
 
-## 6. Производные документы Kaskad
+## 7. Производные документы Kaskad
 
 | Документ Kaskad | Что переносит |
 |---|---|
@@ -71,7 +94,7 @@
 | VYUNENKO_K3_AUDIO_BRIDGE.md | точное кодирование индексов и целых PCM-кодов, единицы, фиксированная точность и tensor mapping |
 | VYUNENKO_THEORY.md, раздел 73 | согласование прикладной математической ветви с фундаментальной K3 |
 
-## 7. Ограничения доказательности
+## 8. Ограничения доказательности
 
 1. Blob SHA удостоверяет идентичность содержимого отдельного файла, но не удостоверяет весь repository snapshot как единый commit.
 2. Документация источника не заменяет исходный алгоритм. Формулы по возможности сверялись с реализацией.
@@ -80,7 +103,7 @@
 5. Производный документ должен сохранять distinction между implemented, specified, planned и metaphorical behavior.
 6. Отсутствующие или не проверенные файлы не получают вымышленных SHA и не включаются как подтверждённые источники.
 
-## 8. Правило обновления
+## 9. Правило обновления
 
 При изменении источника:
 - повторно получить blob SHA исходных файлов и схем;
