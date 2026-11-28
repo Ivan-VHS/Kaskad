@@ -12,7 +12,10 @@
     "cross_repository_relationships_are_mathematical_only",
     "no_operating_system_programming_language_ide_driver_or_application_product_scope",
     "executable_tools_are_optional_support_for_mathematical_verification",
-    "computation_and_experiment_do_not_replace_proofs"
+    "computation_and_experiment_do_not_replace_proofs",
+    "institute_is_a_repository_native_governance_model_not_a_legal_entity",
+    "external_scientific_recognition_requires_verifiable_external_evidence",
+    "mathematical_computational_implementation_and_recognition_statuses_are_orthogonal"
   ],
   "theory": {
     "id": "K3",
@@ -279,5 +282,24 @@
     ],
     "provenance_policy": "docs/ATTRIBUTION_AND_RIGHTS.md",
     "scope": "Original Kaskad research corpus and original Vyunenko Theory K3 material; cited classical results and third-party materials retain their own authorship, provenance and licenses."
+  },
+  "institutional_governance": {
+    "name": "Kaskad Institute of Self-Developing Mathematics",
+    "name_ru": "Институт саморазвивающейся математики Kaskad",
+    "identifier": "KASKAD-ISM",
+    "model": "repository_native_virtual_research_institute",
+    "charter": "docs/KASKAD_INSTITUTE_CHARTER.md",
+    "coordination_core": "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "scientific_status_record": "docs/DEVELOPMENT_STATUS.md#4-mathematical-status",
+    "research_lifecycle": "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+    "claim_registry": "docs/K3_CLAIM_REGISTRY.json",
+    "legal_entity_claimed": false,
+    "accreditation_claimed": false,
+    "external_recognition_claimed": false,
+    "status_axes_are_orthogonal": true,
+    "independent_review_required_for_reviewed_status": true,
+    "automated_checks_do_not_establish_mathematical_truth": true,
+    "external_recognition_requires_verifiable_external_evidence": true,
+    "status_changes_require_auditable_evidence": true
   }
 }

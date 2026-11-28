@@ -10,6 +10,7 @@
   <a href="README.md">RU</a> · <strong>EN</strong> · <a href="README.uk.md">UA</a> · <a href="README.zh-CN.md">中文</a>
   <br />
   <a href="docs/INDEX.md">DOCUMENT MAP</a> ·
+  <a href="docs/KASKAD_INSTITUTE_CHARTER.md">KASKAD INSTITUTE</a> ·
   <a href="docs/VYUNENKO_THEORY.md">K3 THEORY</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1 THEORY</a> ·
   <a href="CONTRIBUTING.md">HOW TO CONTRIBUTE</a>

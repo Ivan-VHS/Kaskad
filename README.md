@@ -10,6 +10,7 @@
   <strong>RU</strong> · <a href="README.en.md">EN</a> · <a href="README.uk.md">UA</a> · <a href="README.zh-CN.md">中文</a>
   <br />
   <a href="docs/INDEX.md">КАРТА ДОКУМЕНТОВ</a> ·
+  <a href="docs/KASKAD_INSTITUTE_CHARTER.md">ИНСТИТУТ KASKAD</a> ·
   <a href="docs/VYUNENKO_THEORY.md">ТЕОРИЯ K3</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">ТЕОРИЯ CV-1</a> ·
   <a href="CONTRIBUTING.md">КАК УЧАСТВОВАТЬ</a>
@@ -225,6 +226,16 @@ README — это краткое знакомство с Kaskad, а не зам�
 | Правила чтения и изменения документов | [Руководство по документации](docs/DOCUMENTATION_GUIDE.md) |
 | План исследовательских работ | [Конструктивная дорожная карта](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) |
 | Текущее состояние разработки | [Development Status](docs/DEVELOPMENT_STATUS.md) |
+| Основная математическая сводка K3 | [Научная консолидация K3](docs/K3_SCIENTIFIC_CONSOLIDATION.md) |
+| Формальная логика и доказательные статусы | [Формальная эпистемика и доказательства](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) |
+| Утверждения, определения и зависимости | [Реестр утверждений K3](docs/K3_CLAIM_REGISTRY.json) |
+| Контрольные математические примеры | [Эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json) |
+| Авторские формулы и позиционная морфология | [Каскадные формулы K3](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) |
+| Двухканальная арифметика и переносы | [Двухканальная геометрия K3](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) |
+| Архитектура документов и слоёв | [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md) |
+| Контрпримеры и границы утверждений | [Реестр контрпримеров](docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md) |
+| Машинная спецификация векторов | [JSON Schema](schemas/k3-reference-vectors.v1.schema.json) |
+
 | Полноту переводов | [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md) |
 | Правила участия | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Авторство и происхождение материалов | [Атрибуция и права](docs/ATTRIBUTION_AND_RIGHTS.md) |
