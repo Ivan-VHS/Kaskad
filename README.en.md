@@ -1,158 +1,158 @@
 <div align="center">
-  <img src="assets/kaskad-jade-atlas.svg" alt="Kaskad — Vyunenko Theory K3" width="100%" />
-  <p><strong>JADE ATLAS · CASCADE MATHEMATICS</strong></p>
-  <p><sub>VYUNENKO THEORY K3 · TCHV · POSITION · STRUCTURE · PROOF</sub></p>
+  <img src="assets/kaskad-jade-atlas.svg" alt="Kaskad Jade Atlas" width="100%" />
+  <p><strong>KASKAD · MATHEMATICAL RESEARCH CORPUS</strong></p>
+  <p><sub>VYUNENKO THEORY K3 · CHUMNY VERDICT THEORY CV-1 · FORMAL MATHEMATICS</sub></p>
+  <h1>Position is preserved. Structure is distinguished. Claims are proved.</h1>
+  <p>A single entry point to two independent theories, their evidence base and compatible research extensions.</p>
 </div>
 
 <p align="center">
-  <a href="README.md">RU</a> · <a href="README.uk.md">UK</a> · <a href="README.zh-CN.md">中文</a> ·
-  <a href="docs/INDEX.md">DOCUMENT MAP</a> · <a href="docs/VYUNENKO_THEORY.md">CANONICAL THEORY</a>
+  <a href="README.md">RU</a> · <strong>EN</strong> · <a href="README.uk.md">UA</a> · <a href="README.zh-CN.md">中文</a>
+  <br />
+  <a href="docs/INDEX.md">DOCUMENT MAP</a> ·
+  <a href="docs/VYUNENKO_THEORY.md">K3 CANON</a> ·
+  <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1</a> ·
+  <a href="docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md">APPLIED ATLAS</a>
 </p>
-
-# Kaskad — Vyunenko Theory K3
-
-**Mathematics where position matters.** Kaskad is a research corpus for cascade-thousand integers, their arithmetic, structure, divisibility and mathematical extensions. The model is distinct from software; computation is not presented as proof.
-
-> **K3 principle:** coefficients and their positions determine value; the separator marks a positional transition, and zero keeps its place.
-
-## ◈ Visual language
-
-An original blend of three moods, not a reproduction of characters, frames or logos.
-
-| Mood reference | Palette | Design role |
-|---|---|---|
-| *Kung Fu Panda 3* | jade, gold, lacquer red, blossom | craft, clarity and harmony |
-| Horseman of Pestilence | charcoal, ash, plum, wine | contrast, uncertainty and edge cases |
-| Ging Freecss (*Hunter × Hunter*) | blue-gray, sand, earth, muted teal | wayfinding and exploration |
-
-**Palette:** jade \#247A60 / \#8BC8A6; gold \#D8AD58; lacquer red \#B83A45; plum \#63394F; obsidian \#10131A; ash \#A9ADB4; sand \#DEBCA1; trail teal \#769194. Color is navigation, not evidence.
-
-## 1. Mathematical core
-
-Vyunenko Theory K3 fixes the composite radix
-
-\[
-B=1000=10^3=2^3\cdot5^3,\qquad D_B=\{0,1,\ldots,999\}.
-\]
-
-A finite cascade is a vector
-
-\[
-a=(a_m,\ldots,a_1,a_0),\qquad a_i\in D_B,
-\]
-
-where $a_0$ is the least significant group. Its value is
-
-\[
-\boxed{\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_i\,1000^i.}
-\]
-
-A positive canonical cascade has a nonzero leading coefficient; zero has the unique form $(0)$. Signed values are separate.
-
-### Reading a cascade
-
-The symbol **k** separates groups. It is **only a separator**, not a digit, multiplier, radix or multiplication operator. Each separator advances to the next power of 1000. Decimal digit count inside a group creates no extra position.
-
-| Word | Coefficients, high to low | Value |
-|---|---:|---:|
-| **7** | $(7)$ | $7$ |
-| **1k** | $(1,0)$ | $1,000$ |
-| **1k0k1** | $(1,0,1)$ | $1,000,001$ |
-| **50k0k7** | $(50,0,7)$ | $50,000,007$ |
-| **50k0k** | $(50,0,0)$ | $50,000,000$ |
-| **12k34k56** | $(12,34,56)$ | $12,034,056$ |
-
-A terminal **k** denotes exactly one omitted zero least-significant group. An explicit zero also occupies a position. Do not delete, move or merge zeros and separators without proving equivalence: depth and value are different characteristics.
-
-## 2. Canonical form and modes
-
-| Mode | Purpose |
-|---|---|
-| **Canonical** | Strict parsing of words admitted by the K3 grammar |
-| **K3-PAD** | Explicit import and normalization of non-canonical tokens |
-| **K3-RAW** | Structural input preserving groups, order and operand form |
-
-Normalization is never silent. Text, coefficient vectors, numeric values, ordered expression trees and operation traces have distinct equality relations. Equal numbers do not make source words or computation histories identical. The shift operator $S_B$ is defined separately from the separator.
-
-## 3. Cascade balance
-
-Carry and borrow are two cases of one law:
-
-\[
-\boxed{c_i+t_i=1000t_{i+1}+r_i,\qquad 0\le r_i\le999.}
-\]
-
-Thus
-
-\[
-t_{i+1}=\left\lfloor\frac{c_i+t_i}{1000}\right\rfloor,
-\qquad r_i=c_i+t_i-1000t_{i+1}.
-\]
-
-Admissible normalization preserves the weighted sum:
-
-\[
-\sum_i c_i1000^i=\sum_i r_i1000^i.
-\]
-
-## 4. Composite radix and extensions
-
-Since $1000=2^3\cdot5^3$, the Chinese remainder theorem gives, for $r\ge1$,
-
-\[
-\mathbb Z/1000^r\mathbb Z\cong
-\mathbb Z/2^{3r}\mathbb Z\times\mathbb Z/5^{3r}\mathbb Z.
-\]
-
-The corresponding completion is the topological ring
-
-\[
-\widehat{\mathbb Z}_{1000}\cong\mathbb Z_2\times\mathbb Z_5,
-\]
-
-not a field. Further layers cover divisibility, ultrametrics, infinite cascades, structural semantics, combinatorics, statistics and tensor invariants. Each has its own domain and status and does not alter the core without a separate version and justification.
-
-## 5. Vyunenko Theory and TCHV
-
-**Vyunenko Theory K3** is Kaskad's formal core: finite cascades, canonical positional representation, polynomial evaluation and compatible extensions.
-
-**TCHV** is mentioned as a neighboring research context and remains a separate theoretical line. This does not identify TCHV with K3 or import one system's claims into the other's axioms. Any relationship requires explicit objects, mappings, assumptions and verifiable statements.
-
-## 6. Claim status
-
-| Marker | Status | Meaning |
-|---|---|---|
-| **DEF** | Definition | Object introduced with explicit domain |
-| **AX** | Postulate | Starting convention fixed |
-| **THM** | Theorem | Complete proof supplied |
-| **CLASSIC** | Classical result | Source and conditions stated |
-| **CHECK** | Computational check | Specific inputs or finite domain checked |
-| **SPEC** | Specification | Requirement or model described |
-| **HYP** | Hypothesis | Claim remains open |
-| **IMPL** | Implementation fact | Code, artifact and reproducible check exist |
-
-A test does not replace proof. Finite enumeration supports a claim only over the domain actually enumerated. Missing verification is not PASS; implementation does not define mathematical meaning.
-
-## 7. Research map
-
-- [Vyunenko Theory K3](docs/VYUNENKO_THEORY.md)
-- [Canonical syntax](docs/K3_CANONICAL_SYNTAX.md) · [Foundations and algebra](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
-- [Cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md) · [Structural semantics](docs/K3_STRUCTURAL_SEMANTICS_AND_ORDERED_SUMS.md)
-- [CRT and infinite cascades](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md)
-- [Classical crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md) · [Proof framework](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md)
-- [Implementation status](docs/DEVELOPMENT_STATUS.md) · [Complete documentation map](docs/INDEX.md)
-
-## 8. Reproducibility and license
-
-The auxiliary implementation is in **src/kaskad_k3/**, tests in **tests/** and vectors in **tests/vectors/**. They are computational instruments, not substitutes for the mathematical core.
-
-    PYTHONPATH=src python -m unittest discover -s tests -v
-
-CI is configured for Python 3.11–3.14. A result applies to its exact commit and GitHub Actions run.
-
-- [Contributing](CONTRIBUTING.md) · [Scientific standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)
-- [Attribution and rights](docs/ATTRIBUTION_AND_RIGHTS.md) · [Citation](CITATION.cff) · [Apache-2.0](LICENSE)
 
 ---
 
-<p align="center"><strong>POSITION IS STRUCTURE.</strong><br/><sub>ZERO KEEPS ITS PLACE · THE FORMULA KEEPS VALUE · PROOF KEEPS MEANING</sub></p>
+## About
+
+**Kaskad** is a mathematical research corpus for the formal study of positional numbers, arithmetic structures, directed relations and mathematical evidence.
+
+The project keeps mathematical theory, computational checks and software implementation distinct. A computation can confirm a specific result or finite set of cases, but it does not replace proof. A research hypothesis is not presented as a theorem, and the presence of a document or code is not treated as proof of implementation.
+
+### At a glance
+
+| | Scope | Primary source |
+|---|---|---|
+| **K3** | Finite positional system with radix 1000 | [Vyunenko Theory](docs/VYUNENKO_THEORY.md) |
+| **CV-1** | Directed relation with one fixed nonzero parameter | [Chumny Verdict Theory](docs/CHUMNY_VERDICT_THEORY.md) |
+| **Navigation** | Full catalogue of chapters, extensions and machine-readable materials | [Documentation map](docs/INDEX.md) |
+
+## Two independent research tracks
+
+### 01 · Vyunenko Theory K3
+
+K3 describes finite integer cascades in a positional system with fixed radix
+
+$$
+B=1000=10^3=2^3\cdot5^3,
+\qquad
+D_B=\{0,1,\ldots,999\}.
+$$
+
+Each canonical group coefficient belongs to $D_B$. For a vector listed from the least significant position to the most significant,
+
+$$
+a=(a_0,a_1,\ldots,a_m),
+\qquad
+\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
+$$
+
+The symbol **k** is a lexical separator between adjacent groups, not a number, radix or multiplier. A group’s index determines its weight. A zero coefficient keeps its position and must not be removed or moved without a proof of equivalence.
+
+**Primary chapters:** [canonical theory](docs/VYUNENKO_THEORY.md) · [syntax](docs/K3_CANONICAL_SYNTAX.md) · [cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md) · [foundations and algebra](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md).
+
+### 02 · Chumny Verdict Theory CV-1
+
+CV-1 studies a separate directed relation on the standard set of integers. For a parameter fixed in advance, $c\in\mathbb Z\setminus\{0\}$, the primary relation is defined by
+
+$$
+x\prec_c y
+\iff
+(x=_{\mathbb Z}0)\land(y=_{\mathbb Z}c),
+\qquad
+\prec_c=\{(0,c)\}.
+$$
+
+Thus $0\prec_c c$, while $c\not\prec_c0$; the standard numerical inequality $0\ne_{\mathbb Z}c$ remains true.
+
+A separate additive-transition relation is defined by
+
+$$
+x\rightsquigarrow_c y
+\iff
+y=_{\mathbb Z}x+c.
+$$
+
+These are two different relations with different roles. CV-1 does not redefine ordinary equality, identify distinct integers or change standard arithmetic operations.
+
+**Primary source:** [Chumny Verdict Theory — CV-1](docs/CHUMNY_VERDICT_THEORY.md).
+
+## K3: position determines value
+
+These examples show why the complete sequence of groups matters, not merely the number of separators.
+
+| Word | Vector, least to most significant | Value |
+|---|---:|---:|
+| **1k** | $(0,1)$ | $1\,000$ |
+| **50k0k7** | $(7,0,50)$ | $50\,000\,007$ |
+| **50k0k** | $(0,0,50)$ | $50\,000\,000$ |
+| **50k7** | $(7,50)$ | $50\,007$ |
+
+In the canonical grammar, a trailing **k** denotes exactly one additional implicit least-significant zero group. Explicit zero groups also retain their positions. For example, removing the middle group from **50k0k7** changes its value from 50,000,007 to 50,007.
+
+K3 treats the following as distinct:
+
+- **Canonical** — strict parsing of canonical words;
+- **K3-PAD** — an explicitly selected import and normalization mode;
+- **K3-RAW** — preservation of the original structure;
+- equality of text, coefficient structures, numerical values, expression trees and operation traces.
+
+Normalization must never happen silently: the transformation mode and preserved invariant must be stated explicitly.
+
+## Scientific integrity and verification
+
+Every claim needs a declared scope, assumptions, evidence type and status.
+
+| Material | What it establishes |
+|---|---|
+| Definition | Meaning of an introduced object or term |
+| Proof | A universal claim under its stated assumptions |
+| Counterexample | A boundary or refutation of a particular general claim |
+| Computational check | Only executed inputs, a finite domain or a numerical experiment |
+| Hypothesis / open problem | A question that still requires research |
+| Implementation status | Only the inspected state of a specific revision |
+
+The central Kaskad rule is: **computational verification does not replace mathematical proof**. A specification, plan, test and implementation fact have different statuses.
+
+Normative references: [Cascade Edition 1.0.0](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [formal epistemics and proof framework](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [research maturity path](docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md).
+
+## Reading routes
+
+| Goal | Suggested route |
+|---|---|
+| Understand the project structure | [Documentation map](docs/INDEX.md) → this README |
+| Study K3 | [Vyunenko Theory](docs/VYUNENKO_THEORY.md) → [syntax](docs/K3_CANONICAL_SYNTAX.md) → [cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md) |
+| Study CV-1 | [Chumny Verdict Theory](docs/CHUMNY_VERDICT_THEORY.md) |
+| Check formulas and claim statuses | [Reference vectors](docs/K3_REFERENCE_VECTORS.json) · [claim registry](docs/K3_CLAIM_REGISTRY.json) |
+| Explore applied correspondences | [Unified Applied Mathematical Atlas](docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md) |
+| Review repository state | [Development status](docs/DEVELOPMENT_STATUS.md) · [language register](docs/LANGUAGE_REGISTER.md) |
+
+## Applied mathematical models
+
+The corpus includes typed mathematical correspondences for **DAK, Reaper, Pytyliki, VentuSample and OPlague**. These describe separate subject domains; they do not automatically become axioms of the finite K3 core. Each correspondence needs its own types, assumptions, mappings and proof obligations.
+
+Start with the [Unified Applied Mathematical Atlas](docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md). Primary chapters and crosswalks are listed in the [documentation map](docs/INDEX.md).
+
+## Computational checks
+
+The repository includes an auxiliary reference implementation and tests. Run locally: <code>PYTHONPATH=src python -m unittest discover -s tests -v</code>.
+
+A result applies only to the revision and cases actually executed. It does not prove every K3 or CV-1 theorem and does not certify another revision. Check [Development Status](docs/DEVELOPMENT_STATUS.md) and the Actions tab before making claims about current CI.
+
+## Languages, attribution and license
+
+- **Language editions:** [Русский](README.md) · [English](README.en.md) · [Українська](README.uk.md) · [简体中文](README.zh-CN.md). The translation coverage of long-form research chapters is recorded separately in the [Language Register](docs/LANGUAGE_REGISTER.md).
+- **Citation:** use [CITATION.cff](CITATION.cff) and cite a specific Git revision. A DOI or arXiv ID is not claimed unless a real identifier has been assigned.
+- **Rights and provenance:** [attribution rules](docs/ATTRIBUTION_AND_RIGHTS.md).
+- **Repository license:** [Apache-2.0](LICENSE).
+
+---
+
+<p align="center">
+  <strong>KASKAD</strong><br />
+  <sub>Definitions establish the subject. Proofs justify conclusions. Navigation connects documents without merging their statuses.</sub>
+</p>
