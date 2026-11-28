@@ -120,6 +120,10 @@ if (!institute) {
   if (institute.charter !== "docs/KASKAD_INSTITUTE_CHARTER.md") {
     fail("Institute charter path is not canonical");
   }
+  if (!Array.isArray(project?.required_documents) ||
+      !project.required_documents.includes("docs/KASKAD_INSTITUTE_CHARTER.md")) {
+    fail("The Institute Charter must be part of the required scientific document contract");
+  }
   if (institute.legal_entity_claimed !== false ||
       institute.accreditation_claimed !== false ||
       institute.external_recognition_claimed !== false) {
