@@ -1,6 +1,6 @@
 {
   "document_type": "K3-MWS-VERIFICATION-VECTOR",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-11-28",
   "purpose": "Machine-readable exact input and reference outputs for K3-MWS-1. Values are data, not additional K3 axioms.",
   "source": {
@@ -261,8 +261,31 @@
           "count": 3
         }
       ],
-      "inferential_status": "Not a population-level p-value for the fixed first-five/last-five positional split unless the exchangeability model is justified."
-    }
+      "inferential_status": "Not a population-level p-value for the fixed first-five/last-five positional split unless the exchangeability model is justified.",
+      "subset_sum_dynamic_program": {
+        "state": "D[j,k,s] = number of k-subsets of first j doubled ranks with sum s",
+        "base_case": "D[0,0,0]=1; all other D[0,k,s]=0",
+        "recurrence": "D[j,k,s] = D[j-1,k,s] + D[j-1,k-1,s-v_j], with invalid indices treated as zero",
+        "checks": {
+          "total_allocations": 252,
+          "center_rank_sum_twice": 55,
+          "center_allocations": 12,
+          "allocations_at_distance_at_least_one": 240
+        }
+      }
+    },
+    "doubled_pooled_ranks": [
+      2,
+      4,
+      6,
+      10,
+      10,
+      10,
+      15,
+      15,
+      18,
+      20
+    ]
   },
   "spielberg": {
     "source": "Holger Spielberg, Multiple quantum products in toric varieties, arXiv:math/0107030 (2001); journal publication (2002), DOI 10.1155/S0161171202107022.",
