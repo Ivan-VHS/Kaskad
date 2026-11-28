@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Каскадная тысячно-позиционная система записи чисел (КТП-1000)
 
 **Рабочая редакция:** 0.1.0  

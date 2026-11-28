@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # 50 конструктивных блоков развития Теории Вьюненко K3
 
 ## Исследовательская программа Kaskad: арифметика, дискретные структуры, вероятность и вычислительная математика

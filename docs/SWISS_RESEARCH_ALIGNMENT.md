@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Научная ориентация Kaskad: исследовательские направления Швейцарии
 
 **Срез источников:** 28 ноября 2026 года  

@@ -8,6 +8,8 @@
 
 ---
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Расширяющие и рефракторные принципы Теории Вьюненко
 
 ## Консервативное наращивание основания, согласованные представления и научный дизайн

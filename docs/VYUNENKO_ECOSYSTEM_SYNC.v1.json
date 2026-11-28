@@ -3,7 +3,7 @@
   "theory": {
     "id": "K3",
     "title": "Теория Вьюненко",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "canonical_source": "docs/VYUNENKO_THEORY.md",
     "canonical_documentation_index": "docs/INDEX.md",
     "license": "Apache-2.0",
@@ -17,13 +17,15 @@
   },
   "release": {
     "date": "2026-11-28",
-    "branch": "research/vyunenko-k3-completion-v0-4-0",
+    "branch": "integration/kaskad-total-consolidation-2026-11-28",
     "compatible_extension": true,
     "base_semantics_changed": false,
     "summary": [
-      "Compatible CRT idempotents and orthogonal decomposition of the 1000-adic completion",
-      "Unique infinite positional expansion by coefficients 0..999",
-      "Exact finite-support and eventual-999 characterizations of ordinary integers"
+      "Retained the 0.4.0 compatible CRT idempotent splitting, 1000-adic completion and unique infinite positional expansion",
+      "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
+      "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
+      "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
+      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation"
     ]
   },
   "results": [
@@ -44,6 +46,48 @@
       "title": "Finite-support and eventual-999 integer tails",
       "status": "proved",
       "source": "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md#7-finite-and-negative-integers"
+    },
+    {
+      "id": "K3-BAL-001",
+      "title": "K3 divisibility depth as the minimum of the two prime channels",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-BAL-002",
+      "title": "Exact compensation law for divisibility depth under multiplication",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-GEO-002",
+      "title": "Explicit 8×125 coordinates of each K3 residue-tree branch",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-GEO-003",
+      "title": "K3 ultrametric as the maximum of the two channel ultrametrics",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-001",
+      "title": "Uniform conditional distribution of the output group",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-002",
+      "title": "Joint distribution of output group and next carry",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-003",
+      "title": "Conditional carry/output correlation −1/√3 for fixed incoming carry",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
     }
   ],
   "kaskad_files": [
@@ -53,7 +97,29 @@
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
     "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md"
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
+    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
+    "docs/K3_EXPRESSION_LANGUAGE.md",
+    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+    "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+    "docs/DAK_SYSTEM_MATHEMATICS.md",
+    "docs/DAK_FORMAL_CONTRACTS.md",
+    "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
+    "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
+    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/REAPER_K3_INTEGRATION.md",
+    "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
+    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
+    "docs/VYUNENKO_AUDIO_CATALOGUE.md",
+    "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
+    "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
+    "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/K3_REFERENCE_VECTORS.json"
   ],
   "ecosystem_dependents": [
     {
