@@ -192,9 +192,9 @@ K3-PAD — уже существующий режим импорта, котор
 \[
 A=_{\mathrm{val}}B
 \iff
-\operatorname{Decode}_{K3}(A)
+\operatorname{Eval}_{K3}(A)
 =
-\operatorname{Decode}_{K3}(B).
+\operatorname{Eval}_{K3}(B).
 \]
 
 Оно сравнивает только целочисленные значения.
@@ -267,9 +267,9 @@ a+b=b+a.
 \operatorname{Eval}_{K3}
 \bigl(\operatorname{AddExpr}(A,B)\bigr)
 =
-\operatorname{Decode}_{K3}(A)
+\operatorname{Eval}_{K3}(A)
 +
-\operatorname{Decode}_{K3}(B).
+\operatorname{Eval}_{K3}(B).
 \]
 
 Следовательно, упорядоченный узел выражения сохраняет порядок, а его числовая оценка выполняет обычное сложение.
@@ -475,8 +475,8 @@ B\boxplus_{\mathrm{seq}}A,
 \[
 \begin{aligned}
 \operatorname{Eval}_{K3}(A\boxplus_{\mathrm{seq}}B)
-&=\operatorname{Decode}_{K3}(A)+\operatorname{Decode}_{K3}(B)\\
-&=\operatorname{Decode}_{K3}(B)+\operatorname{Decode}_{K3}(A)\\
+&=\operatorname{Eval}_{K3}(A)+\operatorname{Eval}_{K3}(B)\\
+&=\operatorname{Eval}_{K3}(B)+\operatorname{Eval}_{K3}(A)\\
 &=\operatorname{Eval}_{K3}(B\boxplus_{\mathrm{seq}}A).
 \end{aligned}
 \]
