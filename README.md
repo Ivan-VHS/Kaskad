@@ -84,3 +84,7 @@ CI настроен для Python 3.11–3.14. Результат проверк
 ## Цитирование и права
 
 Ссылайтесь на конкретную ревизию Git. Метаданные: [CITATION.cff](CITATION.cff) и [CITATION.bib](CITATION.bib). Лицензия — [Apache-2.0](LICENSE).
+
+## Авторство
+
+Автор исследовательского корпуса Kaskad и Теории Вьюненко K3: **Ivan-VHS**. Каноническая запись: [AUTHORS.md](AUTHORS.md); библиографические метаданные: [CITATION.cff](CITATION.cff) и [CITATION.bib](CITATION.bib). Правила сохранения стороннего авторства и происхождения: [docs/ATTRIBUTION_AND_RIGHTS.md](docs/ATTRIBUTION_AND_RIGHTS.md).
