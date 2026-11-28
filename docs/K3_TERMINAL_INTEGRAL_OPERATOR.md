@@ -688,10 +688,11 @@ I(X;Y)=H(X)=1\text{ бит}.
 
 **Требует независимой проверки:** полная спецификация машинной грамматики, физическая интерпретация «кристаллизации», согласование интегрального языка с расширенно-вещественным режимом и независимая рецензия применений.
 
-**Не заявляется:** новое интегральное исчисление, непрерывный вычислительный backend, доказательство любых произвольных потоков или автоматическая интегрируемость символьной формулы.
+**Не заявляется:** новое интегральное исчисление, непрерывный вычислительный backend, доказательство любых произвольных потоков или автоматическая интегрируемость символьной формулы. Процентная оценка «доли корректности» не присваивается: без заранее заданной шкалы, критериев и весов она не является математически определённой величиной.
 
 ## Источники по классическому контексту
 
+- S. W. Goatham, L. E. Mannering, R. Hann, S. Krusch, [Dynamics of Multi-kinks in the Presence of Wells and Barriers](https://doi.org/10.5506/APhysPolB.42.2087), *Acta Physica Polonica B* 42 (2011), 2087–2101, §2, equations (3)–(8): sine-Gordon energy, Bogomolny decomposition, kink profile and energy \(8\sqrt{\lambda}\).
 - Walter Van Assche, [Orthogonal Polynomials and Approximation Theory: some open problems](https://wis.kuleuven.be/analyse/members/walter/jatopen-problems.pdf), 2008, §1.4, p. 4. Для вещественного отображения \(T(x)=x^2-c\), \(c>2\), прямо указано, что множество Жюлиа имеет нулевую одномерную меру; здесь берётся специализация \(c=m\).
 - Mikhail Lyubich, [Conformal Geometry and Dynamics of Quadratic Polynomials](https://indico.ictp.it/event/a12182/session/2/contribution/1/material/0/0.pdf), ICTP lecture notes, 2013, §21.5.1: для вещественного параметра \(c<-2\) описана канторова структура квадратичного множества Жюлиа.
 - Gökalp Alpan, [Orthogonal Polynomials on Cantor Sets of Zero Lebesgue Measure](https://arxiv.org/abs/1610.07660), 2016; см. также классическую ссылку на H. Brolin, *Invariant sets under iteration of rational functions*, Arkiv för Matematik 6 (1965), 103–144.
