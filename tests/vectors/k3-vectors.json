@@ -1,0 +1,278 @@
+{
+  "format": "K3-CONFORMANCE",
+  "version": 1,
+  "radix": 1000,
+  "canonical": [
+    {
+      "word": "0",
+      "value": "0",
+      "groups_le": [
+        0
+      ]
+    },
+    {
+      "word": "7",
+      "value": "7",
+      "groups_le": [
+        7
+      ]
+    },
+    {
+      "word": "999",
+      "value": "999",
+      "groups_le": [
+        999
+      ]
+    },
+    {
+      "word": "1k",
+      "value": "1000",
+      "groups_le": [
+        0,
+        1
+      ]
+    },
+    {
+      "word": "1k5",
+      "value": "1005",
+      "groups_le": [
+        5,
+        1
+      ]
+    },
+    {
+      "word": "1k0k",
+      "value": "1000000",
+      "groups_le": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "word": "50k0k1",
+      "value": "50000001",
+      "groups_le": [
+        1,
+        0,
+        50
+      ]
+    },
+    {
+      "word": "50k0k",
+      "value": "50000000",
+      "groups_le": [
+        0,
+        0,
+        50
+      ]
+    },
+    {
+      "word": "999k999",
+      "value": "999999",
+      "groups_le": [
+        999,
+        999
+      ]
+    },
+    {
+      "word": "-1k",
+      "value": "-1000",
+      "groups_le": [
+        0,
+        1
+      ],
+      "sign": -1
+    }
+  ],
+  "invalid_words": [
+    "",
+    "-",
+    "+1",
+    "00",
+    "01k2",
+    "1000",
+    "k5",
+    "1kk2",
+    "1k0",
+    "1K2",
+    "1 k2",
+    "1k-2",
+    "0k",
+    "-0"
+  ],
+  "normalization": [
+    {
+      "coefficients_le": [],
+      "word": "0"
+    },
+    {
+      "coefficients_le": [
+        1000
+      ],
+      "word": "1k"
+    },
+    {
+      "coefficients_le": [
+        -1,
+        1
+      ],
+      "word": "999"
+    },
+    {
+      "coefficients_le": [
+        0,
+        -1
+      ],
+      "word": "-1k"
+    },
+    {
+      "coefficients_le": [
+        1000,
+        -1
+      ],
+      "word": "0"
+    },
+    {
+      "coefficients_le": [
+        0,
+        0,
+        -1
+      ],
+      "word": "-1k0k"
+    },
+    {
+      "coefficients_le": [
+        1,
+        0,
+        50
+      ],
+      "word": "50k0k1"
+    }
+  ],
+  "arithmetic": [
+    {
+      "operation": "add",
+      "left": "999",
+      "right": "1",
+      "expected": "1k"
+    },
+    {
+      "operation": "add",
+      "left": "50k0k1",
+      "right": "999",
+      "expected": "50k1k"
+    },
+    {
+      "operation": "subtract",
+      "left": "1k",
+      "right": "1",
+      "expected": "999"
+    },
+    {
+      "operation": "subtract",
+      "left": "1",
+      "right": "2",
+      "expected": "-1"
+    },
+    {
+      "operation": "multiply",
+      "left": "1k",
+      "right": "1k",
+      "expected": "1k0k"
+    }
+  ],
+  "divisibility": [
+    {
+      "value": "0",
+      "depth": "infinity"
+    },
+    {
+      "value": "8",
+      "depth": 0
+    },
+    {
+      "value": "125",
+      "depth": 0
+    },
+    {
+      "value": "1000",
+      "depth": 1
+    },
+    {
+      "value": "1000000",
+      "depth": 2
+    },
+    {
+      "value": "8000000",
+      "depth": 2
+    }
+  ],
+  "shift": [
+    {
+      "coefficients_le": [
+        1,
+        0,
+        50
+      ],
+      "positions": 1,
+      "expected_le": [
+        0,
+        1,
+        0,
+        50
+      ],
+      "value": "50000001000"
+    },
+    {
+      "coefficients_le": [
+        -3,
+        1001,
+        -2
+      ],
+      "positions": 2,
+      "expected_le": [
+        0,
+        0,
+        -3,
+        1001,
+        -2
+      ],
+      "value": "-999003000000"
+    }
+  ],
+  "units": [
+    {
+      "value": "1",
+      "is_unit": true
+    },
+    {
+      "value": "7",
+      "is_unit": true
+    },
+    {
+      "value": "999",
+      "is_unit": true
+    },
+    {
+      "value": "1001",
+      "is_unit": true
+    },
+    {
+      "value": "0",
+      "is_unit": false
+    },
+    {
+      "value": "8",
+      "is_unit": false
+    },
+    {
+      "value": "125",
+      "is_unit": false
+    },
+    {
+      "value": "1000",
+      "is_unit": false
+    }
+  ]
+}

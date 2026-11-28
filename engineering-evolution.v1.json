@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "contract_id": "KASKAD-ENGINEERING-EVOLUTION",
-  "current_stage": "stage-0-specification-consolidation",
+  "current_stage": "stage-1-k3-core",
   "stages": [
     {
       "id": "stage-0-specification-consolidation",
@@ -21,14 +21,26 @@
     },
     {
       "id": "stage-1-k3-core",
-      "status": "planned",
+      "status": "in_progress",
       "deliverables": [
-        "parser",
+        "strict_canonical_parser",
         "canonical_encoder_decoder",
-        "normalizer",
-        "exact_arithmetic",
-        "reference_vectors",
-        "proof_and_property_tests"
+        "signed_coefficient_normalizer",
+        "exact_integer_arithmetic",
+        "comparison_and_equality",
+        "positional_shift_operator",
+        "euclidean_division_by_radix",
+        "low_group_access",
+        "residue_and_divisibility_operations",
+        "composite_base_unit_criterion",
+        "exact_1000_divisibility_metric",
+        "versioned_json_serialization",
+        "theory_level_reference_vectors",
+        "extended_edge_case_vectors",
+        "unit_and_finite_property_tests",
+        "reference_implementation_documentation",
+        "algorithmic_complexity_boundary",
+        "continuous_integration"
       ]
     },
     {

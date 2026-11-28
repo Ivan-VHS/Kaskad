@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kaskad-k3"
+version = "0.1.0"
+description = "Auxiliary exact reference implementation for the Vyunenko K3 mathematical system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+authors = [
+  { name = "Ivan-VHS" }
+]
+keywords = ["K3", "mathematics", "radix-1000", "number-theory"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
