@@ -5,6 +5,8 @@
 
 ---
 
+> Cascade Edition 1.0.0 · Scientific integrity: mathematical claims retain their declared status; metaphorical labels do not substitute for definitions or proof.
+
 # Каскад негативных тенденций и модель дефектного распространения K3-NT
 
 **Идентификатор:** K3-NT  
