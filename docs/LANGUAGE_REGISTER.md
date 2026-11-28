@@ -18,6 +18,7 @@
 | README.md | 4 языка — эквивалентная редакция | Готово | Готово | Готово |
 | docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md | 4 языка — эквивалентная редакция | Готово | Краткая эквивалентная версия | Краткая эквивалентная версия |
 | docs/VYUNENKO_THEORY.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+| docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/CHAPTER_II_CASCADE_BALANCE.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_CANONICAL_SYNTAX.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
