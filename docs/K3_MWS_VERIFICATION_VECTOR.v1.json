@@ -1,0 +1,339 @@
+{
+  "document_type": "K3-MWS-VERIFICATION-VECTOR",
+  "version": "1.0.0",
+  "date": "2026-11-28",
+  "purpose": "Machine-readable exact input and reference outputs for K3-MWS-1. Values are data, not additional K3 axioms.",
+  "source": {
+    "blocks": [
+      "фыд",
+      "овдфышж",
+      "рвфышд",
+      "врфышд",
+      "вфыщшжв",
+      "ыфгз9",
+      "в9гыфз90",
+      "вгфыжшвыв",
+      "ошыдфл",
+      "ю"
+    ],
+    "alphabet": [
+      "0",
+      "9",
+      "в",
+      "г",
+      "д",
+      "ж",
+      "з",
+      "л",
+      "о",
+      "р",
+      "ф",
+      "ы",
+      "ш",
+      "щ",
+      "ю"
+    ],
+    "distinct_symbol_count": 15,
+    "block_count": 10,
+    "block_lengths": [
+      3,
+      7,
+      6,
+      6,
+      7,
+      5,
+      8,
+      9,
+      6,
+      1
+    ],
+    "total_symbol_count": 58
+  },
+  "mann_whitney": {
+    "sample_A": [
+      3,
+      7,
+      6,
+      6,
+      7
+    ],
+    "sample_B": [
+      5,
+      8,
+      9,
+      6,
+      1
+    ],
+    "n_A": 5,
+    "n_B": 5,
+    "pooled_average_ranks": [
+      1,
+      2,
+      3,
+      5,
+      5,
+      5,
+      7.5,
+      7.5,
+      9,
+      10
+    ],
+    "rank_sum_A": "27",
+    "strict_pairwise_A_gt_B": 11,
+    "strict_pairwise_A_lt_B": 12,
+    "tied_pairs": 2,
+    "U_A": "12",
+    "U_B": "13",
+    "U_definition": "U_A = count(A > B) + 0.5 * count(A = B)",
+    "pairwise_superiority_with_half_ties": "12/25",
+    "rank_biserial": "-1/25",
+    "mean_A": "29/5",
+    "mean_B": "29/5",
+    "sample_variance_A": "27/10",
+    "sample_variance_B": "97/10",
+    "ranges": {
+      "A": 4,
+      "B": 8
+    },
+    "conditional_permutation_reference": {
+      "null_model": "Choose uniformly 5 of the 10 labelled pooled observations for group A; this requires exchangeability of group labels.",
+      "allocation_count": 252,
+      "null_center_U": "25/2",
+      "two_sided_distance": "abs(U - 25/2) >= 1/2",
+      "center_allocation_count": 12,
+      "extreme_allocation_count": 240,
+      "exact_conditional_p": "20/21",
+      "U_frequency": [
+        {
+          "U": "1",
+          "count": 3
+        },
+        {
+          "U": "3",
+          "count": 1
+        },
+        {
+          "U": "3.5",
+          "count": 6
+        },
+        {
+          "U": "4",
+          "count": 1
+        },
+        {
+          "U": "5",
+          "count": 4
+        },
+        {
+          "U": "5.5",
+          "count": 6
+        },
+        {
+          "U": "6",
+          "count": 4
+        },
+        {
+          "U": "6.5",
+          "count": 6
+        },
+        {
+          "U": "7",
+          "count": 3
+        },
+        {
+          "U": "7.5",
+          "count": 8
+        },
+        {
+          "U": "8",
+          "count": 9
+        },
+        {
+          "U": "8.5",
+          "count": 4
+        },
+        {
+          "U": "9",
+          "count": 9
+        },
+        {
+          "U": "9.5",
+          "count": 8
+        },
+        {
+          "U": "10",
+          "count": 8
+        },
+        {
+          "U": "10.5",
+          "count": 14
+        },
+        {
+          "U": "11",
+          "count": 5
+        },
+        {
+          "U": "11.5",
+          "count": 12
+        },
+        {
+          "U": "12",
+          "count": 9
+        },
+        {
+          "U": "12.5",
+          "count": 12
+        },
+        {
+          "U": "13",
+          "count": 9
+        },
+        {
+          "U": "13.5",
+          "count": 12
+        },
+        {
+          "U": "14",
+          "count": 5
+        },
+        {
+          "U": "14.5",
+          "count": 14
+        },
+        {
+          "U": "15",
+          "count": 8
+        },
+        {
+          "U": "15.5",
+          "count": 8
+        },
+        {
+          "U": "16",
+          "count": 9
+        },
+        {
+          "U": "16.5",
+          "count": 4
+        },
+        {
+          "U": "17",
+          "count": 9
+        },
+        {
+          "U": "17.5",
+          "count": 8
+        },
+        {
+          "U": "18",
+          "count": 3
+        },
+        {
+          "U": "18.5",
+          "count": 6
+        },
+        {
+          "U": "19",
+          "count": 4
+        },
+        {
+          "U": "19.5",
+          "count": 6
+        },
+        {
+          "U": "20",
+          "count": 4
+        },
+        {
+          "U": "21",
+          "count": 1
+        },
+        {
+          "U": "21.5",
+          "count": 6
+        },
+        {
+          "U": "22",
+          "count": 1
+        },
+        {
+          "U": "24",
+          "count": 3
+        }
+      ],
+      "inferential_status": "Not a population-level p-value for the fixed first-five/last-five positional split unless the exchangeability model is justified."
+    }
+  },
+  "spielberg": {
+    "source": "Holger Spielberg, Multiple quantum products in toric varieties, arXiv:math/0107030 (2001); journal publication (2002), DOI 10.1155/S0161171202107022.",
+    "symbol_map_type": "rho: Sigma -> H^*(X; Q)",
+    "block_class_type": "Gamma_i = cup_j rho(a_{i,j}) in H^*(X; Q)",
+    "quantum_output_type": "QH^*(X) = H^*(X; Q) tensor Lambda_X",
+    "required_inputs": [
+      "a specified smooth projective toric variety X",
+      "ordinary cohomology ring and dual basis",
+      "symbol map rho",
+      "relevant Gromov-Witten invariants",
+      "coefficient/Novikov ring Lambda_X"
+    ],
+    "numeric_quantum_product_computed": false
+  },
+  "whitney": {
+    "parameters": {
+      "RD": 3,
+      "TD": 9,
+      "N": 1000,
+      "q": 10
+    },
+    "full_closed_rose_sampling": {
+      "radius": "r(theta) = sin(3 theta / 10)",
+      "theta_interval": "[0, 20 pi]",
+      "angular_step": "pi / 50",
+      "phase_state_minimal_period": 1000,
+      "sample_count": 1000,
+      "observed_coordinate_minimal_period": "not asserted"
+    },
+    "discrete_radial_law": {
+      "source_formula": "r_n = sin((RD/(TD+1)) * 2 pi n / N)",
+      "instantiated_radius": "r_n = sin(3 pi n / 5000)",
+      "explicit_angular_lift": "psi_n = 2 pi TD n / N",
+      "auxiliary_phase": "chi_n = 2 pi n / (N (TD+1))",
+      "autonomous_state_space": "(R/2piZ)^2",
+      "state_map": "(psi,chi) -> (psi + 2pi TD/N, chi + 2pi/(N(TD+1))) mod 2pi",
+      "full_phase_state_minimal_period": 10000,
+      "full_cycle_sample_count": 10000,
+      "observed_coordinate_minimal_period": "not asserted",
+      "attribution_boundary": "The radial sequence follows the discrete formula reported in Putnam's analysis of Whitney. The explicit torus lift and angular embedding are constructions specified by K3-MWS-1."
+    }
+  },
+  "k3_length_profile": {
+    "radix": 1000,
+    "coefficient_order": "most-significant block to least-significant block",
+    "coefficients_most_significant_first": [
+      3,
+      7,
+      6,
+      6,
+      7,
+      5,
+      8,
+      9,
+      6,
+      1
+    ],
+    "canonical_k3": "3k7k6k6k7k5k8k9k6k1",
+    "exact_decimal_value": "3007006006007005008009006001",
+    "round_trip": "a_i = floor(N / 1000^i) mod 1000; block_length ell_(10-i) = a_i for i=0..9",
+    "encodes": "block lengths only",
+    "does_not_encode": "the original symbols inside the blocks"
+  },
+  "proof_status": {
+    "exact_finite_calculations": true,
+    "conditional_permutation_assumptions_explicit": true,
+    "quantum_layer_is_conditional": true,
+    "two_discretization_conventions_are_separated": true,
+    "phase_periods_proved": true,
+    "length_profile_round_trip_proved": true,
+    "canonical_k3_axioms_modified": false
+  }
+}
