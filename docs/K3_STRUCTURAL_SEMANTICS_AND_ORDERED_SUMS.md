@@ -172,7 +172,7 @@ I_{K3}(50k0k)
 Для каждой группы:
 
 \[
-g_i\in\{0,\ldots,9\}^{1,2,3},
+g_i\in\displaystyle\bigcup_{\ell=1}^{3}\{0,\ldots,9\}^{\ell},
 \qquad
 0\le\nu(g_i)\le999.
 \]
