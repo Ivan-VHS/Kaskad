@@ -80,3 +80,7 @@ CI 配置覆盖 Python 3.11–3.14；验证结果只适用于对应的运行记�
 ## 引用与许可
 
 请引用具体 Git 修订版。引用元数据见 [CITATION.cff](CITATION.cff) 和 [CITATION.bib](CITATION.bib)。许可证：[Apache-2.0](LICENSE)。
+
+## 作者身份
+
+Kaskad 数学研究文档库及维尤年科 K3 理论的主要作者：**Ivan-VHS**。规范记录见 [AUTHORS.md](AUTHORS.md)；引用元数据见 [CITATION.cff](CITATION.cff) 和 [CITATION.bib](CITATION.bib)。第三方作者身份与来源信息按照 [docs/ATTRIBUTION_AND_RIGHTS.md](docs/ATTRIBUTION_AND_RIGHTS.md) 保留。
