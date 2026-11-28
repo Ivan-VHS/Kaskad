@@ -131,6 +131,7 @@ K3 розглядає скінченні позиційні записи, їхн
 |---|---|
 | Зрозуміти всю теорію K3 | [Теорія В'юненка K3](docs/VYUNENKO_THEORY.md) |
 | Зрозуміти інтеграл, що закриває формулу справа | [K3-TI — термінальний інтеграл](docs/K3_TERMINAL_INTEGRAL_OPERATOR.md) |
+| Дослідити оператор ▼ і каталог 64 напрямів | [K3-RZ-WORD](docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md) · [K3-SCT-01](docs/K3_SELF_CREATED_THEORIES_CATALOGUE.md) |
 | Ознайомитися з направленим вердиктом і CV-K3-M1 | [Теорія Чумного Вердикту CV-1](docs/CHUMNY_VERDICT_THEORY.md) (v1.2.1; монотонність доведена лише для заданої моделі) |
 | Вивчити правила запису й розбору | [Канонічний синтаксис K3](docs/K3_CANONICAL_SYNTAX.md) |
 | Розібратися з переносом і позикою | [Каскадний баланс](docs/CHAPTER_II_CASCADE_BALANCE.md) |

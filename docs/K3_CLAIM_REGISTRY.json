@@ -1400,6 +1400,184 @@
         ],
         "boundary": "This is a relative model construction and does not prove the consistency of the background set theory."
       }
+    },
+    {
+      "id": "K3-RZ-WORD-DEF-001",
+      "kind": "definition",
+      "statement": "The word universe W is Sigma star, the set of all finite words over a declared nonempty alphabet Sigma, including the empty word epsilon.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§1, word universe and boundary",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-RZ-WORD-DEF-002",
+      "kind": "definition",
+      "statement": "The total binary operator on W is defined by u ▼ v = v for every pair of finite words u and v.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§2, Definition 2.1 and axiom RZ",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-RZ-WORD-THM-001",
+      "kind": "theorem",
+      "statement": "The algebra (W,▼) is associative and every element is idempotent; every finite nonempty product equals its last factor.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§5.1–§5.3",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "All finite words W over a nonempty alphabet Sigma",
+        "assumptions": [
+          "The binary operation is total on W×W",
+          "For every u,v in W, u▼v=v"
+        ],
+        "boundary": "This is the classical right-zero semigroup law on the selected word universe, not a new general semigroup identity."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-002",
+      "kind": "theorem",
+      "statement": "For fixed a, the left translation L_a(v)=a▼v is the identity; for fixed b, the right translation R_b(u)=u▼b is constant b. Their fibers are respectively singletons and either the whole word universe or the empty set.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§6.1–§6.2",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "All finite words W and fixed parameters a,b in W",
+        "assumptions": [
+          "The operator is u▼v=v",
+          "Fibers are taken for the stated one-variable translation maps"
+        ],
+        "boundary": "Fiber sizes depend on the declared word universe; finite truncations and the unbounded universe are distinguished."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-003",
+      "kind": "theorem",
+      "statement": "The binary operator D(u,v)=u▼v is surjective and its fiber over w is exactly W×{w}; it is noninjective whenever W has at least two elements.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§6.3, binary fibers",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-001",
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The map D:W×W→W for finite words over a nonempty alphabet",
+        "assumptions": [
+          "The codomain is W",
+          "The operation returns the second coordinate exactly"
+        ],
+        "boundary": "Each fiber has cardinality |W|; for finite nonempty alphabets W is countably infinite, while bounded-length truncations are finite."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-004",
+      "kind": "theorem",
+      "statement": "If W has more than one element, the right-zero semigroup has neither a two-sided identity nor a two-sided absorbing zero.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§5.5, Theorem 5.3",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A right-zero semigroup (W,▼) with |W|>1",
+        "assumptions": [
+          "For all x,y in W, x▼y=y",
+          "A two-sided identity e must satisfy e▼x=x and x▼e=x",
+          "A two-sided zero z must satisfy x▼z=z and z▼x=z"
+        ],
+        "boundary": "The singleton right-zero semigroup is the degenerate exception and does have an identity and a zero, namely its only element."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-005",
+      "kind": "theorem",
+      "statement": "Every equivalence relation on W is a congruence for the right-zero operation, and every function between two right-zero semigroups is a semigroup homomorphism.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§5.4 and the morphism consequences of axiom RZ",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Right-zero semigroups (W,▼) and (V,▼) on nonempty carriers",
+        "assumptions": [
+          "The relation is an equivalence relation on W",
+          "Both domain and codomain operations return their right argument"
+        ],
+        "boundary": "This does not state that every relation is a congruence for arbitrary semigroups."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-006",
+      "kind": "theorem",
+      "statement": "For jointly distributed discrete random words U,V with Y=U▼V=V, mutual information satisfies I(U;Y)=I(U;V), and it is zero exactly when U and V are independent.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§8, information and privacy",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Jointly distributed discrete random variables U,V and output Y=V with the relevant information quantities defined",
+        "assumptions": [
+          "The output is the right projection Y=U▼V=V",
+          "The mutual information I(U;V) is well-defined"
+        ],
+        "boundary": "The operator alone gives no privacy guarantee; correlation or side information may reveal the left input."
+      }
+    },
+    {
+      "id": "K3-RZ-WORD-THM-007",
+      "kind": "theorem",
+      "statement": "For f:W→W and x⋄_f y=f(y), the derived binary operation is associative if and only if f∘f=f.",
+      "source": "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+      "proof_reference": "§9.1, Theorem on right images",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A nonempty set W with a self-map f:W→W and operation x⋄_f y=f(y)",
+        "assumptions": [
+          "The operation is total on W×W",
+          "Associativity is required for all triples x,y,z in W"
+        ],
+        "boundary": "The criterion applies to right-image variants; it is not a general criterion for arbitrary gated or partial variants."
+      }
+    },
+    {
+      "id": "K3-SCT-01-CATALOGUE",
+      "kind": "catalogue",
+      "statement": "The K3-SCT-01 catalogue records 64 research candidates in exactly eight categories, with eight entries per category and stable identifiers.",
+      "source": "docs/K3_SELF_CREATED_THEORIES_CATALOGUE.md",
+      "proof_reference": "§§1–3; machine-readable source docs/K3_SELF_CREATED_THEORIES.v1.json",
+      "dependencies": [
+        "K3-RZ-WORD-DEF-001",
+        "K3-RZ-WORD-DEF-002"
+      ],
+      "evidence_status": "catalogue_integrity_pending_ci",
+      "independent_review": "not_recorded",
+      "machine_check_scope": "JSON Schema fixes 8 categories and 8 entries per category; a CI validation must additionally enforce global identifier uniqueness and total_entries=64."
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"

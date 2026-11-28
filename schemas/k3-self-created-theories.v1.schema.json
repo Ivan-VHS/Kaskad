@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/k3-self-created-theories.v1.schema.json",
+  "title": "Kaskad Self-Created Theory Research Catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "catalogue_id",
+    "project",
+    "parent_theory",
+    "version",
+    "language",
+    "design",
+    "total_entries",
+    "status_policy",
+    "categories"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "catalogue_id": {
+      "type": "string",
+      "const": "K3-SCT-01"
+    },
+    "project": {
+      "type": "string",
+      "const": "Kaskad"
+    },
+    "parent_theory": {
+      "type": "string",
+      "const": "Vyunenko K3"
+    },
+    "version": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "const": "ru"
+    },
+    "design": {
+      "type": "string",
+      "const": "8 categories x 8 entries"
+    },
+    "total_entries": {
+      "type": "integer",
+      "const": 64
+    },
+    "status_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "research_candidate",
+        "defined_in_companion_spec"
+      ],
+      "properties": {
+        "research_candidate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "defined_in_companion_spec": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "code",
+          "title",
+          "scope",
+          "entries"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^C[1-8]$"
+          },
+          "code": {
+            "type": "string",
+            "pattern": "^K3-[A-Z]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 10
+          },
+          "entries": {
+            "type": "array",
+            "minItems": 8,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "title",
+                "notation",
+                "object",
+                "research_question",
+                "status"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^K3-[A-Z]+-[0-9]{2}$"
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 3
+                },
+                "notation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "object": {
+                  "type": "string",
+                  "minLength": 3
+                },
+                "research_question": {
+                  "type": "string",
+                  "minLength": 8
+                },
+                "status": {
+                  "enum": [
+                    "research_candidate",
+                    "defined_in_companion_spec"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -36,6 +36,8 @@ from .terminal import (
     terminal_integral_k3,
 )
 
+from .right_zero_words import Word, right_zero_word
+
 __version__ = "0.2.0"
 
 __all__ = [
@@ -70,4 +72,6 @@ __all__ = [
     "render_terminal_integral",
     "terminal_integral",
     "terminal_integral_k3",
+    "Word",
+    "right_zero_word",
 ]
