@@ -53,7 +53,8 @@
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
     "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md"
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/CHUMNY_VERDICT_THEORY.md"
   ],
   "ecosystem_dependents": [
     {
@@ -129,5 +130,21 @@
     "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
     "automation_status": "not_assessed",
     "note": "This manifest is a machine-readable dependency and synchronization registry. It does not itself execute GitHub writes, schedule background work, or prove that a cross-repository automation credential is configured."
-  }
+  },
+  "research_extensions": [
+    {
+      "id": "TCV-0.1.0",
+      "title": "Теория Чумного Вердикта",
+      "status": "compatible_research_specification",
+      "source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "base_semantics_changed": false,
+      "summary": [
+        "Separates integer membership from equality to the unique additive identity",
+        "Defines an exact zero-verdict map for integers and evaluated K3 objects",
+        "Proves the zero criterion for finite nonnegative K3 coefficient vectors",
+        "Distinguishes zero coefficients, zero values, and structural zero representations",
+        "Records the zero-divisor boundary between Z and Z/1000^r Z"
+      ]
+    }
+  ]
 }
