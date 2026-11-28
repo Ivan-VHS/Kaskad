@@ -2795,7 +2795,9 @@ P_t=|S_t\setminus S_{t-1}|.
 Для исследовательской оценки допускается неотрицательная матрица влияния \(R=(r_{vu})\) и вектор новых нарушений \(\mathbf u(t)\ge0\):
 
 \[
-\mathbf e(t+1)=R\mathbf e(t)+\mathbf u(t),
+\widetilde{\mathbf e}(t+1)=R\mathbf e(t)+\mathbf u(t),
+\qquad
+e_v(t+1)=\min\{1,\widetilde e_v(t+1)\}\quad(v\in V),
 \qquad R\ge0.
 \]
 
@@ -2831,7 +2833,8 @@ P_t=|S_t\setminus S_{t-1}|.
 
 \[
 E_{t+1}
-=\sum_u e_u(t)\sum_v r_{vu}
+=\sum_v\min\left\{1,\sum_u r_{vu}e_u(t)\right\}
+\le\sum_u e_u(t)\sum_v r_{vu}
 \le\sum_u e_u(t)=E_t.
 \]
 
