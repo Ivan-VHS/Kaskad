@@ -203,7 +203,7 @@
           "uniqueItems": true,
           "items": {
             "type": "string",
-            "pattern": "^K3-[A-Z]+-[0-9]{3}$"
+            "pattern": "^K3-[A-Z]+(-[A-Z]+)?-[0-9]{3}$"
           }
         }
       }
