@@ -30,6 +30,9 @@
 | Гиперкомплексная математика | [HYPERCOMPLEX_K3_MATHEMATICS.md](HYPERCOMPLEX_K3_MATHEMATICS.md) | Многокомпонентные алгебры и структурные константы |
 | Расширяющие принципы | [VYUNENKO_EXTENSION_PRINCIPLES.md](VYUNENKO_EXTENSION_PRINCIPLES.md) | Консервативные вложения и рефракторные отображения |
 | Тензорные суммы и перестановочные инварианты | [K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md](K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) | Матрица коэффициентов, вектор значений и тензоры взаимодействий |
+| Авторские каскадные формулы | [K3_ORIGINAL_CASCADE_FORMULAS.md](K3_ORIGINAL_CASCADE_FORMULAS.md) | Моментный спектр, нулевая топология, лаговые взаимодействия, переносы и двойные остатки |
+| 4685 формульных экземпляров K3-M | [K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md](K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md) | Пять постулатов, двенадцать принципов, пять доказанных схем и 4685 параметризованных записей |
+| Расслоенная математика K3-M | [K3_STRATIFIED_MATHEMATICS.md](K3_STRATIFIED_MATHEMATICS.md) | Десять разных математических слоёв и их доказанные взаимосвязи |
 
 ## 3. Базовые формулы слоя
 
