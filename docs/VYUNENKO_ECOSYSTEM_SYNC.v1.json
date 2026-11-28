@@ -53,7 +53,8 @@
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
     "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md"
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/CHUMNY_VERDICT_THEORY.md"
   ],
   "ecosystem_dependents": [
     {
@@ -129,5 +130,25 @@
     "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
     "automation_status": "not_assessed",
     "note": "This manifest is a machine-readable dependency and synchronization registry. It does not itself execute GitHub writes, schedule background work, or prove that a cross-repository automation credential is configured."
-  }
+  },
+  "research_extensions": [
+    {
+      "id": "CV-1",
+      "title": "Теория Чумного Вердикта",
+      "version": "1.0.0",
+      "status": "formal_specification",
+      "source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "parameter_domain": "c in Z, c != 0",
+      "primary_relation": "x prec_c y iff x = 0 and y = c",
+      "additive_transition": "x leads_to_c y iff y = x + c",
+      "base_semantics_changed": false,
+      "notes": [
+        "Ordinary integer identity and arithmetic are unchanged",
+        "The primary directed relation contains exactly one ordered pair (0,c)",
+        "Additive propagation is modelled as a directed translation graph",
+        "Unrestricted multiplication changes the parameter and is not a closure rule for fixed c",
+        "No claim of a new alternative arithmetic of integers is made"
+      ]
+    }
+  ]
 }
