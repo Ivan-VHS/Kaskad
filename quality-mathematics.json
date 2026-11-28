@@ -66,7 +66,10 @@
     "cascade_monad_declares_transformer_order_unit_and_bind_laws": true,
     "comonad_context_is_not_asserted_without_counit_and_comultiplication_laws": true,
     "operational_node_statuses_are_distinct_from_four_valued_predicate_results": true,
-    "wave_budget_is_not_treated_as_a_convergence_proof": true
+    "wave_budget_is_not_treated_as_a_convergence_proof": true,
+    "cv_k3_m1_declares_nonnegative_state_inputs_and_matrices": true,
+    "cv_k3_m1_strict_growth_requires_nonzero_increment": true,
+    "cv_k3_m1_is_scoped_to_explicit_accumulation_model": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -197,7 +200,8 @@
     "self_review_is_not_independent_review": true,
     "scientific_maturity_must_not_be_collapsed_into_one_score": true,
     "threshold_calibration_review_required": true,
-    "interpretive_claims_require_source_context_and_competing_readings_review_required": true
+    "interpretive_claims_require_source_context_and_competing_readings_review_required": true,
+    "cv_k3_m1_requires_independent_review_before_verified_status": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
