@@ -149,13 +149,13 @@ K3-PAD — уже существующий режим импорта, котор
 Для арифметических выражений иногда необходимо зафиксировать явно указанную конечную нулевую группу. Она не является каноническим словом и не является допустимым standalone-входом K3-PAD. Поэтому вводится типизированная сырая форма:
 
 \[
-\operatorname{RawK3}(RawK3(5k0)):=(5,0),
+\operatorname{RawK3}(5k0):=(5,0),
 \]
 
 где группы перечислены от старшей к младшей. Её числовая оценка:
 
 \[
-\operatorname{Eval}_{K3}(\operatorname{RawK3}(RawK3(5k0)))
+\operatorname{Eval}_{K3}(\operatorname{RawK3}(5k0))
 =5\cdot1000+0=5\,000.
 \]
 
@@ -163,20 +163,20 @@ K3-PAD — уже существующий режим импорта, котор
 
 \[
 \operatorname{Eval}_{K3}(5k)
-=\operatorname{Eval}_{K3}(\operatorname{RawK3}(RawK3(5k0)))
+=\operatorname{Eval}_{K3}(\operatorname{RawK3}(5k0))
 =5\,000.
 \]
 
 Но исходные структуры различаются:
 
 \[
-5k\ne_{\mathrm{str}}\operatorname{RawK3}(RawK3(5k0)).
+5k\ne_{\mathrm{str}}\operatorname{RawK3}(5k0).
 \]
 
 Канонизация сырого операнда:
 
 \[
-\operatorname{Canon}_{K3}(\operatorname{RawK3}(RawK3(5k0)))=5k.
+\operatorname{Canon}_{K3}(\operatorname{RawK3}(5k0))=5k.
 \]
 
 Таким образом, дальнейшие примеры с 5k0 используют именно K3-RAW как типизированный операнд. Это не отменяет строгую грамматику и не расширяет язык K3-PAD.
@@ -310,39 +310,34 @@ B\boxplus_{\mathrm{seq}}A,
 
 Множество структурных выражений задаётся рекурсивно:
 
-[
-operatorname{Expr}_{K3}::=
-operatorname{Atom}(s)
-mid
-operatorname{AddExpr}(E_1,E_2),
-]
+\\[
+\\operatorname{Expr}_{K3}::=\\operatorname{Atom}(s)\\mid\\operatorname{AddExpr}(E_1,E_2),
+\\]
 
 где (s) — допустимая структурная запись, а (E_1,E_2) — структурные выражения.
 
 Оценка определяется рекурсивно:
 
-[
-operatorname{Eval}_{K3}(operatorname{Atom}(s))
-=operatorname{Decode}_{K3}(s),
-]
+\\[
+\\operatorname{Eval}_{K3}(\\operatorname{Atom}(s))=\\operatorname{Decode}_{K3}(s),
+\\]
 
-[
-operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
-=operatorname{Eval}_{K3}(E_1)+operatorname{Eval}_{K3}(E_2).
-]
+\\[
+\\operatorname{Eval}_{K3}(\\operatorname{AddExpr}(E_1,E_2))=\\operatorname{Eval}_{K3}(E_1)+\\operatorname{Eval}_{K3}(E_2).
+\\]
 
 Дерево хранит порядок аргументов и расстановку скобок. Поэтому перестановка операндов и изменение группировки могут менять структурное дерево, даже если числовое значение сохраняется.
 
 ## 7. Четыре контрольные суммы
 
-Для вычислений используем канонические операнды 5k и 50k, а также типизированный сырой операнд \(\\operatorname{RawK3}(RawK3(5k0))\):
+Для вычислений используем канонические операнды 5k и 50k, а также типизированный сырой операнд \(\operatorname{RawK3}(5k0)\):
 
 \[
-5k=5\\,000,
-\\qquad
-\\operatorname{RawK3}(RawK3(5k0))=5\\,000,
-\\qquad
-50k=50\\,000.
+5k=5\,000,
+\qquad
+\operatorname{RawK3}(5k0)=5\,000,
+\qquad
+50k=50\,000.
 \]
 
 Сырая форма 5k0 сохраняет явно записанную нулевую младшую группу и канонизируется в 5k. Она не является самостоятельным каноническим словом.
@@ -450,7 +445,7 @@ operatorname{Eval}_{K3}(operatorname{AddExpr}(E_1,E_2))
 | 5k + 5k0 | 10 000 | AddExpr(5k, RawK3(5k0)) |
 | 5k + 50k | 55 000 | AddExpr(5k, 50k) |
 | 50k + 5k0 | 55 000 | AddExpr(50k, RawK3(5k0)) |
-| RawK3(5k0) + 50k | 55 000 | AddExpr(5k0, 50k) |
+| RawK3(5k0) + 50k | 55 000 | AddExpr(RawK3(5k0), 50k) |
 
 Первые два выражения дают разные числа. Третье и четвёртое задают разные упорядоченные выражения, но одинаковое числовое значение.
 
