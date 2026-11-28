@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.0.0",
+  "model": {
+    "id": "KASKAD-KTM-1",
+    "title": "Математическая модель переходов исследовательского знания Kaskad",
+    "version": "1.0.0",
+    "date": "2026-11-28",
+    "normative_scope": "research_methodology",
+    "base_theory": "K3",
+    "base_theory_version": "0.5.0",
+    "stage_count": 20,
+    "status": "normative_methodological_model_not_a_mathematical_axiom_system"
+  },
+  "claim_record": {
+    "required_fields": [
+      "claim_id",
+      "claim_text",
+      "claim_kind",
+      "domain_and_scope",
+      "formal_signature",
+      "assumptions_or_protocol",
+      "source_revision",
+      "dependencies",
+      "evidence_ledger",
+      "state_vector",
+      "limitations",
+      "history"
+    ],
+    "evidence_ledger_policy": "append_only_with_supersession_and_invalidation_events",
+    "source_and_scope_required": true,
+    "status_is_derived_from_evidence": true
+  },
+  "state_space": {
+    "formal": {
+      "formalization": [
+        "not_formalized",
+        "formalized"
+      ],
+      "proof_evidence": [
+        "none",
+        "complete_manual_proof",
+        "proof_checker_verified",
+        "invalidated"
+      ],
+      "refutation_evidence": [
+        "none",
+        "verified_counterexample",
+        "formal_negation_proved",
+        "invalidated"
+      ],
+      "axiom_system_consistency": [
+        "not_assessed",
+        "relative_consistency_proved",
+        "inconsistency_detected"
+      ]
+    },
+    "computational": [
+      "not_run",
+      "exploratory_run",
+      "finite_exhaustive_verified",
+      "implementation_tested",
+      "reproduced_from_frozen_artifacts",
+      "failed",
+      "invalidated"
+    ],
+    "empirical": {
+      "protocol": [
+        "not_applicable",
+        "not_specified",
+        "specified",
+        "preregistered"
+      ],
+      "observations": [
+        "none",
+        "collected_with_provenance"
+      ],
+      "support": [
+        "not_evaluated",
+        "inconclusive",
+        "supported_within_declared_scope",
+        "independently_replicated_within_declared_scope",
+        "contradicted_within_declared_scope",
+        "conflicted"
+      ]
+    },
+    "review": [
+      "not_submitted",
+      "under_review",
+      "reviewed_with_findings",
+      "reviewed_accepted",
+      "reviewed_rejected"
+    ],
+    "publication": [
+      "private",
+      "preprint",
+      "published"
+    ],
+    "application": [
+      "not_applied",
+      "prototype",
+      "applied",
+      "validated_in_declared_domain"
+    ]
+  },
+  "state_vector": {
+    "coordinates": [
+      "formal.formalization",
+      "formal.proof_evidence",
+      "formal.refutation_evidence",
+      "formal.axiom_system_consistency",
+      "computational",
+      "empirical.protocol",
+      "empirical.observations",
+      "empirical.support",
+      "review",
+      "publication",
+      "application"
+    ],
+    "independent_axes": true,
+    "single_linear_rank": false,
+    "publication_changes_proof_status": false,
+    "peer_review_changes_proof_status": false,
+    "application_changes_proof_status": false,
+    "computational_test_changes_proof_status": false
+  },
+  "transition_rules": [
+    {
+      "id": "KTM-R01",
+      "action": "formalize_claim",
+      "guard": "claim, domain, signature, quantifiers, assumptions and formal system are explicit",
+      "effect": "formalization := formalized",
+      "axis": "formal"
+    },
+    {
+      "id": "KTM-R02",
+      "action": "accept_proof",
+      "guard": "proof derives phi from declared Gamma in declared calculus and is checked by the declared procedure",
+      "effect": "proof evidence := complete manual proof or proof-checker verified",
+      "axis": "formal"
+    },
+    {
+      "id": "KTM-R03",
+      "action": "accept_refutation",
+      "guard": "negation proof is checked or witness satisfies the exact domain and negated predicate",
+      "effect": "refutation evidence := formal negation or verified counterexample",
+      "axis": "formal"
+    },
+    {
+      "id": "KTM-R04",
+      "action": "accept_finite_exhaustion",
+      "guard": "domain is finite, enumerator completeness is established, every element is visited and evaluation is exact",
+      "effect": "finite verification applies only to the declared finite domain",
+      "axis": "computational_and_formal_scope"
+    },
+    {
+      "id": "KTM-R05",
+      "action": "record_computation",
+      "guard": "revision, inputs, algorithm, parameters, environment and outputs are captured",
+      "effect": "computational axis records run, test or failure",
+      "axis": "computational"
+    },
+    {
+      "id": "KTM-R06",
+      "action": "specify_empirical_protocol",
+      "guard": "population, sampling, controls, measurements, uncertainty, analysis and decision criteria are explicit",
+      "effect": "empirical protocol := specified or preregistered",
+      "axis": "empirical"
+    },
+    {
+      "id": "KTM-R07",
+      "action": "record_observation",
+      "guard": "data provenance, time, units, source, processing and uncertainty are recorded",
+      "effect": "observation := collected with provenance",
+      "axis": "empirical"
+    },
+    {
+      "id": "KTM-R08",
+      "action": "accept_empirical_support",
+      "guard": "predeclared criteria are met within scope and uncertainty and confounders are addressed",
+      "effect": "empirical support := supported within declared scope",
+      "axis": "empirical"
+    },
+    {
+      "id": "KTM-R09",
+      "action": "accept_independent_replication",
+      "guard": "independent party or setup repeats the protocol on independent observations",
+      "effect": "empirical support := independently replicated in scope",
+      "axis": "empirical"
+    },
+    {
+      "id": "KTM-R10",
+      "action": "review_claim",
+      "guard": "review report identifies scope, methods, findings and unresolved issues",
+      "effect": "review axis changes only",
+      "axis": "review"
+    },
+    {
+      "id": "KTM-R11",
+      "action": "publish_claim",
+      "guard": "version, attribution, evidence, limitations and status are disclosed",
+      "effect": "publication axis changes only",
+      "axis": "publication"
+    },
+    {
+      "id": "KTM-R12",
+      "action": "apply_claim",
+      "guard": "application domain, measurements and failure boundaries are recorded",
+      "effect": "application axis changes only",
+      "axis": "application"
+    },
+    {
+      "id": "KTM-R13",
+      "action": "invalidate_or_supersede",
+      "guard": "defect, correction or superseding artifact is recorded with provenance",
+      "effect": "append event; retain prior evidence and recompute status",
+      "axis": "evidence_ledger"
+    }
+  ],
+  "derived_labels": {
+    "theorem_relative_to_declared_system": "proof valid relative to named assumptions and calculus",
+    "refuted_relative_to_declared_system": "formal refutation or valid counterexample checked",
+    "conflicting_formal_evidence": "proof and refutation both accepted; audit axioms and calculus",
+    "finite_domain_verified": "complete finite domain enumerated and exact cases checked",
+    "empirically_supported_in_scope": "predeclared criteria met in declared population and conditions",
+    "independently_replicated_in_scope": "independent replication criterion met",
+    "peer_reviewed": "review completed; not itself proof",
+    "published": "public dissemination recorded; not itself proof",
+    "validated_in_application_domain": "application passed domain validation only"
+  },
+  "non_implications": {
+    "publication_implies_proof": false,
+    "peer_review_implies_proof": false,
+    "institutional_adoption_implies_proof": false,
+    "application_implies_universal_validity": false,
+    "random_tests_prove_universal_claim": false,
+    "finite_sample_proves_infinite_claim": false,
+    "computational_conjecture_confirms_theorem": false,
+    "mathematical_proof_implies_empirical_model_truth": false,
+    "one_failed_test_refutes_universal_math_without_checked_witness": false,
+    "same_dataset_rerun_equals_independent_replication": false
+  },
+  "workflow": {
+    "stages_are_universal_required_sequence": false,
+    "stages_are_research_activity_catalogue": true,
+    "feedback_and_revision_edges_allowed": true,
+    "formal_track_may_omit_empirical_stages": true,
+    "empirical_track_requires_scope_and_protocol": true,
+    "publication_and_application_are_orthogonal_to_validity": true,
+    "stage_order": "numbered reading order only; dependencies follow guards and claim kind"
+  },
+  "stages": [
+    {
+      "id": 1,
+      "name": "Интуитивная идея",
+      "track": "origin",
+      "artifact": "idea_note",
+      "gate": "Идея отделена от утверждения."
+    },
+    {
+      "id": 2,
+      "name": "Формулировка гипотезы",
+      "track": "origin",
+      "artifact": "hypothesis_record",
+      "gate": "Область и способ опровержения заданы."
+    },
+    {
+      "id": 3,
+      "name": "Концептуальная модель",
+      "track": "origin",
+      "artifact": "conceptual_model",
+      "gate": "Объекты и связи определены."
+    },
+    {
+      "id": 4,
+      "name": "Первичная самокритика",
+      "track": "revision",
+      "artifact": "counterargument_register",
+      "gate": "Возражения и контрпримеры зафиксированы."
+    },
+    {
+      "id": 5,
+      "name": "Рабочий язык",
+      "track": "formal_preparation",
+      "artifact": "glossary_crosswalk",
+      "gate": "Новые термины определены; метафоры помечены."
+    },
+    {
+      "id": 6,
+      "name": "Формализация объектов",
+      "track": "formal",
+      "artifact": "signature_and_formula",
+      "gate": "Типы, кванторы, область и предпосылки явны."
+    },
+    {
+      "id": 7,
+      "name": "Дедуктивное исследование",
+      "track": "formal",
+      "artifact": "lemmas_and_proofs",
+      "gate": "Зависимости и выводы проверяемы."
+    },
+    {
+      "id": 8,
+      "name": "Аудит аксиоматики",
+      "track": "formal",
+      "artifact": "axiom_system_profile",
+      "gate": "Аксиомы и правила вывода объявлены."
+    },
+    {
+      "id": 9,
+      "name": "Алгоритмы проверки",
+      "track": "computational",
+      "artifact": "verification_contract",
+      "gate": "Входы, инварианты и завершимость заданы."
+    },
+    {
+      "id": 10,
+      "name": "Инварианты",
+      "track": "formal_and_computational",
+      "artifact": "invariant_catalogue",
+      "gate": "Для каждого инварианта указан статус."
+    },
+    {
+      "id": 11,
+      "name": "Контролируемый эксперимент",
+      "track": "empirical_or_computational",
+      "artifact": "experiment_protocol",
+      "gate": "Тип эксперимента и область заданы."
+    },
+    {
+      "id": 12,
+      "name": "Сравнение с аналогами",
+      "track": "context",
+      "artifact": "literature_crosswalk",
+      "gate": "Новизна не выводится из названия."
+    },
+    {
+      "id": 13,
+      "name": "Предсказание",
+      "track": "prediction",
+      "artifact": "prediction_record",
+      "gate": "Критерий записан до результата."
+    },
+    {
+      "id": 14,
+      "name": "Воспроизведение и репликация",
+      "track": "reproducibility",
+      "artifact": "replication_report",
+      "gate": "Повтор отличён от независимой репликации."
+    },
+    {
+      "id": 15,
+      "name": "Статистический анализ",
+      "track": "statistical",
+      "artifact": "uncertainty_report",
+      "gate": "Статистика применяется при подходящей модели."
+    },
+    {
+      "id": 16,
+      "name": "Открытая публикация",
+      "track": "dissemination",
+      "artifact": "versioned_preprint",
+      "gate": "Источники, статус и ограничения раскрыты."
+    },
+    {
+      "id": 17,
+      "name": "Рецензирование",
+      "track": "review",
+      "artifact": "review_report",
+      "gate": "Замечания и ответы сохранены."
+    },
+    {
+      "id": 18,
+      "name": "Дискуссия и пересмотр",
+      "track": "revision",
+      "artifact": "revision_log",
+      "gate": "Возражения классифицированы."
+    },
+    {
+      "id": 19,
+      "name": "Интеграция в корпус",
+      "track": "adoption",
+      "artifact": "canonical_record",
+      "gate": "Статус и происхождение не завышены."
+    },
+    {
+      "id": 20,
+      "name": "Практическое применение",
+      "track": "application",
+      "artifact": "domain_validation",
+      "gate": "Полезность оценена в объявленной области."
+    }
+  ],
+  "verification": {
+    "method": "schema_validation_and_exact_guard_consistency_checks",
+    "ci_status": "not_executed",
+    "notes": [
+      "KTM-1 is a research-method model, not an axiom system for K3.",
+      "State coordinates are independent, not a progress score.",
+      "Twenty stages are an activity catalogue, not a universal chronology.",
+      "Empirical support is bounded by scope and protocol.",
+      "Proof is relative to named assumptions and calculus."
+    ]
+  }
+}

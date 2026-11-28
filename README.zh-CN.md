@@ -80,3 +80,7 @@ CI 配置覆盖 Python 3.11–3.14；验证结果只适用于对应的运行记�
 ## 引用与许可
 
 请引用具体 Git 修订版。引用元数据见 [CITATION.cff](CITATION.cff) 和 [CITATION.bib](CITATION.bib)。许可证：[Apache-2.0](LICENSE)。
+
+## CV-P 与数学知识转换
+
+[CV-P](docs/CHUMNY_VERDICT_THEORY.md) 保留普通数值计算，并在表达式求值完成后单独记录判定投影。[数学知识转换模型](docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md) 跟踪主张、证据、修订和研究状态变化。两项扩展均不改变 K3 的位置算术。

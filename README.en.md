@@ -84,3 +84,7 @@ CI is configured for Python 3.11–3.14. A check result applies only to its spec
 ## Citation and license
 
 Cite a specific Git revision. Metadata: [CITATION.cff](CITATION.cff) and [CITATION.bib](CITATION.bib). License: [Apache-2.0](LICENSE).
+
+## CV-P and mathematical knowledge transitions
+
+[CV-P](docs/CHUMNY_VERDICT_THEORY.md) preserves the ordinary numeric evaluation and records a separate verdict projection after expression evaluation. The [Mathematical Knowledge Transition Model](docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md) tracks claims, evidence, revisions and research-status changes. Neither extension changes K3 positional arithmetic.

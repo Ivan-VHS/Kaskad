@@ -28,6 +28,10 @@ const mathematics = readJson("quality-mathematics.json");
 const computation = readJson("quality-computation.json");
 const evolution = readJson("engineering-evolution.v1.json");
 const vectors = readJson("docs/K3_REFERENCE_VECTORS.json");
+const knowledgeTransition = readJson("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json");
+const knowledgeTransitionSchema = readJson("schemas/knowledge-transition.v1.schema.json");
+const chumnyVerdict = readJson("docs/CHUMNY_VERDICT_MODEL.v1.json");
+const chumnyVerdictSchema = readJson("schemas/chumny-verdict.v1.schema.json");
 
 if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
@@ -257,6 +261,163 @@ if (vectors) {
   }
 }
 
+
+if (chumnyVerdict) {
+  if (chumnyVerdict.theory?.id !== "CV-1" ||
+      chumnyVerdict.theory?.version !== "1.2.0" ||
+      chumnyVerdict.theory?.base_theory !== "K3" ||
+      chumnyVerdict.theory?.base_radix !== 1000 ||
+      chumnyVerdict.theory?.base_k3_semantics_changed !== false ||
+      chumnyVerdict.theory?.ordinary_integer_equality_changed !== false) {
+    fail("Chumny Verdict model must preserve K3 base semantics and ordinary equality");
+  }
+  if (chumnyVerdict.instance?.parameter !== "c" ||
+      chumnyVerdict.instance?.domain !== "Z" ||
+      chumnyVerdict.instance?.nonzero_required !== true ||
+      chumnyVerdict.instance?.exactly_one_value_per_instance !== true ||
+      chumnyVerdict.instance?.global_default !== null) {
+    fail("Chumny Verdict requires one fixed nonzero parameter per instance");
+  }
+  if (chumnyVerdict.projection?.symbol !== "P_c" ||
+      chumnyVerdict.projection?.idempotent !== true ||
+      chumnyVerdict.projection?.preserves_raw_evaluation !== true ||
+      chumnyVerdict.projection?.kernel_is_additive_congruence !== false ||
+      chumnyVerdict.projection?.image !== "Z excluding 0") {
+    fail("CV-P projection metadata is inconsistent");
+  }
+  const sample = chumnyVerdict.illustrative_instance;
+  if (!sample || !Number.isSafeInteger(sample.c) || sample.c === 0) {
+    fail("Chumny Verdict sample parameter must be a nonzero exact integer");
+  } else {
+    const c = BigInt(sample.c);
+    const P = (n) => n === 0n ? c : n;
+    for (const item of sample.map_cases ?? []) {
+      const actual = P(BigInt(item.input));
+      if (actual !== BigInt(item.output) || P(actual) !== actual) {
+        fail("CV-P map/idempotence check failed for " + item.input);
+      }
+    }
+    for (const item of sample.primary_relation_cases ?? []) {
+      const actual = BigInt(item.from) === 0n && BigInt(item.to) === c;
+      if (actual !== item.expected) fail("CV primary relation check failed");
+    }
+    for (const item of sample.transfer_cases ?? []) {
+      const actual = BigInt(item.to) === BigInt(item.from) + c;
+      if (actual !== item.expected) fail("CV additive-transfer graph check failed");
+    }
+    for (const item of sample.post_evaluation_cases ?? []) {
+      if (P(BigInt(item.raw_value)) !== BigInt(item.cv_value)) {
+        fail("CV-P post-evaluation check failed for " + item.expression);
+      }
+    }
+    const positional = sample.positional_zero_group_example;
+    if (!positional ||
+        positional.radix !== 1000 ||
+        positional.coefficient_order !== "least_significant_to_most_significant" ||
+        positional.coefficients.some((x) => !Number.isInteger(x) || x < 0 || x > 999)) {
+      fail("CV positional zero-group example has invalid K3 coefficients");
+    } else {
+      const value = positional.coefficients.reduce(
+        (sum, coefficient, index) => sum + BigInt(coefficient) * (1000n ** BigInt(index)), 0n
+      );
+      if (value !== BigInt(positional.evaluated_value) ||
+          P(value) !== BigInt(positional.cv_value) ||
+          value !== 1000n) {
+        fail("CV-P must operate on the evaluated K3 integer, not on a zero coefficient");
+      }
+    }
+    for (const item of sample.kernel_equivalence_cases ?? []) {
+      const actual = P(BigInt(item.left)) === P(BigInt(item.right));
+      if (actual !== item.expected) fail("CV-P kernel-equivalence control failed");
+    }
+    if (P(0n) !== c || P(c) !== c || P(1n) !== 1n ||
+        P(P(0n)) !== P(0n) || P(1000n) !== 1000n) {
+      fail("CV-P image, fixed-point or idempotence invariant failed");
+    }
+    if (P(0n) !== P(c) || P(1n) === P(c + 1n)) {
+      fail("CV-P kernel must identify the 0/c pair and must not be an additive congruence");
+    }
+  }
+}
+if (chumnyVerdictSchema) {
+  if (chumnyVerdictSchema.$schema !== "https://json-schema.org/draft/2020-12/schema" ||
+      chumnyVerdictSchema.properties?.theory?.properties?.base_radix?.const !== 1000 ||
+      chumnyVerdictSchema.properties?.instance?.properties?.nonzero_required?.const !== true ||
+      chumnyVerdictSchema.properties?.projection?.properties?.preserves_raw_evaluation?.const !== true) {
+    fail("Chumny Verdict JSON Schema does not enforce the mathematical contract");
+  }
+}
+
+
+if (knowledgeTransition) {
+  const kt = knowledgeTransition;
+  if (kt.model?.id !== "KASKAD-KTM-1" || kt.model?.version !== "1.0.0" ||
+      kt.model?.base_theory !== "K3" || kt.model?.base_theory_version !== "0.5.0" ||
+      kt.model?.stage_count !== 20) {
+    fail("KTM-1 identity, stage count or K3 compatibility is inconsistent");
+  }
+  if (kt.state_vector?.independent_axes !== true ||
+      kt.state_vector?.single_linear_rank !== false ||
+      kt.state_vector?.publication_changes_proof_status !== false ||
+      kt.state_vector?.peer_review_changes_proof_status !== false ||
+      kt.state_vector?.application_changes_proof_status !== false ||
+      kt.state_vector?.computational_test_changes_proof_status !== false) {
+    fail("KTM-1 must keep evidence axes independent and prevent status inflation");
+  }
+  const axes = kt.state_vector?.coordinates ?? [];
+  for (const axis of [
+    "formal.formalization","formal.proof_evidence","formal.refutation_evidence",
+    "formal.axiom_system_consistency","computational","empirical.protocol",
+    "empirical.observations","empirical.support","review","publication","application"
+  ]) {
+    if (!axes.includes(axis)) fail("KTM-1 state vector is missing axis: " + axis);
+  }
+  const stages = kt.stages ?? [];
+  if (stages.length !== 20 || stages.some((stage,index) =>
+    stage.id !== index + 1 || !stage.name || !stage.track || !stage.artifact || !stage.gate)) {
+    fail("KTM-1 must define twenty complete, sequentially identified research stages");
+  }
+  const ruleIds = new Set();
+  for (const rule of kt.transition_rules ?? []) {
+    if (!rule.id || ruleIds.has(rule.id) || !rule.guard || !rule.effect || !rule.axis) {
+      fail("KTM-1 contains a malformed or duplicate guarded transition");
+    }
+    ruleIds.add(rule.id);
+  }
+  if (ruleIds.size < 13) fail("KTM-1 is missing guarded knowledge-transition rules");
+  for (const inference of [
+    "publication_implies_proof","peer_review_implies_proof",
+    "institutional_adoption_implies_proof","application_implies_universal_validity",
+    "random_tests_prove_universal_claim","finite_sample_proves_infinite_claim",
+    "computational_conjecture_confirms_theorem","mathematical_proof_implies_empirical_model_truth",
+    "one_failed_test_refutes_universal_math_without_checked_witness",
+    "same_dataset_rerun_equals_independent_replication"
+  ]) {
+    if (kt.non_implications?.[inference] !== false) fail("KTM-1 must reject invalid inference: " + inference);
+  }
+  if (kt.workflow?.stages_are_universal_required_sequence !== false ||
+      kt.workflow?.formal_track_may_omit_empirical_stages !== true ||
+      kt.workflow?.feedback_and_revision_edges_allowed !== true) {
+    fail("KTM-1 workflow must permit optional stages and feedback");
+  }
+  if (project?.knowledge_transition_model?.id !== "KASKAD-KTM-1" ||
+      project?.knowledge_transition_model?.version !== "1.0.0" ||
+      !project?.required_documents?.includes("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md") ||
+      !project?.required_documents?.includes("docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json") ||
+      !project?.required_documents?.includes("schemas/knowledge-transition.v1.schema.json")) {
+    fail("Project contract is not synchronized with KTM-1 documents");
+  }
+}
+if (knowledgeTransitionSchema) {
+  if (knowledgeTransitionSchema.$schema !== "https://json-schema.org/draft/2020-12/schema" ||
+      knowledgeTransitionSchema.properties?.model?.properties?.stage_count?.const !== 20 ||
+      knowledgeTransitionSchema.properties?.state_vector?.properties?.single_linear_rank?.const !== false ||
+      knowledgeTransitionSchema.properties?.stages?.minItems !== 20 ||
+      knowledgeTransitionSchema.properties?.stages?.maxItems !== 20) {
+    fail("KTM-1 JSON Schema does not enforce the twenty-stage multidimensional model");
+  }
+}
+
 if (evolution) {
   if (evolution.contract_id !== "KASKAD-ENGINEERING-EVOLUTION") {
     fail("Unexpected engineering evolution contract id");
@@ -356,5 +517,5 @@ if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad scientific documentation standard, multilingual README, mathematical scope, K3 notation, reference vectors, algebraic semantics and local links: OK\n");
+  process.stdout.write("Kaskad scientific documentation standard, multilingual README, K3 notation, reference vectors, CV-1/CV-P and KTM-1 knowledge-transition semantics and local links: OK\n");
 }
