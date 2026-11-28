@@ -119,7 +119,8 @@
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/REFERENCE_IMPLEMENTATION.md",
-    "docs/K3_REFERENCE_VECTORS.json"
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/THEORY_OF_THE_PLAGUE_VERDICT.md"
   ],
   "ecosystem_dependents": [
     {
