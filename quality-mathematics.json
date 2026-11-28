@@ -37,7 +37,13 @@
     "composite_radix_is_not_mislabeled_as_prime_p_adic": true,
     "semantic_numeric_and_structural_equalities_are_typed_separately": true,
     "hermeneutic_and_gematric_mappings_are_parameterized_and_provenance_tracked": true,
-    "cryptographic_security_is_not_inferred_from_k3_encoding": true
+    "cryptographic_security_is_not_inferred_from_k3_encoding": true,
+    "four_valued_gate_evidence_is_distinct_from_operational_node_statuses": true,
+    "effect_stack_declares_order_and_monad_laws": true,
+    "candidate_comonad_declares_counit_comultiplication_and_coassociativity": true,
+    "category_valued_descent_checks_overlap_cocycle_and_morphism_gluing": true,
+    "cascade_termination_uses_well_founded_rank_or_finite_height_fixpoint": true,
+    "wave_limit_does_not_imply_convergence": true
   },
   "k3_constraints": {
     "radix": 1000,
