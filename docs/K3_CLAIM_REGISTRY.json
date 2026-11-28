@@ -950,6 +950,33 @@
         ],
         "boundary": "The result proves the recurrence's behavior only; it is not a universal theorem about formal systems."
       }
+    },
+    {
+      "id": "K3-NS-DEF-001",
+      "kind": "definition",
+      "statement": "A K3-NS record is a typed many-sorted tuple separating the source object, encoding profile, canonical K3 vector and value, structural profile, relation graph, context, interpretation set, and provenance; every map between components is explicitly typed.",
+      "source": "docs/K3_NUMERATIVE_SEMANTICS.md",
+      "proof_reference": "§1.2, typed numerative record and canonical contract",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The tuple is a compatible semantic overlay; it does not redefine the K3 value function or the lexical separator."
+    },
+    {
+      "id": "K3-NS-DEF-002",
+      "kind": "definition",
+      "statement": "K3-NS keeps source-object equality, code equality, numeric-value equality, structural relations, graph relations, and contextual interpretation as distinct typed relations unless an explicit mapping and equivalence criterion is supplied.",
+      "source": "docs/K3_NUMERATIVE_SEMANTICS.md",
+      "proof_reference": "§2, equality layers, collisions, and typed relations",
+      "dependencies": [
+        "K3-NS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "A collision in one encoding profile does not imply semantic equivalence, causality, prediction, or a cryptographic property."
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
