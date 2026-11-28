@@ -150,6 +150,13 @@ flowchart TD
     B --> H["Separate tracks, including CV-1"]
 ~~~
 
+### Additional documents
+
+- [K3 scientific consolidation](docs/K3_SCIENTIFIC_CONSOLIDATION.md) · [Formal epistemics and proofs](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [Reference vectors](docs/K3_REFERENCE_VECTORS.json)
+- [Original cascade formulas](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) · [Two-channel geometry and carry law](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) · [Repository architecture](docs/REPOSITORY_ARCHITECTURE.md)
+- [Reference-vector schema](schemas/k3-reference-vectors.v1.schema.json) · [Mathematical glossary](docs/MATHEMATICAL_GLOSSARY.md) · [Scientific quality plan](docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md)
+- [Cascade Edition scientific documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Kaskad Institute Charter](docs/KASKAD_INSTITUTE_CHARTER.md)
+
 ## Checking the reference implementation
 
 The repository contains an auxiliary package in **src/kaskad_k3/**, tests in **tests/**, and reference data in **tests/vectors/**. The package uses the Python standard library and has no additional runtime dependencies. The CI configuration covers Python 3.11–3.14.
