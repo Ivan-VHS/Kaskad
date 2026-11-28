@@ -152,7 +152,11 @@
         "triadic graph node statuses with four-valued guard evidence kept as separate types",
         "cascade short-circuit/state/writer effect stack with explicit monad operations",
         "local graph context comonad candidate with counit, comultiplication and law obligations",
-        "well-founded termination or finite-height fixpoint criterion; W_max is only a safety budget"
+        "well-founded termination or finite-height fixpoint criterion; W_max is only a safety budget",
+        "K3 graph-category-semiotic passport presheaf with explicit site and restriction laws",
+        "sheaf-of-passport-classes versus category-valued stack descent boundary",
+        "local dependency-context comonad candidate with counit, comultiplication and law obligations",
+        "wave-limit and finite-termination criteria kept separate from successful convergence"
       ]
     }
   ],
