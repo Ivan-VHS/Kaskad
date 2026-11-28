@@ -1,234 +1,82 @@
-# Kaskad
+# Kaskad — 维尤年科 K3 理论
 
-[简体中文](README.zh-CN.md) · [English](README.en.md) · [Русский](README.md) · [Українська](README.uk.md)
+[Русский](README.md) · [English](README.en.md) · [Українська](README.uk.md)
 
-维尤年科 K3 理论数学研究文档库。本仓库用于精确定义数学对象、建立数学模型、
-给出证明与反例，并研究其与经典数学理论之间的联系。
+> **Kaskad** 是维尤年科 K3 理论的数学研究文档库。其核心是以 1000 为基数的有限位置系统；扩展研究算术、表示结构、整除性及相关数学空间。数学理论、计算检验与软件实现彼此区分。
 
-## 引用
+## 1. 数学核心
 
-截至本版本，仓库尚未登记独立的期刊论文、预印本、DOI 或已发表的实验结果集。
-本 README 不声称对应任何未注明的论文。为保证研究可复现，请引用具体的
-Git commit，而不只是会变化的分支名称。
+固定
+[
+B=1000=10^3=2^3cdot5^3,qquad D_B={0,1,ldots,999}.
+]
 
-仓库引用信息（BibTeX）：
+规范级联是有限系数向量
+[
+a=(a_m,ldots,a_1,a_0),qquad a_iin D_B,
+]
+其中 (a_0) 是最低位。其数值为
+[
+operatorname{Val}_{K3}(a)=sum_{i=0}^{m}a_iB^i.
+]
 
-~~~bibtex
-@misc{vyunenko_kaskad_2026,
-  author       = {Vyunenko, Ivan},
-  title        = {Kaskad: Mathematical Research Corpus for the Vyunenko Theory of K3},
-  year         = {2026},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/Ivan-VHS/Kaskad},
-  note         = {Cite a specific Git revision; no DOI is registered}
-}
-~~~
+正数的最高位系数非零；零只有规范形式 ((0))。负数属于单独的有符号扩展。
 
-## 目录
+## 2. 位置具有语义
 
-- [项目目的与范围](#项目目的与范围)
-- [K3 数学模型](#k3-数学模型)
-- [数学主张的认知状态](#数学主张的认知状态)
-- [研究方法](#研究方法)
-- [文档与仓库结构](#文档与仓库结构)
-- [可复现验证](#可复现验证)
-- [数据与实验结果](#数据与实验结果)
-- [指标与硬件要求](#指标与硬件要求)
-- [许可证与署名](#许可证与署名)
-- [参与贡献与问题报告](#参与贡献与问题报告)
+符号 `k` 分隔相邻数值组。它不是数字、基数、乘数或乘法运算符。只有 `k` 边界才推进到下一个 (1000) 次幂；组内十进制数字的位数不会产生新位置。
 
-## 项目目的与范围
+| 写法 | 从高位到低位的系数 | 数值 |
+|---|---:|---:|
+| `1k` | ((1,0)) | (1,000) |
+| `50k0k7` | ((50,0,7)) | (50,000,007) |
+| `50k0k` | ((50,0,0)) | (50,000,000) |
 
-Kaskad 是一个持续维护的数学研究文档库。其主要研究对象是维尤年科 K3 理论
-及经过严格定义的数学扩展。研究流程如下：
+末尾的 `k` 表示恰好省略一个最低位零组。显式零组也保留其位置。未经等价性证明，不得删除、移动或合并零与分隔符：深度相同不代表数值相同。
 
-**研究问题 → 经典数学背景 → 定义 → 模型 → 证明或反例 → 精确或数值检验
-推论 → 独立审查 → 记录研究结果。**
+## 3. 输入模式与相等关系
 
-Kaskad 不是操作系统、编程语言、IDE、驱动程序、应用软件或通用软件平台项目。
-与其他仓库的联系仅限于数学关系，包括共同定义、映射、模型、可证明的推论，
-以及明确说明适用边界的类比。
+- **规范模式**只接受严格 K3 语法允许的写法。
+- **K3-PAD** 是显式选择的导入与规范化模式，不改变严格解析规则。
+- **K3-RAW** 为结构分析保留原始操作数结构及其顺序。
 
-代码和计算工具仅可作为辅助工具，用于精确算术、有限范围验证、可复现实验、
-文档检查或形式化验证。计算不能替代数学证明，也不能仅凭计算就把猜想升级为定理。
+文本、系数结构、数值、表达式树和操作轨迹具有不同的相等关系。最终数值相同，不代表原始写法或计算历史相同。位置移位算子 (S_B) 与符号 `k` 分别定义。
 
-## K3 数学模型
+## 4. 算术与扩展
 
-K3 基础系统固定使用复合基数
+进位和借位由同一个平衡关系描述：
+[
+c_i+t_i=1000t_{i+1}+r_i,qquad 0le r_ile999.
+]
+合法规范化保持加权数值；证明和条件见相应数学章节。
 
-\[
-B=1000=10^3=2^3\cdot5^3.
-\]
+由于基数是合数，中国剩余定理对 (rge1) 给出
+[
+mathbb Z/1000^rmathbb Zcong
+mathbb Z/2^{3r}mathbb Z	imesmathbb Z/5^{3r}mathbb Z.
+]
+相应完备化是环 (mathbb Z_2	imesmathbb Z_5)，不是域。CRT 与无限级联属于独立拓扑扩展，不改变有限 K3 语义。
 
-规范级联表示由有限系数向量给出：
+## 5. 范围与主张状态
 
-\[
-a=(a_m,\ldots,a_1,a_0),\qquad a_i\in\{0,1,\ldots,999\},
-\]
+K3 为整数提供精确表示，并研究其位置、代数、整除、组合与拓扑性质。测量值、物理单位、统计数据、图和软件实体需要各自的类型、单位与明确映射，不会自动成为 K3 数。
 
-其数值由多项式求值定义：
+定义引入对象；公设固定约定；定理必须证明；经典结果保留来源和适用条件。计算测试只支持已检查的输入。规范或猜想不等同于实现事实或已确立的定理。
 
-\[
-\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
-\]
+## 6. 文档与验证
 
-索引 \(i=0\) 表示最低位组。在文本记法中，各组由符号
-\(\mathtt{k}\) 分隔。\(\mathtt{k}\) 是词法分组分隔符，不是数字、乘数或
-乘法运算符。位置移位算子 \(S_B\) 另行定义。
+- [文档索引](docs/INDEX.md) · [文档指南](docs/DOCUMENTATION_GUIDE.md)
+- [规范理论](docs/VYUNENKO_THEORY.md) · [基础与代数](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
+- [语法](docs/K3_CANONICAL_SYNTAX.md) · [级联平衡](docs/CHAPTER_II_CASCADE_BALANCE.md)
+- [CRT 与无限级联](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md) · [经典数学对照](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
+- [开发状态](docs/DEVELOPMENT_STATUS.md) · [科学文档标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)
 
-| 参数 | 规范值 |
-|---|---|
-| 系统 | K3 |
-| 基数 | \(B=1000=2^3\cdot5^3\) |
-| 规范组范围 | \(0\ldots999\) |
-| 分组符号 | \(\mathtt{k}\) |
-| 非负数值域 | \(\mathbb N_0\) |
-| 有符号扩展 | \(\mathbb Z\) |
-| 零的规范表示 | \(0\) |
-| 空词 | 不是规范表示 |
+本地验证命令：
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+CI 配置覆盖 Python 3.11–3.14；验证结果只适用于对应的运行记录和 Git 修订版。
 
-规范非负级联表示 \(\mathbb N_0\)；有符号扩展则单独用于
-\(\mathbb Z\)。由于基数是合数，未经证明不得把素数 \(p\)-进制的性质
-直接移植到 K3。在第 \(r\) 层，使用如下分解：
+## 引用与许可
 
-\[
-\mathbb Z/1000^r\mathbb Z
-\cong
-\mathbb Z/2^{3r}\mathbb Z\times\mathbb Z/5^{3r}\mathbb Z,
-\]
-
-相应的完备化是拓扑环 \(\mathbb Z_2\times\mathbb Z_5\)，而不是域。
-
-## 数学主张的认知状态
-
-文档分别标注定义、公设、假设、引理、定理、推论、猜想、反例、
-穷尽有限验证、计算观察、经验观察、数值估计、启发式方法、条件性结果、
-已否定的表述以及研究计划。
-
-研究路线图中的条目并不因此成为已证明结果。有限枚举只能支持已完全枚举
-的有限范围内的结论。经验规律或数值估计不能充当普遍性证明。除非相应的
-形式化证明已经发布，否则文本证明不得称为机器形式化证明。
-
-## 研究方法
-
-~~~mermaid
-flowchart TD
-    A[数学问题] --> B[经典背景与符号约定]
-    B --> C[精确定义与适用范围]
-    C --> D[形式模型]
-    D --> E{是否已有证明？}
-    E -->|是| F[定理与证明]
-    E -->|否| G[猜想、反例或开放问题]
-    F --> H[对推论进行精确或数值检验]
-    G --> H
-    H --> I[独立审查并记录状态]
-    I --> J[文档化]
-~~~
-
-该图描述研究方法，不构成任何定理的证明，也不是来自未注明出版物的插图。
-
-## 文档与仓库结构
-
-### K3 基础理论
-
-- [维尤年科 K3 理论——基础规范](docs/VYUNENKO_THEORY.md)
-- [级联平衡、规范化与不变量](docs/CHAPTER_II_CASCADE_BALANCE.md)
-- [K3 规范语法与形式文法](docs/K3_CANONICAL_SYNTAX.md)
-- [K3 规范基础、代数与语义](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
-- [K3 复合基数算术](docs/K3_COMPOSITE_RADIX_ARITHMETIC.md)
-- [经典数学与术语对应表](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md)
-- [基础数学原理参考手册](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
-
-### 方法论与研究计划
-
-- [数学理论发展规则](docs/THEORY_DEVELOPMENT_RULES.md)
-- [K3 建设性研究路线图](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md)
-- [计算研究基础](docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md)
-- [数学学科及依赖关系图](docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md)
-- [形式化、认知与证明方法论](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md)
-- [计算研究架构](docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md)
-- [实验、经验与统计方法论](docs/EXPERIMENTAL_EMPIRICAL_METHOD.md)
-- [研究计划路线图](docs/RESEARCH_PLATFORM_ROADMAP.md)
-- [可复现研究记录模板](docs/RESEARCH_RECORD_TEMPLATE.md)
-- [递归 K 后缀：研究计划与形式审查](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md)
-- [协作公式综合：比例与兼容性](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md)
-
-### 质量契约与验证
-
-- [项目契约](project-contract.json)
-- [数学质量契约](quality-mathematics.json)
-- [计算质量契约](quality-computation.json)
-- [项目演进契约](engineering-evolution.v1.json)
-- [研究基础验证脚本](scripts/validate-foundation.mjs)
-- [GitHub Actions：基础验证](.github/workflows/foundation-validation.yml)
-
-## 可复现验证
-
-当前 CI 检查项目契约与数学契约的一致性、K3 规范语义、必需文档以及
-README 中的相对链接。这是文档与契约检查，不是对数学证明的机器验证，
-也不是数学计算内核的测试套件。
-
-本地验证需要 Node.js 22；这是当前 CI workflow 选择的主版本。
-验证脚本仅使用 Node.js 内置模块，无需安装第三方软件包。
-
-~~~bash
-git clone https://github.com/Ivan-VHS/Kaskad.git
-cd Kaskad
-node --version
-node scripts/validate-foundation.mjs
-~~~
-
-当契约与本地链接有效时，预期输出为：
-
-~~~text
-Kaskad mathematical scope, K3 notation, algebraic semantics, arithmetic contracts and local links: OK
-~~~
-
-Workflow 使用标签为 ubuntu-latest 的 GitHub 托管运行器、
-actions/checkout v4 和 actions/setup-node v4。这是对当前 CI 配置的说明，
-并非为数值研究实验完全锁定的环境。未来研究计算应记录工具的准确版本、
-源代码修订、精度与舍入设置、输入数据及 SHA-256 校验和；随机过程还应
-记录 PRNG 和 seed。
-
-## 数据与实验结果
-
-在所检查的仓库树中，没有已发布的数据集、实验测量档案、benchmark 表格
-或相应数据校验和。仓库的主要内容是数学理论研究。因此，本 README 不会
-编造数据集链接、模型训练结果、运行次数或统计区间。
-
-未来任何计算或经验结果至少应包含：实验标识、理论版本、Git revision、
-算法版本、运行环境、输入校验和、参数、精度与舍入模式、PRNG 和 seed、
-时间戳、输出工件以及验证状态。原始数据、派生数据和分析结果应分别保存。
-
-## 指标与硬件要求
-
-理论结果的主要评价标准是定义的正确性、假设的完整性、证明的有效性以及
-经典数学对应关系的准确性。凡引入物理量或数值量，均应明确其单位。
-
-本版本没有报告硬件测量、模型训练、推理时间、算法性能，也没有与 SOTA
-或基线方法进行比较。理论结果不适用硬件性能指标；未来计算实验应随具体
-实验协议一并公布硬件信息。
-
-## 集成数学扩展（2026-11-28）
-
-Kaskad 研究文档库现已纳入 K3 有序算术专著、定向位置组合、基数 \(1000=2^3\cdot5^3\) 的双通道几何，以及 K3-M 的十层有限系数轮廓形态学。
-
-相关应用数学来源分别记录：[DAK](docs/DAK_SYSTEM_MATHEMATICS.md)、[Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md) 和 [VentuSample 音频数学](docs/VYUNENKO_AUDIO_MATHEMATICS.md)。这些内容是数学模型与对应关系，不表示 Kaskad 实现了这些源项目。
-
-请参阅[CRT 完备化与无限级联](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md)、[科学文档标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)、[完整文档目录](docs/INDEX.md)和[语言状态登记册](docs/LANGUAGE_REGISTER.md)。K3 的规范基数、系数范围、分隔符和零位置语义均保持不变。
-
-## 许可证与署名
-
-仓库包含 [Apache License 2.0](LICENSE)。当前目录中没有单独声明数据集
-或模型许可证。第三方材料的权利与使用条件必须另行注明。
-
-引用时请使用上方 BibTeX 条目，并记录所用文档版本对应的 commit hash。
-在 DOI、SWHID 或归档版本标识实际注册之前，不应填写这些编号。
-
-## 参与贡献与问题报告
-
-报告数学问题时，请提供具体文档与章节、待讨论命题、全部假设，以及最小
-反例或可检查的推导过程。报告计算问题时，请提供 Git revision、输入数据
-或安全的最小示例、参数、准确环境和实际观察结果。
-
-贡献与审查规则见 [CONTRIBUTING.md](CONTRIBUTING.md)，漏洞报告见 [SECURITY.md](SECURITY.md)。数学建议应明确列出假设并提供可检查的论证；未经独立证明，不得将猜想提升为定理。
+请引用具体 Git 修订版。引用元数据见 [CITATION.cff](CITATION.cff) 和 [CITATION.bib](CITATION.bib)。许可证：[Apache-2.0](LICENSE)。
