@@ -1,0 +1,39 @@
+name: K3-Omega framework validation
+
+on:
+  push:
+    branches:
+      - main
+      - "research/**"
+      - "theory/**"
+    paths:
+      - "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md"
+      - "docs/OMEGA_CLAIM_REGISTRY.v1.json"
+      - "schemas/omega-claim-registry.v1.schema.json"
+      - "scripts/validate-omega-framework.mjs"
+      - ".github/workflows/omega-framework-validation.yml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "docs/VYUNENKO_OMEGA_FORMAL_SYSTEM.md"
+      - "docs/OMEGA_CLAIM_REGISTRY.v1.json"
+      - "schemas/omega-claim-registry.v1.schema.json"
+      - "scripts/validate-omega-framework.mjs"
+      - ".github/workflows/omega-framework-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-omega-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate K3-Omega registry and dependency graph
+        run: node scripts/validate-omega-framework.mjs
