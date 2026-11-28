@@ -276,9 +276,10 @@
         "K3-M-THM-004",
         "K3-THM-003"
       ],
-      "evidence_status": "catalogue_integrity_pending_ci",
+      "evidence_status": "catalogue_integrity_verified_by_ci",
       "independent_review": "not_recorded",
-      "machine_check_scope": "record_count_family_counts_sequential_unique_ids_and_all_937_CRT_reconstructions_only"
+      "machine_check_scope": "record_count_family_counts_sequential_unique_ids_and_all_937_CRT_reconstructions_only",
+      "verification_note": "GitHub Actions K3 contract validation succeeded on commit c11613faddc569808116f2017c94aacc103a2d9f (push and pull_request runs). The check covers 4685 unique IDs, five families of 937 records, and exact reconstruction of all 937 CRT rows; it does not prove the master theorems."
     },
     {
       "id": "K3-BP-THM-001",
