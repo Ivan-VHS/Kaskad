@@ -121,7 +121,13 @@
     "mathematical_review_required": true,
     "counterexample_review_required": true,
     "dependency_graph_review_required": true,
-    "status_change_requires_audit_trail": true
+    "status_change_requires_audit_trail": true,
+    "independent_proof_review_required_for_verified_status": true,
+    "computational_checks_never_promote_universal_claims_to_theorems": true,
+    "status_changes_require_commit_scoped_evidence": true,
+    "external_recognition_requires_verifiable_external_record": true,
+    "self_review_is_not_independent_review": true,
+    "scientific_maturity_must_not_be_collapsed_into_one_score": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
