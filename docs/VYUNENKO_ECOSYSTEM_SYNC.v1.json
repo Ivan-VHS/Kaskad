@@ -54,7 +54,8 @@
     "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
     "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
-    "docs/CHUMNY_VERDICT_THEORY.md"
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/K3_QUANTUM_COMMA_JUMPS.md"
   ],
   "ecosystem_dependents": [
     {
@@ -144,6 +145,21 @@
         "Proves the zero criterion for finite nonnegative K3 coefficient vectors",
         "Distinguishes zero coefficients, zero values, and structural zero representations",
         "Records the zero-divisor boundary between Z and Z/1000^r Z"
+      ]
+    },
+    {
+      "id": "K3-QCJ-0.1.0",
+      "title": "Квантовые скачки запятой",
+      "status": "compatible_research_specification",
+      "source": "docs/K3_QUANTUM_COMMA_JUMPS.md",
+      "base_semantics_changed": false,
+      "summary": [
+        "Defines decimal values as coefficient-scale pairs (m,d)",
+        "Defines signed decimal comma shifts J_k(x)=10^k x and their composition",
+        "Defines comma erasure E(m,d)=m with scale metadata",
+        "Audits the 100 Chuma-stage expressions and separates arithmetic, representation, and symbolic transitions",
+        "Proves that finite powers-of-ten scaling preserves zero status",
+        "Connects three decimal shifts to one K3 radix-1000 position without equating the notations"
       ]
     }
   ]
