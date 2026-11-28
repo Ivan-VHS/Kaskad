@@ -5,7 +5,8 @@
 **Источник:** репозиторий [Ivan-VHS/DAK](https://github.com/Ivan-VHS/DAK), ветка main, состояние проверки 28 ноября 2026 года  
 **Базовый математический слой:** [Теория Вьюненко K3](VYUNENKO_THEORY.md)  
 **Основная модель:** [Математическая основа DAK](DAK_SYSTEM_MATHEMATICS.md)  
-**Трассировка:** [DAK ↔ K3](DAK_K3_ALIGNMENT_AND_TRACEABILITY.md)
+**Трассировка:** [DAK ↔ K3](DAK_K3_ALIGNMENT_AND_TRACEABILITY.md)  
+**Полный реестр:** [340 исходных файлов DAK](DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md)
 
 ---
 
@@ -370,6 +371,8 @@ R=(schema,tool,version,commit,inputDigest,platform,result,limitations).
 | UI | duckos/ui/accessibility.rpr; duckos/ui/canvas.rpr; duckos/ui/command_palette.rpr; duckos/ui/config.rpr; duckos/ui/desktop.rpr; duckos/ui/motion.rpr; duckos/ui/native_bridge.rpr; duckos/ui/notifications.rpr; duckos/ui/physics.rpr; duckos/ui/session.rpr; duckos/ui/shell_policy.rpr; duckos/ui/taskbar.rpr; duckos/ui/theme.rpr; duckos/ui/window_manager.rpr; duckos/ui/workspace.rpr |
 
 ## 15. Карта остальных 239 файлов DAK
+
+Полный построчный перечень всех 340 blob-путей с классификацией математической роли вынесен в [DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md](DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md).
 
 В просмотренном дереве было 340 файлов верхнего уровня репозитория; 101 путь относится к пространству duckos/. Остальные 239 путей распределены по следующим источникам:
 
