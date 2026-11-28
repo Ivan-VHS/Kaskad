@@ -59,11 +59,11 @@ The main K3 notation is:
 
 | Symbol | Meaning |
 |---|---|
-| $B$ | Radix: $1000=10^3=2^3\\cdot5^3$ |
-| $D_B$ | Allowed canonical coefficients: $\\{0,1,\\ldots,999\\}$ |
+| $B$ | Radix: $1000=10^3=2^3\cdot5^3$ |
+| $D_B$ | Allowed canonical coefficients: $\{0,1,\ldots,999\}$ |
 | $a_i$ | Coefficient of the group at position $i$ |
 | $k$ | Separator between adjacent groups; not a number or multiplier |
-| $\\operatorname{Val}_{K3}$ | Function that evaluates a cascade as an integer |
+| $\operatorname{Val}_{K3}$ | Function that evaluates a cascade as an integer |
 
 See the [canonical K3 theory](docs/VYUNENKO_THEORY.md) and the [scientific documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) for the full conventions.
 
@@ -74,27 +74,27 @@ See the [canonical K3 theory](docs/VYUNENKO_THEORY.md) and the [scientific docum
 Its radix is fixed:
 
 $$
-B=1000=10^3=2^3\\cdot5^3,
-\\qquad
-D_B=\\{0,1,\\ldots,999\\}.
+B=1000=10^3=2^3\cdot5^3,
+\qquad
+D_B=\{0,1,\ldots,999\}.
 $$
 
 A cascade can be represented by a finite coefficient vector. When the coefficients are listed from the least significant position to the most significant position,
 
 $$
-a=(a_0,a_1,\\ldots,a_m),
-\\qquad
-\\operatorname{Val}_{K3}(a)=\\sum_{i=0}^{m}a_iB^i.
+a=(a_0,a_1,\ldots,a_m),
+\qquad
+\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
 $$
 
 In simple terms, every group has a position, and that position determines its contribution to the number.
 
 | Word | Vector, least to most significant | Value |
 |---|---:|---:|
-| **1k** | $(0,1)$ | $1\\,000$ |
-| **50k0k7** | $(7,0,50)$ | $50\\,000\\,007$ |
-| **50k0k** | $(0,0,50)$ | $50\\,000\\,000$ |
-| **50k7** | $(7,50)$ | $50\\,007$ |
+| **1k** | $(0,1)$ | $1\,000$ |
+| **50k0k7** | $(7,0,50)$ | $50\,000\,007$ |
+| **50k0k** | $(0,0,50)$ | $50\,000\,000$ |
+| **50k7** | $(7,50)$ | $50\,007$ |
 
 **Why do zero groups matter?** In **50k0k7**, the middle group is zero, but it still occupies a position. Removing it gives **50k7**, which is a different number. Zeros and separators must not be removed, moved or combined without a precise rule and a proof that the required property is preserved.
 
@@ -115,27 +115,27 @@ These modes must not silently replace one another.
 First, one fixed nonzero integer is selected:
 
 $$
-c\\in\\mathbb Z\\setminus\\{0\\}.
+c\in\mathbb Z\setminus\{0\}.
 $$
 
 The relation is then defined as
 
 $$
-x\\prec_c y
-\\iff
-(x=_{\\mathbb Z}0)\\land(y=_{\\mathbb Z}c),
-\\qquad
-\\prec_c=\\{(0,c)\\}.
+x\prec_c y
+\iff
+(x=_{\mathbb Z}0)\land(y=_{\mathbb Z}c),
+\qquad
+\prec_c=\{(0,c)\}.
 $$
 
-This means that the relation contains exactly one pair in the given model: $(0,c)$. It is directed: $0\\prec_c c$ does not imply $c\\prec_c0$.
+This means that the relation contains exactly one pair in the given model: $(0,c)$. It is directed: $0\prec_c c$ does not imply $c\prec_c0$.
 
 A separate relation describes a transition by the fixed amount:
 
 $$
-x\\rightsquigarrow_c y
-\\iff
-y=_{\\mathbb Z}x+c.
+x\rightsquigarrow_c y
+\iff
+y=_{\mathbb Z}x+c.
 $$
 
 These are different mathematical relations. **CV-1 does not change ordinary integer equality**, identify different integers or replace the usual rules of arithmetic.
