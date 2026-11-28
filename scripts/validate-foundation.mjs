@@ -120,6 +120,10 @@ if (!institute) {
   if (institute.charter !== "docs/KASKAD_INSTITUTE_CHARTER.md") {
     fail("Institute charter path is not canonical");
   }
+  if (!Array.isArray(project?.required_documents) ||
+      !project.required_documents.includes("docs/KASKAD_INSTITUTE_CHARTER.md")) {
+    fail("The Institute Charter must be part of the required scientific document contract");
+  }
   if (institute.legal_entity_claimed !== false ||
       institute.accreditation_claimed !== false ||
       institute.external_recognition_claimed !== false) {
@@ -353,7 +357,7 @@ if (existsSync(statusRecordPath)) {
     "### 4.1. Status of the whole corpus",
     "### 4.2. Independent status axes",
     "### 4.3. Existing K3 claim registry",
-    "### 4.6. Current main verification snapshot",
+    "### 4.6. Historical baseline verification snapshot",
     "### 4.7. Conditions for claims of scientific recognition"
   ]) {
     if (!statusText.includes(requiredText)) {
