@@ -1400,6 +1400,252 @@
         ],
         "boundary": "This is a relative model construction and does not prove the consistency of the background set theory."
       }
+    },
+    {
+      "id": "K3-SAA-POST-001",
+      "kind": "extension_postulate",
+      "statement": "The K3-SAA model uses nine declared axioms for typed inputs, fixed environments, separated channels, three-valued trigger evaluation, optional swap symmetry, two-sided payload loss, context-indexed residue, terminal stability, and admissible integration.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§4, Axioms SAA-A1–SAA-A9",
+      "dependencies": [],
+      "evidence_status": "extension_postulate",
+      "independent_review": "not_recorded",
+      "verification_note": "These are model postulates, not claims that every pair of objects is annihilated."
+    },
+    {
+      "id": "K3-SAA-DEF-001",
+      "kind": "definition",
+      "statement": "A K3-SAA environment is a typed tuple of left and right carriers, a boundary, fixed parameters, a diagnostic map, an admissible diagnostic set, and an optional type-preserving channel-exchange map.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§2.2, Definition 2.1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "An environment is fixed for the duration of one operator evaluation."
+    },
+    {
+      "id": "K3-SAA-DEF-002",
+      "kind": "definition",
+      "statement": "The K3-SAA trigger is a three-valued function returning true, false, or undetermined; an undefined diagnostic is never silently interpreted as an annihilation event.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§4, Axiom SAA-A4; §5.1",
+      "dependencies": [
+        "K3-SAA-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "Strict symmetry additionally requires invariance under the declared channel-exchange map."
+    },
+    {
+      "id": "K3-SAA-DEF-003",
+      "kind": "definition",
+      "statement": "The symmetric annihilation operator maps a typed pair to an annihilated residue, a retained pair, or an undetermined outcome according to the fixed environment trigger.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§5.2–§5.3, Definition of the main operator",
+      "dependencies": [
+        "K3-SAA-DEF-001",
+        "K3-SAA-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "Partial erasure is a separate operator and is not identified with full annihilation."
+    },
+    {
+      "id": "K3-SAA-DEF-004",
+      "kind": "definition",
+      "statement": "The void residue Xi_E is the typed pair consisting of a two-channel loss marker and the identifier of the fixed environment, without either original payload.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§4, Axiom SAA-A7; §5.3",
+      "dependencies": [
+        "K3-SAA-DEF-001",
+        "K3-SAA-DEF-003"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The residue is context-indexed and is not numeric zero or the empty set."
+    },
+    {
+      "id": "K3-SAA-DEF-005",
+      "kind": "definition",
+      "statement": "The double annihilation integral is the product-measure integral of a declared measurable weight multiplied by the indicator of the measurable set of input pairs whose annihilation trigger is true.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§12, Definition of the double annihilation integral",
+      "dependencies": [
+        "K3-SAA-DEF-002",
+        "K3-TI-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A product of two declared measure spaces for the left and right input carriers",
+        "assumptions": [
+          "The trigger set is measurable in the product sigma-algebra",
+          "The integrand is measurable",
+          "The weighted indicator is integrable, or is nonnegative for Tonelli integration"
+        ],
+        "boundary": "The integral measures the weighted size of the trigger set; it is not the annihilation operator and does not prove the trigger is universally true."
+      }
+    },
+    {
+      "id": "K3-SAA-DEF-006",
+      "kind": "definition",
+      "statement": "The n-channel annihilation integral is the product-measure integral of a declared integrand against the indicator of a measurable n-channel trigger set.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§13, n-channel integral",
+      "dependencies": [
+        "K3-SAA-DEF-005"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The one-, two-, and three-channel cases are specializations of the same product-space construction."
+    },
+    {
+      "id": "K3-SAA-DEF-007",
+      "kind": "definition",
+      "statement": "Crystallization is an idempotent normal-form map on a declared equivalence relation, with any claimed preserved invariant stated separately.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§10.1, Definition of crystallization",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The term does not imply existence of a normal form until the equivalence relation and construction are specified."
+    },
+    {
+      "id": "K3-SAA-DEF-008",
+      "kind": "definition",
+      "statement": "A repository theory module is represented by a signature, an axiom set, and an inference relation; a dependency edge requires an explicit structure-preserving translation.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§21, theory modules and translations",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "Shared names or file co-location do not establish a formal dependency."
+    },
+    {
+      "id": "K3-SAA-THM-001",
+      "kind": "theorem",
+      "statement": "For a fixed K3-SAA environment, all inputs on which the trigger is true have the same annihilated output Xi_E.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§19, Theorem SAA-T1",
+      "dependencies": [
+        "K3-SAA-DEF-003",
+        "K3-SAA-DEF-004"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Inputs in one fixed K3-SAA environment",
+        "assumptions": [
+          "The environment is fixed",
+          "The trigger is true for each input being compared",
+          "The annihilation operator returns the environment-indexed residue"
+        ],
+        "boundary": "This proves equality only on the trigger-true subset; it does not prove universal triggering."
+      }
+    },
+    {
+      "id": "K3-SAA-THM-002",
+      "kind": "theorem",
+      "statement": "The extended K3-SAA operator is idempotent on states already mapped to the terminal annihilated residue.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§19, Theorem SAA-T2",
+      "dependencies": [
+        "K3-SAA-DEF-003",
+        "K3-SAA-DEF-004"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The extended state-and-outcome carrier of one fixed environment",
+        "assumptions": [
+          "The extended operator is defined on annihilated outcomes",
+          "The environment-indexed residue is a fixed point"
+        ],
+        "boundary": "Idempotence is asserted for terminal annihilated states, not for every possible partial or undetermined operator."
+      }
+    },
+    {
+      "id": "K3-SAA-THM-003",
+      "kind": "theorem",
+      "statement": "If two distinct inputs both satisfy the annihilation trigger in one fixed environment, the annihilation operator is non-injective on that trigger-true subset.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§19, Theorem SAA-T3",
+      "dependencies": [
+        "K3-SAA-THM-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A trigger-true subset containing at least two distinct input states",
+        "assumptions": [
+          "The environment is fixed",
+          "At least two distinct inputs satisfy the true trigger",
+          "Both inputs map to the same environment-indexed residue"
+        ],
+        "boundary": "The conclusion concerns recovery from the operator output alone; external backups or side channels are outside the map."
+      }
+    },
+    {
+      "id": "K3-SAA-THM-004",
+      "kind": "theorem",
+      "statement": "A bounded idempotent linear operator on a complex Banach space has spectrum contained in the set zero and one.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§19, Theorem SAA-T4",
+      "dependencies": [],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A bounded linear operator P on a complex Banach space",
+        "assumptions": [
+          "P is linear and bounded",
+          "P squared equals P",
+          "The spectrum is taken in the bounded-operator algebra on the stated space"
+        ],
+        "boundary": "This classical spectral fact applies only to such a linear realization, not to an arbitrary nonlinear or symbolic annihilation map."
+      },
+      "classical_context": "Standard resolvent identity for bounded idempotent operators; the explicit inverse is given in §19."
+    },
+    {
+      "id": "K3-SAA-THM-005",
+      "kind": "theorem",
+      "statement": "Under the hypotheses of Fubini's theorem, the double annihilation integral equals either corresponding iterated integral; for a nonnegative measurable integrand Tonelli's theorem applies.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§12.2 and §19, Theorem SAA-T5",
+      "dependencies": [
+        "K3-SAA-DEF-005"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A product measure space with measurable trigger set and weighted indicator integrand",
+        "assumptions": [
+          "The weighted indicator is integrable in absolute value, or is nonnegative and measurable",
+          "The product measure and component measures are declared"
+        ],
+        "boundary": "The result is the classical Fubini–Tonelli theorem applied to the defined integrand; it introduces no new integration theorem."
+      }
+    },
+    {
+      "id": "K3-URT-THM-001",
+      "kind": "theorem",
+      "statement": "A proof-preserving signature translation carries every derivable source formula to a derivable target formula, and finite compositions of such translations preserve derivability.",
+      "source": "docs/K3_SYMMETRIC_ANNIHILATION_THEORY.md",
+      "proof_reference": "§22, Theorem K3-URT",
+      "dependencies": [
+        "K3-SAA-DEF-008"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Formal theory modules connected by explicit signature translations",
+        "assumptions": [
+          "Each translation preserves declared sorts and operations",
+          "Each source axiom maps to a target theorem or axiom",
+          "Each source inference step maps to an allowed target inference step",
+          "All composed translations are defined on the relevant signatures"
+        ],
+        "boundary": "The theorem does not create missing dependency bridges and does not imply that every repository theory is already connected."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
