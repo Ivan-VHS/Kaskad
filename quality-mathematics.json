@@ -103,7 +103,22 @@
     "julia_zero_measure_claim_specifies_one_dimensional_lebesgue_measure_and_source": true,
     "mutual_information_claim_requires_random_variables_and_a_joint_probability_law": true,
     "zero_mutual_information_from_erasure_requires_constant_output_almost_surely": true,
-    "partial_trajectorywise_erasure_does_not_imply_unconditional_zero_mutual_information": true
+    "partial_trajectorywise_erasure_does_not_imply_unconditional_zero_mutual_information": true,
+    "mathematical_cosmology_universe_is_stratified_by_object_and_meta_object_levels": true,
+    "mathematical_cosmology_does_not_assume_a_set_of_all_sets_or_all_mathematical_objects": true,
+    "every_transformation_declares_input_output_types_domain_and_preconditions": true,
+    "transformation_boundaries_distinguish_domain_topological_operational_and_epistemic_meanings": true,
+    "outside_active_domain_is_not_equated_with_nonexistence_or_physical_deletion": true,
+    "lyapunov_stability_is_not_equated_with_asymptotic_convergence": true,
+    "crystallization_declares_an_invariant_target_basin_and_convergence_conditions": true,
+    "lasalle_claims_state_the_exact_variant_and_all_required_hypotheses": true,
+    "symbolic_crystallization_requires_termination_and_confluence_for_unique_normal_forms": true,
+    "annihilation_operator_declares_predicate_domain_output_type_and_level": true,
+    "annihilation_marker_is_distinct_from_zero_empty_set_unknown_and_physical_deletion": true,
+    "theory_level_annihilation_is_described_from_an_explicit_higher_meta_level": true,
+    "absolute_all_level_annihilation_is_not_reported_as_a_proved_internal_operation": true,
+    "five_rule_cosmology_is_not_claimed_to_derive_all_mathematics_without_an_inference_calculus": true,
+    "five_rule_linear_sequence_is_not_mistaken_for_a_universal_temporal_process": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -177,7 +192,8 @@
         "metaphorical_labels_are_not_medical_claims"
       ],
       "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure",
-      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation"
+      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation",
+      "mathematical_cosmology": "five_rule_meta_axiomatic_layer_with_stratified_universes_typed_maps_boundary_passports_conditional_crystallization_and_level_relative_annihilation"
     }
   },
   "forbidden": {
@@ -231,7 +247,14 @@
     "encoding_arbitrary_real_integral_as_integer_K3_word": true,
     "claiming_K3_TI_defines_a_new_integral_calculus": true,
     "inferring_zero_measure_from_the_word_Cantor_alone": true,
-    "claiming_Shannon_mutual_information_without_a_probability_model": true
+    "claiming_Shannon_mutual_information_without_a_probability_model": true,
+    "assume_one_set_contains_all_sets_or_all_meta_levels_without_foundational_semantics": true,
+    "claim_lyapunov_stability_alone_implies_convergence_to_a_fixed_point": true,
+    "claim_every_dynamical_system_eventually_crystallizes_without_assumptions": true,
+    "identify_topological_boundary_with_any_undefined_or_nonexistent_state": true,
+    "equate_semantic_annihilation_with_physical_storage_deletion": true,
+    "claim_absolute_annihilation_of_all_meta_levels_as_an_internal_theorem": true,
+    "claim_five_principles_alone_derive_all_mathematics_without_a_formal_calculus": true
   },
   "review": {
     "mathematical_review_required": true,
