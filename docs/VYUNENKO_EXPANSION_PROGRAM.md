@@ -299,7 +299,7 @@ O\xrightarrow{\delta}\mathcal D
 
 - **DAK:** конечные состояния и переходы, ресурсы, память, IPC, полномочия, графы, сеть, интерфейс, аудио и транзакции. См. [системную математику](DAK_SYSTEM_MATHEMATICS.md), [формальные контракты](DAK_FORMAL_CONTRACTS.md), [K3 alignment](DAK_K3_ALIGNMENT_AND_TRACEABILITY.md) и [инвентаризацию](DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md).
 - **Reaper:** конечные типизированные модели, IR, байткод, source spans, региональная память, модульные графы, ABI и capabilities. См. [математические основания](REAPER_MATHEMATICAL_FOUNDATIONS.md), [мост Reaper–K3](REAPER_K3_INTEGRATION.md) и [реестр источников](REAPER_MATHEMATICAL_SOURCE_REGISTER.json).
-- **VentuSample:** дискретные сигналы, DSP, PCM, FFT, resampling, MIDI и детерминированная маршрутизация. См. [аудиоматематику](VYUNENKO_AUDIO_MATHEMATICS.md), [каталог](VYUNENKO_AUDIO_CATALOGUE.md), [мост K3–аудио](VYUNENKO_K3_AUDIO_BRIDGE.md), [происхождение](VYUNENKO_VENTUSAMPLE_PROVENANCE.md) и [матрицу охвата](VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md).
+- **VentuSample:** дискретные сигналы, DSP, PCM, FFT, resampling, MIDI и детерминированная маршрутизация. См. [аудиоматематику](VYUNENKO_AUDIO_MATHEMATICS.md), [каталог](VYUNENKO_AUDIO_CATALOGUE.md), [мост K3–аудио](VYUNENKO_K3_AUDIO_BRIDGE.md), [происхождение](VYUNENKO_VENTUSAMPLE_PROVENANCE.md) и [матрицу охвата](VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md). Нормативный мост к основному корпусу: [Теория Вьюненко, §105](VYUNENKO_THEORY.md#105-прикладная-математика-дискретных-сигналов-и-цифровых-операторов).
 
 ### 10.4. Научные ограничения и критерии завершения
 
