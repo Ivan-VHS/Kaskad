@@ -23,11 +23,15 @@ const readJson = (relativePath) => {
 const registerPath = "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json";
 const standardPath = "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE_STANDARD.md";
 const auditPath = "docs/K3_INTEGER_MULTIPLICITY_AUDIT.md";
+const claimRegistryPath = "docs/K3_CLAIM_REGISTRY.json";
+const claimSchemaPath = "schemas/k3-claim-registry.v1.schema.json";
 const schemaPath = "schemas/k3-integer-multiplicity-evidence.v1.schema.json";
 const register = readJson(registerPath);
 const schema = readJson(schemaPath);
+const claimRegistry = readJson(claimRegistryPath);
 const standard = readText(standardPath);
 readText(auditPath);
+readText(claimSchemaPath);
 
 const requiredIds = Array.from({ length: 20 }, (_, index) => "IME-" + String(index + 1).padStart(2, "0"));
 const B = 1000n;
@@ -91,6 +95,17 @@ if (register) {
   }
   if (JSON.stringify(register.status_vocabulary) !== JSON.stringify(["met", "partial", "not_met", "not_applicable", "not_audited"])) {
     fail("Evidence status vocabulary is inconsistent");
+  }
+
+  if (register.claim_registry?.path !== claimRegistryPath || register.claim_registry?.schema !== claimSchemaPath) {
+    fail("IME must extend, not replace, the canonical K3 claim registry");
+  }
+  const canonicalIds = new Set((claimRegistry?.claims ?? []).map((claim) => claim.id));
+  for (const id of register.claim_registry?.related_claim_ids ?? []) {
+    if (!canonicalIds.has(id)) fail("Referenced canonical claim is missing: " + id);
+  }
+  for (const id of ["K3-BP-THM-001", "K3-BP-THM-002", "K3-CTR-001", "K3-CTR-002"]) {
+    if (!canonicalIds.has(id)) fail("Required canonical multiplicity/counterexample claim is missing: " + id);
   }
 
   const criteria = register.criteria ?? [];
