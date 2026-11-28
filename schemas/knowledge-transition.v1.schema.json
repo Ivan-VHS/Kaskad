@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/knowledge-transition.v1.schema.json",
+  "title": "Kaskad Knowledge Transition Model KTM-1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "model",
+    "claim_record",
+    "state_space",
+    "state_vector",
+    "transition_rules",
+    "derived_labels",
+    "non_implications",
+    "workflow",
+    "stages",
+    "verification"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "version",
+        "date",
+        "normative_scope",
+        "base_theory",
+        "base_theory_version",
+        "stage_count",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "const": "KASKAD-KTM-1"
+        },
+        "title": {
+          "const": "Математическая модель переходов исследовательского знания Kaskad"
+        },
+        "version": {
+          "const": "1.0.0"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "normative_scope": {
+          "const": "research_methodology"
+        },
+        "base_theory": {
+          "const": "K3"
+        },
+        "base_theory_version": {
+          "const": "0.5.0"
+        },
+        "stage_count": {
+          "const": 20
+        },
+        "status": {
+          "const": "normative_methodological_model_not_a_mathematical_axiom_system"
+        }
+      }
+    },
+    "claim_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_fields",
+        "evidence_ledger_policy",
+        "source_and_scope_required",
+        "status_is_derived_from_evidence"
+      ],
+      "properties": {
+        "required_fields": {
+          "type": "array",
+          "minItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence_ledger_policy": {
+          "const": "append_only_with_supersession_and_invalidation_events"
+        },
+        "source_and_scope_required": {
+          "const": true
+        },
+        "status_is_derived_from_evidence": {
+          "const": true
+        }
+      }
+    },
+    "state_space": {
+      "type": "object",
+      "required": [
+        "formal",
+        "computational",
+        "empirical",
+        "review",
+        "publication",
+        "application"
+      ],
+      "properties": {
+        "formal": {
+          "type": "object",
+          "required": [
+            "formalization",
+            "proof_evidence",
+            "refutation_evidence",
+            "axiom_system_consistency"
+          ]
+        },
+        "computational": {
+          "type": "array",
+          "minItems": 7,
+          "items": {
+            "type": "string"
+          }
+        },
+        "empirical": {
+          "type": "object",
+          "required": [
+            "protocol",
+            "observations",
+            "support"
+          ]
+        },
+        "review": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "publication": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string"
+          }
+        },
+        "application": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "state_vector": {
+      "type": "object",
+      "required": [
+        "coordinates",
+        "independent_axes",
+        "single_linear_rank",
+        "publication_changes_proof_status",
+        "peer_review_changes_proof_status",
+        "application_changes_proof_status",
+        "computational_test_changes_proof_status"
+      ],
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "minItems": 11,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "independent_axes": {
+          "const": true
+        },
+        "single_linear_rank": {
+          "const": false
+        },
+        "publication_changes_proof_status": {
+          "const": false
+        },
+        "peer_review_changes_proof_status": {
+          "const": false
+        },
+        "application_changes_proof_status": {
+          "const": false
+        },
+        "computational_test_changes_proof_status": {
+          "const": false
+        }
+      }
+    },
+    "transition_rules": {
+      "type": "array",
+      "minItems": 13,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "action",
+          "guard",
+          "effect",
+          "axis"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^KTM-R[0-9]{2}$"
+          },
+          "action": {
+            "type": "string"
+          },
+          "guard": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "axis": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "derived_labels": {
+      "type": "object",
+      "minProperties": 8,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "non_implications": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "boolean"
+      },
+      "required": [
+        "publication_implies_proof",
+        "peer_review_implies_proof",
+        "institutional_adoption_implies_proof",
+        "application_implies_universal_validity",
+        "random_tests_prove_universal_claim",
+        "finite_sample_proves_infinite_claim",
+        "computational_conjecture_confirms_theorem",
+        "mathematical_proof_implies_empirical_model_truth",
+        "one_failed_test_refutes_universal_math_without_checked_witness",
+        "same_dataset_rerun_equals_independent_replication"
+      ]
+    },
+    "workflow": {
+      "type": "object",
+      "required": [
+        "stages_are_universal_required_sequence",
+        "stages_are_research_activity_catalogue",
+        "feedback_and_revision_edges_allowed",
+        "formal_track_may_omit_empirical_stages",
+        "empirical_track_requires_scope_and_protocol",
+        "publication_and_application_are_orthogonal_to_validity",
+        "stage_order"
+      ]
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "track",
+          "artifact",
+          "gate"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "name": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "artifact": {
+            "type": "string"
+          },
+          "gate": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "method",
+        "ci_status",
+        "notes"
+      ],
+      "properties": {
+        "method": {
+          "const": "schema_validation_and_exact_guard_consistency_checks"
+        },
+        "ci_status": {
+          "enum": [
+            "not_executed",
+            "executed"
+          ]
+        },
+        "notes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
