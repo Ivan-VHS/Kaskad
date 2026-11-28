@@ -8,7 +8,7 @@
 
 > **Позиция имеет вес. Ноль сохраняет место. Доказательство ставит печать.**
 
-Kaskad — авторский математический репозиторий, посвящённый Теории Вьюненко и каскадно-тысячной системе K3. Строгая позиционная модель служит ядром; расширения, вычислительные модели и исследовательские направления оформляются отдельными слоями с явно указанным математическим статусом.
+Kaskad — авторский математический репозиторий, посвящённый Теории Вьюненко и каскадно-тысячной системе K3. Строгая позиционная модель служит ядром; расширения, вычислительные модели и исследовательские направления оформляются отдельными слоями с явно указанным математическим статусом. **Теория версии 0.4.0** дополнительно формализует CRT-проекторы (e_2,e_5), ортогональное разложение `Zhat_1000 ≅ Z_2 × Z_5` и единственную бесконечную запись коэффициентами 0–999, не меняя конечную арифметику.
 
 <div align="center">
 
@@ -63,12 +63,12 @@ flowchart TD
 
 ## 2. Карта репозитория
 
-Полный перечень документов, их назначение и статус собраны в [карте документации](docs/INDEX.md). Основные маршруты:
+Полный перечень документов, их назначение и статус собраны в [карте документации](docs/INDEX.md). Состав зависимых описаний и границы их обновления фиксируются в [машиночитаемом реестре синхронизации](docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json). Основные маршруты:
 
 | Маршрут | Документы |
 |---|---|
 | **Канон и язык** | [Фундаментальная теория](docs/VYUNENKO_THEORY.md) · [Канонический синтаксис](docs/K3_CANONICAL_SYNTAX.md) · [Структурная семантика](docs/K3_STRUCTURAL_SEMANTICS_AND_ORDERED_SUMS.md) |
-| **Арифметика и инварианты** | [Глава II: каскадный баланс](docs/CHAPTER_II_CASCADE_BALANCE.md) · [Тензорные суммы и перестановки](docs/K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) · [КТП-1000](docs/KTP_1000_NOTATION.md) |
+| **Арифметика и инварианты** | [Глава II: каскадный баланс](docs/CHAPTER_II_CASCADE_BALANCE.md) · [Тензорные суммы и перестановки](docs/K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) · [КТП-1000](docs/KTP_1000_NOTATION.md) · [CRT, идемпотенты и бесконечные каскады](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md) |
 | **Классические соответствия** | [Математический crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md) · [Справочник принципов](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md) |
 | **Исследовательская программа** | [Дорожная карта](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) · [Правила разработки теории](docs/THEORY_DEVELOPMENT_RULES.md) · [Научная ориентация](docs/SWISS_RESEARCH_ALIGNMENT.md) |
 | **Расширения Теории Вьюненко** | [Программа расширения](docs/VYUNENKO_EXPANSION_PROGRAM.md) · [Когнитивные функции](docs/VYUNENKO_COGNITIVE_FUNCTIONS.md) · [Комплекторная логика](docs/COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md) · [Графы](docs/VYUNENKO_GRAPH_THEORY.md) · [Большие числа](docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md) · [Гиперкомплексная математика](docs/HYPERCOMPLEX_K3_MATHEMATICS.md) · [Принципы расширения](docs/VYUNENKO_EXTENSION_PRINCIPLES.md) · [Синтез K3-X](docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md) |
