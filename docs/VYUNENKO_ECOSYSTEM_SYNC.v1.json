@@ -25,7 +25,8 @@
       "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
-      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation"
+      "Added typed applied mathematical models and traceability for DAK, Reaper, Pytyliki, OPlague and VentuSample without claiming source-project implementation",
+      "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations."
     ]
   },
   "results": [
@@ -92,43 +93,50 @@
   ],
   "kaskad_files": [
     "README.md",
-    "docs/CHUMNY_VERDICT_MODEL.v1.json",
-    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/INDEX.md",
+    "docs/VYUNENKO_THEORY.md",
+    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
+    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
+    "docs/K3_EXPRESSION_LANGUAGE.md",
+    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+    "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+    "docs/DAK_SYSTEM_MATHEMATICS.md",
     "docs/DAK_FORMAL_CONTRACTS.md",
     "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
     "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
-    "docs/DAK_SYSTEM_MATHEMATICS.md",
-    "docs/EXPERIMENTAL_EMPIRICAL_METHOD.md",
-    "docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md",
-    "docs/INDEX.md",
-    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
-    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/K3_EXPRESSION_LANGUAGE.md",
-    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
-    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
-    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
-    "docs/K3_REFERENCE_VECTORS.json",
-    "docs/K3_STRATIFIED_MATHEMATICS.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
-    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
-    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
-    "docs/REAPER_K3_INTEGRATION.md",
     "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/REAPER_K3_INTEGRATION.md",
     "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
-    "docs/REFERENCE_IMPLEMENTATION.md",
-    "docs/RESEARCH_RECORD_TEMPLATE.md",
-    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
-    "docs/THEORY_DEVELOPMENT_RULES.md",
-    "docs/VYUNENKO_AUDIO_CATALOGUE.md",
     "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
+    "docs/VYUNENKO_AUDIO_CATALOGUE.md",
     "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
-    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
-    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
-    "docs/VYUNENKO_THEORY.md",
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_MAP.v1.json",
+    "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/OPLAGUE_TO_K3_CROSSWALK.md",
+    "docs/OPLAGUE_K3_MODEL.v1.json",
+    "schemas/oplage-k3-model.v1.schema.json",
+    "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+    "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+    "README.en.md",
+    "README.uk.md",
+    "README.zh-CN.md",
+    "docs/CHUMNY_VERDICT_MODEL.v1.json",
     "schemas/chumny-verdict.v1.schema.json",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+    "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
     "schemas/knowledge-transition.v1.schema.json"
   ],
   "ecosystem_dependents": [
@@ -221,7 +229,15 @@
     "trigger_paths": [
       "docs/VYUNENKO_THEORY.md",
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+      "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+      "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md",
+      "docs/CHUMNY_VERDICT_THEORY.md",
+      "docs/CHUMNY_VERDICT_MODEL.v1.json",
+      "schemas/chumny-verdict.v1.schema.json",
+      "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+      "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.v1.json",
+      "schemas/knowledge-transition.v1.schema.json"
     ]
   },
   "research_extensions": [
@@ -310,6 +326,29 @@
         "A finite exhaustive check proves only the declared finite domain",
         "Evidence corrections and invalidations are retained in an auditable history"
       ]
+    },
+    {
+      "id": "KTM-1",
+      "title": "Mathematical Knowledge Transition Model",
+      "version": "1.0.0",
+      "status": "formal_research_process_model",
+      "source": "docs/MATHEMATICAL_KNOWLEDGE_TRANSITION_MODEL.md",
+      "base_semantics_changed": false
+    }
+  ],
+  "compatible_extensions": [
+    {
+      "id": "CV-1-CV-P",
+      "title": "Chumny Verdict idempotent output projection",
+      "version": "1.2.0",
+      "status": "formalized_compatible_extension",
+      "canonical_source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "machine_model": "docs/CHUMNY_VERDICT_MODEL.v1.json",
+      "machine_schema": "schemas/chumny-verdict.v1.schema.json",
+      "projection": "P_c(n)=c if n=0; n otherwise",
+      "raw_integer_evaluation_preserved": true,
+      "ordinary_integer_equality_changed": false,
+      "base_k3_semantics_changed": false
     }
   ]
 }
