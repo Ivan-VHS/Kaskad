@@ -118,7 +118,12 @@
         "VentuSample discrete signal and DSP mathematics",
         "K3 typed bridges with explicit domains and limitations",
         "open proof obligations retained in the registry",
-        "K3 paradigmatic-erosion metatheory specification and proof-obligation registry"
+        "K3 paradigmatic-erosion metatheory specification and proof-obligation registry",
+        "K3 graph-category-semiotic passport presheaf with explicit site and restriction laws",
+        "sheaf-of-passport-classes versus category-valued stack descent boundary",
+        "cascade short-circuit/state/writer effect stack with explicit monad operations",
+        "local dependency-context comonad candidate with verified counit and coassociativity laws",
+        "wave-limit and finite-termination criteria kept separate from successful convergence"
       ]
     },
     {
