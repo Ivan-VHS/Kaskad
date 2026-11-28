@@ -24,7 +24,16 @@
     "infinite_K3_expansion_has_an_explicit_topological_domain": true,
     "ordinary_integer_tail_classification_states_finite_support_or_eventual_999": true,
     "the_two_channel_unit_criterion_uses_gcd_with_1000": true,
-    "carry_correlations_declare_the_fixed_incoming_carry_and_input_distribution": true
+    "carry_correlations_declare_the_fixed_incoming_carry_and_input_distribution": true,
+    "every_integer_multiplicity_declares_typed_relation_and_domain": true,
+    "integer_divisibility_uses_exact_quotient_remainder": true,
+    "composite_radix_1000_divisibility_checks_both_prime_channels": true,
+    "composite_base_depth_uses_product_compensation_law": true,
+    "prime_factor_multiplicity_is_distinct_from_radix_depth": true,
+    "positional_scale_preserves_explicit_zero_groups": true,
+    "multiset_repetition_does_not_collapse_to_set": true,
+    "multiplicity_claims_include_boundary_cases_and_counterexamples": true,
+    "multiplicity_claims_follow_K3_IME_1_0_0": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -65,7 +74,8 @@
         "5_primary_branch_factor": 125,
         "total": 1000
       },
-      "unit_test_depends_on": "least_significant_K3_group"
+      "unit_test_depends_on": "least_significant_K3_group",
+      "divisor_product_compensation_law": "nu_1000(xy)=nu_1000(x)+nu_1000(y)+chi_B(x,y), for nonzero x,y"
     },
     "extension_layers": {
       "biprime_base_factorization": "1000=2^3*5^3",
@@ -111,7 +121,13 @@
     "treating_the_1000_adic_completion_as_the_ordinary_integer_ring": true,
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
-    "using_1000_not_dividing_x_as_a_unit_criterion": true
+    "using_1000_not_dividing_x_as_a_unit_criterion": true,
+    "rounding_or_approximate_ratio_as_divisibility_proof": true,
+    "conflating_integer_multiplier_with_power_exponent_or_factor_multiplicity": true,
+    "assuming_nu_1000_is_multiplicative": true,
+    "using_nonzero_low_group_as_modular_unit_test": true,
+    "using_plain_set_when_repetition_counts_matter": true,
+    "scoring_evidence_status_as_mathematical_truth": true
   },
   "review": {
     "mathematical_review_required": true,
@@ -138,6 +154,7 @@
     "no_unverified_doi_or_arxiv_identifier": true,
     "no_unmeasured_benchmark_claims": true,
     "no_unexecuted_test_marked_pass": true,
-    "no_unimplemented_algorithm_reported_as_implemented": true
+    "no_unimplemented_algorithm_reported_as_implemented": true,
+    "multiplicity_evidence_standard": "K3-IME 1.0.0"
   }
 }
