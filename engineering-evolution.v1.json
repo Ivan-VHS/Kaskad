@@ -117,7 +117,8 @@
         "Reaper typed mathematical models and source register",
         "VentuSample discrete signal and DSP mathematics",
         "K3 typed bridges with explicit domains and limitations",
-        "open proof obligations retained in the registry"
+        "open proof obligations retained in the registry",
+        "K3 paradigmatic-erosion metatheory specification and proof-obligation registry"
       ]
     },
     {
