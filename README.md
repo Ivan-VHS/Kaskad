@@ -2,6 +2,8 @@
 
 [中文](#中文) · [English](#english) · [Русский](#русский) · [Українська](#українська)
 
+## English
+
 Kaskad is a mathematical research corpus. Its subject is the formulation, analysis and proof of mathematical structures, with the Vyunenko Theory of K3 as its foundational research object. This repository is not an operating system, programming language, IDE, driver collection, application or general-purpose software platform.
 
 **Normative documentation:** [Scientific Mathematical Documentation Standard — Cascade Edition](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)  
