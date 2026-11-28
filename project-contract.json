@@ -59,7 +59,8 @@
       "CV1_model_specific_monotonicity_theorem_CV_K3_M1",
       "CV1_directed_zero_relation_and_twenty_level_negative_trend_model",
       "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model",
-      "typed_postfix_terminal_integral_operator_K3_TI"
+      "typed_postfix_terminal_integral_operator_K3_TI",
+      "typed_TOPK_total_system_annihilation_and_meta_level_hierarchy"
     ]
   },
   "scope": [
@@ -101,7 +102,8 @@
     "local_graph_context_comonadic_models",
     "directed_graph_models_and_relational_extensions",
     "directed_plague_verdict_and_negative_trend_model",
-    "measure_theory_and_typed_integral_operators"
+    "measure_theory_and_typed_integral_operators",
+    "typed_total_annihilation_and_meta_level_formal_semantics"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -244,7 +246,8 @@
     "docs/K3_NUMERATIVE_SEMANTICS.md",
     "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
     "docs/K3_REVERSE_CURSED_ROOT.md",
-    "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md"
+    "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+    "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
