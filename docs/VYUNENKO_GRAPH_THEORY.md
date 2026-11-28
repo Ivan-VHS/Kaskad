@@ -275,7 +275,7 @@ S\longrightarrow
 \bigl(\mathsf{Either}(\mathsf{Stop},X)\times S\times J\bigr).
 \]
 
-Это стандартная композиция эффектов short-circuit, state и writer в выбранном порядке. При такой записи состояние \(S\) и журнал сохраняются даже при остановке.
+Это стек трансформеров \(\mathsf{ExceptT}\ \mathsf{Stop}\ (\mathsf{StateT}\ S\ (\mathsf{Writer}\ J))\ X\), то есть стандартная композиция short-circuit, state и writer в указанном порядке. При такой записи состояние \(S\) и журнал сохраняются даже при остановке.
 
 Единица монады:
 
