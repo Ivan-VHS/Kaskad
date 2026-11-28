@@ -10,6 +10,7 @@
   <a href="README.md">RU</a> · <a href="README.en.md">EN</a> · <a href="README.uk.md">UA</a> · <strong>中文</strong>
   <br />
   <a href="docs/INDEX.md">文档索引</a> ·
+  <a href="docs/KASKAD_INSTITUTE_CHARTER.md">KASKAD 数学研究院</a> ·
   <a href="docs/VYUNENKO_THEORY.md">K3 理论</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">CV-1 理论</a> ·
   <a href="CONTRIBUTING.md">如何参与</a>
