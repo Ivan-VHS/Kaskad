@@ -128,7 +128,8 @@
     "docs/OPLAGUE_TO_K3_CROSSWALK.md",
     "docs/OPLAGUE_K3_MODEL.v1.json",
     "schemas/oplage-k3-model.v1.schema.json",
-    "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md"
+    "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+    "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
   ],
   "ecosystem_dependents": [
     {
@@ -221,7 +222,8 @@
       "docs/VYUNENKO_THEORY.md",
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
       "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
-      "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md"
+      "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+      "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
     ]
   },
   "research_extensions": [
