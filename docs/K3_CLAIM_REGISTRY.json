@@ -1039,6 +1039,27 @@
         ],
         "boundary": "Arbitrary graph neighborhoods are not claimed to form a comonad."
       }
+    },
+    {
+      "id": "CV-K3-M1",
+      "kind": "theorem",
+      "statement": "For the explicitly defined accumulation recurrence y_(t+1)=y_t+M_t y_t+C_t epsilon_t with y_t, epsilon_t, M_t and C_t componentwise nonnegative and fixed w>0, the state vector is componentwise nondecreasing and Phi_t=w^T y_t is nondecreasing, strictly increasing exactly when the increment vector is nonzero.",
+      "source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "proof_reference": "§16.2, Theorem CV-K3-M1",
+      "dependencies": [],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite-dimensional discrete-time accumulation models over nonnegative vectors and matrices",
+        "assumptions": [
+          "d,m are positive integers",
+          "y_0 is componentwise nonnegative",
+          "epsilon_t is componentwise nonnegative",
+          "M_t and C_t are componentwise nonnegative at every step",
+          "w is fixed and strictly positive"
+        ],
+        "boundary": "The theorem is model-specific and does not establish monotonicity for arbitrary dynamic systems or empirical/medical phenomena."
+      }
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
