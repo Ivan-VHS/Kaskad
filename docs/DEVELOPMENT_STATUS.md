@@ -4,7 +4,7 @@
 
 > **Document type:** repository status and verification-boundary record.  
 > **Revision date:** 2026-11-28.  
-> **Inspected main revision:** `2492dad07b621dee003861b3b204905a8856e582`.  
+> **Initial inspected main revision:** `e68fbb1e84041eeb175b5feb63dbbda7adc9c910`.  
 > **Status:** finite reference implementation and tests are present; this record does not certify current-main CI.  
 > **References:** [scientific documentation standard](SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [reference implementation](REFERENCE_IMPLEMENTATION.md), [project contract](../project-contract.json), [60-point scientific review gate](SCIENTIFIC_REVIEW_GATE.md).
 
@@ -107,18 +107,9 @@ The reference package is a supporting exact-integer instrument, not the definiti
 - A source implementation can be called conformant only against a defined specification and a bounded verification scope.
 - The inverse-limit completion, CRT topological ring, probability results and infinite structures retain their own mathematical proof obligations independently of package features.
 
-### 4.6. Current main verification snapshot
+### 4.6. Historical baseline verification snapshot
 
-The inspected main revision for this audit is `2492dad07b621dee003861b3b204905a8856e582`. The following GitHub Actions runs are attached to that exact commit:
-
-| Workflow | Run | Result | Observed failure boundary |
-|---|---:|---|---|
-| Repository structure | [46109146717](https://github.com/Ivan-VHS/Kaskad/actions/runs/46109146717) | **success** | Repository structure validator completed. |
-| K3 reference checks | [46109146721](https://github.com/Ivan-VHS/Kaskad/actions/runs/46109146721) | **failure** | `test_theory_reference_vectors` expects reference-vector schema version `1.2.0`, while `docs/K3_REFERENCE_VECTORS.json` declares `1.1.0`; the other reported tests passed. |
-| Foundation validation | [46109146701](https://github.com/Ivan-VHS/Kaskad/actions/runs/46109146701) | **failure** | Root README language-edition and multilingual-summary markers are missing; nine normative documents are missing required Cascade Edition headers. |
-| K3 contract validation | [46109146723](https://github.com/Ivan-VHS/Kaskad/actions/runs/46109146723) | **failure** | Reference-vector schema mismatch, duplicate numeric section identifiers in `VYUNENKO_THEORY.md`, and six missing module-index links in README. |
-
-These are repository/test-contract failures on the named revision. They neither prove nor disprove any universal mathematical theorem. The exact diagnostics and criteria-by-criteria audit are preserved in [Scientific Review Gate](SCIENTIFIC_REVIEW_GATE.md). The new review-gate validator checks only the integrity of its register and computes readiness separately; it does not mask or repair these pre-existing failures.
+At the beginning of this governance change, the inspected baseline commit was 5ded82cd197e866aecfe93b7bec58f4c90032186. The combined commit-status lookup returned no status entries, and the pull-request workflow lookup for that historical commit returned no runs. This is a historical baseline observation only; it is **not** a statement about the current main branch or the current pull request. An empty result is not evidence of either a successful or a failed run.
 
 Any later CI statement must name the exact commit SHA, workflow, job or matrix, execution time and actual conclusion. Historical results must remain attached to the commit on which they ran.
 
