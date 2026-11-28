@@ -27,4 +27,7 @@ jobs:
           node-version: 22
 
       - name: Validate mathematical and computational contracts
-        run: node scripts/validate-foundation.mjs
+        run: |
+          node --check scripts/validate-foundation.mjs
+          node --check scripts/sync_vyunenko_docs.mjs
+          node scripts/validate-foundation.mjs

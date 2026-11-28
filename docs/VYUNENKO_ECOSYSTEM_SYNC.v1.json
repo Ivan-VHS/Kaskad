@@ -3,7 +3,7 @@
   "theory": {
     "id": "K3",
     "title": "Теория Вьюненко",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "canonical_source": "docs/VYUNENKO_THEORY.md",
     "canonical_documentation_index": "docs/INDEX.md",
     "license": "Apache-2.0",
@@ -25,7 +25,8 @@
       "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
-      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation"
+      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation",
+      "Added K3-NT, a documentation-only research model of invariant-violation load, weakly connected defect clusters, directed dependency propagation and twenty threshold-based metaphorical levels; empirical calibration remains open."
     ]
   },
   "results": [
@@ -120,7 +121,7 @@
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/REFERENCE_IMPLEMENTATION.md",
     "docs/K3_REFERENCE_VECTORS.json",
-    "docs/CHUMNY_VERDICT_THEORY.md"
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
   ],
   "ecosystem_dependents": [
     {
@@ -212,7 +213,8 @@
     "trigger_paths": [
       "docs/VYUNENKO_THEORY.md",
       "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+      "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
     ]
   },
   "research_extensions": [
@@ -258,6 +260,20 @@
         ],
         "base_semantics_changed": false
       }
+    },
+    {
+      "id": "K3-NT-1",
+      "title": "Negative-tendency and defect-propagation model",
+      "status": "proposed_formal_research_model",
+      "source": "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
+      "base_semantics_changed": false,
+      "calibration_required": true
+    },
+    {
+      "id": "K3-NT-ZERO-1",
+      "title": "Zero equality and canonical zero characterization",
+      "status": "proved_under_base_K3_assumptions",
+      "source": "docs/VYUNENKO_THEORY.md#103-zero-as-an-integer"
     }
   ]
 }
