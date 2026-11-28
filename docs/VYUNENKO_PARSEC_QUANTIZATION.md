@@ -1,3 +1,5 @@
+> **Cascade Edition 1.0.0 — Scientific documentation standard.** Mathematical assumptions, source units, and quantization errors remain explicit.
+
 # Квантование парсековых величин в Теории Вьюненко K3
 
 > **Идентификатор:** K3-PCQ  

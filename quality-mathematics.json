@@ -49,7 +49,12 @@
     "equivalence_collapse_requires_common_typed_carrier": true,
     "description_complexity_does_not_imply_object_nonexistence": true,
     "integrals_declare_density_domain_and_measure": true,
-    "semantic_load_metrics_are_operationally_defined": true
+    "semantic_load_metrics_are_operationally_defined": true,
+    "product_decomposition_uses_complete_disjoint_position_partitions": true,
+    "partial_products_retain_position_weights_and_cell_provenance": true,
+    "raw_convolution_is_normalized_with_carry_balance": true,
+    "distributed_euclidean_quotients_reconcile_all_remainders": true,
+    "positional_partition_is_distinct_from_numeric_factorization": true
   },
   "k3_constraints": {
     "radix": 1000,
