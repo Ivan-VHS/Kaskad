@@ -171,7 +171,12 @@
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+    "scripts/validate-k3-contract.mjs",
+    ".github/workflows/k3-contract-validation.yml",
+    "docs/VYUNENKO_AUTOMATION_SETUP.md",
+    "scripts/sync_vyunenko_docs.mjs",
+    ".github/workflows/vyunenko-ecosystem-sync.yml"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -188,7 +193,12 @@
     "cross_domain_type_and_provenance_review",
     "canonical_K3_core_invariants_preserved",
     "open_proof_obligations_remain_explicit",
-    "previous_CRT_completion_and_infinite_expansion_results_preserved"
+    "previous_CRT_completion_and_infinite_expansion_results_preserved",
+    "claim_registry_ci_validates_sources_dependencies_theorem_scope_and_catalogue_rows",
+    "ecosystem_sync_uses_a_fixed_repository_allowlist_and_safe_documentation_paths",
+    "ecosystem_sync_never_writes_directly_to_dependent_default_branches",
+    "cross_repository_sync_is_skipped_when_IVAN_VHS_SYNC_TOKEN_is_unavailable",
+    "each_dependent_repository_reviews_and_merges_its_own_documentation_PR"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",

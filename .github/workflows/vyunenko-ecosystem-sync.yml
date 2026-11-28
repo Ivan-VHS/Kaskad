@@ -1,0 +1,72 @@
+name: Vyunenko ecosystem documentation sync
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/VYUNENKO_THEORY.md"
+      - "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md"
+      - "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+      - "docs/K3_STRATIFIED_MATHEMATICS.md"
+      - "docs/K3_CLAIM_REGISTRY.json"
+      - "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-plan:
+    name: Validate K3 release and prepare reviewable ecosystem PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Kaskad
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check synchronization script syntax
+        run: node --check scripts/sync_vyunenko_docs.mjs
+
+      - name: Validate source registry
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+          const manifest = JSON.parse(readFileSync('docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json', 'utf8'));
+          if (manifest.theory?.id !== 'K3') throw new Error('Expected K3 theory id');
+          if (manifest.theory?.version !== '0.5.0') throw new Error('Unexpected K3 theory version');
+          if (manifest.theory?.base_semantics?.radix !== 1000 ||
+              manifest.theory?.base_semantics?.coefficient_min !== 0 ||
+              manifest.theory?.base_semantics?.coefficient_max !== 999 ||
+              manifest.theory?.base_semantics?.separator !== 'k') {
+            throw new Error('Canonical K3 base contract mismatch');
+          }
+          if (!Array.isArray(manifest.ecosystem_dependents) ||
+              manifest.ecosystem_dependents.length !== 5) {
+            throw new Error('Expected exactly five allowlisted ecosystem dependents');
+          }
+          console.log('K3 0.5.0 source manifest validated; five documentation-only dependents declared.');
+          NODE
+
+      - name: Detect cross-repository credential
+        id: sync-token
+        env:
+          SYNC_TOKEN: ${{ secrets.IVAN_VHS_SYNC_TOKEN }}
+        run: |
+          if [ -n "$SYNC_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "Cross-repository sync skipped: IVAN_VHS_SYNC_TOKEN is not configured. No dependent repository was modified." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Open or update draft synchronization PRs
+        if: steps.sync-token.outputs.available == 'true'
+        env:
+          IVAN_VHS_SYNC_TOKEN: ${{ secrets.IVAN_VHS_SYNC_TOKEN }}
+          KASKAD_REPOSITORY: Ivan-VHS/Kaskad
+        run: node scripts/sync_vyunenko_docs.mjs

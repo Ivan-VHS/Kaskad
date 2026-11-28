@@ -216,6 +216,7 @@ CRT-разложение и бесконечная запись — доказа
 | Расширенная арифметика и геометрия K3 | [Упорядоченная каскадная арифметика](docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md), [двухканальная геометрия и закон переноса](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md), [позиционное различие и направленная композиция](docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md), [язык выражений](docs/K3_EXPRESSION_LANGUAGE.md) |
 | Морфология профилей K3-M | [Десятислойная математика](docs/K3_STRATIFIED_MATHEMATICS.md), [каталог 4685 экземпляров](docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md), [исходные формулы](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) |
 | Прикладные математические модели | [DAK](docs/DAK_SYSTEM_MATHEMATICS.md), [Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md), [VentuSample](docs/VYUNENKO_AUDIO_MATHEMATICS.md), [мост K3–аудио](docs/VYUNENKO_K3_AUDIO_BRIDGE.md) |
+| Автоматизация зависимых репозиториев | [Настройка экосистемной синхронизации](docs/VYUNENKO_AUTOMATION_SETUP.md), [машиночитаемый реестр](docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json) |
 | Научный контроль и вычислительные свидетельства | [Cascade Edition 1.0.0](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [эталонная реализация](docs/REFERENCE_IMPLEMENTATION.md), [эталонные векторы](docs/K3_REFERENCE_VECTORS.json), [реестр языков](docs/LANGUAGE_REGISTER.md) |
 | Происхождение и права | [Авторство, лицензия и атрибуция](docs/ATTRIBUTION_AND_RIGHTS.md), [LICENSE](LICENSE) |
 

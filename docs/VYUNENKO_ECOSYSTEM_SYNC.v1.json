@@ -17,7 +17,7 @@
   },
   "release": {
     "date": "2026-11-28",
-    "branch": "integration/kaskad-total-consolidation-2026-11-28",
+    "branch": "main",
     "compatible_extension": true,
     "base_semantics_changed": false,
     "summary": [
@@ -25,7 +25,9 @@
       "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
-      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation"
+      "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation",
+      "Added a 41-record claim/evidence registry, JSON Schema and CI contract validator for syntax modes, theorem scope, dependencies and the 4685-record catalogue.",
+      "Added guarded ecosystem documentation synchronization that opens reviewable Draft PRs for five allowlisted repositories; secret availability and external dispatch remain unverified."
     ]
   },
   "results": [
@@ -119,7 +121,18 @@
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/REFERENCE_IMPLEMENTATION.md",
-    "docs/K3_REFERENCE_VECTORS.json"
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
+    "docs/K3_SCIENTIFIC_CONSOLIDATION.md",
+    "docs/K3_CLAIM_REGISTRY.json",
+    "schemas/k3-claim-registry.v1.schema.json",
+    "scripts/validate-k3-contract.mjs",
+    ".github/workflows/k3-contract-validation.yml",
+    "docs/superpowers/plans/2026-11-28-k3-scientific-consolidation.md",
+    "docs/superpowers/specs/2026-11-28-k3-scientific-consolidation-design.md",
+    "docs/VYUNENKO_AUTOMATION_SETUP.md",
+    "scripts/sync_vyunenko_docs.mjs",
+    ".github/workflows/vyunenko-ecosystem-sync.yml"
   ],
   "ecosystem_dependents": [
     {
@@ -193,7 +206,10 @@
     "external_license_changes": false,
     "credential_requirement": "A GitHub App installation token or a narrowly scoped token with contents:write and pull_requests:write in each dependent repository is required for unattended future dispatch.",
     "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
-    "automation_status": "not_assessed",
-    "note": "This manifest is a machine-readable dependency and synchronization registry. It does not itself execute GitHub writes, schedule background work, or prove that a cross-repository automation credential is configured."
+    "automation_status": "workflow_implemented_secret_unverified",
+    "note": "The workflow and allowlisted draft-PR synchronizer are implemented. IVAN_VHS_SYNC_TOKEN availability, scope and a successful dispatch are not verified; absent the secret, the workflow validates and skips all dependent-repository writes.",
+    "workflow_path": ".github/workflows/vyunenko-ecosystem-sync.yml",
+    "script_path": "scripts/sync_vyunenko_docs.mjs",
+    "setup_document": "docs/VYUNENKO_AUTOMATION_SETUP.md"
   }
 }

@@ -120,6 +120,15 @@ JSON-файлы не получают декоративные баннеры: �
 - [Архитектура вычислительного исследования](COMPUTATIONAL_RESEARCH_ARCHITECTURE.md), [шаблон исследовательской записи](RESEARCH_RECORD_TEMPLATE.md), [платформенная дорожная карта](RESEARCH_PLATFORM_ROADMAP.md) и [статус разработки](DEVELOPMENT_STATUS.md) — проверяемый процесс работ.
 
 
+
+## XI. Автоматизация экосистемной синхронизации
+
+- [Настройка и границы workflow](VYUNENKO_AUTOMATION_SETUP.md) — secret, права, allowlist и условия безопасного запуска.
+- [Скрипт документационной синхронизации](../scripts/sync_vyunenko_docs.mjs) — отдельные ветки и Draft PR; только разрешённые README, индексы и research-reference заметки.
+- [Workflow](../.github/workflows/vyunenko-ecosystem-sync.yml) — проверяет manifest, валидирует синтаксис скрипта и пропускает межрепозиторные записи при отсутствии секрета.
+- Секрет `IVAN_VHS_SYNC_TOKEN` и факт успешного dispatch должны быть подтверждены в GitHub Actions; их наличие не предполагается из самого факта существования файлов.
+
+
 ## Маршрут чтения
 
 ~~~mermaid

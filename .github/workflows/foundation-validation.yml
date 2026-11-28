@@ -26,5 +26,8 @@ jobs:
         with:
           node-version: 22
 
+      - name: Check ecosystem synchronization script syntax
+        run: node --check scripts/sync_vyunenko_docs.mjs
+
       - name: Validate mathematical and computational contracts
         run: node scripts/validate-foundation.mjs

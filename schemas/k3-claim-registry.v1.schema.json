@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/k3-claim-registry.v1.schema.json",
+  "title": "Kaskad K3 Claim Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema",
+    "project",
+    "theory",
+    "theory_version",
+    "base",
+    "status_vocabulary",
+    "review_policy",
+    "claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "schema": {
+      "type": "string",
+      "const": "schemas/k3-claim-registry.v1.schema.json"
+    },
+    "project": {
+      "type": "string",
+      "const": "Kaskad"
+    },
+    "theory": {
+      "type": "string",
+      "const": "Vyunenko K3"
+    },
+    "theory_version": {
+      "type": "string"
+    },
+    "base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "radix",
+        "factorization",
+        "coefficient_range",
+        "coefficient_order",
+        "separator",
+        "separator_semantics"
+      ],
+      "properties": {
+        "radix": {
+          "type": "integer",
+          "const": 1000
+        },
+        "factorization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "2",
+            "5"
+          ],
+          "properties": {
+            "2": {
+              "type": "integer",
+              "const": 3
+            },
+            "5": {
+              "type": "integer",
+              "const": 3
+            }
+          }
+        },
+        "coefficient_range": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "integer",
+              "const": 0
+            },
+            {
+              "type": "integer",
+              "const": 999
+            }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "coefficient_order": {
+          "type": "string",
+          "const": "least_significant_to_most_significant"
+        },
+        "separator": {
+          "type": "string",
+          "const": "k"
+        },
+        "separator_semantics": {
+          "type": "string",
+          "const": "lexical_group_delimiter"
+        }
+      }
+    },
+    "status_vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "review_policy": {
+      "type": "object",
+      "required": [
+        "independent_review",
+        "proof_assistant",
+        "computation"
+      ],
+      "properties": {
+        "independent_review": {
+          "type": "string"
+        },
+        "proof_assistant": {
+          "type": "string"
+        },
+        "computation": {
+          "type": "string"
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "statement",
+          "source",
+          "proof_reference",
+          "dependencies",
+          "evidence_status",
+          "independent_review"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9-]+$"
+          },
+          "kind": {
+            "enum": [
+              "definition",
+              "theorem",
+              "catalogue",
+              "hypothesis",
+              "application_model",
+              "extension_postulate"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 12
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proof_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "evidence_status": {
+            "type": "string"
+          },
+          "independent_review": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "object",
+            "required": [
+              "domain",
+              "assumptions",
+              "boundary"
+            ],
+            "properties": {
+              "domain": {
+                "type": "string",
+                "minLength": 1
+              },
+              "assumptions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              },
+              "boundary": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "machine_check_scope": {
+            "type": "string"
+          },
+          "classical_context": {
+            "type": "string"
+          },
+          "verification_note": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "theorem"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "scope"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "catalogue"
+                }
+              },
+              "required": [
+                "kind"
+              ]
+            },
+            "then": {
+              "required": [
+                "machine_check_scope"
+              ]
+            }
+          }
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}
