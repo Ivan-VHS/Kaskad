@@ -106,7 +106,7 @@ J_{j+k}^{\leftarrow},
 \[
 J_j^{\rightarrow}\circ J_k^{\leftarrow}
 =
-J_{j-k}^{\rightarrow},
+J_{j-k},
 \]
 
 если правые индексы обобщить на целые числа. В частности,
