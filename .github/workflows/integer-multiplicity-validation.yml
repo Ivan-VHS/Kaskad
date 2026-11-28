@@ -1,0 +1,28 @@
+name: Integer multiplicity evidence validation
+
+on:
+  push:
+    branches:
+      - main
+      - "research/**"
+      - "theory/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-integer-multiplicity:
+    name: Validate K3 integer multiplicity evidence
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate evidence register and exact reference cases
+        run: node scripts/validate-integer-multiplicity-evidence.mjs

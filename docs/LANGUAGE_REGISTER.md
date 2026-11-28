@@ -16,8 +16,11 @@
 | Документ | Основная редакция | English | Українська | 中文 |
 |---|---|---|---|---|
 | README.md | 4 языка — эквивалентная редакция | Готово | Готово | Готово |
+| docs/KASKAD_INSTITUTE_CHARTER.md | RU — исходная редакция | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md | 4 языка — эквивалентная редакция | Готово | Краткая эквивалентная версия | Краткая эквивалентная версия |
 | docs/VYUNENKO_THEORY.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+| docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+| docs/K3_PARADIGMATIC_EROSION_METATHEORY.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/CHAPTER_II_CASCADE_BALANCE.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_CANONICAL_SYNTAX.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
@@ -35,6 +38,10 @@
 | docs/RESEARCH_RECORD_TEMPLATE.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
 | docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+
+| docs/K3_INTEGER_MULTIPLICITY_EVIDENCE_STANDARD.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+| docs/K3_INTEGER_MULTIPLICITY_AUDIT.md | RU | Ожидает перевода | Ожидает перевода | Ожидает перевода |
+| docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json | Машиночитаемый реестр | Не применимо | Не применимо | Не применимо |
 
 ## Правило изменения статуса
 
