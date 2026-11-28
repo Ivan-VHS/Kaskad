@@ -17,7 +17,7 @@
   },
   "release": {
     "date": "2026-11-28",
-    "branch": "integration/kaskad-total-consolidation-2026-11-28",
+    "branch": "research/cv-k3-crossdomain-synthesis",
     "compatible_extension": true,
     "base_semantics_changed": false,
     "summary": [
@@ -26,7 +26,10 @@
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
       "Added typed applied mathematical models and traceability for DAK, Reaper and VentuSample without claiming source-project implementation",
-      "Added K3-NT, a documentation-only research model of invariant-violation load, weakly connected defect clusters, directed dependency propagation and twenty threshold-based metaphorical levels; empirical calibration remains open."
+      "Added K3-NT, a documentation-only research model of invariant-violation load, weakly connected defect clusters, directed dependency propagation and twenty threshold-based metaphorical levels; empirical calibration remains open.",
+      "Added a typed interdisciplinary dynamic and information synthesis shared by K3 and CV-1",
+      "Formalized global graph-flow balance and monotonicity of quadratic graph-diffusion energy under explicit assumptions",
+      "Added phase sampling, memory provenance, oscillator, execution-state, nonlocal-transition, rate-distortion and cross-layer research models without changing K3 base semantics"
     ]
   },
   "results": [
@@ -89,6 +92,18 @@
       "title": "Conditional carry/output correlation −1/√3 for fixed incoming carry",
       "status": "proved",
       "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CV-D1",
+      "title": "Global balance law for a finite directed graph with incidence-matrix flows",
+      "status": "proved",
+      "source": "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md#5-balance-on-a-finite-graph"
+    },
+    {
+      "id": "K3-CV-D2",
+      "title": "Monotonicity of quadratic energy for finite weighted undirected graph diffusion",
+      "status": "proved",
+      "source": "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md#8-gradient-resistance-and-viscous-core"
     }
   ],
   "kaskad_files": [
@@ -121,7 +136,9 @@
     "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/REFERENCE_IMPLEMENTATION.md",
     "docs/K3_REFERENCE_VECTORS.json",
-    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md"
   ],
   "ecosystem_dependents": [
     {
@@ -259,7 +276,8 @@
           "INVALID"
         ],
         "base_semantics_changed": false
-      }
+      },
+      "related_research_document": "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md"
     },
     {
       "id": "K3-NT-1",
@@ -274,6 +292,41 @@
       "title": "Zero equality and canonical zero characterization",
       "status": "proved_under_base_K3_assumptions",
       "source": "docs/VYUNENKO_THEORY.md#103-zero-as-an-integer"
+    },
+    {
+      "id": "K3-CV-XD-1",
+      "title": "Междисциплинарный синтез динамических и информационных моделей Kaskad",
+      "version": "1.0.0",
+      "status": "formal_research_specification",
+      "source": "docs/CV_K3_INTERDISCIPLINARY_DYNAMIC_INFORMATION_SYNTHESIS.md",
+      "related_theories": [
+        "K3",
+        "CV-1"
+      ],
+      "base_semantics_changed": false,
+      "modules": [
+        "threshold_graph_dynamics",
+        "conservative_network_flows",
+        "memory_and_provenance",
+        "discrete_sampling_and_phase",
+        "graph_laplacian_energy",
+        "coupled_oscillators",
+        "possibility_vs_execution",
+        "nonlocal_graph_transitions",
+        "lossless_and_lossy_compression",
+        "layered_correlation_and_interference"
+      ],
+      "proved_results": [
+        "K3-CV-D1",
+        "K3-CV-D2"
+      ],
+      "notes": [
+        "Physical metaphors are not treated as physical laws",
+        "No reverse causality is inferred from turbulence analogies",
+        "Graph jumps are not identified with quantum tunneling",
+        "K3 canonicalization and lossy compression are kept distinct",
+        "CV-1 primary target and fixed parameter semantics remain unchanged"
+      ]
     }
   ]
 }
