@@ -22,6 +22,8 @@ Kaskad посвящён математической теории каскадн
 
 ## Расширенная математическая надстройка Теории Вьюненко
 
+- [Математическая основа Pytyliki и её согласование с K3](docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md) — формулы, области определения, инварианты, точность и научные границы; [машиночитаемая карта источников](docs/PYTYLIKI_TO_K3_MATHEMATICAL_MAP.v1.json).
+
 - [Интегрированная программа расширения](docs/VYUNENKO_EXPANSION_PROGRAM.md)
 - [Когнитивные функции и типизированные операторы](docs/VYUNENKO_COGNITIVE_FUNCTIONS.md)
 - [Комплекторная логика и псевдоосновы](docs/COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md)
