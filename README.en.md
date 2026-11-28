@@ -130,6 +130,7 @@ Known limits, failed generalizations, and open questions are collected in the [c
 | To… | Read |
 |---|---|
 | Understand the full K3 theory | [Vyunenko Theory K3](docs/VYUNENKO_THEORY.md) |
+| Explore the directed verdict and CV-K3-M1 | [Chumny Verdict Theory CV-1](docs/CHUMNY_VERDICT_THEORY.md) (v1.2.1; monotonicity is model-scoped) |
 | Learn the notation and parsing rules | [K3 canonical syntax](docs/K3_CANONICAL_SYNTAX.md) |
 | Understand carry and borrow | [Cascade balance](docs/CHAPTER_II_CASCADE_BALANCE.md) |
 | Compare K3 with classical mathematics | [Classical mathematics crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md) |
