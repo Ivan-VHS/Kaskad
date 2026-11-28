@@ -1,3 +1,15 @@
+<div align="center">
+  <img src="../assets/kaskad-jade-atlas.svg" alt="Нефритовый атлас Kaskad — Теория Вьюненко K3" width="100%" />
+  <p><strong>НЕФРИТОВЫЙ АТЛАС · ТЕОРИЯ ВЬЮНЕНКО K3</strong></p>
+  <p><sub>ОСНОВАНИЕ B = 1000 · МАТЕМАТИЧЕСКИЙ ДОКУМЕНТ</sub></p>
+</div>
+
+<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
+
+---
+
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Справочник 50 фундаментальных математических принципов для Kaskad
 
 ## Логика, арифметика составных оснований, профинитная топология, гармонический анализ и вычислительные методы
@@ -466,3 +478,8 @@ H(X)=-\sum_i p_i\log p_i.
 - **Вещественные позиционные расширения и \(1000\)-адические пополнения:** разные пространства и разные понятия сходимости.
 
 Подробные определения, формулы и статусы новых конструкций вынесены в [Расширенную математическую программу Теории Вьюненко](VYUNENKO_EXPANSION_PROGRAM.md). Справочник не утверждает, что все новые объекты уже образуют единую доказанную теорию.
+
+
+---
+
+<p align="center"><sub>KASKAD · ТЕОРИЯ ВЬЮНЕНКО K3 · Редакционное оформление не меняет математический статус утверждений. См. <a href="INDEX.md">карту документации</a> и <a href="ATTRIBUTION_AND_RIGHTS.md">правила атрибуции</a>.</sub></p>
