@@ -714,6 +714,73 @@
         ],
         "boundary": "This theorem concerns the infinite fractional self-similar attractor, not finite integer K3 profiles."
       }
+    },
+    {
+      "id": "K3-GRAPH-DEF-001",
+      "kind": "definition",
+      "statement": "The operational status of a triadic cascade node is one of NEW, DEFERRED, BLOCKED_GUARD, BLOCKED_CONFLICT, or CONVERGED and is distinct from the four-valued evidence result of a guard predicate.",
+      "source": "docs/VYUNENKO_GRAPH_THEORY.md",
+      "proof_reference": "§11.1, node statuses and four-valued predicates",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "A type-separation requirement; the documentation example does not implement a production graph scheduler."
+    },
+    {
+      "id": "K3-GRAPH-DEF-002",
+      "kind": "definition",
+      "statement": "The cascade computation effect is the composition ExceptT Stop (StateT S (Writer J)), where J is the monoid of obstruction and proof-log sequences.",
+      "source": "docs/VYUNENKO_GRAPH_THEORY.md",
+      "proof_reference": "§11.2–§11.3, journal monoid and cascade monad",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The unit and bind are specified by the standard transformer order; no proof-assistant formalization is claimed."
+    },
+    {
+      "id": "K3-GRAPH-MOD-001",
+      "kind": "hypothesis",
+      "statement": "A fixed-radius dependency neighborhood on a typed K3 graph may be equipped with a comonadic structure when its restriction and nested-neighborhood maps satisfy the counit and coassociativity laws.",
+      "source": "docs/VYUNENKO_GRAPH_THEORY.md",
+      "proof_reference": "§11.4, local neighborhood and comonadic context",
+      "dependencies": [
+        "K3-GRAPH-DEF-001"
+      ],
+      "evidence_status": "open_definition_and_law_obligation",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Pointed finite-radius neighborhoods in a typed directed dependency graph",
+        "assumptions": [
+          "The neighborhood assignment is stable under the chosen graph restrictions",
+          "A counit extracting the center value is defined",
+          "A comultiplication into nested neighborhoods is defined"
+        ],
+        "boundary": "The document describes a comonad candidate and does not assert that arbitrary graph neighborhoods form a comonad."
+      }
+    },
+    {
+      "id": "K3-GRAPH-DEF-003",
+      "kind": "definition",
+      "statement": "The graph cascade is accepted as converged only for the current input generation after all declared guard, algebraic, descent, and invariant checks pass.",
+      "source": "docs/VYUNENKO_GRAPH_THEORY.md",
+      "proof_reference": "§11.1 and §11.5, convergence and termination conditions",
+      "dependencies": [
+        "K3-GRAPH-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GRAPH-DEF-004",
+      "kind": "definition",
+      "statement": "A finite wave budget W_max is a safety cutoff and does not by itself prove convergence or termination of the triadic cascade.",
+      "source": "docs/VYUNENKO_GRAPH_THEORY.md",
+      "proof_reference": "§11.5, finite stopping criteria",
+      "dependencies": [
+        "K3-GRAPH-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
