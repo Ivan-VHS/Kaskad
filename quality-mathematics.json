@@ -54,7 +54,11 @@
     "partial_products_retain_position_weights_and_cell_provenance": true,
     "raw_convolution_is_normalized_with_carry_balance": true,
     "distributed_euclidean_quotients_reconcile_all_remainders": true,
-    "positional_partition_is_distinct_from_numeric_factorization": true
+    "positional_partition_is_distinct_from_numeric_factorization": true,
+    "numerative_records_separate_source_encoding_value_structure_relations_context_interpretation_and_provenance": true,
+    "numerative_encoding_profiles_are_explicit_and_versioned": true,
+    "numeric_code_structural_and_semantic_equality_layers_are_distinct": true,
+    "interpretations_retain_context_and_provenance": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -167,7 +171,11 @@
     "treating_a_negative_integer_as_a_defect_by_sign_alone": true,
     "treating_unassessed_nodes_as_zero_load": true,
     "claiming_empirical_thresholds_without_calibration": true,
-    "interpreting_metaphorical_levels_as_epidemiological_results": true
+    "interpreting_metaphorical_levels_as_epidemiological_results": true,
+    "code_collisions_are_not_claimed_as_semantic_equivalence": true,
+    "symbolic_interpretations_are_not_promoted_to_causal_or_predictive_laws": true,
+    "k3_encoding_is_not_claimed_as_cryptographic_security": true,
+    "digit_patterns_are_not_claimed_as_fractality_without_explicit_transform": true
   },
   "review": {
     "mathematical_review_required": true,
@@ -180,7 +188,8 @@
     "external_recognition_requires_verifiable_external_record": true,
     "self_review_is_not_independent_review": true,
     "scientific_maturity_must_not_be_collapsed_into_one_score": true,
-    "threshold_calibration_review_required": true
+    "threshold_calibration_review_required": true,
+    "interpretive_claims_require_source_context_and_competing_readings_review_required": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
