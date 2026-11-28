@@ -17,7 +17,7 @@
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
-    "specification_version": "0.5.0",
+    "specification_version": "0.6.0",
     "radix": 1000,
     "radix_factorization": {
       "2": 3,
@@ -46,7 +46,8 @@
       "biprime_residue_geometry_and_carry_distribution",
       "finite_profile_morphology_and_moment_layers",
       "directed_block_composition_separate_from_addition",
-      "typed_applied_mathematical_models_DAK_Reaper_VentuSample"
+      "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
+      "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels"
     ]
   },
   "scope": [
@@ -87,7 +88,8 @@
     "two_channel_composite_radix_geometry",
     "finite_profile_morphology",
     "directed_expression_composition",
-    "typed_applied_mathematical_models"
+    "typed_applied_mathematical_models",
+    "negative_tendency_and_dependency_defect_model"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -108,7 +110,8 @@
     "research_program",
     "speculative_model",
     "metaphorical_interpretation",
-    "not_formulated"
+    "not_formulated",
+    "proposed_formal_research_model"
   ],
   "numerical_policy": {
     "exact_integer_arithmetic": "required_for_discrete_core",
@@ -171,7 +174,8 @@
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+    "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -188,7 +192,8 @@
     "cross_domain_type_and_provenance_review",
     "canonical_K3_core_invariants_preserved",
     "open_proof_obligations_remain_explicit",
-    "previous_CRT_completion_and_infinite_expansion_results_preserved"
+    "previous_CRT_completion_and_infinite_expansion_results_preserved",
+    "negative_tendency_model_has_complete_observation_coverage_and_predeclared_thresholds"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",

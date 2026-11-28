@@ -10,6 +10,7 @@ const markerStart = '<!-- vyunenko-k3-reference:start -->';
 const markerEnd = '<!-- vyunenko-k3-reference:end -->';
 const theoryUrl = 'https://github.com/' + sourceRepo + '/blob/main/docs/VYUNENKO_THEORY.md';
 const proofUrl = 'https://github.com/' + sourceRepo + '/blob/main/docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md';
+const k3NtUrl = 'https://github.com/' + sourceRepo + '/blob/main/docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md';
 const styleUrl = 'https://github.com/Ivan-VHS/Kaskad/blob/main/docs/JADE_ATLAS_STYLE.md';
 
 async function request(method, path, payload) {
@@ -80,13 +81,14 @@ async function writeTextFile(repo, path, branchName, current, content, message) 
 function localizedSection(path, version) {
   const releaseLink = '[' + version + '](' + theoryUrl + ')';
   const proofLink = '[CRT and infinite-cascade proof](' + proofUrl + ')';
+  const k3NtLink = '[K3-NT defect-cascade model](' + k3NtUrl + ')';
   const localLink = '[local research note](docs/VYUNENKO_K3_RESEARCH_REFERENCE.md)';
-  const lead = 'The ' + releaseLink + ' formalizes the radix-1000 divisibility completion, compatible CRT idempotents, and unique infinite positional expansions by coefficients 0..999. ';
-  const tail = 'This is a documentation-only mathematical reference; it does not add a runtime/build dependency or change local implementation, APIs, schemas, data formats, hardware behavior or licensing. See ' + proofLink + ' and the ' + localLink + '.';
+  const lead = 'The ' + releaseLink + ' retains the compatible radix-1000 completion, CRT idempotents and unique infinite positional expansions, and adds K3-NT: a mathematical research model for invariant violations, normalized defect load, dependency clusters, directed propagation and twenty threshold-based levels. Zero remains an integer equal only to zero; a zero group may occur in a nonzero cascade. ';
+  const tail = 'This is a documentation-only mathematical reference; K3-NT uses metaphorical labels, not medical or epidemiological claims. It does not add a runtime/build dependency or change local implementation, APIs, schemas, data formats, hardware behavior or licensing. See ' + proofLink + ', ' + k3NtLink + ' and the ' + localLink + '.';
   const lang = path === 'README.uk.md' ? 'uk' : path === 'README.ru.md' ? 'ru' : path === 'README.zh-CN.md' ? 'zh' : 'en';
-  if (lang === 'uk') return '## Пов’язане математичне дослідження\n\n' + releaseLink + ' формалізує поповнення з основою 1000, сумісні CRT-ідемпотенти та єдині нескінченні позиційні розклади коефіцієнтами 0..999. Це лише документаційне математичне посилання: воно не додає залежності runtime/збірки й не змінює реалізацію, API, схеми, формати даних, апаратну поведінку або ліцензію. Див. ' + proofLink + ' та ' + localLink + '.';
-  if (lang === 'ru') return '## Связанное математическое исследование\n\n' + releaseLink + ' формализует пополнение с основанием 1000, совместимые CRT-идемпотенты и единственные бесконечные позиционные разложения коэффициентами 0..999. Это только документационная математическая ссылка: она не добавляет runtime/build-зависимость и не меняет реализацию, API, схемы, форматы данных, аппаратное поведение или лицензию. См. ' + proofLink + ' и ' + localLink + '.';
-  if (lang === 'zh') return '## 相关数学研究\n\n' + releaseLink + ' 对基数 1000 的完备化、兼容 CRT 幂等元以及系数 0..999 的唯一无限位置展开进行了形式化。这只是文档层面的数学参考；不会增加运行时/构建依赖，也不会改变本仓库的实现、API、模式、数据格式、硬件行为或许可证。参见' + proofLink + '和' + localLink + '。';
+  if (lang === 'uk') return '## Пов’язане математичне дослідження\n\n' + releaseLink + ' зберігає сумісне поповнення з основою 1000, CRT-ідемпотенти та нескінченні позиційні записи, а також додає K3-NT — модель порушень інваріантів, навантаження дефектів, кластерів залежностей, спрямованого поширення та двадцяти порогових рівнів. Нуль є цілим числом і дорівнює лише нулю; нульова група може входити до ненульового каскаду. Це документаційне математичне посилання, а не медична чи епідеміологічна модель; воно не змінює реалізацію або runtime/build-залежності. Див. ' + proofLink + ', ' + k3NtLink + ' та ' + localLink + '.';
+  if (lang === 'ru') return '## Связанное математическое исследование\n\n' + releaseLink + ' сохраняет совместимое пополнение с основанием 1000, CRT-идемпотенты и бесконечные позиционные записи, а также добавляет K3-NT — модель нарушений инвариантов, нагрузки дефектов, кластеров зависимостей, направленного распространения и двадцати пороговых уровней. Ноль является целым числом и равен только нулю; нулевая группа может входить в ненулевой каскад. Это документационная математическая модель, а не медицинская или эпидемиологическая модель; она не меняет реализацию или runtime/build-зависимости. См. ' + proofLink + ', ' + k3NtLink + ' и ' + localLink + '.';
+  if (lang === 'zh') return '## 相关数学研究\n\n' + releaseLink + ' 保留基数 1000 的兼容完备化、CRT 幂等元和无限位置展开，并增加 K3-NT：用于描述不变量违反、缺陷负荷、依赖簇、有向传播及二十个阈值等级的数学研究模型。零是整数且只等于零；零系数组可以出现在非零级联中。这是文档层面的数学模型，不是医学或流行病学模型；不会增加运行时/构建依赖，也不会改变本仓库实现。参见' + proofLink + '、' + k3NtLink + '和' + localLink + '。';
   return '## Related mathematical research\n\n' + lead + tail;
 }
 
@@ -121,14 +123,14 @@ function replaceSection(content, path, version, repo) {
 function researchNote(repo, version) {
   return '# Vyunenko Theory K3 ' + version + ' — external mathematical reference\n\n' +
     '> This note is documentation-only. It does not declare a product integration or implementation.\n\n' +
-    'The [canonical theory](' + theoryUrl + ') and its [CRT / infinite-cascade proof](' + proofUrl + ') formalize the radix-1000 completion, compatible orthogonal idempotents and unique infinite positional expansions by coefficients 0..999.\n\n' +
+    'The [canonical theory](' + theoryUrl + '), its [CRT / infinite-cascade proof](' + proofUrl + ') and the [K3-NT defect-cascade model](' + k3NtUrl + ') cover radix-1000 arithmetic, invariant violations, normalized defect load, dependency clusters, directed propagation and twenty threshold-based levels. Zero is an integer equal only to zero, and an isolated zero group may belong to a nonzero cascade. K3-NT is a mathematical research model, not an epidemiological claim.\n\n' +
     '## Relationship to ' + repo + '\n\n' +
     'This is an external mathematical reference only. It does not import Kaskad source code, add a runtime/build dependency, change a local API/ABI/schema, alter product behavior or transfer licensing rights. Any future implementation-level adoption requires a separate versioned contract, tests and an explicit compatibility decision in the owning repository.\n\n' +
     'See the [Psychoporter 666 documentation profile](' + styleUrl + '). Existing author credits, license terms, notices and third-party attribution remain authoritative.\n';
 }
 
 function indexSection(version) {
-  return '## Related mathematical research\n\n- [Vyunenko Theory K3 ' + version + ' — external research reference](VYUNENKO_K3_RESEARCH_REFERENCE.md) — CRT completion and infinite base-1000 expansions; documentation-only, no runtime dependency.';
+  return '## Related mathematical research\n\n- [Vyunenko Theory K3 ' + version + ' — external research reference](VYUNENKO_K3_RESEARCH_REFERENCE.md) — CRT completion, infinite base-1000 expansions and K3-NT defect-cascade research; documentation-only, no runtime dependency.';
 }
 
 async function main() {
