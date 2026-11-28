@@ -1,0 +1,600 @@
+{
+  "schema": "ivan-vhs.kaskad.pytyliki-mathematical-map.v1",
+  "version": "1.0.0",
+  "status": "integration-map",
+  "source_repository": {
+    "repository": "Ivan-VHS/Pytyliki",
+    "branch": "main",
+    "project_version": "0.8.0",
+    "language": "C11",
+    "documented_review_date": "2026-11-27",
+    "policy": "Transfer mathematical meaning and traceability; do not duplicate Pytyliki runtime implementation."
+  },
+  "target": {
+    "repository": "Ivan-VHS/Kaskad",
+    "theory": "Теория Вьюненко K3",
+    "radix": 1000,
+    "coefficient_domain": [
+      0,
+      999
+    ],
+    "canonical_evaluation": "sum(a_i * 1000^i)",
+    "compatibility": "No change to base K3 semantics; imported models are typed extensions."
+  },
+  "status_legend": {
+    "implemented_numeric_contract": "Corresponding C11 implementation/source contract exists; this does not claim that CI was executed during transfer.",
+    "documented_contract": "Behavior is documented but full runtime path is not asserted.",
+    "proposed_extension": "Candidate or future operation, not an implemented public capability.",
+    "classical_simulation": "Bounded classical numerical model, not physical quantum hardware.",
+    "migrated_out": "Implementation ownership moved to another repository; do not duplicate code.",
+    "abstraction_only": "Mathematical model of an engineering domain; proof of runtime enforcement is separate."
+  },
+  "mathematical_domains": [
+    {
+      "id": "integer-euclidean-arithmetic",
+      "title": "Евклидова арифметика",
+      "status": "implemented_numeric_contract",
+      "model": "a=q*b+r; 0<=r<abs(b), b!=0",
+      "sources": [
+        "src/division.c",
+        "src/division.h",
+        "docs/DIVISION_ENGINE.md"
+      ],
+      "k3_mapping": "Exact integers map to canonical radix-1000 vectors; remainders under division by 1000 are K3 coefficients.",
+      "invariants": [
+        "Reconstruction identity",
+        "Euclidean nonnegative remainder."
+      ],
+      "limits": "Zero divisor and INT64_MIN/-1 rejected; finite int64 domain."
+    },
+    {
+      "id": "balanced-partition",
+      "title": "Сбалансированное разбиение",
+      "status": "documented_contract",
+      "model": "q=floor(n/p), r=n-p*q; lengths_i=q+1 if i<r else q",
+      "sources": [
+        "docs/DIVISION_ENGINE.md",
+        "tests/test_division.c",
+        "CMakeLists.txt"
+      ],
+      "k3_mapping": "Counts, ranges, indexes and lengths are separate K3 integers.",
+      "invariants": [
+        "Complete coverage",
+        "disjoint ranges",
+        "size difference at most one."
+      ],
+      "limits": "Planning does not imply worker execution."
+    },
+    {
+      "id": "even-allocation",
+      "title": "Равномерное распределение целого итога",
+      "status": "implemented_numeric_contract",
+      "model": "A=abs(T); q=A div p; r=A mod p; x_i=sign(T)*(q+indicator(i<r))",
+      "sources": [
+        "src/division.c",
+        "src/gift_planner.c",
+        "docs/DISCRETE_GIFT_ALLOCATION.md"
+      ],
+      "k3_mapping": "Signed shares map as sign and K3 magnitude.",
+      "invariants": [
+        "Sum of shares equals total",
+        "absolute difference at most one",
+        "stable remainder order."
+      ],
+      "limits": "p>0; bounded output capacity."
+    },
+    {
+      "id": "weighted-largest-remainder",
+      "title": "Взвешенное распределение методом наибольших остатков",
+      "status": "implemented_numeric_contract",
+      "model": "quota_i=T*w_i/W; base_i=floor(quota_i); residue_i=(T*w_i) mod W; assign leftover by descending residue and stable index",
+      "sources": [
+        "src/gift_planner.c",
+        "src/gift_planner.h",
+        "docs/DIVISION_ENGINE.md"
+      ],
+      "k3_mapping": "Total, weights, quotas, residues and shares are K3 integers; preserve indexes.",
+      "invariants": [
+        "Exact total conservation",
+        "deterministic tie-break."
+      ],
+      "limits": "Positive weight sum; bounded recipient count."
+    },
+    {
+      "id": "combinatorics",
+      "title": "Биномиальные коэффициенты",
+      "status": "implemented_numeric_contract",
+      "model": "C(n,k)=n!/(k!(n-k)!); symmetry and gcd cancellation",
+      "sources": [
+        "src/gift_planner.c",
+        "src/gift_planner.h"
+      ],
+      "k3_mapping": "n, k and exact result map to K3 integers.",
+      "invariants": [
+        "C(n,k)=C(n,n-k)",
+        "exact result until machine bound."
+      ],
+      "limits": "n<=1000000; result must fit uint64_t."
+    },
+    {
+      "id": "greedy-budget-selection",
+      "title": "Жадный выбор ограниченного набора",
+      "status": "implemented_numeric_contract",
+      "model": "Sort by preference_i/price_i via cross multiplication; take min(stock_i,floor(remaining/price_i))",
+      "sources": [
+        "src/gift_planner.c",
+        "docs/DISCRETE_GIFT_ALLOCATION.md"
+      ],
+      "k3_mapping": "Prices, stocks, budget and spent amount map to K3 integers.",
+      "invariants": [
+        "Spend<=budget",
+        "quantity<=stock",
+        "deterministic ties."
+      ],
+      "limits": "Heuristic, not globally optimal knapsack."
+    },
+    {
+      "id": "vector-metrics",
+      "title": "Векторные нормы, расстояния и проекции",
+      "status": "implemented_numeric_contract",
+      "model": "L1, L2, L-infinity, dot, weighted norms, projections and orthogonal components",
+      "sources": [
+        "src/metric_geometry.c",
+        "src/metric_geometry.h",
+        "docs/ORTHOGONAL_METRIC_ENGINE.md"
+      ],
+      "k3_mapping": "Coordinates stay typed and indexed; only declared quantization yields integer K3 components.",
+      "invariants": [
+        "Norm and distance axioms in valid exact domains",
+        "projection residual orthogonality."
+      ],
+      "limits": "Floating approximation; max dimension 4096; weighted norm requires positive weights to be a norm."
+    },
+    {
+      "id": "quadratic-geometry",
+      "title": "Квадратичные формы и неевклидовы модели",
+      "status": "implemented_numeric_contract",
+      "model": "Q(x)=x^T M x; spherical, hyperbolic, law-of-cosines, De Gua and Minkowski formulas",
+      "sources": [
+        "src/metric_geometry.c",
+        "docs/ORTHOGONAL_METRIC_ENGINE.md"
+      ],
+      "k3_mapping": "Preserve geometry kind, matrix axes, scale and numerical error.",
+      "invariants": [
+        "Formula-specific domain and finite-value constraints."
+      ],
+      "limits": "Quadratic form is not automatically a metric; Minkowski form is indefinite."
+    },
+    {
+      "id": "descriptive-statistics",
+      "title": "Статистика и квантили",
+      "status": "implemented_numeric_contract",
+      "model": "Mean, median, nearest-rank p90/p95/p99, sample standard deviation, coefficient of variation, MAD",
+      "sources": [
+        "src/benchmark_stats.c",
+        "docs/BENCHMARK_STATISTICS.md"
+      ],
+      "k3_mapping": "Counts are exact K3 integers; floating summaries require scale and uncertainty.",
+      "invariants": [
+        "Nearest rank ceil(pN)",
+        "sample variance denominator N-1",
+        "input unchanged."
+      ],
+      "limits": "1..100000 finite nonnegative samples; not hardware certification."
+    },
+    {
+      "id": "complex-state-vector",
+      "title": "Комплексный state-vector",
+      "status": "classical_simulation",
+      "model": "psi in C^(2^q), sum(|alpha_j|^2)=1; seeded state-vector measurement",
+      "sources": [
+        "src/atomic_quantum.c",
+        "src/atomic_quantum.h",
+        "docs/ATOMIC_QUANTUM_133.md"
+      ],
+      "k3_mapping": "Real and imaginary parts are separate approximate fields; counts and seeds are separate exact values.",
+      "invariants": [
+        "Dimension 2^q",
+        "normalization within tolerance",
+        "seeded reproducibility."
+      ],
+      "limits": "q<=10; 133 IDs do not mean 133 implemented solvers; not quantum hardware."
+    },
+    {
+      "id": "memory-ranges-pools",
+      "title": "Ограниченные представления памяти",
+      "status": "implemented_numeric_contract",
+      "model": "(count-1)*stride+element_size<=extent for nonempty views",
+      "sources": [
+        "src/memory.c",
+        "src/memory.h",
+        "docs/MEMORY_ARENA.md"
+      ],
+      "k3_mapping": "Counts, sizes, offsets and capacities map to K3 integers; pointers/types remain distinct.",
+      "invariants": [
+        "Checked size arithmetic",
+        "used<=capacity",
+        "occupancy<=pool capacity."
+      ],
+      "limits": "Pointers are not K3 positional values."
+    },
+    {
+      "id": "transaction-state-machine",
+      "title": "Транзакционный автомат снимков",
+      "status": "implemented_numeric_contract",
+      "model": "Commit requires expected_generation=current_generation and valid checksum; generation increments on success",
+      "sources": [
+        "src/runtime_transaction.c",
+        "docs/TRANSACTIONAL_RUNTIME.md"
+      ],
+      "k3_mapping": "Generations, schema versions and lengths map to K3 integers; payload stays a byte sequence.",
+      "invariants": [
+        "Stale generation rejected",
+        "commit increments once",
+        "rollback restores committed snapshot."
+      ],
+      "limits": "In-memory snapshots only; max payload 16 MiB; async/await cooperative."
+    },
+    {
+      "id": "trace-provenance",
+      "title": "Измерительная запись и неопределённость",
+      "status": "implemented_numeric_contract",
+      "model": "record=(metric,unit,context,digest,value,uncertainty,window,count,quality); envelopes disjoint if abs(delta)>eps1+eps2",
+      "sources": [
+        "src/trace.c",
+        "src/trace.h",
+        "docs/TRACE_MEASUREMENT_PROVENANCE.md"
+      ],
+      "k3_mapping": "Counters and timestamps exact; measured values scaled/approximate and carry uncertainty.",
+      "invariants": [
+        "Compatible units/context/window",
+        "quality checks",
+        "source digest."
+      ],
+      "limits": "Not a universal statistical significance test."
+    },
+    {
+      "id": "cadence-analysis",
+      "title": "Периодичность и дрейф",
+      "status": "implemented_numeric_contract",
+      "model": "CV, relative bias, first-half/second-half drift; bounded descriptive cadence score",
+      "sources": [
+        "src/trace.c",
+        "src/trace.h"
+      ],
+      "k3_mapping": "Counts and timestamps map to K3 integers; intervals/scores remain approximations.",
+      "invariants": [
+        "Finite positive intervals",
+        "bounded score."
+      ],
+      "limits": "2..1000000 intervals; not hardware certification."
+    },
+    {
+      "id": "finite-language-parser",
+      "title": "Формальные языки и разбор директив",
+      "status": "implemented_numeric_contract",
+      "model": "Partial parser P: Sigma* -> AST with bounded input and diagnostics",
+      "sources": [
+        "src/system_array.c",
+        "src/system_array.h"
+      ],
+      "k3_mapping": "Offsets and lengths map to K3 integers; symbols and aliases stay typed.",
+      "invariants": [
+        "Invalid input yields diagnostic",
+        "aliases normalize to canonical form."
+      ],
+      "limits": "Syntax only; max input 512; no execution."
+    },
+    {
+      "id": "early-mathematics-extension",
+      "title": "Кандидатные операции ранней математики",
+      "status": "proposed_extension",
+      "model": "Counts, histograms, fractions, units, geometry, patterns and simple stats",
+      "sources": [
+        "docs/EARLY_MATHEMATICS_NUMERICAL_WORKBENCH_V1.md"
+      ],
+      "k3_mapping": "Exact counts/fractions use K3 integers and rational pairs; geometry may be approximate.",
+      "invariants": [
+        "Permutation invariant histograms",
+        "checked arithmetic",
+        "explicit units."
+      ],
+      "limits": "No new public C ABI function claimed implemented."
+    },
+    {
+      "id": "audio-dsp",
+      "title": "Аудио-DSP",
+      "status": "migrated_out",
+      "model": "PCM16 WAV, filtering, compression and measurement algorithms",
+      "sources": [
+        "docs/PYTYLIKI_DSP_MIGRATION.md"
+      ],
+      "k3_mapping": "Kaskad records formulae and provenance only; implementation remains in VentuSample.",
+      "invariants": [
+        "Single implementation owner",
+        "versioned interface."
+      ],
+      "limits": "Do not duplicate DSP code."
+    },
+    {
+      "id": "processor-hardware-descriptors",
+      "title": "Процессорные и аппаратные модели",
+      "status": "abstraction_only",
+      "model": "Finite feature sets, typed ranges, capability predicates and evidence metadata",
+      "sources": [
+        "src/processor.c",
+        "src/processor_catalog.c",
+        "src/architecture_atlas.c",
+        "src/cpu_suite.c",
+        "src/embedded.c",
+        "src/low_level_contract.c",
+        "src/hw_rules.c"
+      ],
+      "k3_mapping": "Counts and bounds map to K3 integers; architecture identities and capability sets remain typed.",
+      "invariants": [
+        "Capability claim requires evidence",
+        "checked range ends."
+      ],
+      "limits": "Read-only or simulated paths are not physical device control."
+    },
+    {
+      "id": "system-policy-lifecycle",
+      "title": "Политики, эволюция и pipeline",
+      "status": "abstraction_only",
+      "model": "Finite predicates, dependency graphs, versioned contracts, labeled transition systems",
+      "sources": [
+        "src/core.c",
+        "src/improvement.c",
+        "src/pipeline.c",
+        "src/policy.c",
+        "src/evolution.c",
+        "src/apsia.c",
+        "src/berry_core.c",
+        "src/mtte.c",
+        "src/ironclad_systems.c",
+        "src/forge66.c",
+        "src/self_product.c",
+        "src/three_medium.c",
+        "src/trimatrix_autoforge.c"
+      ],
+      "k3_mapping": "Counters, versions and indexes map to K3 integers; graph/predicate labels remain explicit.",
+      "invariants": [
+        "Transition preconditions",
+        "evidence separated from claim."
+      ],
+      "limits": "Do not infer runtime enforcement from metadata alone."
+    },
+    {
+      "id": "syntax-diagnostics",
+      "title": "QCS, syntax inspection and diagnostics",
+      "status": "abstraction_only",
+      "model": "Source string to AST/diagnostics with spans and bounded offsets",
+      "sources": [
+        "src/qcs.c",
+        "src/syntax_pie.c",
+        "src/concat.c",
+        "src/interop.c",
+        "src/reaper_frontend_cli.c",
+        "vendor/reaper_frontend"
+      ],
+      "k3_mapping": "Offsets and lengths map to K3 integers; syntax and spans remain structured.",
+      "invariants": [
+        "Explicit diagnostic positions",
+        "inspected source is not necessarily executed."
+      ],
+      "limits": "Do not duplicate Reaper grammar or canonical IR."
+    },
+    {
+      "id": "budget-resource-planning",
+      "title": "Бюджеты и ограниченное планирование",
+      "status": "documented_contract",
+      "model": "Bounded integer budget, resource envelopes and exact accounting",
+      "sources": [
+        "src/budget.c",
+        "src/gift_planner.c",
+        "src/division.c",
+        "docs/DISCRETE_GIFT_ALLOCATION.md"
+      ],
+      "k3_mapping": "Each amount, cap, quantity and balance is an independent K3 integer.",
+      "invariants": [
+        "Spent plus remaining equals budget",
+        "capacity never exceeded."
+      ],
+      "limits": "Do not infer optimal scheduling without proof."
+    }
+  ],
+  "module_coverage": [
+    {
+      "path": "src/embedded_kernel.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/low_level_contract.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/benchmark_stats.c",
+      "domain": "descriptive-statistics"
+    },
+    {
+      "path": "src/concat.c",
+      "domain": "syntax-diagnostics"
+    },
+    {
+      "path": "src/core.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/processor.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/improvement.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/hw_rules.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/pipeline.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/policy.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/processor_catalog.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/evolution.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/apsia.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/syntax_pie.c",
+      "domain": "syntax-diagnostics"
+    },
+    {
+      "path": "src/berry_core.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/mtte.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/ironclad_systems.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/forge66.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/cpu_suite.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/trimatrix_autoforge.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/metric_geometry.c",
+      "domain": "vector-metrics"
+    },
+    {
+      "path": "src/compute_ops.c",
+      "domain": "combinatorics"
+    },
+    {
+      "path": "src/memory.c",
+      "domain": "memory-ranges-pools"
+    },
+    {
+      "path": "src/metric_registry.c",
+      "domain": "vector-metrics"
+    },
+    {
+      "path": "src/architecture_atlas.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/self_product.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/embedded.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/systems_accel.c",
+      "domain": "processor-hardware-descriptors"
+    },
+    {
+      "path": "src/qcs.c",
+      "domain": "syntax-diagnostics"
+    },
+    {
+      "path": "src/trace.c",
+      "domain": "trace-provenance"
+    },
+    {
+      "path": "src/three_medium.c",
+      "domain": "system-policy-lifecycle"
+    },
+    {
+      "path": "src/division.c",
+      "domain": "integer-euclidean-arithmetic"
+    },
+    {
+      "path": "src/atomic_quantum.c",
+      "domain": "complex-state-vector"
+    },
+    {
+      "path": "src/budget.c",
+      "domain": "budget-resource-planning"
+    },
+    {
+      "path": "src/runtime_transaction.c",
+      "domain": "transaction-state-machine"
+    },
+    {
+      "path": "src/snapshot_store.c",
+      "domain": "transaction-state-machine"
+    },
+    {
+      "path": "src/system_array.c",
+      "domain": "finite-language-parser"
+    }
+  ],
+  "non_math_and_external_boundaries": [
+    {
+      "id": "win32-gui",
+      "sources": [
+        "src/win_gui.c"
+      ],
+      "reason": "Presentation and interaction; include only explicit UI states or measurable constraints."
+    },
+    {
+      "id": "audio-dsp",
+      "sources": [
+        "docs/PYTYLIKI_DSP_MIGRATION.md",
+        "VentuSample/src/compat/pytyliki-dsp"
+      ],
+      "reason": "Implementation is owned by VentuSample; Kaskad does not duplicate it."
+    },
+    {
+      "id": "reaper-frontend",
+      "sources": [
+        "src/reaper_frontend_cli.c",
+        "vendor/reaper_frontend"
+      ],
+      "reason": "Reaper grammar and canonical compiler IR remain owned by Reaper."
+    },
+    {
+      "id": "ci-and-tests",
+      "sources": [
+        "CMakeLists.txt",
+        "tests/"
+      ],
+      "reason": "Tests are regression evidence, not mathematical proof by themselves."
+    }
+  ],
+  "verification_note": "Repository documentation, CMake module list, key mathematical source modules and test-target declarations were inspected. CI and the full CTest suite were not executed during this transfer.",
+  "compatibility_rules": [
+    "Keep radix B=1000 and coefficient set 0..999 unchanged.",
+    "Preserve every K3 position, zero coefficient, separator and index.",
+    "Keep exact integer arithmetic distinct from floating-point approximation.",
+    "Keep vectors, matrices, tensors, complex states, graphs and automata typed.",
+    "Do not reinterpret v_1000 as a multiplicative p-adic valuation.",
+    "Do not describe the Pytyliki state-vector kernel as quantum hardware.",
+    "Do not duplicate audio DSP now owned by VentuSample.",
+    "Treat source contracts, catalogues, tests and executed proof evidence as distinct evidence classes."
+  ]
+}
