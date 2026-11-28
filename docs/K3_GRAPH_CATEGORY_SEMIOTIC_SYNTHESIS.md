@@ -118,7 +118,7 @@ J,K,\mathcal I),
 Для ориентированного пути
 
 \[
-\pi=(v_0\xrightarrow{e_1}v_1
+\pi_{\\mathrm{path}}=(v_0\xrightarrow{e_1}v_1
 \xrightarrow{e_2}\cdots
 \xrightarrow{e_r}v_r)
 \]
