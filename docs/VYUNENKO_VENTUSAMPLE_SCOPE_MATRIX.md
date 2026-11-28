@@ -1,3 +1,5 @@
+> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
+
 # Карта полноты математического переноса VentuSample
 
 **Дата инвентаризации:** 2026-11-28  

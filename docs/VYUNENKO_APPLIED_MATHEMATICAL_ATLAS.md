@@ -329,7 +329,7 @@ X_k=\sum_{n=0}^{N-1}x_n e^{-2\pi i kn/N},
 
 **Статус источника:** VentuSample — offline audio core с C++20 и C11 DSP-слоем, PCM16 WAV, seeded generation и ограниченной маршрутизацией; Qt desktop обозначен как частичный. Это не real-time DAW и не физический квантовый вычислитель.
 
-Первичные документы: [VentuSample Audio Mathematics](VYUNENKO_AUDIO_MATHEMATICS.md), [каталог DSP](VYUNENKO_AUDIO_CATALOGUE.md), [мост K3–аудио](VYUNENKO_K3_AUDIO_BRIDGE.md), [происхождение источников](VYUNENKO_VENTUSAMPLE_PROVENANCE.md), [исходный VentuSample](https://github.com/Ivan-VHS/VentuSample).
+Первичные документы: [VentuSample Audio Mathematics](VYUNENKO_AUDIO_MATHEMATICS.md), [каталог DSP](VYUNENKO_AUDIO_CATALOGUE.md), [мост K3–аудио](VYUNENKO_K3_AUDIO_BRIDGE.md), [происхождение источников](VYUNENKO_VENTUSAMPLE_PROVENANCE.md), [исходный VentuSample](https://github.com/Ivan-VHS/VentuSample). Нормативная интеграция в K3: [Теория Вьюненко, §105 — прикладная математика сигналов](VYUNENKO_THEORY.md#105-прикладная-математика-дискретных-сигналов-и-цифровых-операторов).
 
 ### 2.5. OPlague — идентификация, графы и доказательная база
 

@@ -1,3 +1,5 @@
+> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
+
 # Мост K3: позиционное представление аудиоданных и операторных цепочек
 
 **Теория:** Вьюненко K3 · **Основание:** \(B=1000=10^3\)  

@@ -29,6 +29,23 @@
     "theorem_and_hypothesis_statuses_are_tracked_by_stable_claim_id": true,
     "proof_review_and_machine_check_status_are_separate": true,
     "applied_models_do_not_inherit_theorem_status_from_source_domain": true,
+    "defect_load_requires_explicit_invariant_registry": true,
+    "defect_load_requires_complete_fixed_observation_coverage": true,
+    "unassessed_observations_are_not_zero": true,
+    "negative_tendency_levels_require_predeclared_thresholds": true,
+    "dependency_clusters_declare_weak_connectivity": true,
+    "directed_propagation_is_distinct_from_cluster_connectivity": true,
+    "normalized_local_defect_load_is_bounded": true,
+    "medical_metaphors_are_not_medical_claims": true
+    "every_integer_multiplicity_declares_typed_relation_and_domain": true,
+    "integer_divisibility_uses_exact_quotient_remainder": true,
+    "composite_radix_1000_divisibility_checks_both_prime_channels": true,
+    "composite_base_depth_uses_product_compensation_law": true,
+    "prime_factor_multiplicity_is_distinct_from_radix_depth": true,
+    "positional_scale_preserves_explicit_zero_groups": true,
+    "multiset_repetition_does_not_collapse_to_set": true,
+    "multiplicity_claims_include_boundary_cases_and_counterexamples": true,
+    "multiplicity_claims_follow_K3_IME_1_0_0": true
     "equivalence_collapse_requires_common_typed_carrier": true,
     "description_complexity_does_not_imply_object_nonexistence": true,
     "integrals_declare_density_domain_and_measure": true,
@@ -73,7 +90,8 @@
         "5_primary_branch_factor": 125,
         "total": 1000
       },
-      "unit_test_depends_on": "least_significant_K3_group"
+      "unit_test_depends_on": "least_significant_K3_group",
+      "divisor_product_compensation_law": "nu_1000(xy)=nu_1000(x)+nu_1000(y)+chi_B(x,y), for nonzero x,y"
     },
     "extension_layers": {
       "biprime_base_factorization": "1000=2^3*5^3",
@@ -93,7 +111,17 @@
         "q_addend_carries",
         "lag_moments"
       ],
-      "directed_composition": "separate_noncommutative_sequence_concatenation"
+      "directed_composition": "separate_noncommutative_sequence_concatenation",
+      "negative_tendency_model": [
+        "explicit_invariant_registry_and_applicability",
+        "complete_fixed_observation_coverage",
+        "unassessed_is_not_zero",
+        "normalized_local_load_in_0_to_1",
+        "weakly_connected_defect_clusters",
+        "directed_dependency_propagation_with_componentwise_cap",
+        "predeclared_twenty_level_thresholds",
+        "metaphorical_labels_are_not_medical_claims"
+      ]
     }
   },
   "forbidden": {
@@ -120,6 +148,12 @@
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
     "using_1000_not_dividing_x_as_a_unit_criterion": true,
+    "rounding_or_approximate_ratio_as_divisibility_proof": true,
+    "conflating_integer_multiplier_with_power_exponent_or_factor_multiplicity": true,
+    "assuming_nu_1000_is_multiplicative": true,
+    "using_nonzero_low_group_as_modular_unit_test": true,
+    "using_plain_set_when_repetition_counts_matter": true,
+    "scoring_evidence_status_as_mathematical_truth": true
     "identifying_empty_set_with_numeric_zero_or_scalar_without_typed_map": true,
     "evaluating_real_functions_at_empty_set": true,
     "treating_semantic_overhead_as_a_standard_number_class": true,
@@ -156,6 +190,7 @@
     "no_unverified_doi_or_arxiv_identifier": true,
     "no_unmeasured_benchmark_claims": true,
     "no_unexecuted_test_marked_pass": true,
-    "no_unimplemented_algorithm_reported_as_implemented": true
+    "no_unimplemented_algorithm_reported_as_implemented": true,
+    "multiplicity_evidence_standard": "K3-IME 1.0.0"
   }
 }
