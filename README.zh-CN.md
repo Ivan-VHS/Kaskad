@@ -137,6 +137,7 @@ K3 的数值算术与普通整数算术一致：基数 1000 只是把十进制�
 | 实现和测试的边界 | [开发状态](docs/DEVELOPMENT_STATUS.md) |
 | 其他所有文档 | [完整文档索引](docs/INDEX.md) |
 | 了解数值、编码、结构与语境之间的类型关系 | [K3-NS 数值语义](docs/K3_NUMERATIVE_SEMANTICS.md)（俄文原版） |
+| 了解局部护照、范畴下降与级联效应 | [K3-GCS 图—范畴—符号综合](docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md)（俄文原版） |
 
 文档之间的关系：
 
