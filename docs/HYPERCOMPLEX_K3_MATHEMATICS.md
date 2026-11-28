@@ -1,3 +1,15 @@
+<div align="center">
+  <img src="../assets/kaskad-jade-atlas.svg" alt="Нефритовый атлас Kaskad — Теория Вьюненко K3" width="100%" />
+  <p><strong>НЕФРИТОВЫЙ АТЛАС · ТЕОРИЯ ВЬЮНЕНКО K3</strong></p>
+  <p><sub>ОСНОВАНИЕ B = 1000 · МАТЕМАТИЧЕСКИЙ ДОКУМЕНТ</sub></p>
+</div>
+
+<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
+
+---
+
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Гиперкомплексная математика Теории Вьюненко
 
 ## Многокомпонентные каскады, комплексные числа, алгебры и формулы
@@ -202,3 +214,8 @@ e_i e_j+e_j e_i=2g_{ij}\,1,
 ## 10. Научная граница
 
 K3-кодирование комплексных и гиперкомплексных компонент не создаёт автоматически новых комплексных чисел или гиперкомплексных алгебр. Результатом Теории Вьюненко может стать специальная координатная модель, алгоритм, классификация или новая алгебра, если её структура определена независимо и доказана.
+
+
+---
+
+<p align="center"><sub>KASKAD · ТЕОРИЯ ВЬЮНЕНКО K3 · Редакционное оформление не меняет математический статус утверждений. См. <a href="INDEX.md">карту документации</a> и <a href="ATTRIBUTION_AND_RIGHTS.md">правила атрибуции</a>.</sub></p>
