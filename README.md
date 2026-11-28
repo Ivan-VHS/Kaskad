@@ -156,6 +156,10 @@ t_{i+1}=\left\lfloor\frac{c_i+t_i}{1000}\right\rfloor,
 | Статус реализации | [Development Status](docs/DEVELOPMENT_STATUS.md) |
 | Все документы | [Карта Kaskad](docs/INDEX.md) |
 
+### Дополнительные реестры и структура корпуса
+
+[Научная консолидация](docs/K3_SCIENTIFIC_CONSOLIDATION.md) · [Реестр утверждений](docs/K3_CLAIM_REGISTRY.json) · [Эталонные векторы](docs/K3_REFERENCE_VECTORS.json) · [Исходные формулы](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) · [Бипрайм-геометрия и закон переноса](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) · [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md) · [Контрпримеры и границы](docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md) · [Схема векторов](schemas/k3-reference-vectors.v1.schema.json)
+
 ## 8. Воспроизводимость
 
 В репозитории есть вспомогательная реализация **src/kaskad_k3/**, тесты **tests/** и векторы **tests/vectors/**. Это вычислительный инструмент, не замена математического ядра.
