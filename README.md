@@ -111,6 +111,7 @@ r_i=c_i+t_i-1000t_{i+1}.
 5. **Бесконечные каскады.** Последовательности коэффициентов \(a_i\in\{0,\ldots,999\}\), обратный предел остатков по \(1000^r\) и единственная бесконечная позиционная запись каждого элемента завершённого кольца.
 6. **Структурная и тензорная семантика.** Упорядоченные наборы, коэффициентные профили, суммы, перестановочные инварианты и операционные следы.
 7. **Комбинаторика и вероятность.** Конечные последовательности коэффициентов, подсчёт, распределения и условия применимости вероятностных моделей.
+8. **Нулевая идентичность.** Различение целочисленности, единственного аддитивного нуля, нулевой позиционной группы и нулевого значения; см. [Теорию Чумного Вердикта](docs/CHUMNY_VERDICT_THEORY.md).
 
 Базовая система K3 работает с точными целыми коэффициентами. Рациональные и вещественные числа, измерения с погрешностью, физические величины, графы и другие многокомпонентные структуры требуют собственных типов, единиц измерения и правил преобразования. Их нельзя объявлять точными K3-целыми только за счёт кодирования отдельного числового поля.
 
@@ -211,7 +212,7 @@ CRT-разложение и бесконечная запись — доказа
 | Топологическое расширение | [CRT-идемпотенты и бесконечные каскады](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md) |
 | Классические соответствия | [Математический crosswalk](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md), [справочник фундаментальных принципов](docs/MATHEMATICAL_FOUNDATIONS_REFERENCE.md) |
 | Методология и исследования | [Правила разработки теории](docs/THEORY_DEVELOPMENT_RULES.md), [конструктивная дорожная карта](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md), [научная ориентация](docs/SWISS_RESEARCH_ALIGNMENT.md), [главный контур консолидации](docs/KASKAD_CENTRAL_CONSOLIDATION.md) |
-| Расширения | [Программа расширения](docs/VYUNENKO_EXPANSION_PROGRAM.md), [когнитивные функции](docs/VYUNENKO_COGNITIVE_FUNCTIONS.md), [комплекторная логика](docs/COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md), [теория графов](docs/VYUNENKO_GRAPH_THEORY.md), [большие и расширенные числа](docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md), [гиперкомплексная математика](docs/HYPERCOMPLEX_K3_MATHEMATICS.md), [принципы расширения](docs/VYUNENKO_EXTENSION_PRINCIPLES.md), [синтез K3-X](docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md) |
+| Расширения | [Программа расширения](docs/VYUNENKO_EXPANSION_PROGRAM.md), [когнитивные функции](docs/VYUNENKO_COGNITIVE_FUNCTIONS.md), [комплекторная логика](docs/COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md), [теория графов](docs/VYUNENKO_GRAPH_THEORY.md), [большие и расширенные числа](docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md), [гиперкомплексная математика](docs/HYPERCOMPLEX_K3_MATHEMATICS.md), [принципы расширения](docs/VYUNENKO_EXTENSION_PRINCIPLES.md), [синтез K3-X](docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md), [Теория Чумного Вердикта](docs/CHUMNY_VERDICT_THEORY.md) |
 | Прикладные соответствия | [Математическая основа Pytyliki](docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md), [основания OPlague](docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md), [OPlague ↔ K3](docs/OPLAGUE_TO_K3_CROSSWALK.md) |
 | Происхождение и права | [Авторство, лицензия и атрибуция](docs/ATTRIBUTION_AND_RIGHTS.md), [LICENSE](LICENSE) |
 
