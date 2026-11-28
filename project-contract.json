@@ -59,7 +59,10 @@
       "CV1_model_specific_monotonicity_theorem_CV_K3_M1",
       "CV1_directed_zero_relation_and_twenty_level_negative_trend_model",
       "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model",
-      "typed_postfix_terminal_integral_operator_K3_TI"
+      "typed_postfix_terminal_integral_operator_K3_TI",
+      "typed_TOPK_total_system_annihilation_and_meta_level_hierarchy",
+      "typed_right_zero_word_semigroup_operator",
+      "structured_catalogue_of_64_research_candidates_in_eight_categories"
     ]
   },
   "scope": [
@@ -101,7 +104,11 @@
     "local_graph_context_comonadic_models",
     "directed_graph_models_and_relational_extensions",
     "directed_plague_verdict_and_negative_trend_model",
-    "measure_theory_and_typed_integral_operators"
+    "measure_theory_and_typed_integral_operators",
+    "typed_total_annihilation_and_meta_level_formal_semantics",
+    "formal_languages_and_word_algebras",
+    "semigroup_theory",
+    "information_theory_and_privacy"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -244,7 +251,12 @@
     "docs/K3_NUMERATIVE_SEMANTICS.md",
     "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
     "docs/K3_REVERSE_CURSED_ROOT.md",
-    "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md"
+    "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+    "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+    "docs/K3_RIGHT_ZERO_WORD_OPERATOR_THEORY.md",
+    "docs/K3_SELF_CREATED_THEORIES_CATALOGUE.md",
+    "docs/K3_SELF_CREATED_THEORIES.v1.json",
+    "schemas/k3-self-created-theories.v1.schema.json"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -274,7 +286,15 @@
     "K3_TI_sine_Gordon_energy_claim_declares_locally_absolutely_continuous_finite_energy_class",
     "K3_TI_quadratic_escape_radius_is_separated_from_full_survivor_set",
     "K3_TI_Julia_measure_statement_uses_one_dimensional_Lebesgue_measure_and_classical_source",
-    "K3_TI_mutual_information_zero_requires_almost_surely_constant_output"
+    "K3_TI_mutual_information_zero_requires_almost_surely_constant_output",
+    "right_zero_word_universe_includes_all_finite_words_and_empty_word",
+    "down_operator_is_total_and_returns_the_right_word_unchanged",
+    "right_zero_semigroup_is_distinguished_from_null_semigroup_and_single_zero_element",
+    "preimage_counts_declare_the_map_and_the_universe_cardinality",
+    "information_privacy_claims_require_a_joint_probability_law",
+    "operator_variants_do_not_inherit_laws_without_proof",
+    "self_application_uses_explicit_types_and_domains",
+    "catalogue_has_exactly_eight_categories_and_eight_entries_per_category"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",

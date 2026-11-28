@@ -103,7 +103,29 @@
     "julia_zero_measure_claim_specifies_one_dimensional_lebesgue_measure_and_source": true,
     "mutual_information_claim_requires_random_variables_and_a_joint_probability_law": true,
     "zero_mutual_information_from_erasure_requires_constant_output_almost_surely": true,
-    "partial_trajectorywise_erasure_does_not_imply_unconditional_zero_mutual_information": true
+    "partial_trajectorywise_erasure_does_not_imply_unconditional_zero_mutual_information": true,
+    "total_annihilation_declares_a_typed_domain_and_external_codomain": true,
+    "total_annihilation_is_distinct_from_left_channel_erasure": true,
+    "total_annihilation_meta_claims_declare_the_external_description_level": true,
+    "total_annihilation_claims_track_the_complete_declared_system_environment": true,
+    "logical_context_erasure_is_not_treated_as_a_validity_preserving_inference_rule": true,
+    "every_word_operator_declares_alphabet_carrier_and_empty_word": true,
+    "word_universe_scope_distinguishes_finite_words_from_infinite_sequences": true,
+    "right_zero_operator_is_total_on_all_declared_word_pairs": true,
+    "right_zero_operator_returns_the_right_word_without_normalization": true,
+    "right_zero_operation_is_distinguished_from_concatenation_and_k3_arithmetic": true,
+    "right_zero_semigroup_is_distinguished_from_null_semigroup_and_absorbing_zero": true,
+    "right_zero_fiber_counts_declare_binary_map_or_fixed_translation": true,
+    "right_zero_identity_and_zero_claims_state_the_singleton_exception": true,
+    "inverse_relation_is_distinguished_from_inverse_function": true,
+    "information_claims_for_right_projection_use_joint_distribution": true,
+    "zero_mutual_information_requires_independence_of_left_and_right_inputs": true,
+    "side_information_is_included_in_privacy_claims_when_relevant": true,
+    "gated_and_partial_operator_variants_reprove_associativity": true,
+    "two_layer_right_image_associativity_checks_idempotence_of_composite_map": true,
+    "higher_order_self_application_declares_operator_type_and_carrier": true,
+    "immutable_word_algorithm_declares_copying_and_serialization_costs": true,
+    "catalogue_status_distinguishes_research_candidates_from_completed_theories": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -177,7 +199,8 @@
         "metaphorical_labels_are_not_medical_claims"
       ],
       "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure",
-      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation"
+      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation",
+      "topk_total_annihilation": "typed_constant_map_to_external_annihilation_marker_with_meta_level_hierarchy"
     }
   },
   "forbidden": {
@@ -231,7 +254,19 @@
     "encoding_arbitrary_real_integral_as_integer_K3_word": true,
     "claiming_K3_TI_defines_a_new_integral_calculus": true,
     "inferring_zero_measure_from_the_word_Cantor_alone": true,
-    "claiming_Shannon_mutual_information_without_a_probability_model": true
+    "claiming_Shannon_mutual_information_without_a_probability_model": true,
+    "total_annihilation_is_not_claimed_as_physical_storage_deletion": true,
+    "constant_map_is_not_called_an_absorbing_algebraic_operation_without_operation_laws": true,
+    "terminal_object_is_not_identified_with_a_zero_object_without_categorical_hypotheses": true,
+    "absolute_meta_hierarchy_is_not_claimed_to_have_a_final_level_without_proof": true,
+    "TOPK_total_annihilation_is_not_conflated_with_K3_RCR_left_channel_erasure": true,
+    "treating_right_zero_semigroup_as_a_semigroup_with_one_absorbing_zero": true,
+    "claiming_right_projection_guarantees_cryptographic_privacy": true,
+    "claiming_zero_mutual_information_without_independence_or_joint_law": true,
+    "claiming_binary_operator_has_a_unique_inverse_pair": true,
+    "extending_finite_word_theorems_to_infinite_words_without_a_new_domain": true,
+    "treating_the_64_catalogue_entries_as_64_proven_discoveries": true,
+    "importing_right_zero_laws_into_gated_partial_or_two_layer_variants_without_proof": true
   },
   "review": {
     "mathematical_review_required": true,
