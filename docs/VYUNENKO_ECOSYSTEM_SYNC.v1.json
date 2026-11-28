@@ -133,7 +133,8 @@
       ],
       "index": "docs/README.md",
       "technical_crosswalk": "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
-      "no_runtime_dependency": true
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
     },
     {
       "repository": "Ivan-VHS/Reaper",
@@ -145,7 +146,8 @@
         "README.zh-CN.md"
       ],
       "index": "docs/README.md",
-      "no_runtime_dependency": true
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
     },
     {
       "repository": "Ivan-VHS/OPlague",
@@ -158,7 +160,8 @@
       ],
       "index": "docs/README.md",
       "technical_crosswalk": "docs/OPLAGUE_TO_K3_CROSSWALK.md",
-      "no_runtime_dependency": true
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
     },
     {
       "repository": "Ivan-VHS/VentuSample",
@@ -170,7 +173,8 @@
         "README.zh-CN.md"
       ],
       "index": "docs/README.md",
-      "no_runtime_dependency": true
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
     },
     {
       "repository": "Ivan-VHS/DAK",
@@ -182,7 +186,8 @@
         "README.zh-CN.md"
       ],
       "index": "docs/README.md",
-      "no_runtime_dependency": true
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
     }
   ],
   "governance": {
@@ -193,7 +198,20 @@
     "external_license_changes": false,
     "credential_requirement": "A GitHub App installation token or a narrowly scoped token with contents:write and pull_requests:write in each dependent repository is required for unattended future dispatch.",
     "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
-    "automation_status": "not_assessed",
-    "note": "This manifest is a machine-readable dependency and synchronization registry. It does not itself execute GitHub writes, schedule background work, or prove that a cross-repository automation credential is configured."
+    "automation_status": "workflow_implemented_secret_unverified",
+    "note": "Workflow and synchronizer are committed. Continuous cross-repository writes are not confirmed until IVAN_VHS_SYNC_TOKEN is configured and the workflow completes successfully.",
+    "workflow_path": ".github/workflows/vyunenko-ecosystem-sync.yml",
+    "script_path": "scripts/sync_vyunenko_docs.mjs",
+    "required_secret": "IVAN_VHS_SYNC_TOKEN",
+    "required_token_permissions": [
+      "contents:write",
+      "pull_requests:write"
+    ],
+    "merge_policy": "draft_pull_request_only",
+    "trigger_paths": [
+      "docs/VYUNENKO_THEORY.md",
+      "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json"
+    ]
   }
 }
