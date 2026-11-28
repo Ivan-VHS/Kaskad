@@ -28,6 +28,8 @@ const mathematics = readJson("quality-mathematics.json");
 const computation = readJson("quality-computation.json");
 const evolution = readJson("engineering-evolution.v1.json");
 const vectors = readJson("docs/K3_REFERENCE_VECTORS.json");
+const chumnyVerdict = readJson("docs/CHUMNY_VERDICT_MODEL.v1.json");
+const chumnyVerdictSchema = readJson("schemas/chumny-verdict.v1.schema.json");
 
 if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
@@ -230,6 +232,92 @@ if (vectors) {
   }
 }
 
+
+if (chumnyVerdict) {
+  if (chumnyVerdict.theory?.id !== "CV-1" ||
+      chumnyVerdict.theory?.version !== "1.1.0" ||
+      chumnyVerdict.theory?.base_theory !== "K3" ||
+      chumnyVerdict.theory?.base_radix !== 1000 ||
+      chumnyVerdict.theory?.base_k3_semantics_changed !== false ||
+      chumnyVerdict.theory?.ordinary_integer_equality_changed !== false) {
+    fail("Chumny Verdict model must preserve K3 base semantics and ordinary equality");
+  }
+  if (chumnyVerdict.instance?.parameter !== "c" ||
+      chumnyVerdict.instance?.domain !== "Z" ||
+      chumnyVerdict.instance?.nonzero_required !== true ||
+      chumnyVerdict.instance?.exactly_one_value_per_instance !== true ||
+      chumnyVerdict.instance?.global_default !== null) {
+    fail("Chumny Verdict requires one fixed nonzero parameter per instance");
+  }
+  if (chumnyVerdict.projection?.symbol !== "P_c" ||
+      chumnyVerdict.projection?.idempotent !== true ||
+      chumnyVerdict.projection?.preserves_raw_evaluation !== true ||
+      chumnyVerdict.projection?.kernel_is_additive_congruence !== false) {
+    fail("CV-P projection metadata is inconsistent");
+  }
+  const sample = chumnyVerdict.illustrative_instance;
+  if (!sample || !Number.isSafeInteger(sample.c) || sample.c === 0) {
+    fail("Chumny Verdict sample parameter must be a nonzero exact integer");
+  } else {
+    const c = BigInt(sample.c);
+    const P = (n) => n === 0n ? c : n;
+    for (const item of sample.map_cases ?? []) {
+      const actual = P(BigInt(item.input));
+      if (actual !== BigInt(item.output) || P(actual) !== actual) {
+        fail("CV-P map/idempotence check failed for " + item.input);
+      }
+    }
+    for (const item of sample.primary_relation_cases ?? []) {
+      const actual = BigInt(item.from) === 0n && BigInt(item.to) === c;
+      if (actual !== item.expected) fail("CV primary relation check failed");
+    }
+    for (const item of sample.transfer_cases ?? []) {
+      const actual = BigInt(item.to) === BigInt(item.from) + c;
+      if (actual !== item.expected) fail("CV additive-transfer graph check failed");
+    }
+    for (const item of sample.post_evaluation_cases ?? []) {
+      if (P(BigInt(item.raw_value)) !== BigInt(item.cv_value)) {
+        fail("CV-P post-evaluation check failed for " + item.expression);
+      }
+    }
+    const positional = sample.positional_zero_group_example;
+    if (!positional ||
+        positional.radix !== 1000 ||
+        positional.coefficient_order !== "least_significant_to_most_significant" ||
+        positional.coefficients.some((x) => !Number.isInteger(x) || x < 0 || x > 999)) {
+      fail("CV positional zero-group example has invalid K3 coefficients");
+    } else {
+      const value = positional.coefficients.reduce(
+        (sum, coefficient, index) => sum + BigInt(coefficient) * (1000n ** BigInt(index)), 0n
+      );
+      if (value !== BigInt(positional.evaluated_value) ||
+          P(value) !== BigInt(positional.cv_value) ||
+          value !== 1000n) {
+        fail("CV-P must operate on the evaluated K3 integer, not on a zero coefficient");
+      }
+    }
+    for (const item of sample.kernel_equivalence_cases ?? []) {
+      const actual = P(BigInt(item.left)) === P(BigInt(item.right));
+      if (actual !== item.expected) fail("CV-P kernel-equivalence control failed");
+    }
+    if (P(0n) !== c || P(c) !== c || P(1n) !== 1n ||
+        P(P(0n)) !== P(0n) || P(1000n) !== 1000n) {
+      fail("CV-P image, fixed-point or idempotence invariant failed");
+    }
+    if (P(0n) !== P(c) || P(1n) === P(c + 1n)) {
+      fail("CV-P kernel must identify only the 0/c pair and must not be an additive congruence");
+    }
+  }
+}
+if (chumnyVerdictSchema) {
+  if (chumnyVerdictSchema.$schema !== "https://json-schema.org/draft/2020-12/schema" ||
+      chumnyVerdictSchema.properties?.theory?.properties?.base_radix?.const !== 1000 ||
+      chumnyVerdictSchema.properties?.instance?.properties?.nonzero_required?.const !== true ||
+      chumnyVerdictSchema.properties?.projection?.properties?.preserves_raw_evaluation?.const !== true) {
+    fail("Chumny Verdict JSON Schema does not enforce the mathematical contract");
+  }
+}
+
 if (evolution) {
   if (evolution.contract_id !== "KASKAD-ENGINEERING-EVOLUTION") {
     fail("Unexpected engineering evolution contract id");
@@ -305,5 +393,5 @@ if (failures.length > 0) {
   for (const failure of failures) process.stderr.write("FAIL: " + failure + "\n");
   process.exitCode = 1;
 } else {
-  process.stdout.write("Kaskad scientific documentation standard, multilingual README, mathematical scope, K3 notation, reference vectors, algebraic semantics and local links: OK\n");
+  process.stdout.write("Kaskad scientific documentation standard, multilingual README, K3 notation, reference vectors, CV-1/CV-P semantics and local links: OK\n");
 }

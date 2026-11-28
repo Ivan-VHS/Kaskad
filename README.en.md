@@ -148,6 +148,7 @@ is not a figure from an unspecified publication.
 ### K3 foundations
 
 - [Vyunenko Theory of K3 — foundational specification](docs/VYUNENKO_THEORY.md)
+- [Chumny Verdict Theory — CV-1](docs/CHUMNY_VERDICT_THEORY.md)
 - [Cascade balance, normalization, and invariants](docs/CHAPTER_II_CASCADE_BALANCE.md)
 - [Canonical K3 syntax and formal grammar](docs/K3_CANONICAL_SYNTAX.md)
 - [Canonical foundations, algebra, and semantics](docs/K3_CANONICAL_FOUNDATIONS_AND_ALGEBRA.md)
@@ -238,7 +239,7 @@ together with the relevant protocol.
 
 ## Integrated mathematical extensions (2026-11-28)
 
-The Kaskad corpus now includes the ordered K3 arithmetic monograph, directed positional composition, the two-channel \(2^3\times5^3\) geometry of radix 1000, and the ten-layer K3-M profile morphology.
+The Kaskad corpus now includes the ordered K3 arithmetic monograph, directed positional composition, the two-channel \(2^3\times5^3\) geometry of radix 1000, and the ten-layer K3-M profile morphology. Chumny Verdict CV-1 1.1.0 adds an idempotent projection (P_c) while preserving the raw integer evaluation and ordinary equality.
 
 Applied mathematical sources are documented separately: [DAK](docs/DAK_SYSTEM_MATHEMATICS.md), [Reaper](docs/REAPER_MATHEMATICAL_FOUNDATIONS.md), and [VentuSample audio mathematics](docs/VYUNENKO_AUDIO_MATHEMATICS.md). These are mathematical models and crosswalks, not claims that their source projects are implemented in Kaskad.
 

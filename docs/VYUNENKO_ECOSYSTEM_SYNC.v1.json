@@ -91,36 +91,44 @@
     }
   ],
   "kaskad_files": [
+    "README.en.md",
     "README.md",
-    "docs/INDEX.md",
-    "docs/VYUNENKO_THEORY.md",
-    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
-    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
+    "README.uk.md",
+    "README.zh-CN.md",
+    "docs/CHUMNY_VERDICT_MODEL.v1.json",
+    "docs/CHUMNY_VERDICT_THEORY.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
-    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
-    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
-    "docs/K3_EXPRESSION_LANGUAGE.md",
-    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
-    "docs/K3_STRATIFIED_MATHEMATICS.md",
-    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
-    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
-    "docs/DAK_SYSTEM_MATHEMATICS.md",
     "docs/DAK_FORMAL_CONTRACTS.md",
     "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
     "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
-    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/DAK_SYSTEM_MATHEMATICS.md",
+    "docs/INDEX.md",
+    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+    "docs/K3_EXPRESSION_LANGUAGE.md",
+    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
     "docs/REAPER_K3_INTEGRATION.md",
+    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
     "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
-    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
+    "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
     "docs/VYUNENKO_AUDIO_CATALOGUE.md",
+    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
     "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
+    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
+    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
+    "docs/VYUNENKO_THEORY.md",
     "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
-    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
-    "docs/REFERENCE_IMPLEMENTATION.md",
-    "docs/K3_REFERENCE_VECTORS.json",
-    "docs/CHUMNY_VERDICT_THEORY.md"
+    "project-contract.json",
+    "quality-mathematics.json",
+    "schemas/chumny-verdict.v1.schema.json",
+    "scripts/validate-foundation.mjs"
   ],
   "ecosystem_dependents": [
     {
@@ -219,7 +227,7 @@
     {
       "id": "CV-1",
       "title": "Теория Чумного Вердикта",
-      "version": "1.1.0",
+      "version": "1.0.0",
       "status": "formal_specification",
       "source": "docs/CHUMNY_VERDICT_THEORY.md",
       "parameter_domain": "c in Z, c != 0",
@@ -231,33 +239,31 @@
         "The primary directed relation contains exactly one ordered pair (0,c)",
         "Additive propagation is modelled as a directed translation graph",
         "Unrestricted multiplication changes the parameter and is not a closure rule for fixed c",
-        "No claim of a new alternative arithmetic of integers is made",
-        "TCV-K3 lifts the fixed directed CV relation to compatible typed carriers without replacing ordinary equality",
-        "K3 positional zero slots retain their indices even when their numeric contribution is zero",
-        "The zero-divisor example is in Z/1000Z; it is not an equality 625*376=0 in Z",
-        "The evidence verdict distinguishes exact zero, exact nonzero, unknown, absent, and invalid states"
-      ],
-      "typed_k3_layer": {
-        "id": "TCV-K3",
-        "title": "Каскадно-типизированное расширение",
-        "status": "compatible_formal_extension",
-        "sections": [
-          "typed_additive_domains",
-          "lifted_directed_relation",
-          "value_and_structural_equality",
-          "positional_zero_identity",
-          "residue_ring_zero_divisors",
-          "five_state_evidence_verdict"
-        ],
-        "verdict_states": [
-          "ZERO",
-          "NONZERO",
-          "UNKNOWN",
-          "ABSENT",
-          "INVALID"
-        ],
-        "base_semantics_changed": false
-      }
+        "No claim of a new alternative arithmetic of integers is made"
+      ]
+    }
+  ],
+  "compatible_extensions": [
+    {
+      "id": "CV-1",
+      "title": "Теория Чумного Вердикта",
+      "version": "1.1.0",
+      "date": "2026-11-28",
+      "status": "formalized_compatible_extension",
+      "canonical_source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "machine_model": "docs/CHUMNY_VERDICT_MODEL.v1.json",
+      "machine_schema": "schemas/chumny-verdict.v1.schema.json",
+      "parameter": "c",
+      "parameter_domain": "Z excluding 0",
+      "one_parameter_per_instance": true,
+      "primary_relation": "0 prec_c c",
+      "transfer_relation": "x rightsquigarrow_c x+c",
+      "verdict_projection": "P_c(n)=c if n=0; n otherwise",
+      "raw_integer_evaluation_preserved": true,
+      "base_k3_semantics_changed": false,
+      "ordinary_integer_equality_changed": false,
+      "positional_zero_coefficients_changed": false,
+      "note": "CV-P is a separate output projection. It does not replace the primary relation, additive transfer graph, or standard integer evaluation."
     }
   ]
 }
