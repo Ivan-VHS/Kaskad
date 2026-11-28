@@ -92,7 +92,12 @@
     "terminal_integral_atomic_mass_has_declared_semantics": true,
     "real_quadratic_escape_radius_uses_the_positive_fixed_point": true,
     "mutual_information_claims_require_random_variables_and_joint_law": true,
-    "Cantor_topology_is_not_used_as_a_standalone_zero_measure_proof": true
+    "Cantor_topology_is_not_used_as_a_standalone_zero_measure_proof": true,
+    "total_annihilation_declares_a_typed_domain_and_external_codomain": true,
+    "total_annihilation_is_distinct_from_left_channel_erasure": true,
+    "total_annihilation_meta_claims_declare_the_external_description_level": true,
+    "total_annihilation_claims_track_the_complete_declared_system_environment": true,
+    "logical_context_erasure_is_not_treated_as_a_validity_preserving_inference_rule": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -166,7 +171,8 @@
         "metaphorical_labels_are_not_medical_claims"
       ],
       "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure",
-      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation"
+      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation",
+      "topk_total_annihilation": "typed_constant_map_to_external_annihilation_marker_with_meta_level_hierarchy"
     }
   },
   "forbidden": {
@@ -220,7 +226,12 @@
     "encoding_arbitrary_real_integral_as_integer_K3_word": true,
     "claiming_K3_TI_defines_a_new_integral_calculus": true,
     "inferring_zero_measure_from_the_word_Cantor_alone": true,
-    "claiming_Shannon_mutual_information_without_a_probability_model": true
+    "claiming_Shannon_mutual_information_without_a_probability_model": true,
+    "total_annihilation_is_not_claimed_as_physical_storage_deletion": true,
+    "constant_map_is_not_called_an_absorbing_algebraic_operation_without_operation_laws": true,
+    "terminal_object_is_not_identified_with_a_zero_object_without_categorical_hypotheses": true,
+    "absolute_meta_hierarchy_is_not_claimed_to_have_a_final_level_without_proof": true,
+    "TOPK_total_annihilation_is_not_conflated_with_K3_RCR_left_channel_erasure": true
   },
   "review": {
     "mathematical_review_required": true,
