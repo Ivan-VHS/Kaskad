@@ -20,7 +20,7 @@
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
-    "specification_version": "0.6.0",
+    "specification_version": "0.7.0",
     "radix": 1000,
     "radix_factorization": {
       "2": 3,
@@ -57,7 +57,8 @@
       "typed_numerative_semantics_K3_NS",
       "typed_graph_category_semiotic_passport_descent_and_cascade_effects",
       "CV1_model_specific_monotonicity_theorem_CV_K3_M1",
-      "CV1_directed_zero_relation_and_twenty_level_negative_trend_model"
+      "CV1_directed_zero_relation_and_twenty_level_negative_trend_model",
+      "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model"
     ]
   },
   "scope": [
@@ -121,7 +122,8 @@
     "typed_multisorted_numerative_semantics",
     "category_valued_descent_and_passport_gluing",
     "triadic_graph_effectful_execution_and_statuses",
-    "directed_plague_verdict_and_negative_trend_model"
+    "directed_plague_verdict_and_negative_trend_model",
+    "typed_discriminant_gated_left_channel_erasure_and_recoverability_model"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -236,7 +238,8 @@
     "docs/K3_PRODUCT_DECOMPOSITION.md",
     "docs/VYUNENKO_PARSEC_QUANTIZATION.md",
     "docs/K3_NUMERATIVE_SEMANTICS.md",
-    "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"
+    "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+    "docs/K3_REVERSE_CURSED_ROOT.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -255,7 +258,8 @@
     "open_proof_obligations_remain_explicit",
     "previous_CRT_completion_and_infinite_expansion_results_preserved",
     "negative_tendency_model_has_complete_observation_coverage_and_predeclared_thresholds",
-    "integer_multiplicity_evidence_contract"
+    "integer_multiplicity_evidence_contract",
+    "reverse_cursed_root_declares_discriminant_domain_heavens_set_erasure_marker_and_unknown_state"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",
