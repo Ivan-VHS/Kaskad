@@ -10,6 +10,7 @@
   <strong>RU</strong> · <a href="README.en.md">EN</a> · <a href="README.uk.md">UA</a> · <a href="README.zh-CN.md">中文</a>
   <br />
   <a href="docs/INDEX.md">КАРТА ДОКУМЕНТОВ</a> ·
+  <a href="docs/KASKAD_INSTITUTE_CHARTER.md">ИНСТИТУТ KASKAD</a> ·
   <a href="docs/VYUNENKO_THEORY.md">ТЕОРИЯ K3</a> ·
   <a href="docs/CHUMNY_VERDICT_THEORY.md">ТЕОРИЯ CV-1</a> ·
   <a href="CONTRIBUTING.md">КАК УЧАСТВОВАТЬ</a>
@@ -158,6 +159,8 @@ $$
 
 Для знакомства подойдут [классические математические соответствия](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md), [CRT и бесконечные каскады](docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md), [теория графов Вьюненко (операционные статусы, монадические эффекты и остановка)](docs/VYUNENKO_GRAPH_THEORY.md) и [морфология K3-M](docs/K3_STRATIFIED_MATHEMATICS.md).
 
+Отдельный мост [вычислимых нумераций, позиционных индексов K3 и TCV-K3](docs/K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md) определяет, как индекс объекта кодируется в K3, как сравниваются нумерации и как направленный вердикт переносится на индексируемые типизированные объекты.
+
 Не все направления имеют одинаковую степень готовности. В каждом документе нужно смотреть, что уже определено и доказано, а что пока предложено для исследования.
 
 ## 07 · Прикладные математические модели и интеграции
@@ -193,6 +196,7 @@ Kaskad также описывает математические стороны
 Одно не следует автоматически из другого. Например, успешный тест подтверждает проверенный случай, но не доказывает утверждение для всех целых чисел.
 
 В Kaskad важно указывать область действия, предпосылки, источники, точные обозначения и ограничения результата. Для развития научного корпуса используются [Cascade Edition 1.0.0](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md), [формальная методология доказательств](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) и [правила разработки теории](docs/THEORY_DEVELOPMENT_RULES.md).
+ Результат текущего аудита и незакрытые требования собраны в [60-пунктовой матрице научной готовности](docs/SCIENTIFIC_REVIEW_GATE.md); она является проверяемым статусным срезом, а не сертификатом истинности или признания.
 
 ## 09 · Вычислительная инфраструктура и проверка
 
@@ -223,6 +227,16 @@ README — это краткое знакомство с Kaskad, а не зам�
 | Правила чтения и изменения документов | [Руководство по документации](docs/DOCUMENTATION_GUIDE.md) |
 | План исследовательских работ | [Конструктивная дорожная карта](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) |
 | Текущее состояние разработки | [Development Status](docs/DEVELOPMENT_STATUS.md) |
+| Основная математическая сводка K3 | [Научная консолидация K3](docs/K3_SCIENTIFIC_CONSOLIDATION.md) |
+| Формальная логика и доказательные статусы | [Формальная эпистемика и доказательства](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) |
+| Утверждения, определения и зависимости | [Реестр утверждений K3](docs/K3_CLAIM_REGISTRY.json) |
+| Контрольные математические примеры | [Эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json) |
+| Авторские формулы и позиционная морфология | [Каскадные формулы K3](docs/K3_ORIGINAL_CASCADE_FORMULAS.md) |
+| Двухканальная арифметика и переносы | [Двухканальная геометрия K3](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md) |
+| Архитектура документов и слоёв | [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md) |
+| Контрпримеры и границы утверждений | [Реестр контрпримеров](docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md) |
+| Машинная спецификация векторов | [JSON Schema](schemas/k3-reference-vectors.v1.schema.json) |
+
 | Полноту переводов | [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md) |
 | Правила участия | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Авторство и происхождение материалов | [Атрибуция и права](docs/ATTRIBUTION_AND_RIGHTS.md) |

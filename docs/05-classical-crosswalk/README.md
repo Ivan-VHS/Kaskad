@@ -3,7 +3,8 @@
 > Cascade Edition 1.0.0 · Слой терминологической и библиографической сверки.
 
 - [Классический математический crosswalk](../CLASSICAL_MATHEMATICS_CROSSWALK.md)
-- [Высшие структуры и семантические модели K3](../K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md) — точные соответствия, ограничения и классические источники.
+- [Графо-категориально-семиотический синтез K3](../K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md) — явное сопоставление графовых, категорийных и семиотических терминов их математическим типам.
+- [Вычислимые нумерации, позиционные индексы K3 и TCV-K3](../K3_COMPUTABLE_NUMBERINGS_AND_TCV_BRIDGE.md)
 - [Справочник фундаментальных принципов](../MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
 - [Авторство, права и атрибуция](../ATTRIBUTION_AND_RIGHTS.md)
 - [Научная ориентация](../SWISS_RESEARCH_ALIGNMENT.md)

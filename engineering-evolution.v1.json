@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "contract_id": "KASKAD-ENGINEERING-EVOLUTION",
-  "current_stage": "stage-1-k3-core",
+  "current_stage": "stage-9-institute-governance",
   "stages": [
     {
       "id": "stage-0-specification-consolidation",
@@ -117,7 +117,21 @@
         "Reaper typed mathematical models and source register",
         "VentuSample discrete signal and DSP mathematics",
         "K3 typed bridges with explicit domains and limitations",
-        "open proof obligations retained in the registry"
+        "open proof obligations retained in the registry",
+        "K3 paradigmatic-erosion metatheory specification and proof-obligation registry"
+      ]
+    },
+    {
+      "id": "stage-9-institute-governance",
+      "status": "in_progress",
+      "deliverables": [
+        "Kaskad Institute charter and repository-native governance",
+        "orthogonal mathematical computational implementation and external-recognition status axes",
+        "independent proof-review records and conflict-of-interest disclosures",
+        "claim dependency graph and auditable status-transition history",
+        "commit-scoped reproducibility and external-replication records",
+        "institutional maturity gates without unsupported recognition claims",
+        "multilingual institute documentation and consistent navigation"
       ]
     },
     {
@@ -158,6 +172,8 @@
       "CITATION.bib"
     ],
     "mathematical_reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
-    "rule": "Documentation and computation support mathematical research; they do not redefine project scope."
+    "rule": "Documentation and computation support mathematical research; they do not redefine project scope.",
+    "institute_charter": "docs/KASKAD_INSTITUTE_CHARTER.md",
+    "institutional_status_record": "docs/DEVELOPMENT_STATUS.md"
   }
 }
