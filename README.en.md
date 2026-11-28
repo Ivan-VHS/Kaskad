@@ -136,6 +136,7 @@ Known limits, failed generalizations, and open questions are collected in the [c
 | Find a claim and its status | [Claim registry](docs/K3_CLAIM_REGISTRY.json) |
 | See implementation and test boundaries | [Development status](docs/DEVELOPMENT_STATUS.md) |
 | Browse the rest of the repository | [Complete document map](docs/INDEX.md) |
+| Understand typed number, code, structure, and context layers | [K3-NS — numerative semantics](docs/K3_NUMERATIVE_SEMANTICS.md) (Russian source) |
 
 Document relationships:
 
