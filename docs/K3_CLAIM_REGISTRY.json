@@ -2,7 +2,7 @@
   "schema_version": "1.1.0",
   "project": "Kaskad",
   "theory": "Vyunenko K3",
-  "theory_version": "0.6.0",
+  "theory_version": "0.7.0",
   "base": {
     "radix": 1000,
     "factorization": {
@@ -1059,6 +1059,68 @@
           "w is fixed and strictly positive"
         ],
         "boundary": "The theorem is model-specific and does not establish monotonicity for arbitrary dynamic systems or empirical/medical phenomena."
+      }
+    },
+    {
+      "id": "K3-RCR-DEF-001",
+      "kind": "definition",
+      "statement": "Given typed left and standard channels, a partial discriminant map and an explicitly declared admissible set, K3-RCR erases only the left payload when both channels are nonempty and the defined discriminant lies outside that set; undefined discriminants remain undetermined and the standard channel is preserved.",
+      "source": "docs/K3_REVERSE_CURSED_ROOT.md",
+      "proof_reference": "§§1–4, Definition 1",
+      "dependencies": [
+        "K3-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Typed pairs (L,S) in declared carriers L×S, optionally encoded by K3 profiles without collapsing text, structure and numeric value",
+        "assumptions": [
+          "The partial discriminant map Δθ and admissible set Hθ are fixed before evaluation",
+          "The erasure trigger requires L≠∅ and S≠∅",
+          "The erasure marker ⊥L is distinct from integer zero and from a zero K3 coefficient"
+        ],
+        "boundary": "The definition is parametric; it neither supplies universal values for Δθ or Hθ nor describes physical deletion from storage."
+      }
+    },
+    {
+      "id": "K3-RCR-THM-001",
+      "kind": "theorem",
+      "statement": "For a fixed standard payload S, any two distinct left payloads that both satisfy the K3-RCR erasure condition have the same erased output; therefore the operator is non-injective on that erased fiber.",
+      "source": "docs/K3_REVERSE_CURSED_ROOT.md",
+      "proof_reference": "§4.2, non-injectivity argument",
+      "dependencies": [
+        "K3-RCR-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A fixed S and at least two distinct L values in the declared left carrier",
+        "assumptions": [
+          "Both pairs (L1,S) and (L2,S) satisfy the declared RCR erasure trigger",
+          "The operator output omits the erased left payload and preserves only the same marker and S"
+        ],
+        "boundary": "The result concerns recovery from the RCR output alone; an external backup or side channel is outside the map."
+      }
+    },
+    {
+      "id": "K3-RCR-HYP-001",
+      "kind": "hypothesis",
+      "statement": "For the intended but not yet operationally parameterized input family, every pair with nonempty left and standard channels has a defined discriminant outside the declared heavens set, so the left payload is always erased whenever the standard position is occupied.",
+      "source": "docs/K3_REVERSE_CURSED_ROOT.md",
+      "proof_reference": "§7, Hypothesis K3-RCR-H1",
+      "dependencies": [
+        "K3-RCR-DEF-001"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A future explicitly declared family X contained in L×S with nonempty left and standard channels",
+        "assumptions": [
+          "The carrier family X and its input encoding are fixed",
+          "The partial discriminant map Δθ is defined for every pair in the quantified family",
+          "The admissible heavens set Hθ is fixed independently of the evaluated pair"
+        ],
+        "boundary": "No universality is claimed before the parameters are fixed; one in-range discriminant for a nonempty pair refutes the hypothesis on that family."
       }
     }
   ],
