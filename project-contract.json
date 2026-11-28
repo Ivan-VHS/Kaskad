@@ -54,7 +54,8 @@
       "computable_K3_numbering_and_TCV_K3_index_pullbacks",
       "hierarchical_K3_product_decomposition_and_exact_quotient_remainder_segmentation",
       "typed_discrete_signal_operators_and_VentuSample_mathematical_bridge",
-      "typed_numerative_semantics_K3_NS"
+      "typed_numerative_semantics_K3_NS",
+      "typed_graph_category_semiotic_passport_descent_and_cascade_effects"
     ]
   },
   "scope": [
@@ -91,7 +92,9 @@
     "fractal_geometry",
     "semiotics_hermeneutics_and_symbolic_interpretation",
     "cryptography_steganography_security_boundary_models",
-    "triadic_cascade_operational_semantics"
+    "triadic_cascade_operational_semantics",
+    "category_valued_local_passport_descent",
+    "local_graph_context_comonadic_models"
   ],
   "architecture_layers": [
     "1000_adic_inverse_limit_and_CRT_projectors",
@@ -111,7 +114,9 @@
     "machine_readable_reference_vector_schema",
     "computable_numberings_and_index_morphisms",
     "typed_CV_index_pullbacks",
-    "typed_multisorted_numerative_semantics"
+    "typed_multisorted_numerative_semantics",
+    "category_valued_descent_and_passport_gluing",
+    "triadic_graph_effectful_execution_and_statuses"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -225,7 +230,8 @@
     "docs/ERRATA.md",
     "docs/K3_PRODUCT_DECOMPOSITION.md",
     "docs/VYUNENKO_PARSEC_QUANTIZATION.md",
-    "docs/K3_NUMERATIVE_SEMANTICS.md"
+    "docs/K3_NUMERATIVE_SEMANTICS.md",
+    "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
