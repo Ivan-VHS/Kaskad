@@ -147,3 +147,18 @@ flowchart TD
 ---
 
 <p align="center"><sub>АТЛАС ДОКУМЕНТАЦИИ KASKAD · КАЖДЫЙ СЛОЙ ИМЕЕТ СВОЙ СТАТУС</sub></p>
+
+
+## Структура математического корпуса
+
+- [Статус и границы](status-and-scope.md)
+- [Основания K3](foundations/README.md)
+- [Теория и структура K3](theory/README.md)
+- [Реестр доказательств](proofs/index.md)
+- [Расширения](extensions/README.md)
+- [Классические связи и источники](classical-links/README.md)
+- [Открытые проблемы](open-problems/README.md)
+- [Прикладные модели](applied-models/README.md)
+- [Дорожная карта](roadmap.md)
+- [Машинная формализация](../formal/README.md)
+- [Профиль структуры репозитория](REPOSITORY_STRUCTURE_PROFILE.md)
