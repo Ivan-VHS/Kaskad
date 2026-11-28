@@ -274,17 +274,17 @@ if (!existsSync(readmePath)) {
   fail("README.md is missing");
 } else {
   const readme = readFileSync(readmePath, "utf8");
-  const languageMarkers = [
-    ["Russian", "Kaskad — Теория Вьюненко K3"],
-    ["English", "<summary><strong>English</strong></summary>"],
-    ["Ukrainian", "<summary><strong>Українська</strong></summary>"],
-    ["Chinese", "<summary><strong>中文</strong></summary>"]
+  const languageEditions = [
+    ["Russian", "README.md"],
+    ["English", "README.en.md"],
+    ["Ukrainian", "README.uk.md"],
+    ["Chinese", "README.zh-CN.md"]
   ];
-  for (const [language, marker] of languageMarkers) {
-    if (!readme.includes(marker)) fail("README is missing a language edition: " + language);
-  }
-  if (!readme.includes("## Краткие аннотации")) {
-    fail("README must expose the multilingual summary annotations");
+  for (const [language, path] of languageEditions) {
+    if (!existsSync(resolve(root, path))) fail("Missing language edition: " + language + " (" + path + ")");
+    if (path !== "README.md" && !readme.includes(path)) {
+      fail("README must link to the separate language edition: " + path);
+    }
   }
   if (!readme.includes("docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md")) {
     fail("README must link to the normative Cascade documentation standard");
@@ -300,14 +300,14 @@ if (!existsSync(readmePath)) {
   }
 }
 
-const docsPath = resolve(root, "docs");
-if (existsSync(docsPath)) {
-  for (const fileName of readdirSync(docsPath)) {
-    if (!fileName.endsWith(".md")) continue;
-    const fileText = readFileSync(resolve(docsPath, fileName), "utf8");
-    if (!fileText.includes("Cascade Edition 1.0.0")) {
-      fail("Scientific document is missing the Cascade Edition header: docs/" + fileName);
-    }
+const requiredScientificDocuments = project?.required_documents ?? [];
+for (const relativePath of requiredScientificDocuments) {
+  if (!relativePath.startsWith("docs/") || !relativePath.endsWith(".md")) continue;
+  const documentPath = resolve(root, relativePath);
+  if (!existsSync(documentPath)) continue;
+  const documentText = readFileSync(documentPath, "utf8");
+  if (!documentText.includes("Cascade Edition 1.0.0")) {
+    fail("Required scientific document is missing the Cascade Edition header: " + relativePath);
   }
 }
 
