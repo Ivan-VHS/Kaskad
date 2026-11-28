@@ -43,7 +43,7 @@
 | Гиперкомплексная математика | [HYPERCOMPLEX_K3_MATHEMATICS.md](HYPERCOMPLEX_K3_MATHEMATICS.md) | Многокомпонентные алгебры и структурные константы |
 | Расширяющие принципы | [VYUNENKO_EXTENSION_PRINCIPLES.md](VYUNENKO_EXTENSION_PRINCIPLES.md) | Консервативные вложения и рефракторные отображения |
 | Тензорные суммы и перестановочные инварианты | [K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md](K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) | Матрица коэффициентов, вектор значений и тензоры взаимодействий |
-| Числовая семантика K3-NS | [K3_NUMERATIVE_SEMANTICS.md](K3_NUMERATIVE_SEMANTICS.md) | Многосортная запись \(\\mathfrak n(x,\\theta,c)\), кодовые, структурные, графовые и интерпретативные проекции |
+| Числовая семантика K3-NS | [K3_NUMERATIVE_SEMANTICS.md](K3_NUMERATIVE_SEMANTICS.md) | Многосортная запись \(\mathfrak n(x,\theta,c)\), кодовые, структурные, графовые и интерпретативные проекции |
 
 ## 3. Базовые формулы слоя
 
