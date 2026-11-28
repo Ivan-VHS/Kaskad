@@ -8,7 +8,7 @@
     "commit": "ab83f8bfbcb3a1b820067a502e6bb1b7f0b4b7e6",
     "tree": "282a2f3eedaaf02ce1ffcc039f8951eb5a2cad65",
     "tracked_file_count": 326,
-    "review_scope": "Full-tree inventory plus selected authoritative documentation, project contracts, schemas, core source modules and focused tests; not a line-by-line audit of every tracked file.",
+    "review_scope": "Full-tree inventory plus selected authoritative documentation, project contracts, schemas, core source modules and focused tests. Additional reviewed documents include Universal Division & Decomposition, Program Catalog 1000, Orthogonal Metric Diagnostics, Self Product Composition, NEXUS Device Profile, Federated Integration, Hardware ID Lint, Authenticode and System Capability Profile; not a line-by-line audit of every tracked file.",
     "license": "Apache-2.0"
   },
   "integration": {
@@ -207,7 +207,15 @@
       "guarded-power-restore",
       "budget-allocation",
       "atomic-ui-settings",
-      "clife-change-governance"
+      "clife-change-governance",
+      "integer-division",
+      "partitioning",
+      "resource-allocation",
+      "spdx-inventory",
+      "signature-evidence",
+      "nexus-consumer-contract",
+      "report-envelope",
+      "capability-profile"
     ]
   },
   "models": {
@@ -397,6 +405,156 @@
       ],
       "autonomous_source_rewriter": false,
       "review_status": "pilot"
+    },
+    "division_decomposition": {
+      "status": "contract_only",
+      "native_implementation_present": false,
+      "arithmetic": "a=bq+r, b!=0, 0<=r<abs(b)",
+      "equal_allocation": "N=kq+r; first r groups receive q+1, remaining groups receive q",
+      "weighted_allocation": "floor(N*w_i/sum(w)); distribute residual by descending fractional remainder with stable tie-break",
+      "dependency_model": "dependency graph condensed by strongly connected components; declared indivisible components are never split",
+      "conservation": "union(partitions)=input and partitions are pairwise disjoint; ordered reconstruction must restore original inventory order and hashes",
+      "lifecycle": [
+        "DISCOVER",
+        "VALIDATE",
+        "MODEL_DEPENDENCIES",
+        "PROPOSE",
+        "SIMULATE",
+        "VERIFY",
+        "REVIEW",
+        "APPLY"
+      ],
+      "apply_requires_separate_authorization": true,
+      "driver_fragments_installable_by_definition": false
+    },
+    "program_catalog": {
+      "global_catalog_size": 1000,
+      "oplague_owned_range": {
+        "from": 501,
+        "to": 700,
+        "count": 200
+      },
+      "domains": [
+        {
+          "from": 501,
+          "to": 560,
+          "count": 60,
+          "subject": "Windows system utilities, PnP, INF and driver trust"
+        },
+        {
+          "from": 561,
+          "to": 600,
+          "count": 40,
+          "subject": "Linux/macOS device discovery and imported evidence"
+        },
+        {
+          "from": 601,
+          "to": 650,
+          "count": 50,
+          "subject": "Archives, PE/COFF and binary inspection"
+        },
+        {
+          "from": 651,
+          "to": 700,
+          "count": 50,
+          "subject": "Signatures, SBOM, hashes and supply-chain evidence"
+        }
+      ],
+      "range_means_implemented": false,
+      "offline_inventory_queries_remote_feeds": false
+    },
+    "spdx_inventory": {
+      "version": "SPDX-2.3",
+      "file_inventory": true,
+      "stable_identifiers": true,
+      "checksum": "SHA-256",
+      "unknown_license_marker": "NOASSERTION",
+      "dependency_resolver": false,
+      "hash_proves_authorship_or_redistribution_rights": false
+    },
+    "authenticode": {
+      "provider": "Windows PowerShell Get-AuthenticodeSignature",
+      "platform_scope": "Windows",
+      "max_files_per_request": 100,
+      "reports_signer_metadata_when_available": true,
+      "signature_status_proves_driver_safety": false,
+      "signature_status_proves_device_compatibility": false
+    },
+    "hardware_id_linter": {
+      "parses_known_structured_bus_fields": true,
+      "validates_widths_and_hex_fields": true,
+      "unknown_fields_preserved": true,
+      "vendor_name_inference": false,
+      "proves_device_exists": false,
+      "proves_driver_match": false
+    },
+    "nexus_evidence_profile": {
+      "oplague_role": "read-only evidence provider",
+      "consumers": [
+        "VectorScope",
+        "TrustVault",
+        "ThermalPilot",
+        "Nexus Hub"
+      ],
+      "inputs": [
+        "device-snapshot",
+        "gpu-telemetry",
+        "UDRV-report",
+        "Authenticode/SBOM-report",
+        "gaming-frametime-report"
+      ],
+      "consumer_must_validate": [
+        "schema-version",
+        "source-mode",
+        "bounds",
+        "digest",
+        "freshness",
+        "validity"
+      ],
+      "consumer_authorizes_driver_install": false
+    },
+    "report_envelope": {
+      "schema": "ivan-vhs.report.v1",
+      "outer_envelope_and_payload_schema_validated_separately": true,
+      "envelope_validation_proves_payload_semantics": false
+    },
+    "system_capability_profile": {
+      "source_point_count": 66,
+      "groups": [
+        {
+          "id": "security-crypto-policy",
+          "first": 1,
+          "last": 14,
+          "count": 14
+        },
+        {
+          "id": "network-protocols",
+          "first": 15,
+          "last": 28,
+          "count": 14
+        },
+        {
+          "id": "installation-servicing",
+          "first": 29,
+          "last": 40,
+          "count": 12
+        },
+        {
+          "id": "user-interface-storage",
+          "first": 41,
+          "last": 54,
+          "count": 14
+        },
+        {
+          "id": "lifecycle-compatibility",
+          "first": 55,
+          "last": 66,
+          "count": 12
+        }
+      ],
+      "source_quality": "mixed_historical_claims",
+      "authoritative_windows_xp_sp3_changelog": false,
+      "historical_items_are_runtime_capabilities": false
     }
   },
   "conflicts_to_resolve": [
