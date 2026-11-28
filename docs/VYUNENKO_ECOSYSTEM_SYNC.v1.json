@@ -3,7 +3,7 @@
   "theory": {
     "id": "K3",
     "title": "Теория Вьюненко",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "canonical_source": "docs/VYUNENKO_THEORY.md",
     "canonical_documentation_index": "docs/INDEX.md",
     "license": "Apache-2.0",
@@ -17,13 +17,14 @@
   },
   "release": {
     "date": "2026-11-28",
-    "branch": "research/vyunenko-k3-completion-v0-4-0",
+    "branch": "research/vyunenko-k3-negative-tendencies-v0-5-0",
     "compatible_extension": true,
     "base_semantics_changed": false,
     "summary": [
       "Compatible CRT idempotents and orthogonal decomposition of the 1000-adic completion",
       "Unique infinite positional expansion by coefficients 0..999",
-      "Exact finite-support and eventual-999 characterizations of ordinary integers"
+      "Exact finite-support and eventual-999 characterizations of ordinary integers",
+      "K3-NT research model for invariant-violation load, localized clusters, dependency-graph propagation and twenty metaphorical levels; thresholds remain calibration parameters."
     ]
   },
   "results": [
@@ -53,7 +54,8 @@
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
     "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
     "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
-    "docs/KASKAD_CENTRAL_CONSOLIDATION.md"
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md"
   ],
   "ecosystem_dependents": [
     {
@@ -129,5 +131,22 @@
     "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
     "automation_status": "not_assessed",
     "note": "This manifest is a machine-readable dependency and synchronization registry. It does not itself execute GitHub writes, schedule background work, or prove that a cross-repository automation credential is configured."
-  }
+  },
+  "research_extensions": [
+    {
+      "id": "K3-NT-1",
+      "title": "Negative-tendency and defect-propagation model",
+      "status": "proposed_formal_research_model",
+      "source": "docs/K3_NEGATIVE_TENDENCIES_AND_DEFECT_CASCADE.md",
+      "base_semantics_changed": false,
+      "calibration_required": true
+    },
+    {
+      "id": "K3-NT-ZERO-1",
+      "title": "Canonical zero characterization for finite nonnegative K3 vectors",
+      "status": "proved_under_base_K3_assumptions",
+      "source": "docs/VYUNENKO_THEORY.md",
+      "base_semantics_changed": false
+    }
+  ]
 }
