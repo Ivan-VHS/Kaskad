@@ -31,6 +31,7 @@
 | Расширяющие принципы | [VYUNENKO_EXTENSION_PRINCIPLES.md](VYUNENKO_EXTENSION_PRINCIPLES.md) | Консервативные вложения и рефракторные отображения |
 | Тензорные суммы и перестановочные инварианты | [K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md](K3_TENSOR_SUM_AND_PERMUTATION_INVARIANTS.md) | Матрица коэффициентов, вектор значений и тензоры взаимодействий |
 | Прикладная системная математика DAK | [DAK_SYSTEM_MATHEMATICS.md](DAK_SYSTEM_MATHEMATICS.md), [DAK_FORMAL_CONTRACTS.md](DAK_FORMAL_CONTRACTS.md), [DAK_K3_ALIGNMENT_AND_TRACEABILITY.md](DAK_K3_ALIGNMENT_AND_TRACEABILITY.md) | Типизированная модель операционной системы: интервалы, автоматы, графы, контракты, доказательные обязательства и provenance |
+| Полный реестр DAK | [DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md](DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md) | Все 340 исходных файлов классифицированы по роли в математизации и доказательной трассировке |
 
 ## 3. Базовые формулы слоя
 
