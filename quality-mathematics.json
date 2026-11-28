@@ -69,7 +69,11 @@
     "wave_budget_is_not_treated_as_a_convergence_proof": true,
     "cv_k3_m1_declares_nonnegative_state_inputs_and_matrices": true,
     "cv_k3_m1_strict_growth_requires_nonzero_increment": true,
-    "cv_k3_m1_is_scoped_to_explicit_accumulation_model": true
+    "cv_k3_m1_is_scoped_to_explicit_accumulation_model": true,
+    "cv1_directional_zero_relation_is_not_replaced_by_equality": true,
+    "cv_k3_m1_requires_componentwise_nonnegative_state_inputs_and_matrices": true,
+    "cv_k3_m1_strict_weighted_growth_requires_nonzero_increment": true,
+    "cv_k3_m1_is_model_specific_not_a_universal_dynamic_law": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -186,7 +190,10 @@
     "code_collisions_are_not_claimed_as_semantic_equivalence": true,
     "symbolic_interpretations_are_not_promoted_to_causal_or_predictive_laws": true,
     "k3_encoding_is_not_claimed_as_cryptographic_security": true,
-    "digit_patterns_are_not_claimed_as_fractality_without_explicit_transform": true
+    "digit_patterns_are_not_claimed_as_fractality_without_explicit_transform": true,
+    "cv1_zero_of_a_group_coefficient_is_not_treated_as_zero_of_full_k3_value": true,
+    "cv1_medical_metaphors_are_not_medical_or_epidemiological_claims": true,
+    "cv_k3_m1_is_not_generalized_to_arbitrary_dynamic_systems": true
   },
   "review": {
     "mathematical_review_required": true,
@@ -201,7 +208,8 @@
     "scientific_maturity_must_not_be_collapsed_into_one_score": true,
     "threshold_calibration_review_required": true,
     "interpretive_claims_require_source_context_and_competing_readings_review_required": true,
-    "cv_k3_m1_requires_independent_review_before_verified_status": true
+    "cv_k3_m1_requires_independent_review_before_verified_status": true,
+    "cv_k3_m1_requires_independent_proof_review_before_verified_status": true
   },
   "documentation": {
     "standard": "Cascade Edition 1.0.0",
