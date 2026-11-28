@@ -335,7 +335,7 @@ if (existsSync(k3ntPath)) {
     "0=n\\iff n=0",
     "неоценённый",
     "компонента слабой связности",
-    "\\\\min\\\\{1,",
+    "\\min\\{1,",
     "не является эпидемиологической или медицинской моделью"
   ]) {
     if (!k3ntText.includes(required)) fail("K3-NT specification is missing required semantic guard: " + required);
