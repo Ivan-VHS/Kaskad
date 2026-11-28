@@ -336,7 +336,44 @@ variant выбирает конфигурацию ветви общей моде
 
 Нормировка, унитарные операции H/Pauli/CNOT/SWAP, вероятности, измерение с переданным sample u∈[0,1), dephase, amplitude damping и fidelity имеют собственные алгоритмы в atomic_quantum.cpp. Каталог 133 имён шире этого набора функций: имя в реестре нельзя считать доказательством полной реализации физической модели, пока не указаны соответствующий обработчик и тест.
 
-## 3. Восемь эффектов Stochastic Router
+
+## 3. Девятнадцать встроенных инструментальных плагинов
+
+Эти 19 плагинов — не аудиофильтры и не элементы 133 DSP-каталога. Это служебные операции приложения, представленные типизированными descriptor и зарегистрированными handler. Их математическая формализация относится к workflow-графам, проверке данных, метрикам, оценкам ресурсов и конечным контрактам исполнения.
+
+| ID | Имя | Домен | Операция и формальный объект |
+|---|---|---|---|
+| operandu | Operandu | Data & logic | Снимок типизированных параметров генератора и результат validation |
+| dropaul | Dropaul | Actions & workflows | Упорядоченный dry-run граф этапов export: validate → preflight → render → measure → write → manifest |
+| zdoro | Zdoro | Integrity & diagnostics | Read-only проверка существования workspace/output и валидности параметров |
+| pyemont | Pyemont | Development | Ограниченная инвентаризация файлов и типов исходников |
+| dilly | Dilly | Interface & experience | Проверка зарегистрированных UI-панелей и требований представления |
+| baplap | Baplap | Data infrastructure | Индекс WAV-файлов, количество и суммарный размер в байтах |
+| sretuo | Sretuo | Quality engineering | Инвентаризация тестов и план проверки |
+| kali | Kali | Security | Ограниченное read-only сканирование security hygiene |
+| zalam | Zalam | Connectivity | Проверка manifest v1/v2 и экспортного контракта |
+| liur | Liur | Runtime resources | Оценка объёма аудиобуфера и предельных ресурсов |
+| keel-koh | Keel Koh | Knowledge | Инвентаризация Markdown-документации |
+| vorof | Vorof | Reverse engineering | Статическая карта файлов и модулей исходного дерева |
+| vprof | Vprof | Profiling & metrics | Оценка размера исходного кода и количества branch-keyword; не runtime profiling |
+| profe | Profe | Engineering standards | Проверка диапазонов параметров и typed settings |
+| prossee | Prossee | Project planning | План последовательности release/export-этапов |
+| vprossee | Vprossee | Verification & validation | Матрица требований и свидетельств готовности |
+| professiya | Professiya | Learning | Последовательность обучающих шагов для contributor |
+| profevo | Profevo | Evolution | Проверка совместимости версий manifest и миграции |
+| stochastic-router | Stochastic Router | Audio processing | Seeded effect-route preview, ограниченные ветви, wet/feedback/peak guards |
+
+### 3.1. Контракт служебного плагина
+
+Плагин описывается кортежем
+\[
+P=(id,name,domain,version,api,operation,capabilities,handler).
+\]
+Manifest discovery регистрирует metadata и не является загрузчиком произвольного исполняемого кода. Только явно зарегистрированный handler может быть вызван менеджером. Поля enabled, initialized, handlerAttached и lastError — различные состояния и не должны объединяться в один Boolean «плагин доступен».
+
+Точные ограничения выполняемого workflow и plugin lifecycle определены в источниках PLUGINS.md, plugin_manager.hpp/.cpp и builtin_plugins.cpp. Сам факт существования descriptor не доказывает полноту каждой заявленной capability.
+
+## 4. Восемь эффектов Stochastic Router
 
 | ID эффекта | Класс оператора |
 |---|---|
@@ -351,7 +388,7 @@ variant выбирает конфигурацию ветви общей моде
 
 План маршрута выбирает доступные эффекты по весам без повторного выбора в пуле и распределяет их по Serial, Parallel или Hybrid topology. Выбор детерминируется seed и индексом триггера. Это отдельный маршрутизатор из восьми типов эффектов, а не часть 133 записей Quantum Audio Engine.
 
-## 4. Реестр генератора
+## 5. Реестр генератора
 
 | Область | Значения |
 |---|---|
@@ -363,7 +400,7 @@ variant выбирает конфигурацию ветви общей моде
 
 Реестр задаёт конечный набор категориальных параметров. Математический смысл ритмического расписания, частот нот, огибающих, stereo pan, source chops и семенного воспроизведения формализован в [VYUNENKO_AUDIO_MATHEMATICS.md](VYUNENKO_AUDIO_MATHEMATICS.md).
 
-## 5. Граница математического прочтения
+## 6. Граница математического прочтения
 
 Строка каталога содержит несколько семантически разных полей: идентификатор — ключ реестра; отображаемое имя — интерфейсная метка; family — группировка; model — тип вычислительного оператора; variant — ветвь реализации; defaults — начальный набор параметров; description — краткая функциональная аннотация; visual — интерфейсная метафора. Только поля, имеющие формальное определение или связь с обработчиком, участвуют в математическом контракте.
 
