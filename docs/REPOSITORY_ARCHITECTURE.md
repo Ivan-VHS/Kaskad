@@ -32,6 +32,7 @@ Kaskad/
 │   ├── 08-computational-evidence/README.md
 │   ├── VYUNENKO_THEORY.md
 │   ├── K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md
+│   ├── VYUNENKO_GRAPH_THEORY.md
 │   ├── K3_CANONICAL_SYNTAX.md
 │   ├── CHAPTER_II_CASCADE_BALANCE.md
 │   ├── K3_CLAIM_REGISTRY.json
@@ -76,8 +77,8 @@ Kaskad/
 |---|---|---|
 | 01 · Основания | docs/01-foundations/README.md | Постулаты, определения, алфавит, типы и границы |
 | 02 · Ядро | docs/02-core-theory/README.md | Каноническая семантика, арифметика и нормализация |
-| 03 · Доказательства | docs/03-proofs-and-theorems/README.md | Формулировки, доказательства, зависимости и статусы |
-| 04 · Алгебра и топология | docs/04-algebra-and-topology/README.md | Кольца, делимость, CRT, метрики, комплексы, гомологии, пучки и высшие структуры |
+| 03 · Доказательства | docs/03-proofs-and-theorems/README.md | Формулировки, доказательства, зависимости, графовые статусы и доказательные журналы |
+| 04 · Алгебра и топология | docs/04-algebra-and-topology/README.md | Кольца, CRT, метрики, комплексы, гомологии, локальные паспорта, пучки и высшие структуры |
 | 05 · Crosswalk | docs/05-classical-crosswalk/README.md | Классические соответствия, источники и атрибуция |
 | 06 · Открытые задачи | docs/06-open-problems/README.md | Гипотезы, контрпримеры, ограничения и вопросы |
 | 07 · Прикладные модели | docs/07-applied-models/README.md | DAK, Reaper, Pytyliki, VentuSample и OPlague |
