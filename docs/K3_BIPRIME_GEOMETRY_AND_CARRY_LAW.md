@@ -1,6 +1,6 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # Двухканальная геометрия K3 и закон сопряжения группы с переносом
+
+> **Cascade Edition 1.0.0 · Mathematical research chapter.**
 
 **Теория:** Вьюненко K3  
 **Документ:** исследовательская глава 0.1.0  

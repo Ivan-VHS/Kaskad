@@ -1,6 +1,6 @@
-> **Cascade Edition 1.0.0 — Scientific documentation standard.** Claims retain their explicitly stated epistemic status.
-
 # Расслоенная математика K3: десять взаимосвязанных слоёв закономерностей и преобразований
+
+> **Cascade Edition 1.0.0 · Mathematical research specification.**
 
 **Теория:** Теория Вьюненко  
 **Система:** K3 / K3-M  

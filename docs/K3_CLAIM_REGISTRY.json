@@ -1,0 +1,956 @@
+{
+  "schema_version": "1.1.0",
+  "project": "Kaskad",
+  "theory": "Vyunenko K3",
+  "theory_version": "0.5.0",
+  "base": {
+    "radix": 1000,
+    "factorization": {
+      "2": 3,
+      "5": 3
+    },
+    "coefficient_range": [
+      0,
+      999
+    ],
+    "coefficient_order": "least_significant_to_most_significant",
+    "separator": "k",
+    "separator_semantics": "lexical_group_delimiter"
+  },
+  "status_vocabulary": [
+    "definition",
+    "extension_postulate",
+    "proof_written_pending_independent_review",
+    "classical_specialization_pending_independent_review",
+    "catalogue_integrity_pending_ci",
+    "catalogue_integrity_verified_by_ci",
+    "open_hypothesis",
+    "application_model_not_theorem",
+    "counterexample"
+  ],
+  "review_policy": {
+    "independent_review": "not_recorded_unless_reviewer_and_date_are_supplied",
+    "proof_assistant": "no_machine_checked_proof_is_claimed_by_this_registry",
+    "computation": "finite_checks_never_upgrade_a_universal_claim_to_a_theorem"
+  },
+  "claims": [
+    {
+      "id": "K3-DEF-001",
+      "kind": "definition",
+      "statement": "The fixed radix is B=1000=2^3*5^3 and the canonical coefficient set is {0,...,999}.",
+      "source": "docs/VYUNENKO_THEORY.md",
+      "proof_reference": "Part I; postulates K3-A1 and K3-A2",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-DEF-002",
+      "kind": "definition",
+      "statement": "A finite coefficient profile a=(a_0,...,a_m), indexed from least significant to most significant, has value sum_i a_i*1000^i.",
+      "source": "docs/VYUNENKO_THEORY.md",
+      "proof_reference": "Part II; polynomial evaluation",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-THM-001",
+      "kind": "theorem",
+      "statement": "Every n in N_0 has exactly one finite canonical base-1000 coefficient profile.",
+      "source": "docs/VYUNENKO_THEORY.md",
+      "proof_reference": "§6, existence and uniqueness proof",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "n in N_0",
+        "assumptions": [
+          "B=1000 is fixed",
+          "Every coefficient is the Euclidean remainder in 0..999"
+        ],
+        "boundary": "Finite canonical expansions only; signed values are handled by the separate sign extension."
+      }
+    },
+    {
+      "id": "K3-DEF-003",
+      "kind": "definition",
+      "statement": "The symbol k is a lexical group separator; a terminal k denotes exactly one implicit low-order zero group.",
+      "source": "docs/K3_CANONICAL_SYNTAX.md",
+      "proof_reference": "§§1–3, EBNF and semantic mapping",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-DEF-004",
+      "kind": "definition",
+      "statement": "Strict canonical words, K3-PAD imports and typed K3-RAW operands are distinct input types.",
+      "source": "docs/K3_STRUCTURAL_SEMANTICS_AND_ORDERED_SUMS.md",
+      "proof_reference": "§§3–4, input profiles and structural equality",
+      "dependencies": [
+        "K3-DEF-002",
+        "K3-DEF-003"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-THM-002",
+      "kind": "theorem",
+      "statement": "Euclidean carry/borrow normalization preserves the polynomial value and yields a canonical coefficient profile under the stated finite-vector assumptions.",
+      "source": "docs/CHAPTER_II_CASCADE_BALANCE.md",
+      "proof_reference": "§§2.1–2.8, local balance and telescoping global invariant",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite integer coefficient vectors",
+        "assumptions": [
+          "Each local step uses Euclidean quotient and remainder",
+          "The input vector is finite"
+        ],
+        "boundary": "The binary carry bound is not asserted for arbitrary signed raw coefficients."
+      }
+    },
+    {
+      "id": "K3-THM-003",
+      "kind": "theorem",
+      "statement": "For every r>=1, Z/1000^r Z is isomorphic to Z/2^(3r) Z x Z/5^(3r) Z.",
+      "source": "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
+      "proof_reference": "§3, Chinese remainder decomposition",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "r in integers with r>=1",
+        "assumptions": [
+          "The moduli 2^(3r) and 5^(3r) are coprime"
+        ],
+        "boundary": "This is a classical CRT specialization, not a claim that Z/1000^r Z is a field."
+      }
+    },
+    {
+      "id": "K3-THM-004",
+      "kind": "theorem",
+      "statement": "The inverse-limit completion for the 1000-adic ideal filtration is Z_2 x Z_5 as a topological ring.",
+      "source": "docs/K3_COMPOSITE_RADIX_ARITHMETIC.md",
+      "proof_reference": "§9, inverse-limit completion",
+      "dependencies": [
+        "K3-THM-003"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Inverse system Z/1000^r Z for r>=1",
+        "assumptions": [
+          "The transition maps are the canonical reduction maps",
+          "The inverse-limit topology is used"
+        ],
+        "boundary": "The completion is a topological ring; it is not a field."
+      }
+    },
+    {
+      "id": "K3-THM-005",
+      "kind": "theorem",
+      "statement": "Canonicalization preserves numeric evaluation; structural equality and expression-tree equality remain separately typed.",
+      "source": "docs/VYUNENKO_THEORY.md",
+      "proof_reference": "Part XVII, §§70–74; Theorem 70.1",
+      "dependencies": [
+        "K3-DEF-004",
+        "K3-THM-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The separately typed K3 canonical, PAD and RAW input profiles",
+        "assumptions": [
+          "Canonicalization is defined only for accepted PAD/RAW inputs",
+          "The value map is the polynomial evaluation over B=1000"
+        ],
+        "boundary": "Structural or AST equality is not implied by numerical equality."
+      }
+    },
+    {
+      "id": "K3-M-THM-001",
+      "kind": "theorem",
+      "statement": "The finite Hankel moment determinant admits the stated weighted squared-Vandermonde expansion for a finite nonnegative coefficient profile.",
+      "source": "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+      "proof_reference": "§3, Theorem 3.3; Cauchy–Binet factorization",
+      "dependencies": [
+        "K3-DEF-002"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite nonnegative profiles a=(a_0,...,a_m) and finite moment order q",
+        "assumptions": [
+          "a_i>=0",
+          "Moment and Hankel matrices use the definitions in §3"
+        ],
+        "boundary": "The determinant expansion is a Cauchy-Binet/Vandermonde specialization, not a general priority claim."
+      }
+    },
+    {
+      "id": "K3-M-THM-002",
+      "kind": "theorem",
+      "statement": "The position-and-length polynomial of maximal zero runs reconstructs the zero mask of the finite profile.",
+      "source": "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+      "proof_reference": "§4, Theorem 4.1",
+      "dependencies": [
+        "K3-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite profiles with zero positions in {0,...,m}",
+        "assumptions": [
+          "The zero-run list contains all maximal zero intervals exactly once"
+        ],
+        "boundary": "The zero mask does not recover nonzero coefficient magnitudes."
+      }
+    },
+    {
+      "id": "K3-M-THM-003",
+      "kind": "theorem",
+      "statement": "The finite lag spectrum satisfies the stated zero-lag, reciprocity and total-sum identities for aligned finite profiles.",
+      "source": "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+      "proof_reference": "§5, Theorem 5.1",
+      "dependencies": [
+        "K3-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Two finite aligned profiles with the same declared finite depth",
+        "assumptions": [
+          "Out-of-range coordinates are handled according to the chapter's zero-extension convention"
+        ],
+        "boundary": "The lag spectrum does not in general determine the complete pair of profiles."
+      }
+    },
+    {
+      "id": "K3-M-THM-004",
+      "kind": "theorem",
+      "statement": "For addition of two nonnegative canonical profiles, carry values are binary and the weighted local balance telescopes to the global sum identity.",
+      "source": "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+      "proof_reference": "§6, Theorems 6.1 and 6.2",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002",
+        "K3-THM-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Two finite nonnegative canonical K3 profiles",
+        "assumptions": [
+          "Each input coefficient belongs to 0..999",
+          "The initial carry is zero"
+        ],
+        "boundary": "Binary carry is not claimed for arbitrary raw signed coefficient vectors or an arbitrary number of addends."
+      }
+    },
+    {
+      "id": "K3-M-CAT-001",
+      "kind": "catalogue",
+      "statement": "The K3-M appendix contains five parameterized families of 937 records each, for 4685 unique identifiers; records instantiate five master schemes and are not 4685 independent discoveries.",
+      "source": "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+      "proof_reference": "§§0, 3–5; five master schemas and catalogue tables",
+      "dependencies": [
+        "K3-M-THM-001",
+        "K3-M-THM-002",
+        "K3-M-THM-003",
+        "K3-M-THM-004",
+        "K3-THM-003"
+      ],
+      "evidence_status": "catalogue_integrity_pending_ci",
+      "independent_review": "not_recorded",
+      "machine_check_scope": "record_count_family_counts_sequential_unique_ids_and_all_937_CRT_reconstructions_only"
+    },
+    {
+      "id": "K3-BP-THM-001",
+      "kind": "theorem",
+      "statement": "The 1000-divisibility depth is the minimum of the quantized 2-adic and 5-adic depths.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§2, Theorem 1",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "n in Z\\{0} and r in N_0",
+        "assumptions": [
+          "B=2^3*5^3",
+          "v_2 and v_5 are the ordinary prime-adic valuations"
+        ],
+        "boundary": "The base-1000 divisibility depth is a minimum of two quantized valuations, not an additive prime valuation."
+      }
+    },
+    {
+      "id": "K3-BP-THM-002",
+      "kind": "theorem",
+      "statement": "The defect of additivity of 1000-divisibility depth under products is given by the exact two-channel compensation term stated in the chapter.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§3, Theorem 2",
+      "dependencies": [
+        "K3-BP-THM-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Nonzero integers x,y",
+        "assumptions": [
+          "The two prime valuations are finite on nonzero integers",
+          "The complementarity term is defined from the remainders modulo 3"
+        ],
+        "boundary": "Do not infer additivity of the 1000-divisibility depth."
+      }
+    },
+    {
+      "id": "K3-BP-THM-003",
+      "kind": "theorem",
+      "statement": "The residue-tree branching coordinates at every level form the stated bijection between the 8-channel and 125-channel residue coordinates.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§5, Theorem 3",
+      "dependencies": [
+        "K3-THM-003"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite level r>=1 of the residue tree",
+        "assumptions": [
+          "gcd(8^r,125^r)=1",
+          "The coordinate maps are those specified in §5"
+        ],
+        "boundary": "The result is an explicit CRT coordinate description, not a new arithmetic base."
+      }
+    },
+    {
+      "id": "K3-BP-THM-004",
+      "kind": "theorem",
+      "statement": "The 1000-adic ultrametric equals the maximum of the two channel ultrametrics under the chapter's definitions.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§6, Theorem 4",
+      "dependencies": [
+        "K3-BP-THM-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Distinct integers x,y with the channel metrics defined in §6",
+        "assumptions": [
+          "Both channel metrics are defined from the 2- and 5-adic valuations",
+          "The product metric is their maximum"
+        ],
+        "boundary": "No claim is made that either channel alone induces the K3 metric."
+      }
+    },
+    {
+      "id": "K3-BP-THM-005",
+      "kind": "theorem",
+      "statement": "For independent uniform input groups and a fixed incoming carry, the conditional joint distribution of output group and next carry is the one stated in the chapter.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§8, Theorem 5",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A,D independent and uniform on D_B; fixed c in {0,1}",
+        "assumptions": [
+          "B is an integer >=2",
+          "R=(A+D+c) mod B",
+          "C'=floor((A+D+c)/B)"
+        ],
+        "boundary": "The law is conditional on a fixed incoming carry and does not imply independence of R and C'."
+      }
+    },
+    {
+      "id": "K3-BP-THM-006",
+      "kind": "theorem",
+      "statement": "Under independent uniform input groups and fixed incoming carry, Corr(R,C'|c)=-1/sqrt(3), for every integer base B>=2.",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+      "proof_reference": "§9, Theorem 6",
+      "dependencies": [
+        "K3-BP-THM-005"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A,D independent and uniform on D_B; fixed c in {0,1}",
+        "assumptions": [
+          "B is an integer >=2",
+          "R and C' are as defined in §7",
+          "The correlation is conditional on c"
+        ],
+        "boundary": "The coefficient -1/sqrt(3) is not asserted for nonuniform or dependent inputs."
+      }
+    },
+    {
+      "id": "K3-X-THM-001",
+      "kind": "theorem",
+      "statement": "The associated graded ring of the 1000-adic ideal filtration on Z is isomorphic to (Z/1000Z)[T].",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "§3, Theorem T4",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-THM-003"
+      ],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The ring Z with ideal filtration I^r=(1000^r)",
+        "assumptions": [
+          "The associated graded ring uses I^r/I^(r+1)",
+          "The grading is by r>=0"
+        ],
+        "boundary": "The graded ring is a classical construction for this filtration, not a field."
+      }
+    },
+    {
+      "id": "K3-X-THM-002",
+      "kind": "theorem",
+      "statement": "For bounded linear operators on a common space, swapping adjacent factors in a product changes the product by the surrounding factors times the commutator.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "§5, Theorem T6",
+      "dependencies": [],
+      "evidence_status": "classical_specialization_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite products of bounded linear operators on one common normed space",
+        "assumptions": [
+          "All factors are bounded and composable",
+          "The commutator is [A,B]=AB-BA"
+        ],
+        "boundary": "The formula does not apply to nonlinear operators without a separate definition and proof."
+      }
+    },
+    {
+      "id": "K3-X-THM-003",
+      "kind": "theorem",
+      "statement": "Under the explicitly stated nearest-frame rounding model, cumulative duration error is bounded by the sum of the half-target-frame periods.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "§6, Theorem T7",
+      "dependencies": [],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A finite sequence of nearest-frame resampling stages with positive target rates f_j",
+        "assumptions": [
+          "Each stage contributes at most half a target frame of rounding error",
+          "Durations are compared in the same unit"
+        ],
+        "boundary": "The theorem does not prove spectral equivalence, absence of aliasing or amplitude preservation."
+      }
+    },
+    {
+      "id": "K3-X-THM-004",
+      "kind": "theorem",
+      "statement": "A transition that only removes capabilities or budget cannot increase the represented feasible-state set under the stated subset order.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "§7, Theorem T8",
+      "dependencies": [],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A transition system ordered by inclusion of feasible-state sets",
+        "assumptions": [
+          "Each transition only removes capabilities or budget",
+          "The feasibility predicate is monotone with respect to the stated order"
+        ],
+        "boundary": "This abstract result does not prove that a particular software system enforces its declared constraints."
+      }
+    },
+    {
+      "id": "K3-X-HYP-001",
+      "kind": "hypothesis",
+      "statement": "A distributional law for the two-channel complementarity index may hold under an explicitly chosen random model.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "Part VI, H1",
+      "dependencies": [
+        "K3-BP-THM-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-X-HYP-002",
+      "kind": "hypothesis",
+      "statement": "A spectral classification of operator chains may be available for selected operator classes.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "Part VI, H2",
+      "dependencies": [
+        "K3-X-THM-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-X-HYP-003",
+      "kind": "hypothesis",
+      "statement": "A dimensionally complete K3-X typing discipline may be developed for a larger class of homogeneous quantities.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "Part VI, H3",
+      "dependencies": [],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-X-HYP-004",
+      "kind": "hypothesis",
+      "statement": "Sharper cumulative error bounds may be proved for selected multistage resampling models.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "Part VI, H4",
+      "dependencies": [
+        "K3-X-THM-003"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-X-HYP-005",
+      "kind": "hypothesis",
+      "statement": "A joint proof-evidence graph may be specified with machine-checkable provenance rules.",
+      "source": "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+      "proof_reference": "Part VI, H5",
+      "dependencies": [],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "PYTYLIKI-APP-001",
+      "kind": "application_model",
+      "statement": "The Pytyliki-to-K3 document is an application-level mathematical reconstruction with explicit implementation and evidence boundaries, not a theorem about full runtime correctness.",
+      "source": "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
+      "proof_reference": "§§13–16, theorem and evidence boundaries",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "application_model_not_theorem",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "OPLAGUE-APP-001",
+      "kind": "application_model",
+      "statement": "The OPlague-to-K3 materials define an application mathematical model and provenance boundaries; they do not extend the base K3 axioms.",
+      "source": "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
+      "proof_reference": "Part XI and Part XII; K3 mapping and proof obligations",
+      "dependencies": [
+        "K3-DEF-001",
+        "K3-DEF-002"
+      ],
+      "evidence_status": "application_model_not_theorem",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-CTR-001",
+      "kind": "counterexample",
+      "statement": "The implication nu_1000(n)=0 => n is a unit modulo 1000^r is false.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§1, n=8 and gcd(8,1000)=8",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "For n=8 and r=1, nu_1000(8)=0 but gcd(8,1000)=8, so [8] is not a unit.",
+      "scope": {
+        "domain": "Integers n and r>=1",
+        "assumptions": [
+          "The modulus is 1000^r",
+          "nu_1000 is divisibility depth by powers of 1000"
+        ],
+        "boundary": "The correct unit criterion is gcd(n,1000)=1."
+      }
+    },
+    {
+      "id": "K3-CTR-002",
+      "kind": "counterexample",
+      "statement": "The function nu_1000 is additive on multiplication for all nonzero integer pairs.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§2, product 2*500=1000",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "nu_1000(2)=0 and nu_1000(500)=0, whereas nu_1000(2*500)=1.",
+      "scope": {
+        "domain": "Nonzero integer pairs",
+        "assumptions": [
+          "nu_1000(n) is the greatest r such that 1000^r divides n"
+        ],
+        "boundary": "The witness refutes additivity, not every divisibility inequality."
+      }
+    },
+    {
+      "id": "K3-CTR-003",
+      "kind": "counterexample",
+      "statement": "The number of separators k uniquely determines the numeric value of a K3 word.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§3, compare 50k0k and 5k0k",
+      "dependencies": [
+        "K3-DEF-002",
+        "K3-DEF-003"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "50k0k and 5k0k each have two separators but evaluate to 50000000 and 5000000.",
+      "scope": {
+        "domain": "Finite canonical nonnegative K3 words",
+        "assumptions": [
+          "Both words use radix 1000 and canonical syntax"
+        ],
+        "boundary": "Separator count records depth, not the full coefficient profile."
+      }
+    },
+    {
+      "id": "K3-CTR-004",
+      "kind": "counterexample",
+      "statement": "The quotient ring Z/1000Z is a field.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§4, nonzero zero divisors [8] and [125]",
+      "dependencies": [
+        "K3-DEF-001"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "[8] and [125] are nonzero modulo 1000 but their product is [1000]=[0].",
+      "scope": {
+        "domain": "The quotient ring Z/1000Z",
+        "assumptions": [
+          "Residue classes are taken modulo 1000"
+        ],
+        "boundary": "A field has no nonzero zero divisors."
+      }
+    },
+    {
+      "id": "K3-CTR-005",
+      "kind": "counterexample",
+      "statement": "Equal numeric evaluations imply identity of ordered expression trees.",
+      "source": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+      "proof_reference": "§5, reversed Add nodes",
+      "dependencies": [
+        "K3-DEF-004"
+      ],
+      "evidence_status": "counterexample",
+      "independent_review": "not_recorded",
+      "witness": "Add(50k,K3-RAW(5k0)) and Add(K3-RAW(5k0),50k) are distinct ordered trees but both evaluate to 55000.",
+      "scope": {
+        "domain": "Ordered binary addition expressions over typed K3 operands",
+        "assumptions": [
+          "Both operands are evaluated as integers",
+          "Addition is ordinary integer addition"
+        ],
+        "boundary": "Numeric equality does not erase AST order or operation provenance."
+      }
+    },
+    {
+      "id": "K3-GCS-DEF-001",
+      "kind": "definition",
+      "statement": "K3-GCS-1 is the typed tuple of a dependency graph, an algebraic category, a sign-interpretation category, graph-to-category and sign mappings, and interpretation rules.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§2, Definition 1; formal signature K3-GCS-1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-002",
+      "kind": "definition",
+      "statement": "A K3-GCS dependency graph is a typed directed multigraph whose vertices and edges carry declared types, labels, contextual guards, and optional weights.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§3, Definition 2",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-003",
+      "kind": "definition",
+      "statement": "A semiotic passport is the typed triple of representamen, represented object, and interpretant rule, with an optional interpretation context.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§5, Definition 5",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-DEF-004",
+      "kind": "definition",
+      "statement": "The four-valued evidence domain consists of true, false, unknown, and conflict states represented by positive and negative evidence pairs.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§8.1, four-valued pair representation",
+      "dependencies": [
+        "K3-GCS-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded"
+    },
+    {
+      "id": "K3-GCS-HYP-001",
+      "kind": "hypothesis",
+      "statement": "For selected classes of K3 dependency graphs, quotienting by equivalences that preserve semantic passports and categorical invariants may yield a smaller model without losing a specified set of derivations.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-1; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Selected finite or suitably bounded typed K3 dependency graphs",
+        "assumptions": [
+          "The quotient relation is explicitly defined",
+          "Semantic passports and selected categorical invariants are preserved"
+        ],
+        "boundary": "No general derivation-preservation theorem is claimed for arbitrary graph quotients."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-002",
+      "kind": "hypothesis",
+      "statement": "For a defined class of predicate systems over finite metadata domains, the cascade refinement operator may be monotone and may reach a least or greatest fixed point.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-2; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-004"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Specified finite partially ordered metadata states and predicate operators",
+        "assumptions": [
+          "A partial order is defined",
+          "Every refinement operator is proved monotone",
+          "The update schedule satisfies the stated fairness condition"
+        ],
+        "boundary": "Termination is not claimed for arbitrary non-monotone or infinite-state cascades."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-003",
+      "kind": "hypothesis",
+      "statement": "For some covers of K3 metadata graphs, compatible local passports may glue uniquely into a global structure satisfying the sheaf conditions.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-3; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-003"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A specified base space, cover, presheaf of metadata, and restriction maps",
+        "assumptions": [
+          "Local sections are defined",
+          "Compatibility on overlaps is defined",
+          "The relevant sheaf axioms are checked"
+        ],
+        "boundary": "Pairwise local compatibility alone does not establish a unique global section."
+      }
+    },
+    {
+      "id": "K3-GCS-HYP-004",
+      "kind": "hypothesis",
+      "statement": "Some metadata morphisms may induce maps between Schwarz planes that preserve selected dimension or tensor invariants.",
+      "source": "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
+      "proof_reference": "§15.1, Hypothesis GCS-4; proof obligation is open",
+      "dependencies": [
+        "K3-GCS-DEF-001",
+        "K3-GCS-DEF-002"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A specified family of metadata morphisms and the associated Schwarz-plane configurations",
+        "assumptions": [
+          "The metadata-to-coordinate maps are fixed",
+          "The class of admissible morphisms is specified",
+          "The dimension or tensor invariant is defined on both sides"
+        ],
+        "boundary": "No invariant-preservation claim is made for arbitrary morphisms or all Schwarz-plane configurations."
+      }
+    },
+    {
+      "id": "K3-PE-DEF-001",
+      "kind": "definition",
+      "statement": "A numbering collapse occurs when an equivalence relation on a common semantic carrier identifies every numbered value with one distinguished void state; the induced factor numbering is the quotient projection composed with the original numbering.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§2.1, Definition 2.1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A numbering nu:I->U and an equivalence relation on U",
+        "assumptions": [
+          "The distinguished void state belongs to the same carrier U",
+          "Every numbered value is equivalent to the distinguished state"
+        ],
+        "boundary": "The definition concerns loss of distinguishability in a quotient and does not delete the index set or the original numbers."
+      }
+    },
+    {
+      "id": "K3-PE-THM-001",
+      "kind": "theorem",
+      "statement": "If every value of a numbering is equivalent to one distinguished void state, its induced quotient numbering is constant and is non-injective whenever the index set has at least two elements.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§2.1, Theorem 2.1",
+      "dependencies": [
+        "K3-PE-DEF-001"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A numbering nu:I->U with |I|>=2",
+        "assumptions": [
+          "An equivalence relation is defined on U",
+          "Every nu(i) is equivalent to the distinguished void state"
+        ],
+        "boundary": "No claim is made that the original numbering or its index domain ceases to exist."
+      }
+    },
+    {
+      "id": "K3-PE-DEF-002",
+      "kind": "definition",
+      "statement": "The negative-axis control model uses K(y)=K0-lambda*y on y<=0 with lambda>0, so decreasing y increases the selected control measure.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§3, equation (PE-2)",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Real control parameter y<=0",
+        "assumptions": [
+          "K0 is real",
+          "lambda is strictly positive"
+        ],
+        "boundary": "The monotonicity follows from the chosen function and is not implied by y<0 alone."
+      }
+    },
+    {
+      "id": "K3-PE-DEF-003",
+      "kind": "definition",
+      "statement": "The secondary inventory of descriptions is the tuple of typed description operators applied to a primary description of an object.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§3.1, Definition 3.1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "An object O with primary description delta(O) and operators P_i",
+        "assumptions": [
+          "Each P_i has a declared input and output type",
+          "The operators are defined on delta(O)"
+        ],
+        "boundary": "The resulting tuple describes descriptions and is not identified with the source object."
+      }
+    },
+    {
+      "id": "K3-PE-DEF-004",
+      "kind": "definition",
+      "statement": "Semantic load after n steps is D_n=sum_{i=1}^n w_i*h_i with nonnegative contributions h_i and positive weights w_i.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§4.1, Definition 4.1",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite sequences of real contributions and weights",
+        "assumptions": [
+          "h_i>=0",
+          "w_i>0",
+          "The units and interpretation of h_i and w_i are declared for each application"
+        ],
+        "boundary": "The decimal example in the source proposal does not by itself define a universal sequence or a semantic metric."
+      }
+    },
+    {
+      "id": "K3-PE-HYP-001",
+      "kind": "hypothesis",
+      "statement": "For some classes of description systems beyond a critical semantic load, increasing description complexity may decrease the operational recoverability of the described object.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§5, Hypothesis PE-H1",
+      "dependencies": [
+        "K3-PE-DEF-003",
+        "K3-PE-DEF-004"
+      ],
+      "evidence_status": "open_hypothesis",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A declared class of description systems with a measurable recoverability function R(P,D)",
+        "assumptions": [
+          "Recoverability is operationally defined on [0,1]",
+          "A critical load threshold is specified",
+          "The comparison holds the object class and measurement protocol fixed"
+        ],
+        "boundary": "The claim is not universal; lossless encodings can increase description length without reducing recoverability."
+      }
+    },
+    {
+      "id": "K3-PE-DEF-005",
+      "kind": "definition",
+      "statement": "The paradigmatic-erosion feedback model is the discrete recurrence for description complexity, semantic load, and recoverability given in equation (PE-5).",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§6, equation (PE-5)",
+      "dependencies": [
+        "K3-PE-DEF-004"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Discrete state variables p_n,e_n,r_n and positive parameters alpha,beta,gamma",
+        "assumptions": [
+          "p_n>=0, e_n>=0 and r_n in [0,1]",
+          "alpha,beta,gamma are strictly positive"
+        ],
+        "boundary": "The recurrence is a chosen model and is not asserted to represent every description process."
+      }
+    },
+    {
+      "id": "K3-PE-THM-002",
+      "kind": "theorem",
+      "statement": "For recurrence (PE-5) with positive parameters, positive initial load, and positive initial recoverability, semantic load and description complexity diverge while recoverability converges to zero.",
+      "source": "docs/K3_PARADIGMATIC_EROSION_METATHEORY.md",
+      "proof_reference": "§6, Theorem 6.1",
+      "dependencies": [
+        "K3-PE-DEF-005"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "The discrete recurrence (PE-5)",
+        "assumptions": [
+          "alpha>0, beta>0, gamma>0",
+          "e_0>0 and r_0>0"
+        ],
+        "boundary": "The result proves the recurrence's behavior only; it is not a universal theorem about formal systems."
+      }
+    }
+  ],
+  "schema": "schemas/k3-claim-registry.v1.schema.json"
+}
