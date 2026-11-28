@@ -3,6 +3,7 @@
 > Cascade Edition 1.0.0 · Слой терминологической и библиографической сверки.
 
 - [Классический математический crosswalk](../CLASSICAL_MATHEMATICS_CROSSWALK.md)
+- [Графо-категориально-семиотический синтез K3](../K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md) — явное сопоставление графовых, категорийных и семиотических терминов их математическим типам.
 - [Справочник фундаментальных принципов](../MATHEMATICAL_FOUNDATIONS_REFERENCE.md)
 - [Авторство, права и атрибуция](../ATTRIBUTION_AND_RIGHTS.md)
 - [Научная ориентация](../SWISS_RESEARCH_ALIGNMENT.md)
