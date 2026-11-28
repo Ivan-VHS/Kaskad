@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "theory": {
+    "id": "K3",
+    "title": "Теория Вьюненко",
+    "version": "0.5.0",
+    "canonical_source": "docs/VYUNENKO_THEORY.md",
+    "canonical_documentation_index": "docs/INDEX.md",
+    "license": "Apache-2.0",
+    "base_semantics": {
+      "radix": 1000,
+      "coefficient_min": 0,
+      "coefficient_max": 999,
+      "separator": "k",
+      "finite_expansions_only_in_base_core": true
+    }
+  },
+  "release": {
+    "date": "2026-11-28",
+    "branch": "integration/kaskad-total-consolidation-2026-11-28",
+    "compatible_extension": true,
+    "base_semantics_changed": false,
+    "summary": [
+      "Retained the 0.4.0 compatible CRT idempotent splitting, 1000-adic completion and unique infinite positional expansion",
+      "Added the two-channel arithmetic of radix 1000=2^3*5^3, including unit criteria, residue geometry and carry laws under explicit assumptions",
+      "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
+      "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
+      "Added typed applied mathematical models and traceability for DAK, Reaper, Pytyliki, OPlague and VentuSample without claiming source-project implementation",
+      "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations."
+    ]
+  },
+  "results": [
+    {
+      "id": "K3-CRT-T1",
+      "title": "Compatible CRT idempotent splitting",
+      "status": "proved",
+      "source": "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md#5-idempotent-decomposition"
+    },
+    {
+      "id": "K3-CRT-T2",
+      "title": "Unique infinite positional K3 expansion",
+      "status": "proved",
+      "source": "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md#6-infinite-positional-k3-expansion"
+    },
+    {
+      "id": "K3-CRT-T3",
+      "title": "Finite-support and eventual-999 integer tails",
+      "status": "proved",
+      "source": "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md#7-finite-and-negative-integers"
+    },
+    {
+      "id": "K3-BAL-001",
+      "title": "K3 divisibility depth as the minimum of the two prime channels",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-BAL-002",
+      "title": "Exact compensation law for divisibility depth under multiplication",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-GEO-002",
+      "title": "Explicit 8×125 coordinates of each K3 residue-tree branch",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-GEO-003",
+      "title": "K3 ultrametric as the maximum of the two channel ultrametrics",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-001",
+      "title": "Uniform conditional distribution of the output group",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-002",
+      "title": "Joint distribution of output group and next carry",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-CAR-003",
+      "title": "Conditional carry/output correlation −1/√3 for fixed incoming carry",
+      "status": "proved",
+      "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    }
+  ],
+  "kaskad_files": [
+    "README.md",
+    "docs/INDEX.md",
+    "docs/VYUNENKO_THEORY.md",
+    "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+    "docs/VYUNENKO_LARGE_AND_EXTENDED_NUMBERS.md",
+    "docs/CROSS_REPOSITORY_MATHEMATICAL_SYNTHESIS_K3X.md",
+    "docs/KASKAD_CENTRAL_CONSOLIDATION.md",
+    "docs/VYUNENKO_ORDERED_CASCADE_ARITHMETIC.md",
+    "docs/K3_POSITIONAL_DISTINCTION_AND_DIRECTED_COMPOSITION.md",
+    "docs/K3_EXPRESSION_LANGUAGE.md",
+    "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
+    "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
+    "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
+    "docs/DAK_SYSTEM_MATHEMATICS.md",
+    "docs/DAK_FORMAL_CONTRACTS.md",
+    "docs/DAK_K3_ALIGNMENT_AND_TRACEABILITY.md",
+    "docs/DAK_REPOSITORY_MATHEMATICAL_INVENTORY.md",
+    "docs/REAPER_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/REAPER_K3_INTEGRATION.md",
+    "docs/REAPER_MATHEMATICAL_SOURCE_REGISTER.json",
+    "docs/VYUNENKO_AUDIO_MATHEMATICS.md",
+    "docs/VYUNENKO_AUDIO_CATALOGUE.md",
+    "docs/VYUNENKO_K3_AUDIO_BRIDGE.md",
+    "docs/VYUNENKO_VENTUSAMPLE_PROVENANCE.md",
+    "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
+    "docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md",
+    "docs/REFERENCE_IMPLEMENTATION.md",
+    "docs/K3_REFERENCE_VECTORS.json",
+    "docs/CHUMNY_VERDICT_THEORY.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
+    "docs/PYTYLIKI_TO_K3_MATHEMATICAL_MAP.v1.json",
+    "docs/OPLAGUE_MATHEMATICAL_FOUNDATIONS.md",
+    "docs/OPLAGUE_TO_K3_CROSSWALK.md",
+    "docs/OPLAGUE_K3_MODEL.v1.json",
+    "schemas/oplage-k3-model.v1.schema.json",
+    "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+    "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
+  ],
+  "ecosystem_dependents": [
+    {
+      "repository": "Ivan-VHS/Pytyliki",
+      "policy": "documentation_reference_only",
+      "readmes": [
+        "README.md",
+        "README.uk.md",
+        "README.ru.md",
+        "README.zh-CN.md"
+      ],
+      "index": "docs/README.md",
+      "technical_crosswalk": "docs/PYTYLIKI_TO_K3_MATHEMATICAL_FOUNDATION.md",
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
+    },
+    {
+      "repository": "Ivan-VHS/Reaper",
+      "policy": "documentation_reference_only",
+      "readmes": [
+        "README.md",
+        "README.uk.md",
+        "README.ru.md",
+        "README.zh-CN.md"
+      ],
+      "index": "docs/README.md",
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
+    },
+    {
+      "repository": "Ivan-VHS/OPlague",
+      "policy": "documentation_reference_only",
+      "readmes": [
+        "README.md",
+        "README.uk.md",
+        "README.ru.md",
+        "README.zh-CN.md"
+      ],
+      "index": "docs/README.md",
+      "technical_crosswalk": "docs/OPLAGUE_TO_K3_CROSSWALK.md",
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
+    },
+    {
+      "repository": "Ivan-VHS/VentuSample",
+      "policy": "documentation_reference_only",
+      "readmes": [
+        "README.md",
+        "README.uk.md",
+        "README.ru.md",
+        "README.zh-CN.md"
+      ],
+      "index": "docs/README.md",
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
+    },
+    {
+      "repository": "Ivan-VHS/DAK",
+      "policy": "documentation_reference_only",
+      "readmes": [
+        "README.md",
+        "README.uk.md",
+        "README.ru.md",
+        "README.zh-CN.md"
+      ],
+      "index": "docs/README.md",
+      "no_runtime_dependency": true,
+      "research_reference": "docs/VYUNENKO_K3_RESEARCH_REFERENCE.md"
+    }
+  ],
+  "governance": {
+    "propagation_model": "reviewable-pull-request-per-repository",
+    "direct_main_branch_writes": false,
+    "preserve_existing_copyright_and_license_notices": true,
+    "do_not_transfer_source_code_or_ownership_between_repositories": true,
+    "external_license_changes": false,
+    "credential_requirement": "A GitHub App installation token or a narrowly scoped token with contents:write and pull_requests:write in each dependent repository is required for unattended future dispatch.",
+    "unattended_dispatch_secret_name": "IVAN_VHS_SYNC_TOKEN",
+    "automation_status": "workflow_implemented_secret_unverified",
+    "note": "Workflow and synchronizer are committed. Continuous cross-repository writes are not confirmed until IVAN_VHS_SYNC_TOKEN is configured and the workflow completes successfully.",
+    "workflow_path": ".github/workflows/vyunenko-ecosystem-sync.yml",
+    "script_path": "scripts/sync_vyunenko_docs.mjs",
+    "required_secret": "IVAN_VHS_SYNC_TOKEN",
+    "required_token_permissions": [
+      "contents:write",
+      "pull_requests:write"
+    ],
+    "merge_policy": "draft_pull_request_only",
+    "trigger_paths": [
+      "docs/VYUNENKO_THEORY.md",
+      "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
+      "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+      "docs/VYUNENKO_APPLIED_MATHEMATICAL_ATLAS.md",
+      "docs/RESEARCH_MATURITY_AND_RECOGNITION_PATH.md"
+    ]
+  },
+  "research_extensions": [
+    {
+      "id": "CV-1",
+      "title": "Теория Чумного Вердикта",
+      "version": "1.1.0",
+      "status": "formal_specification",
+      "source": "docs/CHUMNY_VERDICT_THEORY.md",
+      "parameter_domain": "c in Z, c != 0",
+      "primary_relation": "x prec_c y iff x = 0 and y = c",
+      "additive_transition": "x leads_to_c y iff y = x + c",
+      "base_semantics_changed": false,
+      "notes": [
+        "Ordinary integer identity and arithmetic are unchanged",
+        "The primary directed relation contains exactly one ordered pair (0,c)",
+        "Additive propagation is modelled as a directed translation graph",
+        "Unrestricted multiplication changes the parameter and is not a closure rule for fixed c",
+        "No claim of a new alternative arithmetic of integers is made",
+        "TCV-K3 lifts the fixed directed CV relation to compatible typed carriers without replacing ordinary equality",
+        "K3 positional zero slots retain their indices even when their numeric contribution is zero",
+        "The zero-divisor example is in Z/1000Z; it is not an equality 625*376=0 in Z",
+        "The evidence verdict distinguishes exact zero, exact nonzero, unknown, absent, and invalid states"
+      ],
+      "typed_k3_layer": {
+        "id": "TCV-K3",
+        "title": "Каскадно-типизированное расширение",
+        "status": "compatible_formal_extension",
+        "sections": [
+          "typed_additive_domains",
+          "lifted_directed_relation",
+          "value_and_structural_equality",
+          "positional_zero_identity",
+          "residue_ring_zero_divisors",
+          "five_state_evidence_verdict"
+        ],
+        "verdict_states": [
+          "ZERO",
+          "NONZERO",
+          "UNKNOWN",
+          "ABSENT",
+          "INVALID"
+        ],
+        "base_semantics_changed": false
+      }
+    }
+  ]
+}

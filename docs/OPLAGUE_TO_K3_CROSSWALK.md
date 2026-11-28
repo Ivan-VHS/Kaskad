@@ -1,3 +1,15 @@
+<div align="center">
+  <img src="../assets/kaskad-jade-atlas.svg" alt="Нефритовый атлас Kaskad — Теория Вьюненко K3" width="100%" />
+  <p><strong>НЕФРИТОВЫЙ АТЛАС · ТЕОРИЯ ВЬЮНЕНКО K3</strong></p>
+  <p><sub>ОСНОВАНИЕ B = 1000 · МАТЕМАТИЧЕСКИЙ ДОКУМЕНТ</sub></p>
+</div>
+
+<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
+
+---
+
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Соответствие OPlague ↔ математика Kaskad/K3
 ## Реестр переноса смысловых структур, данных и доказательных границ
 
@@ -115,3 +127,8 @@ K3 используется для точных целых, индексов и 
 ## 6. Итог
 
 OPlague становится в Kaskad не копией программного проекта, а математически описанной прикладной системой. Её ядро — типизированные наблюдения и свидетельства, ограниченные преобразования, граф кандидатных отношений, статистика, транзакции, локальное согласование, DAG и федерация. K3 остаётся фундаментальным позиционным слоем точных целых с основанием 1000, без потери размерностей, источников, типов и доказательной дисциплины.
+
+
+---
+
+<p align="center"><sub>KASKAD · ТЕОРИЯ ВЬЮНЕНКО K3 · Редакционное оформление не меняет математический статус утверждений. См. <a href="INDEX.md">карту документации</a> и <a href="ATTRIBUTION_AND_RIGHTS.md">правила атрибуции</a>.</sub></p>

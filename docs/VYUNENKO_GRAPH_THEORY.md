@@ -1,3 +1,15 @@
+<div align="center">
+  <img src="../assets/kaskad-jade-atlas.svg" alt="Нефритовый атлас Kaskad — Теория Вьюненко K3" width="100%" />
+  <p><strong>НЕФРИТОВЫЙ АТЛАС · ТЕОРИЯ ВЬЮНЕНКО K3</strong></p>
+  <p><sub>ОСНОВАНИЕ B = 1000 · МАТЕМАТИЧЕСКИЙ ДОКУМЕНТ</sub></p>
+</div>
+
+<p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="JADE_ATLAS_STYLE.md">СТИЛЬ</a> · <a href="ATTRIBUTION_AND_RIGHTS.md">ПРАВА И ИСТОЧНИКИ</a></p>
+
+---
+
+> **Cascade Edition 1.0.0 · Scientific integrity:** Mathematical claims retain their declared status; presentation and computation do not substitute for proof.
+
 # Теория графов Вьюненко
 
 ## Графы каскадов, остаточных деревьев, доказательных зависимостей и когнитивных операторов
@@ -184,3 +196,8 @@ L=D-A.
 ## 10. Ограничение научных утверждений
 
 Графовая запись известной структуры сама по себе не является новой теоремой. Новизна возможна, если для конкретного семейства K3-графов доказаны новые характеристики, экстремальные оценки, спектральные свойства, автоморфизмы или алгоритмические границы. Для каждого результата требуются точное определение графа и сравнение с литературой.
+
+
+---
+
+<p align="center"><sub>KASKAD · ТЕОРИЯ ВЬЮНЕНКО K3 · Редакционное оформление не меняет математический статус утверждений. См. <a href="INDEX.md">карту документации</a> и <a href="ATTRIBUTION_AND_RIGHTS.md">правила атрибуции</a>.</sub></p>
