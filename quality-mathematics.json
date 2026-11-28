@@ -81,7 +81,18 @@
     "semantic_erasure_is_distinct_from_physical_storage_deletion": true,
     "undefined_discriminants_do_not_trigger_destructive_branch_by_default": true,
     "universal_reverse_cursed_root_claims_require_complete_quantifiers_and_counterexample_review": true,
-    "visual_brand_analogies_are_non_normative_and_separate_from_mathematical_proof": true
+    "visual_brand_analogies_are_non_normative_and_separate_from_mathematical_proof": true,
+    "sine_gordon_bps_bound_declares_topological_sector_and_finite_energy_domain": true,
+    "sine_gordon_equality_case_is_solved_up_to_translation": true,
+    "static_energy_minimization_is_not_claimed_as_dynamic_asymptotic_stability": true,
+    "authorial_sine_gordon_labels_are_not_promoted_to_physical_theorems": true,
+    "quadratic_escape_radius_is_separated_from_filled_julia_set_membership": true,
+    "filled_julia_set_and_julia_boundary_are_distinguished": true,
+    "julia_set_measure_claim_specifies_one_dimensional_lebesgue_measure": true,
+    "information_gate_declares_payload_module_and_indicator_region": true,
+    "mutual_information_claims_require_a_joint_probability_law": true,
+    "zero_mutual_information_from_erasure_requires_zero_output_almost_surely": true,
+    "trajectorywise_erasure_is_not_promoted_to_unconditional_zero_mutual_information": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -154,7 +165,9 @@
         "predeclared_twenty_level_thresholds",
         "metaphorical_labels_are_not_medical_claims"
       ],
-      "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure"
+      "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure",
+      "sine_gordon_static_bps_kink": "finite_energy_topological_sector_0_to_2pi_bps_bound_8",
+      "reverse_cursed_root_dynamics": "quadratic_escape_radius_julia_survivor_set_and_probabilistic_information_gate"
     }
   },
   "forbidden": {
