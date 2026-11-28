@@ -139,6 +139,35 @@ async function main() {
   const branchName = 'automation/vyunenko-k3-sync-' + version.replace(/[^0-9A-Za-z-]/g, '-');
   const results = [];
 
+  async function ensurePullRequest(repo, base, branchExists) {
+    const owner = repo.split('/')[0];
+    const query = '/pulls?state=all&head=' + encodeURIComponent(owner + ':' + branchName) + '&base=' + encodeURIComponent(base);
+    const related = await request('GET', apiRepo(repo, query));
+    const open = related.find(item => item.state === 'open');
+    if (open) return open;
+
+    const closedUnmerged = related.find(item => item.state === 'closed' && !item.merged_at);
+    if (closedUnmerged) {
+      return await request('PATCH', apiRepo(repo, '/pulls/' + closedUnmerged.number), { state: 'open' });
+    }
+
+    if (branchExists) {
+      const comparePath = '/compare/' + encodeURIComponent(base) + '...' + encodeURIComponent(branchName);
+      const comparison = await getOptional(apiRepo(repo, comparePath));
+      if (!comparison || ((comparison.ahead_by || 0) <= 0 && !(comparison.files || []).length)) return null;
+    } else {
+      return null;
+    }
+
+    return await request('POST', apiRepo(repo, '/pulls'), {
+      title: '[Docs] Sync Vyunenko Theory K3 ' + version,
+      head: branchName,
+      base,
+      draft: true,
+      body: '## Automated documentation synchronization\n\nKaskad merged the canonical Vyunenko Theory K3 ' + version + ' release. This PR synchronizes localized README references, the documentation index and a local research note.\n\nThis is documentation-only: it does not import source code, add runtime dependencies, modify local APIs/schemas or transfer license rights. Existing copyright, license, NOTICE and attribution material is preserved.\n\nPlease run repository checks and review before merge. The workflow never writes directly to the target default branch.'
+    });
+  }
+
   for (const entry of manifest.ecosystem_dependents || []) {
     const repo = entry.repository;
     const repoMeta = await request('GET', apiRepo(repo, ''));
@@ -161,7 +190,9 @@ async function main() {
     const notePath = entry.research_reference || 'docs/VYUNENKO_K3_RESEARCH_REFERENCE.md';
     const noteCurrent = await readTextFile(repo, notePath, targetRef);
     const noteContent = researchNote(repo, version);
-    if (!noteCurrent || noteCurrent.content !== noteContent) pending.push({ path: notePath, desired: noteContent, message: 'docs: add Vyunenko Theory K3 ' + version + ' research reference' });
+    if (!noteCurrent || noteCurrent.content !== noteContent) {
+      pending.push({ path: notePath, desired: noteContent, message: 'docs: add Vyunenko Theory K3 ' + version + ' research reference' });
+    }
 
     const indexPath = entry.index || 'docs/README.md';
     const indexCurrent = await readTextFile(repo, indexPath, targetRef);
@@ -171,15 +202,12 @@ async function main() {
       const desired = hasReference
         ? indexCurrent.content.replace(/## Related mathematical research[\s\S]*?(?=\n## |$)/, section)
         : indexCurrent.content.trimEnd() + '\n\n' + section + '\n';
-      if (desired !== indexCurrent.content) pending.push({ path: indexPath, desired, message: 'docs: index Vyunenko Theory K3 ' + version + ' reference' });
+      if (desired !== indexCurrent.content) {
+        pending.push({ path: indexPath, desired, message: 'docs: index Vyunenko Theory K3 ' + version + ' reference' });
+      }
     }
 
-    if (pending.length === 0) {
-      results.push({ repository: repo, status: 'already_current', branch: branchName });
-      continue;
-    }
-
-    if (!branchRef) {
+    if (pending.length > 0 && !branchRef) {
       try {
         await request('POST', apiRepo(repo, '/git/refs'), { ref: 'refs/heads/' + branchName, sha: baseRef.object.sha });
       } catch (error) {
@@ -188,25 +216,20 @@ async function main() {
       branchRef = await request('GET', apiRepo(repo, '/git/ref/heads/' + branchName));
     }
 
-    for (const item of pending) {
-      const latest = await readTextFile(repo, item.path, branchName);
-      if (latest && latest.content === item.desired) continue;
-      await writeTextFile(repo, item.path, branchName, latest, item.desired, item.message);
+    if (branchRef && pending.length > 0) {
+      for (const item of pending) {
+        const latest = await readTextFile(repo, item.path, branchName);
+        if (latest && latest.content === item.desired) continue;
+        await writeTextFile(repo, item.path, branchName, latest, item.desired, item.message);
+      }
     }
 
-    const owner = repo.split('/')[0];
-    const openPulls = await request('GET', apiRepo(repo, '/pulls?state=open&head=' + encodeURIComponent(owner + ':' + branchName) + '&base=' + encodeURIComponent(base)));
-    let pr = openPulls[0] || null;
-    if (!pr) {
-      pr = await request('POST', apiRepo(repo, '/pulls'), {
-        title: '[Docs] Sync Vyunenko Theory K3 ' + version,
-        head: branchName,
-        base,
-        draft: true,
-        body: '## Automated documentation synchronization\n\nKaskad merged the canonical Vyunenko Theory K3 ' + version + ' release. This PR synchronizes localized README references, the documentation index and a local research note.\n\nThis is documentation-only: it does not import source code, add runtime dependencies, modify local APIs/schemas or transfer license rights. Existing copyright, license, NOTICE and attribution material is preserved.\n\nPlease run repository checks and review before merge. The workflow never writes directly to the target default branch.'
-      });
+    const pr = branchRef ? await ensurePullRequest(repo, base, true) : null;
+    if (pr) {
+      results.push({ repository: repo, status: 'pull_request_open', branch: branchName, pull_request: pr.html_url || null, updated_files: pending.map(item => item.path) });
+    } else {
+      results.push({ repository: repo, status: 'already_current', branch: branchName });
     }
-    results.push({ repository: repo, status: 'pull_request_open', branch: branchName, pull_request: pr.html_url || null, files: pending.map(item => item.path) });
   }
 
   process.stdout.write(JSON.stringify({ version, results }, null, 2) + '\n');
