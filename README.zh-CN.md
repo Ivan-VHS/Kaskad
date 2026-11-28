@@ -63,7 +63,7 @@ K3 使用的主要符号如下：
 | $D_B$ | 允许的规范系数：$\{0,1,\ldots,999\}$ |
 | $a_i$ | 第 $i$ 个位置上的组系数 |
 | $k$ | 相邻组之间的分隔符，不是数字或乘数 |
-| $\operatorname{Val}_{K3}$ | 计算级联数值的函数 |
+| $\mathrm{Val}_{K3}$ | 计算级联数值的函数 |
 
 完整约定见[ K3 规范理论](docs/VYUNENKO_THEORY.md)和[数学文档科学标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)。
 
@@ -84,7 +84,7 @@ $$
 $$
 a=(a_0,a_1,\ldots,a_m),
 \qquad
-\operatorname{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
+\mathrm{Val}_{K3}(a)=\sum_{i=0}^{m}a_iB^i.
 $$
 
 简单来说：每个数值组都有自己的位置，而位置决定了它对整个数值的贡献。
