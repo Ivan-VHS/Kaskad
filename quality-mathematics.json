@@ -28,7 +28,16 @@
     "every_counterexample_names_the_rejected_claim_and_exact_witness": true,
     "theorem_and_hypothesis_statuses_are_tracked_by_stable_claim_id": true,
     "proof_review_and_machine_check_status_are_separate": true,
-    "applied_models_do_not_inherit_theorem_status_from_source_domain": true
+    "applied_models_do_not_inherit_theorem_status_from_source_domain": true,
+    "every_higher_structure_declares_types_and_bridge_contract": true,
+    "every_chain_complex_declares_coefficients_and_boundary_squared_zero": true,
+    "every_sheaf_declares_site_restrictions_and_gluing": true,
+    "every_stratification_checks_frontier_conditions": true,
+    "quantum_logic_is_separate_from_boolean_support_lattice": true,
+    "composite_radix_is_not_mislabeled_as_prime_p_adic": true,
+    "semantic_numeric_and_structural_equalities_are_typed_separately": true,
+    "hermeneutic_and_gematric_mappings_are_parameterized_and_provenance_tracked": true,
+    "cryptographic_security_is_not_inferred_from_k3_encoding": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -115,7 +124,12 @@
     "treating_the_1000_adic_completion_as_the_ordinary_integer_ring": true,
     "claiming_statistical_independence_from_CRT_coordinate_independence": true,
     "describing_correlation_conditional_on_the_next_carry_as_defined_when_that_carry_is_fixed": true,
-    "using_1000_not_dividing_x_as_a_unit_criterion": true
+    "using_1000_not_dividing_x_as_a_unit_criterion": true,
+    "equating_hypergraph_with_simplicial_complex_without_declared_construction": true,
+    "equating_sheaf_and_simplicial_cohomology_without_comparison_theorem": true,
+    "treating_symbolic_sum_match_as_semantic_or_causal_proof": true,
+    "treating_k3_notation_as_cipher_or_security_scheme": true,
+    "treating_finite_k3_profiles_as_intrinsically_fractal": true
   },
   "review": {
     "mathematical_review_required": true,
