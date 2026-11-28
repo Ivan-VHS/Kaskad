@@ -33,8 +33,8 @@ if (project) {
   if (project.project?.id !== "KASKAD") fail("project-contract.json: project.id must be KASKAD");
   if (project.theory?.id !== "K3") fail("project-contract.json: theory.id must be K3");
 
-  if (project.theory?.specification_version !== "0.6.0") {
-    fail("project-contract.json: theory.specification_version must match the integrated K3 theory 0.6.0");
+  if (project.theory?.specification_version !== "0.8.0") {
+    fail("project-contract.json: theory.specification_version must match the integrated K3 theory 0.8.0");
   }
   if (project.theory?.radix !== 1000) fail("project-contract.json: K3 radix must be 1000");
   if (project.theory?.radix_factorization?.["2"] !== 3 || project.theory?.radix_factorization?.["5"] !== 3) {
