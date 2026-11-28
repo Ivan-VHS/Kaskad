@@ -48,6 +48,9 @@
       "directed_block_composition_separate_from_addition",
       "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
       "CV1_directed_zero_relation_and_twenty_level_negative_trend_model"
+    ],
+    "compatible_extensions": [
+      "CV1_directed_zero_relation_and_twenty_level_negative_trend_model"
     ]
   },
   "scope": [
