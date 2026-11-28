@@ -43,9 +43,19 @@ The auxiliary kaskad_k3 package currently provides:
 | Divisibility | Residues, congruence and depth of divisibility | Boundary vectors and composite-base examples |
 | Metric | Exact rational 1000-divisibility distance | Strong triangle inequality checked on a finite grid |
 | Serialization | Deterministic versioned JSON format with strict validation | Round-trip and malformed-payload tests |
-| Research infrastructure | Theory-level vectors and extended edge-case vectors, contribution/security notes and CI | Both vector files are exercised by the test suite; Actions status is recorded separately |
+| Research infrastructure | Theory-level vectors and extended edge-case vectors, contribution/security notes and CI | K3 matrix and foundation validation passed on the core revision listed below |
 
 | Complexity | Group-level operation counts documented without a bit-complexity or performance claim | See reference specification section 9; no benchmark is published |
+
+
+### Verification evidence
+
+The following checks completed successfully for core revision `2fc0468572926a672167edd219092174e15fccd2`:
+
+- [K3 reference checks — run 46086000332](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086000332): passed on Python 3.11, 3.12, 3.13 and 3.14; package compilation and all unit/conformance tests passed.
+- [Foundation validation — run 46086000377](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086000377): passed.
+
+A second K3 run, [46086002506](https://github.com/Ivan-VHS/Kaskad/actions/runs/46086002506), also completed successfully on the same revision. These results verify the auxiliary implementation and repository contracts at the cited revision; they do not certify the unrestricted mathematical theorems. The subsequent status-only commit does not change source, tests, vectors or workflow definitions.
 
 ## 3. Mathematical status
 
