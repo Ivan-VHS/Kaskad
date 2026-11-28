@@ -20,7 +20,7 @@
   "theory": {
     "id": "K3",
     "name": "Теория Вьюненко",
-    "specification_version": "0.7.0",
+    "specification_version": "0.8.0",
     "radix": 1000,
     "radix_factorization": {
       "2": 3,
@@ -60,7 +60,8 @@
       "CV1_directed_zero_relation_and_twenty_level_negative_trend_model",
       "typed_K3_reverse_cursed_root_discriminant_gated_left_channel_erasure_model",
       "typed_postfix_terminal_integral_operator_K3_TI",
-      "typed_TOPK_total_system_annihilation_and_meta_level_hierarchy"
+      "typed_TOPK_total_system_annihilation_and_meta_level_hierarchy",
+      "five_rule_meta_axiomatic_mathematical_cosmology_K3_MC5"
     ]
   },
   "scope": [
@@ -129,7 +130,8 @@
     "directed_plague_verdict_and_negative_trend_model",
     "typed_discriminant_gated_left_channel_erasure_and_recoverability_model",
     "typed_postfix_terminal_integral_operator_K3_TI",
-    "finite_measure_integral_to_exact_K3_sum_bridge"
+    "finite_measure_integral_to_exact_K3_sum_bridge",
+    "stratified_object_universes_typed_transformations_boundaries_crystallization_and_level_relative_annihilation"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -247,7 +249,8 @@
     "docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md",
     "docs/K3_REVERSE_CURSED_ROOT.md",
     "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
-    "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md"
+    "docs/TOPK_TOTAL_ANNIHILATION_THEORY.md",
+    "docs/K3_FIVE_FUNDAMENTAL_RULES_MATHEMATICAL_COSMOLOGY.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
@@ -277,7 +280,16 @@
     "K3_TI_sine_Gordon_energy_claim_declares_locally_absolutely_continuous_finite_energy_class",
     "K3_TI_quadratic_escape_radius_is_separated_from_full_survivor_set",
     "K3_TI_Julia_measure_statement_uses_one_dimensional_Lebesgue_measure_and_classical_source",
-    "K3_TI_mutual_information_zero_requires_almost_surely_constant_output"
+    "K3_TI_mutual_information_zero_requires_almost_surely_constant_output",
+    "K3_MC5_object_universes_are_stratified_and_not_promoted_to_a_naive_universal_set",
+    "K3_MC5_transformations_declare_types_domains_preconditions_and_postconditions",
+    "K3_MC5_boundaries_distinguish_topological_operational_and_epistemic_statuses",
+    "K3_MC5_lyapunov_stability_is_not_mistaken_for_asymptotic_convergence",
+    "K3_MC5_crystallization_requires_a_declared_invariant_target_and_convergence_conditions",
+    "K3_MC5_symbolic_normal_forms_require_termination_and_confluence",
+    "K3_MC5_annihilation_distinguishes_TOPK_C_Omega_and_K3_RCR",
+    "K3_MC5_relative_meta_annihilation_does_not_assume_a_final_meta_level",
+    "K3_MC5_five_rule_derivability_remains_open_until_a_formal_calculus_is_given"
   ],
   "documentation_standard": {
     "edition": "Cascade Edition",
