@@ -51,7 +51,9 @@
       "directed_block_composition_separate_from_addition",
       "typed_applied_mathematical_models_DAK_Reaper_VentuSample",
       "negative_tendency_invariant_defect_cascade_and_twenty_threshold_levels",
-      "computable_K3_numbering_and_TCV_K3_index_pullbacks"
+      "computable_K3_numbering_and_TCV_K3_index_pullbacks",
+      "hierarchical_K3_product_decomposition_and_exact_quotient_remainder_segmentation",
+      "typed_discrete_signal_operators_and_VentuSample_mathematical_bridge"
     ]
   },
   "scope": [
@@ -218,7 +220,9 @@
     "docs/KASKAD_INSTITUTE_CHARTER.md",
     "docs/MATHEMATICAL_GLOSSARY.md",
     "docs/SCIENTIFIC_QUALITY_IMPLEMENTATION_PLAN.md",
-    "docs/ERRATA.md"
+    "docs/ERRATA.md",
+    "docs/K3_PRODUCT_DECOMPOSITION.md",
+    "docs/VYUNENKO_PARSEC_QUANTIZATION.md"
   ],
   "implementation_state": {
     "status": "mathematical_documentation_and_research_methods",
