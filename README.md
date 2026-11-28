@@ -2,6 +2,18 @@
 
 Kaskad — математический исследовательский репозиторий, посвящённый Теории Вьюненко и каскадно-тысячной системе K3. В нём собраны определения, формальные спецификации, доказательства, вычислительные примеры, исследовательские задачи и документы о связи K3 с классическими математическими структурами.
 
+## Научная консолидация K3
+
+- [Карта научной консолидации](docs/K3_SCIENTIFIC_CONSOLIDATION.md) — иерархия источников, доказательный контракт и границы расширений.
+- [Формальная и эпистемическая инфраструктура](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) и [стандарт научной математической документации](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md).
+- [Реестр математических утверждений](docs/K3_CLAIM_REGISTRY.json), [JSON Schema](schemas/k3-claim-registry.v1.schema.json) и [эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json).
+- [Арифметика составного основания](docs/K3_COMPOSITE_RADIX_ARITHMETIC.md) и [двухканальная геометрия с законом переноса](docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md).
+- [Авторские каскадные формулы](docs/K3_ORIGINAL_CASCADE_FORMULAS.md), [4685 параметризованных экземпляров](docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md) и [расслоенная математика K3](docs/K3_STRATIFIED_MATHEMATICS.md).
+- [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md).
+- [Архитектура репозитория](docs/REPOSITORY_ARCHITECTURE.md) и восемь слоевых каталогов от [оснований](docs/01-foundations/README.md) до [вычислительных свидетельств](docs/08-computational-evidence/README.md).
+- [Контрпримеры и границы K3](docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md) — точные свидетели пяти неверных обобщений.
+
+
 **Основной объект:** конечные позиционные каскады целых чисел.  
 **Основание:** \(B=1000=10^3=2^3\cdot5^3\).  
 **Допустимый коэффициент канонической группы:** \(0\le a_i\le999\).  

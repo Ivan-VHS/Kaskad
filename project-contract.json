@@ -87,7 +87,10 @@
     "two_channel_composite_radix_geometry",
     "finite_profile_morphology",
     "directed_expression_composition",
-    "typed_applied_mathematical_models"
+    "typed_applied_mathematical_models",
+    "repository_architecture_and_navigation",
+    "claim_and_counterexample_registry",
+    "machine_readable_reference_vector_schema"
   ],
   "epistemic_statuses": [
     "axiom",
@@ -172,6 +175,21 @@
     "docs/VYUNENKO_VENTUSAMPLE_SCOPE_MATRIX.md",
     "docs/K3_CRT_IDEMPOTENTS_AND_INFINITE_CASCADES.md",
     "docs/VYUNENKO_ECOSYSTEM_SYNC.v1.json",
+    "docs/REPOSITORY_ARCHITECTURE.md",
+    "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+    "docs/01-foundations/README.md",
+    "docs/02-core-theory/README.md",
+    "docs/03-proofs-and-theorems/README.md",
+    "docs/04-algebra-and-topology/README.md",
+    "docs/05-classical-crosswalk/README.md",
+    "docs/06-open-problems/README.md",
+    "docs/07-applied-models/README.md",
+    "docs/08-computational-evidence/README.md",
+    "formal/README.md",
+    "schemas/k3-reference-vectors.v1.schema.json",
+    "tests/README.md",
+    "schemas/README.md",
+    "scripts/README.md",
     "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE_STANDARD.md",
     "docs/K3_INTEGER_MULTIPLICITY_AUDIT.md",
     "docs/K3_INTEGER_MULTIPLICITY_EVIDENCE.v1.json"
@@ -232,5 +250,27 @@
       "criterion_count": 20,
       "status_is_not_a_truth_score": true
     }
+  },
+  "repository_layout": {
+    "architecture_document": "docs/REPOSITORY_ARCHITECTURE.md",
+    "navigation_root": "docs/INDEX.md",
+    "canonical_documents_keep_stable_paths": true,
+    "documentation_layers": [
+      "docs/01-foundations/README.md",
+      "docs/02-core-theory/README.md",
+      "docs/03-proofs-and-theorems/README.md",
+      "docs/04-algebra-and-topology/README.md",
+      "docs/05-classical-crosswalk/README.md",
+      "docs/06-open-problems/README.md",
+      "docs/07-applied-models/README.md",
+      "docs/08-computational-evidence/README.md"
+    ],
+    "claim_registry": "docs/K3_CLAIM_REGISTRY.json",
+    "counterexample_register": "docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md",
+    "reference_vectors": "docs/K3_REFERENCE_VECTORS.json",
+    "schemas": [
+      "schemas/k3-claim-registry.v1.schema.json",
+      "schemas/k3-reference-vectors.v1.schema.json"
+    ]
   }
 }

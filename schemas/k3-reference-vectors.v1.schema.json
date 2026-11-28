@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ivan-VHS/Kaskad/blob/main/schemas/k3-reference-vectors.v1.schema.json",
+  "title": "Kaskad K3 Reference Vectors",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "theory",
+    "radix",
+    "coefficient_order",
+    "canonical_coefficient_range",
+    "vectors"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.2.0"
+    },
+    "theory": {
+      "type": "string",
+      "const": "K3"
+    },
+    "radix": {
+      "type": "integer",
+      "const": 1000
+    },
+    "coefficient_order": {
+      "type": "string",
+      "const": "least_significant_to_most_significant"
+    },
+    "canonical_coefficient_range": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "integer",
+          "const": 0
+        },
+        {
+          "type": "integer",
+          "const": 999
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "vectors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "operation",
+          "left",
+          "expected",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^K3-[A-Z0-9-]+$"
+          },
+          "operation": {
+            "enum": [
+              "add",
+              "multiply",
+              "identity"
+            ]
+          },
+          "left": {
+            "$ref": "#/$defs/operand"
+          },
+          "right": {
+            "$ref": "#/$defs/operand"
+          },
+          "expected": {
+            "$ref": "#/$defs/operand"
+          },
+          "ordered_expression": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "const": "reference_expected_not_execution_pass"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "operation": {
+                  "enum": [
+                    "add",
+                    "multiply"
+                  ]
+                }
+              },
+              "required": [
+                "operation"
+              ]
+            },
+            "then": {
+              "required": [
+                "right"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "input_modes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "$defs": {
+    "operand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "word",
+        "coefficients",
+        "decimal"
+      ],
+      "properties": {
+        "word": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coefficients": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 999
+          }
+        },
+        "decimal": {
+          "type": "string",
+          "pattern": "^-?(?:0|[1-9][0-9]*)$"
+        },
+        "input_mode": {
+          "enum": [
+            "canonical",
+            "K3-PAD",
+            "K3-RAW"
+          ]
+        },
+        "canonical_word": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
