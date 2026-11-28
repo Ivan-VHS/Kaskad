@@ -66,7 +66,10 @@
         "statement_ids",
         "dependency_graph",
         "counterexample_registry",
-        "formalization_decision"
+        "formalization_decision",
+        "K3-TI stable claim identities and dependency registration",
+        "sine-Gordon square-completion proof record",
+        "real quadratic escape-radius proof record"
       ]
     },
     {
@@ -86,7 +89,12 @@
         "symbolic_analysis",
         "numerical_methods",
         "interval_arithmetic",
-        "error_analysis"
+        "error_analysis",
+        "typed_postfix_terminal_integral_notation",
+        "finite_atomic_exact_integral_reference_implementation",
+        "measure_domain_and_integrability_contract",
+        "sine_gordon_disjoint_union_measure_with_topological_atom",
+        "limit_integral_interchange_requires_named_convergence_theorem"
       ]
     },
     {

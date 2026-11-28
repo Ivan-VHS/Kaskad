@@ -81,7 +81,18 @@
     "semantic_erasure_is_distinct_from_physical_storage_deletion": true,
     "undefined_discriminants_do_not_trigger_destructive_branch_by_default": true,
     "universal_reverse_cursed_root_claims_require_complete_quantifiers_and_counterexample_review": true,
-    "visual_brand_analogies_are_non_normative_and_separate_from_mathematical_proof": true
+    "visual_brand_analogies_are_non_normative_and_separate_from_mathematical_proof": true,
+    "terminal_integral_has_explicit_domain_measure_and_variable": true,
+    "terminal_integral_postfix_scope_is_explicit_and_unambiguous": true,
+    "terminal_integral_semantics_reduces_to_standard_measure_integral": true,
+    "finite_atomic_terminal_integral_reduces_to_weighted_finite_sum": true,
+    "limit_integral_interchange_requires_a_named_convergence_theorem": true,
+    "K3_encoding_of_integral_result_requires_proven_nonnegative_integrality": true,
+    "sine_gordon_boundary_term_is_derived_from_declared_topological_sector": true,
+    "terminal_integral_atomic_mass_has_declared_semantics": true,
+    "real_quadratic_escape_radius_uses_the_positive_fixed_point": true,
+    "mutual_information_claims_require_random_variables_and_joint_law": true,
+    "Cantor_topology_is_not_used_as_a_standalone_zero_measure_proof": true
   },
   "k3_constraints": {
     "radix": 1000,
@@ -154,7 +165,8 @@
         "predeclared_twenty_level_thresholds",
         "metaphorical_labels_are_not_medical_claims"
       ],
-      "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure"
+      "reverse_cursed_root": "parametric_discriminant_gated_left_channel_erasure",
+      "terminal_integral": "postfix_operator_with_standard_measure_integral_denotation"
     }
   },
   "forbidden": {
@@ -202,7 +214,13 @@
     "digit_patterns_are_not_claimed_as_fractality_without_explicit_transform": true,
     "cv1_zero_of_a_group_coefficient_is_not_treated_as_zero_of_full_k3_value": true,
     "cv1_medical_metaphors_are_not_medical_or_epidemiological_claims": true,
-    "cv_k3_m1_is_not_generalized_to_arbitrary_dynamic_systems": true
+    "cv_k3_m1_is_not_generalized_to_arbitrary_dynamic_systems": true,
+    "treating_postfix_terminal_integral_as_ordinary_multiplication": true,
+    "interchanging_limit_and_integral_without_convergence_hypotheses": true,
+    "encoding_arbitrary_real_integral_as_integer_K3_word": true,
+    "claiming_K3_TI_defines_a_new_integral_calculus": true,
+    "inferring_zero_measure_from_the_word_Cantor_alone": true,
+    "claiming_Shannon_mutual_information_without_a_probability_model": true
   },
   "review": {
     "mathematical_review_required": true,

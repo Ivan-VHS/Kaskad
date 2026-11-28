@@ -1122,6 +1122,103 @@
         ],
         "boundary": "No universality is claimed before the parameters are fixed; one in-range discriminant for a nonempty pair refutes the hypothesis on that family."
       }
+    },
+    {
+      "id": "K3-TI-DEF-001",
+      "kind": "definition",
+      "statement": "The K3-TI terminal integral is a postfix closure operator whose denotation on an explicitly bracketed integrable function F is the standard measure integral over the declared domain and measure.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§3–§5, Definitions 3.1 and finite-measure semantics",
+      "dependencies": [],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "A notation and typed-semantics extension; not a new integral calculus."
+    },
+    {
+      "id": "K3-TI-DEF-002",
+      "kind": "definition",
+      "statement": "On a finite atomic measure space, the K3-TI integral is the exact weighted finite sum of function values at the atoms.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§5, finite atomic measure",
+      "dependencies": [
+        "K3-TI-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The executable reference function uses exact integers and rational fractions only."
+    },
+    {
+      "id": "K3-TI-THM-001",
+      "kind": "theorem",
+      "statement": "For a finite atomic measure, the K3-TI terminal integral equals the exact weighted sum over its atoms.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§5, finite atomic integral",
+      "dependencies": [
+        "K3-TI-DEF-001",
+        "K3-TI-DEF-002"
+      ],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "A finite atomic measure space with finitely many atoms",
+        "assumptions": [
+          "Each atom has a declared nonnegative mass",
+          "The integrand is defined at each atom",
+          "All finite weighted products and sums are defined"
+        ],
+        "boundary": "This is the finite-support specialization of standard measure integration."
+      }
+    },
+    {
+      "id": "K3-SG-THM-001",
+      "kind": "theorem",
+      "statement": "For a finite-energy sine-Gordon transition u(-infinity)=0 and u(+infinity)=2pi, the energy is at least 8 and decomposes into two nonnegative square-defect integrals plus the topological term 8.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§6.3–§6.5, square completion and boundary evaluation",
+      "dependencies": [],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Finite-energy real profiles on R with the stated endpoint limits and sufficient local absolute continuity",
+        "assumptions": [
+          "The energy integral is finite",
+          "u is locally absolutely continuous with derivative square-integrable where required",
+          "The endpoint limits are 0 and 2pi"
+        ],
+        "boundary": "The lower bound belongs to the specified sine-Gordon normalization and topological sector; it is not a universal energy bound."
+      }
+    },
+    {
+      "id": "K3-DSC-THM-001",
+      "kind": "theorem",
+      "statement": "For the real recurrence D_(k+1)=D_k^2-m with m>0 and rho the positive solution of rho^2-rho-m=0, any state with absolute value greater than rho exits the interval [-rho,rho] permanently and its forward orbit diverges to positive infinity.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§7.2, escape-radius lemma",
+      "dependencies": [],
+      "evidence_status": "proof_written_pending_independent_review",
+      "independent_review": "not_recorded",
+      "scope": {
+        "domain": "Real initial states for the quadratic recurrence with m>0",
+        "assumptions": [
+          "m is a positive real number",
+          "rho=(1+sqrt(1+4m))/2",
+          "The recurrence is iterated exactly over the real numbers"
+        ],
+        "boundary": "The result is specific to the real recurrence and does not by itself establish a complex dynamical claim."
+      }
+    },
+    {
+      "id": "K3-DSC-DEF-001",
+      "kind": "definition",
+      "statement": "The finite survival gate is the product of the admissibility indicators along the first n iterates, represented as the exponential of a finite counting-measure integral of the extended-real logarithm of those indicators.",
+      "source": "docs/K3_TERMINAL_INTEGRAL_OPERATOR.md",
+      "proof_reference": "§7.3, finite survival gate",
+      "dependencies": [
+        "K3-TI-DEF-001"
+      ],
+      "evidence_status": "definition",
+      "independent_review": "not_recorded",
+      "verification_note": "The log-zero convention is log(0)=-infinity; this symbolic extended-real construction is not implemented by the rational-only runtime function."
     }
   ],
   "schema": "schemas/k3-claim-registry.v1.schema.json"
