@@ -33,6 +33,7 @@ Kaskad/
 │   ├── VYUNENKO_THEORY.md
 │   ├── K3_HIGHER_STRUCTURES_AND_SEMANTIC_LAYERS.md
 │   ├── VYUNENKO_GRAPH_THEORY.md
+│   ├── K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md
 │   ├── K3_CANONICAL_SYNTAX.md
 │   ├── CHAPTER_II_CASCADE_BALANCE.md
 │   ├── K3_CLAIM_REGISTRY.json
@@ -88,6 +89,7 @@ Kaskad/
 ## 4. Источники истины
 
 - Теория: docs/VYUNENKO_THEORY.md.
+- Графо-категориально-семиотическая модель локальных паспортов и эффектов: docs/K3_GRAPH_CATEGORY_SEMIOTIC_SYNTHESIS.md.
 - Синтаксис: docs/K3_CANONICAL_SYNTAX.md.
 - Статусы и зависимости: docs/K3_CLAIM_REGISTRY.json.
 - Контрпримеры: docs/K3_COUNTEREXAMPLES_AND_BOUNDARIES.md.
