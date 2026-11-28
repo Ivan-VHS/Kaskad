@@ -111,6 +111,8 @@ For computational claims, documentation records the source revision, actual tool
 ### Verification and governance
 
 - [K3 reference vectors](docs/K3_REFERENCE_VECTORS.json)
+- [K3 reference implementation and API](docs/REFERENCE_IMPLEMENTATION.md)
+- [K3 reference implementation status](docs/DEVELOPMENT_STATUS.md)
 - [Scientific mathematical documentation standard](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md)
 - [Language edition register](docs/LANGUAGE_REGISTER.md)
 - [Project contract](project-contract.json)
@@ -197,7 +199,7 @@ Kaskad охватывает математическую логику, теор�
 
 **Методология:** [Формальная доказательная методология](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [Карта математических дисциплин](docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md) · [Вычислительные методы](docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md) · [Экспериментальная методология](docs/EXPERIMENTAL_EMPIRICAL_METHOD.md) · [Исследовательская методология и вспомогательные вычисления](docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md) · [Дорожная карта программы](docs/RESEARCH_PLATFORM_ROADMAP.md) · [Шаблон записи](docs/RESEARCH_RECORD_TEMPLATE.md) · [Правила развития теории](docs/THEORY_DEVELOPMENT_RULES.md) · [Конструктивная карта исследований](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) · [Ревизия K-суффиксов](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md) · [Кооперативный синтез формул](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md).
 
-**Контроль и управление:** [Эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json) · [Научный стандарт](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md) · [Контракт проекта](project-contract.json) · [Контракт качества математики](quality-mathematics.json) · [Контракт вычислений](quality-computation.json) · [Этапы исследования](engineering-evolution.v1.json).
+**Контроль и управление:** [Эталонные векторы K3](docs/K3_REFERENCE_VECTORS.json) · [Эталонная реализация K3](docs/REFERENCE_IMPLEMENTATION.md) · [Статус реализации K3](docs/DEVELOPMENT_STATUS.md) · [Научный стандарт](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Реестр языковых редакций](docs/LANGUAGE_REGISTER.md) · [Контракт проекта](project-contract.json) · [Контракт качества математики](quality-mathematics.json) · [Контракт вычислений](quality-computation.json) · [Этапы исследования](engineering-evolution.v1.json).
 
 ### Цитирование и публикационный статус
 
@@ -278,7 +280,7 @@ Kaskad охоплює математичну логіку, теорію множ
 
 **Методологія:** [Формальна доказова методологія](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [Карта математичних дисциплін](docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md) · [Обчислювальні методи](docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md) · [Експериментальна методологія](docs/EXPERIMENTAL_EMPIRICAL_METHOD.md) · [Дослідницька методологія та допоміжні обчислення](docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md) · [Дорожня карта програми](docs/RESEARCH_PLATFORM_ROADMAP.md) · [Шаблон запису](docs/RESEARCH_RECORD_TEMPLATE.md) · [Правила розвитку теорії](docs/THEORY_DEVELOPMENT_RULES.md) · [Конструктивна карта досліджень](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) · [Ревізія K-суфіксів](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md) · [Кооперативний синтез формул](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md).
 
-**Контроль і управління:** [Еталонні вектори K3](docs/K3_REFERENCE_VECTORS.json) · [Науковий стандарт](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Реєстр мовних редакцій](docs/LANGUAGE_REGISTER.md) · [Контракт проєкту](project-contract.json) · [Контракт якості математики](quality-mathematics.json) · [Контракт обчислень](quality-computation.json) · [Етапи дослідження](engineering-evolution.v1.json).
+**Контроль і управління:** [Еталонні вектори K3](docs/K3_REFERENCE_VECTORS.json) · [Еталонна реалізація K3](docs/REFERENCE_IMPLEMENTATION.md) · [Статус реалізації K3](docs/DEVELOPMENT_STATUS.md) · [Науковий стандарт](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [Реєстр мовних редакцій](docs/LANGUAGE_REGISTER.md) · [Контракт проєкту](project-contract.json) · [Контракт якості математики](quality-mathematics.json) · [Контракт обчислень](quality-computation.json) · [Етапи дослідження](engineering-evolution.v1.json).
 
 ### Цитування та публікаційний статус
 
@@ -359,7 +361,7 @@ Kaskad 涵盖数学逻辑、集合论、代数、数论、几何、拓扑、数�
 
 **研究方法：** [形式化证明框架](docs/FORMAL_EPISTEMIC_AND_PROOF_FRAMEWORK.md) · [数学学科架构](docs/MATHEMATICAL_DOMAIN_ARCHITECTURE.md) · [计算方法](docs/COMPUTATIONAL_RESEARCH_ARCHITECTURE.md) · [实验方法](docs/EXPERIMENTAL_EMPIRICAL_METHOD.md) · [数学研究方法与辅助计算](docs/RESEARCH_COMPUTATIONAL_FOUNDATION.md) · [研究计划路线图](docs/RESEARCH_PLATFORM_ROADMAP.md) · [研究记录模板](docs/RESEARCH_RECORD_TEMPLATE.md) · [理论发展规则](docs/THEORY_DEVELOPMENT_RULES.md) · [构造性研究路线图](docs/CONSTRUCTIVE_RESEARCH_ROADMAP.md) · [K 后缀研究评议](docs/K_SUFFIX_SPECULATIVE_RESEARCH_REVIEW.md) · [合作公式综合](docs/COOPERATIVE_VITRUVIAN_FORMULA_SYNTHESIS.md)。
 
-**验证与治理：** [K3 参考向量](docs/K3_REFERENCE_VECTORS.json) · [科研文档标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [语言版本登记](docs/LANGUAGE_REGISTER.md) · [项目契约](project-contract.json) · [数学质量契约](quality-mathematics.json) · [计算质量契约](quality-computation.json) · [研究阶段](engineering-evolution.v1.json)。
+**验证与治理：** [K3 参考向量](docs/K3_REFERENCE_VECTORS.json) · [K3 参考实现](docs/REFERENCE_IMPLEMENTATION.md) · [K3 实现状态](docs/DEVELOPMENT_STATUS.md) · [科研文档标准](docs/SCIENTIFIC_MATHEMATICAL_DOCUMENTATION_STANDARD.md) · [语言版本登记](docs/LANGUAGE_REGISTER.md) · [项目契约](project-contract.json) · [数学质量契约](quality-mathematics.json) · [计算质量契约](quality-computation.json) · [研究阶段](engineering-evolution.v1.json)。
 
 ### 引用与发表状态
 
