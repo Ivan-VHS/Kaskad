@@ -3,7 +3,7 @@
   "theory": {
     "id": "K3",
     "title": "Теория Вьюненко",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "canonical_source": "docs/VYUNENKO_THEORY.md",
     "canonical_documentation_index": "docs/INDEX.md",
     "license": "Apache-2.0",
@@ -26,7 +26,8 @@
       "Added the ten-layer K3-M finite-profile morphology, with open questions and finite-catalogue limitations retained",
       "Added explicit ordered expression and directed block composition semantics, separate from integer addition",
       "Added typed applied mathematical models and traceability for DAK, Reaper, Pytyliki, OPlague and VentuSample without claiming source-project implementation",
-      "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations."
+      "Added a unified applied-mathematical atlas coordinating the five domain chapters, K3 encoding boundaries, cross-project contracts and open proof obligations.",
+      "Added the K3-PD hierarchical product-decomposition layer: disjoint factor-index partitions, pairwise product cells, positional and multi-factor convolution, carry-preserving normalization, and exact quotient/remainder reconciliation."
     ]
   },
   "results": [
@@ -89,6 +90,36 @@
       "title": "Conditional carry/output correlation −1/√3 for fixed incoming carry",
       "status": "proved",
       "source": "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md"
+    },
+    {
+      "id": "K3-PD-T1",
+      "title": "Complete blockwise distributive decomposition of a product",
+      "status": "proved",
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#4-hierarchical-partition-and-recursive-refinement"
+    },
+    {
+      "id": "K3-PD-T2",
+      "title": "Positional convolution identity for K3 products",
+      "status": "proved",
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#5-stratification-by-position-and-cascade-convolution"
+    },
+    {
+      "id": "K3-PD-T3",
+      "title": "Value preservation under product normalization",
+      "status": "proved",
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#5-stratification-by-position-and-cascade-convolution"
+    },
+    {
+      "id": "K3-PD-T4",
+      "title": "Exact quotient and remainder reconciliation across product cells",
+      "status": "proved",
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#7-quotient-segmentation-and-remainder-reconciliation"
+    },
+    {
+      "id": "K3-PD-T5",
+      "title": "Multi-factor positional convolution identity",
+      "status": "proved",
+      "source": "docs/K3_PRODUCT_DECOMPOSITION.md#6-decomposition-of-multiple-products"
     }
   ],
   "kaskad_files": [
@@ -104,6 +135,7 @@
     "docs/K3_EXPRESSION_LANGUAGE.md",
     "docs/K3_BIPRIME_GEOMETRY_AND_CARRY_LAW.md",
     "docs/K3_STRATIFIED_MATHEMATICS.md",
+    "docs/K3_PRODUCT_DECOMPOSITION.md",
     "docs/K3_MATHEMATICAL_FOUNDATIONS_AND_4685_INSTANCES.md",
     "docs/K3_ORIGINAL_CASCADE_FORMULAS.md",
     "docs/DAK_SYSTEM_MATHEMATICS.md",
