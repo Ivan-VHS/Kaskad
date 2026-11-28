@@ -3,6 +3,8 @@
   <p><sub>НАПРАВЛЕННОЕ ОТНОШЕНИЕ · ПОЗИЦИОННАЯ СОВМЕСТИМОСТЬ · ДОКАЗАТЕЛЬНЫЕ ГРАНИЦЫ</sub></p>
 </div>
 
+> **Cascade Edition 1.0.0 · Scientific integrity:** CV-1 and TCV-K3 retain their declared scope; directional relations do not replace ordinary equality.
+
 <p align="center"><a href="../README.md">ГЛАВНАЯ</a> · <a href="INDEX.md">КАРТА ДОКУМЕНТОВ</a> · <a href="VYUNENKO_THEORY.md">КАНОН K3</a> · <a href="COMPLECTOR_LOGIC_AND_PSEUDOFOUNDATIONS.md">VCL</a></p>
 
 ---
