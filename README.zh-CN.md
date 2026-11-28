@@ -130,6 +130,7 @@ K3 的数值算术与普通整数算术一致：基数 1000 只是把十进制�
 | 想要了解 | 请阅读 |
 |---|---|
 | 完整 K3 理论 | [维尤年科 K3 理论](docs/VYUNENKO_THEORY.md) |
+| 了解有向判定与 CV-K3-M1 | [Chumny Verdict CV-1 理论](docs/CHUMNY_VERDICT_THEORY.md)（v1.2.1；单调性结论仅适用于明确给定的模型） |
 | 记数和解析规则 | [K3 规范语法](docs/K3_CANONICAL_SYNTAX.md) |
 | 进位与借位 | [级联平衡](docs/CHAPTER_II_CASCADE_BALANCE.md) |
 | 与经典数学的联系 | [经典数学对应关系](docs/CLASSICAL_MATHEMATICS_CROSSWALK.md) |
