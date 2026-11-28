@@ -32,7 +32,15 @@
     "equivalence_collapse_requires_common_typed_carrier": true,
     "description_complexity_does_not_imply_object_nonexistence": true,
     "integrals_declare_density_domain_and_measure": true,
-    "semantic_load_metrics_are_operationally_defined": true
+    "semantic_load_metrics_are_operationally_defined": true,
+    "category_valued_presheaf_declares_base_and_restriction_functor_laws": true,
+    "object_class_sheaf_is_distinguished_from_stack_descent": true,
+    "category_valued_descent_checks_overlap_cocycle_and_morphism_gluing": true,
+    "local_global_gluing_uses_explicit_four_valued_evidence": true,
+    "cascade_monad_declares_transformer_order_unit_and_bind_laws": true,
+    "comonad_context_is_not_asserted_without_counit_and_comultiplication_laws": true,
+    "operational_node_statuses_are_distinct_from_four_valued_predicate_results": true,
+    "wave_budget_is_not_treated_as_a_convergence_proof": true
   },
   "k3_constraints": {
     "radix": 1000,
